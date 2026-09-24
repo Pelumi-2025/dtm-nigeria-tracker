@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DTM Nigeria publications tracker</title>
+<title>DTM Nigeria Publications Tracker</title>
 <meta name="theme-color" content="#0033A0">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -239,14 +239,55 @@ aside.rail{background:linear-gradient(180deg,#0033A0 0%,#002A85 100%);color:#fff
 .dleg{width:100%;font-size:.8rem;display:grid;gap:4px}
 .dleg div{display:flex;align-items:center;gap:7px}.dleg i{width:10px;height:10px;border-radius:2px;flex:none}.dleg b{margin-left:auto}
 @media (max-width:900px){aside.rail{padding-bottom:18px}.railnav{flex-direction:row;flex-wrap:wrap}}
+.chartlegend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:var(--ink);margin-top:10px;padding-top:10px;border-top:1px solid var(--soft)}
+.chartlegend span{display:inline-flex;align-items:center;gap:6px}
+.chartlegend i{width:12px;height:12px;border-radius:3px;flex:none}
+.scalelegend{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);margin-top:10px}
+.scalelegend .bar{width:160px;height:10px;border-radius:5px;background:linear-gradient(90deg,#EAF0FA,#0033A0)}
+body[data-view="home"] main > :not(#home){display:none!important}
+body[data-view="home"] .rail .slicer,body[data-view="home"] .railbtn{display:none}
+body:not([data-view="home"]) #home{display:none}
+.home{max-width:1180px}
+.hero{background:linear-gradient(135deg,#0033A0 0%,#0B4FC4 60%,#418FDE 100%);color:#fff;border-radius:16px;padding:34px 34px 30px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:38px solid rgba(255,255,255,.08)}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#FFD166}
+.hero h2{font-size:2.2rem;margin:6px 0 8px;font-weight:800;letter-spacing:-.01em}
+.hero p{max-width:64ch;font-size:1.02rem;line-height:1.55;margin:0 0 20px;color:#E6EEFB}
+.herostats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0 0 22px}
+.herostats div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 14px}
+.herostats b{display:block;font-size:1.5rem;font-weight:800}
+.herostats span{font-size:.8rem;color:#D4E1F7}
+.cta{background:#FFB81C;color:#1B2233;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:1rem;cursor:pointer}
+.cta:hover{background:#FFC845}
+.hh{font-size:1.15rem;color:var(--iom);margin:26px 0 12px;font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 16px 12px;position:relative}
+.step i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#0033A0;color:#fff;font-weight:800;margin-bottom:8px}
+.step b{display:block;font-size:1rem;margin-bottom:4px}
+.step p,.note p{margin:0;font-size:.88rem;line-height:1.5;color:var(--muted)}
+.step em,.note em{font-style:normal;font-weight:700;color:var(--ink)}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-bottom:10px}
+.note{background:var(--soft);border-left:4px solid #0033A0;border-radius:10px;padding:14px 16px}
+.note b{display:block;margin-bottom:4px}
+#barRegion{max-width:720px}
+.stategrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 22px}
+.stategrid h4{margin:6px 0 0;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.briefs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.brief{display:flex;flex-direction:column;justify-content:flex-start;background:#fff;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:10px;padding:12px 14px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.brief:hover{box-shadow:0 3px 10px rgba(0,51,160,.12)}
+.brief .bt{display:flex;align-items:flex-start;gap:8px;font-weight:800;font-size:.92rem;margin-bottom:4px}
+.brief .bt span:first-child{flex:1}
+.brief .bn{flex:none;background:var(--c);color:#fff;border-radius:999px;padding:1px 9px;font-size:.78rem;font-weight:800}
+.brief.dark .bn{color:#1B2233}
+.brief p{margin:0;font-size:.84rem;line-height:1.5;color:var(--muted)}
 footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="brand">
-    <h1>DTM Nigeria publications tracker</h1>
-    <p>Reports published by IOM DTM Nigeria, counted by component, zone, state and year.</p>
+    <h1>DTM Nigeria Publications Tracker</h1>
+    <p>Every report IOM DTM Nigeria publishes on dtm.iom.int, counted by report type, region, state, month and year.</p>
   </div>
   <div class="status">
     <span id="dataStatus"><span class="dot"></span>Loading data</span>
@@ -262,6 +303,7 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
 <div class="layout">
   <aside class="rail" aria-label="Filters and sections">
     <nav class="railnav" aria-label="Sections">
+      <a href="#home" data-view="home">Home &amp; guide</a>
       <a href="#sec-overview">Overview</a><a href="#sec-types">Report types</a><a href="#sec-calendar">Calendar</a><a href="#sec-charts">Charts</a><a href="#sec-list">Report list</a>
     </nav>
     <div class="slicer">
@@ -274,6 +316,8 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
     </div>
     <div class="slicer"><div class="slabel">Months</div><div class="dd" id="ddMonths"></div></div>
     <div class="slicer"><div class="slabel">Report types</div><div class="dd" id="ddTypes"></div></div>
+    <div class="slicer"><div class="slabel">Region</div><div class="dd" id="ddRegions"></div></div>
+    <div class="slicer"><div class="slabel">States</div><div class="dd" id="ddStates"></div></div>
     <div class="slicer">
       <div class="slabel">Count reports by</div>
       <label class="rcheck"><input type="radio" name="basis" value="pub" checked><span>Publication date on dtm.iom.int</span></label>
@@ -284,7 +328,46 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
   </aside>
 
   <main>
+    <section id="home" class="home" aria-labelledby="homeTitle">
+      <div class="hero">
+        <div class="eyebrow">IOM · Displacement Tracking Matrix · Nigeria</div>
+        <h2 id="homeTitle">DTM Nigeria Publications Tracker</h2>
+        <p>A live count of every report DTM Nigeria publishes on dtm.iom.int, from 2015 onwards. Choose any period, report type, region or state, and every number, chart and list updates together.</p>
+        <div class="herostats">
+          <div><b id="hTotal">–</b><span>reports tracked</span></div>
+          <div><b id="hTypes">–</b><span>report types</span></div>
+          <div><b id="hLatest">–</b><span id="hLatestT">latest publication</span></div>
+          <div><b id="hChecked">–</b><span>last checked on dtm.iom.int</span></div>
+        </div>
+        <button type="button" class="cta" data-go="sec-overview">Open the dashboard →</button>
+      </div>
+
+      <h3 class="hh">How to use the dashboard</h3>
+      <div class="steps">
+        <div class="step"><i>1</i><b>Pick a period</b><p>In the blue panel on the left, set <em>From</em> and <em>To</em> to any month and year, or use a shortcut such as <em>Last 12 months</em> or <em>Last year</em>.</p></div>
+        <div class="step"><i>2</i><b>Narrow by month</b><p>Open <em>Months</em> to keep only some months, for example Q2 (April–June) across every year in your period.</p></div>
+        <div class="step"><i>3</i><b>Choose report types</b><p>Use the bold <em>Report types</em> buttons at the top or the dropdown on the left. Each shows how many reports match your other choices. Tip: click a card in <em>What each report type covers</em> below to jump straight to that type.</p></div>
+        <div class="step"><i>4</i><b>Choose regions and states</b><p>Use the <em>Region</em> and <em>States</em> dropdowns on the left (all 36 states and the FCT, with counts) or the bold buttons at the top. Click a state to focus on it, click more to add them, click again to remove.</p></div>
+        <div class="step"><i>5</i><b>Read the headline numbers</b><p>The cards at the top give the total, the monthly average, the busiest month and the latest report, and compare with the previous period of the same length.</p></div>
+        <div class="step"><i>6</i><b>Explore the charts</b><p>Hover over any bar, point or cell to see its number. Click a bar in <em>report type</em>, <em>state</em> or <em>region</em> to filter by it; click a calendar or table cell to list those reports.</p></div>
+        <div class="step"><i>7</i><b>Open or export reports</b><p>The report list at the bottom links to each report on dtm.iom.int and its PDF. <em>Export CSV</em> and <em>Download counts</em> save what you are looking at.</p></div>
+        <div class="step"><i>8</i><b>Ask the data</b><p>Use the <em>Ask the data</em> button (bottom right) to type questions such as “flash reports per month in Borno in 2025”.</p></div>
+      </div>
+
+      <h3 class="hh">What each report type covers</h3>
+      <div class="briefs" id="briefs"></div>
+
+      <h3 class="hh">Good to know</h3>
+      <div class="notes">
+        <div class="note"><b>How reports are dated</b><p>Each report counts in the month it was published on dtm.iom.int. You can switch to the period named in each report title. Reports published twice count once; a report with no date on the site is flagged in the list.</p></div>
+        <div class="note"><b>Needs Monitoring and Atlas</b><p>North-East rounds 1–40 and North-Central/North-West rounds 1–9 count as Needs Monitoring. Later rounds are classified from the report's PDF file name or, if needed, the text inside the PDF.</p></div>
+        <div class="note"><b>Regions and states</b><p>A state named in a report's title decides its region. Mobility Tracking round reports belong to the operation that produced them: North East, or North Central &amp; North West.</p></div>
+        <div class="note"><b>Always up to date</b><p>New reports on dtm.iom.int are collected every hour, with a full check every night. An open dashboard refreshes itself within 5 minutes; the offline copy works without internet.</p></div>
+      </div>
+    </section>
+
     <section class="deck" aria-label="Choose reports">
+      <div class="deckrow"><div class="decklabel">Report types<span class="quick"><button type="button" data-all="comp">All</button><button type="button" data-none="comp">None</button></span></div><div class="pills" id="typeBar"></div></div>
       <div class="deckrow"><div class="decklabel">Regions<span class="quick"><button type="button" data-all="region">All</button></span></div><div class="pills" id="regionBar"></div></div>
       <div class="deckrow"><div class="decklabel">States<span class="quick"><button type="button" data-all="state">All</button><button type="button" data-none="state">None</button></span></div><div class="pills" id="stateBar"></div></div>
     </section>
@@ -298,8 +381,8 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
         <div id="trend"></div>
       </section>
       <section class="panel chart">
-        <h2>Share by report type</h2>
-        <p class="hint">Largest types in the selection.</p>
+        <h2>Reports by report type</h2>
+        <p class="hint">Number of reports of each type in the selection, largest first. Click a bar to show only that type.</p>
         <div id="donut"></div>
       </section>
     </div>
@@ -314,6 +397,7 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       <h2>Publication calendar</h2>
       <p class="hint">Reports published each month, by each report's publication date on dtm.iom.int. Every number is recounted for your selection. Select a cell to list those reports.</p>
       <div class="scroll"><table class="cal" id="cal"></table></div>
+      <div class="scalelegend">Fewer reports <span class="bar"></span> More reports <span style="margin-left:14px">Striped cells are outside your selection.</span></div>
     </section>
 
     <section class="panel">
@@ -321,32 +405,37 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       <h2>Reports per year, by report type</h2>
       <p class="hint">Select a cell to list those reports below.</p>
       <div class="scroll"><table class="heat" id="heat"></table></div>
+      <div class="scalelegend">Fewer reports <span class="bar"></span> More reports</div>
     </section>
 
     <section class="panel chart" id="sec-charts">
       <h2>Reports per year</h2>
       <p class="hint">Stacked by report type for the current selection. Hover a segment for its number.</p>
       <div id="barYear"></div>
+      <div class="chartlegend" id="legYear"></div>
     </section>
 
     <section class="panel chart">
       <h2>Reports per month</h2>
       <p class="hint">All selected years combined. For month-by-year numbers, see the publication calendar above.</p>
       <div id="barMonth"></div>
+      <div class="chartlegend" id="legMonth"></div>
     </section>
 
-    <div class="twocol">
       <section class="panel chart">
-        <h2>Reports per state</h2>
-        <p class="hint">A report covering several states counts once in each. Click a bar to filter by that state.</p>
-        <div id="barState"></div>
-      </section>
-      <section class="panel chart">
-        <h2>Reports per region</h2>
-        <p class="hint">North Central and North West also shown separately; a report covering both counts in each of those two bars. Click a bar to filter.</p>
-        <div id="barRegion"></div>
-      </section>
-    </div>
+      <h2>Reports per region</h2>
+      <p class="hint">North Central and North West also shown separately; a report covering both counts in each of those two bars. Click a bar to filter.</p>
+      <div id="barRegion"></div>
+      <div class="chartlegend"><span><i style="background:#0033A0"></i>North East</span><span><i style="background:#1A8C7E"></i>North Central &amp; North West (combined)</span><span><i style="background:#5CB8B2"></i>North Central</span><span><i style="background:#E0A100"></i>North West</span><span><i style="background:#6E3C8C"></i>Southern states</span><span><i style="background:#9AA5B6"></i>Region not stated</span></div>
+    </section>
+
+
+    <section class="panel chart">
+      <h2>Reports per state</h2>
+      <p class="hint">All 36 states and the FCT, grouped by geopolitical zone. A report covering several states counts once in each. Click a bar to filter by that state.</p>
+      <div class="stategrid" id="barState"></div>
+      <div class="chartlegend"><span><i style="background:#0033A0"></i>North East</span><span><i style="background:#1A8C7E"></i>North Central</span><span><i style="background:#E0A100"></i>North West</span><span><i style="background:#C1447E"></i>South East</span><span><i style="background:#2E7D32"></i>South South</span><span><i style="background:#F28C28"></i>South West</span></div>
+    </section>
 
     <section class="panel" id="sec-list">
       <h2>Reports</h2>
@@ -382,18 +471,47 @@ const DEFAULT_COMPONENTS = [
   ["transhumance","Transhumance Flow Monitoring Report"],["ewer","Early Warning & Early Response Dashboard"],
   ["flood","Post-Flood Situation Report (Ad-Hoc)"],["joint_flood","Joint Flood Reports"],
   ["biometric","Biometric Registration Report"],["poe","Point of Entry (POE) Reports"],
-  ["climate","Climate & Environmental Vulnerability Reports"],["compendium","Compendium Reports"],
+  ["covid_sa","COVID-19 Situational Analysis Reports"],["climate","Climate & Environmental Vulnerability Reports"],["compendium","Compendium Reports"],
   ["fmp","Flow Monitoring (migrants) – extra category"],["other","Other / Unclassified"]].map(([key,label])=>({key,label}));
-const DISPLAY_ORDER = ["atlas","needs","flash","ett","intention","intention_state","return_intention","ses","ses_fm","smi","si","transhumance","ewer","flood","joint_flood","biometric","poe","climate","compendium","fmp","other"];
+const DISPLAY_ORDER = ["atlas","needs","flash","ett","intention","intention_state","return_intention","ses","ses_fm","smi","si","transhumance","ewer","flood","joint_flood","biometric","poe","covid_sa","climate","compendium","fmp","other"];
 const PALETTE = {atlas:"#0033A0",needs:"#418FDE",flash:"#D22630",ett:"#FFB81C",intention:"#6E3C8C",intention_state:"#A77BCA",
   return_intention:"#C1447E",ses:"#1A8C7E",ses_fm:"#7AB648",smi:"#5CB8B2",si:"#2A6F97",transhumance:"#A05A2C",ewer:"#E56A54",
-  flood:"#00A3E0",joint_flood:"#005E85",biometric:"#53565A",poe:"#F28C28",climate:"#2E7D32",compendium:"#8C1D40",fmp:"#9B7EBD",other:"#B1B3B3"};
+  flood:"#00A3E0",joint_flood:"#005E85",biometric:"#53565A",poe:"#F28C28",covid_sa:"#4B5DAA",climate:"#2E7D32",compendium:"#8C1D40",fmp:"#9B7EBD",other:"#B1B3B3"};
+const BRIEF={
+  atlas:"Mobility Tracking round products counting internally displaced persons (IDPs) and returnees by state, local government area and ward, from baseline and site assessments. Includes the round atlases and reports, dashboards, site and location profiles, and master lists.",
+  needs:"Mobility Tracking round reports on the living conditions and needs of displaced people in camps and host communities (shelter, food, water and sanitation, health, education, protection). DTM Nigeria usually publishes them as the round's Displacement Report.",
+  flash:"Rapid reports issued within about 72 hours of a sudden event such as an armed attack, fire or flood, giving how many people were displaced, where they went, and their most urgent needs.",
+  ett:"Emergency Tracking Tool: short, frequent (usually weekly) reports on sudden population movements, recording new arrivals and departures at monitored locations.",
+  intention:"Region-wide surveys of IDPs' preferred durable solutions (returning home, integrating locally or relocating) and their plans for the coming year.",
+  intention_state:"The same intention surveys carried out for a single state, or for particular camps within a state.",
+  return_intention:"Surveys of IDPs' intentions ahead of camp closures or relocations, and reports documenting camp closures.",
+  ses:"Household socio-economic surveys covering livelihoods, income, employment and assets among displaced and returnee populations.",
+  ses_fm:"Socio-economic survey results combined with mapping of services and infrastructure such as schools, health facilities and water points.",
+  smi:"Solutions and Mobility Index: scores locations hosting IDPs or returnees on the conditions that support durable solutions. Launched in 2025.",
+  si:"Stability Index: rates the stability of areas of return, looking at safety and security, services, livelihoods and social cohesion.",
+  transhumance:"Transhumance Tracking Tool flow monitoring: counts of herders and livestock passing monitoring points, with their direction and seasonal patterns.",
+  ewer:"Transhumance Tracking Tool early warning dashboards: monthly alerts from community key informants on incidents and sudden herder movements, to support early response.",
+  flood:"Ad-hoc post-flood situation reports and flood rapid needs assessments: people affected and displaced, damage and needs after flooding.",
+  joint_flood:"Flood situation and post-flood reports produced jointly with partners, often covering many states, including southern states.",
+  biometric:"Results of biometric registration of IDPs, and later registration updates: numbers registered and their demographic profile.",
+  poe:"Point of Entry dashboards monitoring travellers crossing Nigeria's borders, their direction and health screening, mainly during COVID-19 (2020–2022).",
+  covid_sa:"COVID-19 Situational Analysis reports assessing COVID-19 awareness, risks and impacts in displacement locations, by region (2020–2021).",
+  climate:"Assessments of climate and environmental vulnerability affecting displaced and host communities.",
+  compendium:"Annual compendiums bringing together DTM Nigeria's key figures and products for the year.",
+  fmp:"Migrant flow monitoring dashboards (2017–2022): people passing flow monitoring points, their profiles and routes. Separate from transhumance monitoring.",
+  other:"Reports that match none of the rules above, such as some maps and one-off studies."};
 const LIGHT=new Set(["ett","smi","ses_fm","other","poe","intention_state"]);
-const STATES = {"North East":["Adamawa","Borno","Yobe","Gombe","Taraba","Bauchi"],
-  "North Central":["Benue","Nasarawa","Plateau","Kogi","Niger"],"North West":["Kano","Kaduna","Katsina","Sokoto","Zamfara"]};
+const STATES = {"North East":["Adamawa","Bauchi","Borno","Gombe","Taraba","Yobe"],
+  "North Central":["Benue","FCT","Kogi","Kwara","Nasarawa","Niger","Plateau"],"North West":["Jigawa","Kaduna","Kano","Katsina","Kebbi","Sokoto","Zamfara"],
+  "South East":["Abia","Anambra","Ebonyi","Enugu","Imo"],"South South":["Akwa Ibom","Bayelsa","Cross River","Delta","Edo","Rivers"],
+  "South West":["Ekiti","Lagos","Ogun","Ondo","Osun","Oyo"]};
+const ZONE_COL={"North East":"#0033A0","North Central":"#1A8C7E","North West":"#E0A100","South East":"#C1447E","South South":"#2E7D32","South West":"#F28C28"};
+const stateLabel=st=>st==="FCT"?"FCT (Abuja)":st+" State";
 const REGIONS = [{key:"NE",label:"North East",zones:["North East"]},
   {key:"NCNW",label:"North Central & North West",zones:["North Central","North West"]},
+  {key:"SOUTH",label:"Southern states",zones:["South East","South South","South West"]},
   {key:"NONE",label:"Not specified in title",zones:[]}];
+const REGION_COL={NE:"#0033A0",NCNW:"#1A8C7E",SOUTH:"#6E3C8C",NONE:"#75787B"};
 const STATE_ZONE = Object.fromEntries(Object.entries(STATES).flatMap(([z,ss])=>ss.map(s=>[s,z])));
 const ALL_STATES = Object.values(STATES).flat();
 
@@ -410,7 +528,8 @@ const $ = s=>document.querySelector(s);
 const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt = n=>n.toLocaleString("en-GB");
 function regionKeysOf(r){const z=r.regions||[];const k=[];if(z.includes("North East"))k.push("NE");
-  if(z.includes("North Central")||z.includes("North West"))k.push("NCNW");if(!k.length)k.push("NONE");return k}
+  if(z.includes("North Central")||z.includes("North West"))k.push("NCNW");
+  if(z.some(x=>x.startsWith("South")))k.push("SOUTH");if(!k.length)k.push("NONE");return k}
 
 /* ------------------------------------------------------------ data load */
 function store(k,v){try{localStorage.setItem(k,v);return true}catch(e){STORE_OK=false;return false}}
@@ -500,7 +619,7 @@ function passes(r, opt={}){
   if(!opt.ignoreMonth && F.months.size<12 && !F.months.has(r.month)) return false;
   if(!opt.ignoreComp && !F.comps.has(r.component_key)) return false;
   if(!opt.ignoreRegion && F.regions.size<REGIONS.length && !regionKeysOf(r).some(k=>F.regions.has(k))) return false;
-  if(F.stateFilterOn && !r.states.some(s=>F.states.has(s))) return false;
+  if(!opt.ignoreState && F.stateFilterOn && !r.states.some(s=>F.states.has(s))) return false;
   if(F.kw && !(r.title+" "+r.summary).toLowerCase().includes(F.kw)) return false;
   return true;
 }
@@ -531,12 +650,12 @@ function makeDD(el,{items,sel,onChange,tools,noun}){
 }
 document.addEventListener("click",()=>document.querySelectorAll(".ddpanel").forEach(p=>{p.hidden=true;p.previousElementSibling.setAttribute("aria-expanded","false")}));
 document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".ddpanel").forEach(p=>p.hidden=true)});
-function syncDD(el,counts){
+function syncDD(el,counts,total){
   const set=el._sel(),items=el._items,n=items.filter(i=>set.has(i.key)).length;
   el.querySelectorAll(".ddrow").forEach(r=>{const k=isNaN(+r.dataset.k)?r.dataset.k:+r.dataset.k;r.querySelector("input").checked=set.has(k);
     const c=counts[k]||0;r.querySelector(".cnt").textContent=fmt(c);r.classList.toggle("zero",!c)});
   el.querySelector(".ddsum").textContent=n===items.length?`All ${el._noun}`:n===0?`No ${el._noun}`:n===1?items.find(i=>set.has(i.key)).label:`${n} of ${items.length} ${el._noun}`;
-  const tot=items.filter(i=>set.has(i.key)).reduce((a,i)=>a+(counts[i.key]||0),0);el.querySelector(".ddn").textContent=fmt(tot);
+  const tot=total!==undefined?total:items.filter(i=>set.has(i.key)).reduce((a,i)=>a+(counts[i.key]||0),0);el.querySelector(".ddn").textContent=fmt(tot);
 }
 
 function buildFilters(){
@@ -554,19 +673,32 @@ function buildFilters(){
     sel:()=>F.comps,onChange:()=>{drill=null;render()},
     tools:[["all","All",()=>F.comps=new Set(COMPONENTS.map(c=>c.key))],["none","None",()=>F.comps=new Set()],
            ["mt","Mobility Tracking only",()=>F.comps=new Set(["atlas","needs"])]]});
+  // region dropdown (kept in step with the region buttons at the top)
+  makeDD($("#ddRegions"),{noun:"regions",items:REGIONS.map(r=>({key:r.key,label:r.label,color:REGION_COL[r.key]})),
+    sel:()=>F.regions,onChange:()=>{drill=null;syncFilterInputs();render()},
+    tools:[["all","All",()=>F.regions=new Set(REGIONS.map(r=>r.key))],["ne","North East only",()=>F.regions=new Set(["NE"])],["ncnw","NC & NW only",()=>F.regions=new Set(["NCNW"])]]});
+  // states dropdown: all 36 states and the FCT
+  makeDD($("#ddStates"),{noun:"states",items:Object.entries(STATES).flatMap(([z,ss])=>ss.map(st=>({key:st,label:stateLabel(st),color:ZONE_COL[z]}))),
+    sel:()=>F.states,onChange:()=>{F.stateFilterOn=F.states.size<ALL_STATES.length;drill=null;syncFilterInputs();render()},
+    tools:[["all","All",()=>F.states=new Set(ALL_STATES)],["none","None",()=>F.states=new Set()],
+      ...Object.keys(STATES).map(z=>["z"+z.replace(/\s/g,""),z,()=>F.states=new Set(STATES[z])])]});
+  // report type buttons at the top
+  $("#typeBar").innerHTML=COMPONENTS.map(c=>`<button type="button" class="pb${LIGHT.has(c.key)?" dark":""}" data-comp="${c.key}" aria-pressed="${F.comps.has(c.key)}" title="${esc(BRIEF[c.key]||"")}" style="--c:${PALETTE[c.key]||"#999"}"><i class="pd"></i>${esc(c.label)}<span class="pc" data-cn="${c.key}">0</span></button>`).join("");
+  $("#typeBar").onclick=e=>{const b=e.target.closest("[data-comp]");if(!b)return;const k=b.dataset.comp;F.comps.has(k)?F.comps.delete(k):F.comps.add(k);drill=null;syncFilterInputs();render()};
   // regions and states: button bars at the top
-  const RC={NE:"#0033A0",NCNW:"#1A8C7E",NONE:"#75787B"};
+  const RC=REGION_COL;
   $("#regionBar").innerHTML=REGIONS.map(r=>`<button type="button" class="pb" data-region="${r.key}" aria-pressed="${F.regions.has(r.key)}" style="--c:${RC[r.key]}"><i class="pd"></i>${esc(r.label)}<span class="pc" data-rn="${r.key}">0</span></button>`).join("");
   $("#regionBar").onclick=e=>{const b=e.target.closest("[data-region]");if(!b)return;const k=b.dataset.region;F.regions.has(k)?F.regions.delete(k):F.regions.add(k);drill=null;syncFilterInputs();render()};
-  const ZC={"North East":"#0033A0","North Central":"#1A8C7E","North West":"#E0A100"};
-  $("#stateBar").innerHTML=Object.entries(STATES).map(([z,ss])=>`<span class="zonetag" style="--c:${ZC[z]}">${z}</span>`+
-    ss.map(st=>`<button type="button" class="pb${z==="North West"?" dark":""}" data-state="${st}" aria-pressed="${!F.stateFilterOn||F.states.has(st)}" style="--c:${ZC[z]}"><i class="pd"></i>${st}<span class="pc" data-sn="${st}">0</span></button>`).join("")).join("");
+  const ZC=ZONE_COL, withData=new Set(REPORTS.flatMap(r=>r.states));
+  $("#stateBar").innerHTML=Object.entries(STATES).map(([z,all])=>{const ss=all.filter(st=>withData.has(st));return !ss.length?"":`<span class="zonetag" style="--c:${ZC[z]}">${z}</span>`+
+    ss.map(st=>`<button type="button" class="pb${z==="North West"||z==="South West"?" dark":""}" data-state="${st}" aria-pressed="${!F.stateFilterOn||F.states.has(st)}" style="--c:${ZC[z]}"><i class="pd"></i>${st}<span class="pc" data-sn="${st}">0</span></button>`).join("")}).join("");
   $("#stateBar").onclick=e=>{const b=e.target.closest("[data-state]");if(!b)return;const st=b.dataset.state;
     if(!F.stateFilterOn){F.states=new Set([st]);F.stateFilterOn=true}
     else{F.states.has(st)?F.states.delete(st):F.states.add(st);if(!F.states.size||F.states.size===ALL_STATES.length){F.states=new Set(ALL_STATES);F.stateFilterOn=false}}
     drill=null;syncFilterInputs();render()};
 }
 function syncFilterInputs(){
+  document.querySelectorAll("button[data-comp]").forEach(i=>i.setAttribute("aria-pressed",F.comps.has(i.dataset.comp)));
   document.querySelectorAll("button[data-region]").forEach(i=>i.setAttribute("aria-pressed",F.regions.has(i.dataset.region)));
   document.querySelectorAll("button[data-state]").forEach(i=>i.setAttribute("aria-pressed",!F.stateFilterOn||F.states.has(i.dataset.state)));
   $("#kw").value=F.kw; syncPeriodUI();
@@ -586,7 +718,24 @@ document.querySelectorAll("[data-all]").forEach(b=>b.onclick=()=>{const t=b.data
   if(t==="state"){F.states=new Set(ALL_STATES);F.stateFilterOn=false}syncFilterInputs();render()});
 document.querySelectorAll("[data-none]").forEach(b=>b.onclick=()=>{const t=b.dataset.none;
   if(t==="state"){F.states=new Set();F.stateFilterOn=true}syncFilterInputs();render()});
-document.querySelectorAll(".railnav a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));
+function setView(v){document.body.dataset.view=v;document.querySelectorAll(".railnav a").forEach(x=>x.classList.toggle("on",v==="home"&&x.dataset.view==="home"));window.scrollTo(0,0)}
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{setView("dash");const t=document.getElementById(b.dataset.go);if(t)t.scrollIntoView({block:"start"})});
+function renderHome(){
+  if(!REPORTS.length)return;
+  const tc={};REPORTS.forEach(r=>tc[r.component_key]=(tc[r.component_key]||0)+1);
+  $("#briefs").innerHTML=COMPONENTS.map(c=>`<button type="button" class="brief${LIGHT.has(c.key)?" dark":""}" data-k="${c.key}" style="--c:${PALETTE[c.key]||"#999"}"><div class="bt"><span>${esc(c.label)}</span><span class="bn">${fmt(tc[c.key]||0)}</span></div><p>${esc(BRIEF[c.key]||"")}</p></button>`).join("");
+  $("#briefs").onclick=e=>{const b=e.target.closest(".brief");if(!b)return;F.comps=new Set([b.dataset.k]);drill=null;setView("dash");syncFilterInputs();render();$("#sec-overview").scrollIntoView({block:"start"})};
+  const dated=REPORTS.filter(r=>r.pub_date&&!/no date on the site/.test(r.date_basis));
+  const last=dated.reduce((a,r)=>!a||r.pub_date>a.pub_date?r:a,null);
+  $("#hTotal").textContent=fmt(REPORTS.length);$("#hTypes").textContent=fmt(new Set(REPORTS.map(r=>r.component_key)).size);
+  if(last){$("#hLatest").textContent=new Date(last.pub_date+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
+    $("#hLatestT").textContent="latest: "+last.title.replace(/^Nigeria\s*[—–-]\s*/,"").slice(0,70)}
+  const chk=STATUS?.checked_at||DATA?.generated_at;
+  $("#hChecked").textContent=SOURCE==="sample"?"sample data":chk?new Date(chk).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}):"–";
+}
+document.querySelectorAll(".railnav a").forEach(a=>a.onclick=e=>{e.preventDefault();
+  if(a.dataset.view==="home"){setView("home");return}
+  setView("dash");const t=document.querySelector(a.getAttribute("href"));
   if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
   document.querySelectorAll(".railnav a").forEach(x=>x.classList.toggle("on",x===a))});
 let kwT;$("#kw").oninput=e=>{clearTimeout(kwT);kwT=setTimeout(()=>{F.kw=e.target.value.trim().toLowerCase();render()},200)};
@@ -600,6 +749,9 @@ function render(){
   renderKPIs(rs); renderLede(rs); renderTrend(rs); renderDonut(rs); renderTiles(); renderCalendar(); renderHeat(); renderBarsAll(rs); renderList();
   const tcc={};REPORTS.forEach(r=>{if(passes(r,{ignoreComp:true}))tcc[r.component_key]=(tcc[r.component_key]||0)+1});syncDD($("#ddTypes"),tcc);
   const mcc={};REPORTS.forEach(r=>{if(r.month&&passes(r,{ignoreMonth:true}))mcc[r.month]=(mcc[r.month]||0)+1});syncDD($("#ddMonths"),mcc);
+  const rcc={};REPORTS.forEach(r=>{if(passes(r,{ignoreRegion:true}))regionKeysOf(r).forEach(k=>rcc[k]=(rcc[k]||0)+1)});syncDD($("#ddRegions"),rcc,rs.length);
+  const scc={};REPORTS.forEach(r=>{if(passes(r,{ignoreState:true}))r.states.forEach(st=>scc[st]=(scc[st]||0)+1)});syncDD($("#ddStates"),scc);
+  renderHome();
   // live counts beside checkboxes
   const cc={};REPORTS.forEach(r=>{if(passes(r,{ignoreComp:true}))cc[r.component_key]=(cc[r.component_key]||0)+1});
   document.querySelectorAll("[data-cn]").forEach(s=>s.textContent=fmt(cc[s.dataset.cn]||0));
@@ -665,20 +817,12 @@ function renderTrend(rs){
   if(top&&top.n){const i=pts.indexOf(top);s+=`<text x="${X(i)}" y="${Y(top.n)-9}" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0033A0">${top.n} · ${MONTHS[top.v%12]} ${Math.floor(top.v/12)}</text>`}
   box.innerHTML=s+"</svg>";bindTips(box);
 }
-/* ---- donut: share by report type */
+/* ---- bar chart: reports by report type */
 function renderDonut(rs){
-  const box=$("#donut");const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
-  const ent=Object.entries(c).sort((a,b)=>b[1]-a[1]);const top=ent.slice(0,6),rest=ent.slice(6).reduce((a,e)=>a+e[1],0);
-  const parts=top.map(([k,v])=>({k,v,label:labelFor(k),col:PALETTE[k]||"#999"}));if(rest)parts.push({k:"_rest",v:rest,label:`${ent.length-6} other types`,col:"#D5DBE5"});
-  const tot=rs.length;if(!tot){box.innerHTML='<p class="hint">No reports in this selection.</p>';return}
-  const R=80,r=50,cx=100,cy=100;let ang=-Math.PI/2,s=`<svg viewBox="0 0 200 200" width="210" role="img" aria-label="Share by report type">`;
-  parts.forEach(p=>{const a2=ang+2*Math.PI*p.v/tot;const large=a2-ang>Math.PI?1:0;
-    const P=(rad,a)=>`${(cx+rad*Math.cos(a)).toFixed(2)},${(cy+rad*Math.sin(a)).toFixed(2)}`;
-    s+=parts.length===1?`<circle cx="${cx}" cy="${cy}" r="${(R+r)/2}" fill="none" stroke="${p.col}" stroke-width="${R-r}" data-tip="${esc(p.label)}: ${p.v}"/>`
-      :`<path d="M${P(R,ang)}A${R},${R} 0 ${large} 1 ${P(R,a2)}L${P(r,a2)}A${r},${r} 0 ${large} 0 ${P(r,ang)}Z" fill="${p.col}" stroke="#fff" stroke-width="1.5" data-tip="${esc(p.label)}: ${p.v} (${Math.round(100*p.v/tot)}%)"/>`;ang=a2});
-  s+=`<text x="100" y="98" text-anchor="middle" font-size="26" font-weight="800" fill="#0033A0">${fmt(tot)}</text><text x="100" y="117" text-anchor="middle" font-size="11" fill="var(--muted)">reports</text></svg>`;
-  box.innerHTML=`<div class="donutwrap">${s}<div class="dleg">${parts.map(p=>`<div><i style="background:${p.col}"></i>${esc(p.label.replace("Mobility Tracking – ","MT – "))}<b>${Math.round(100*p.v/tot)}%</b></div>`).join("")}</div></div>`;
-  bindTips(box);
+  const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
+  const items=Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({key:k,label:labelFor(k).replace("Mobility Tracking – ","MT – "),v,c:PALETTE[k]||"#999"}));
+  if(!items.length){$("#donut").innerHTML='<p class="hint">No reports in this selection.</p>';return}
+  hBars($("#donut"),items,k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);drill=null;render()},200,420);
 }
 function heatColor(v,max){ if(!v) return "var(--heat0)"; const t=Math.sqrt(v/max);
   const a=[234,240,250], b=[0,51,160]; return `rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t))})`}
@@ -762,8 +906,8 @@ function stackedBars(el,keys,labelOf,rows,{W=920,H=300}={}){
     if(acc)s+=`<text x="${x+bar/2}" y="${H-B-(H-T-B)*acc/max-5}" text-anchor="middle" font-size="11" font-weight="800" fill="var(--ink)">${fmt(acc)}</text>`});
   el.innerHTML=s+"</svg>";bindTips(el);
 }
-function hBars(el,items,onPick,L=150){
-  const W=560,rowH=26,R=56,T=4;let y=T,s="";const max=Math.max(1,...items.filter(i=>!i.head).map(i=>i.v));
+function hBars(el,items,onPick,L=150,W=560,fixedMax){
+  const rowH=26,R=56,T=4;let y=T,s="";const max=fixedMax||Math.max(1,...items.filter(i=>!i.head).map(i=>i.v));
   items.forEach(it=>{if(it.head){s+=`<text x="0" y="${y+15}" font-size="11" font-weight="800" fill="${it.c}" letter-spacing=".04em">${esc(it.head.toUpperCase())}</text>`;y+=20;return}
     const w=(W-L-R)*it.v/max;
     s+=`<g data-pick="${esc(it.key)}" style="cursor:pointer" data-tip="${esc(it.label)}: ${it.v} report${it.v===1?"":"s"}" opacity="${it.dim?.35:1}">
@@ -774,14 +918,17 @@ function hBars(el,items,onPick,L=150){
   el.onclick=e=>{const g=e.target.closest("[data-pick]");if(g)onPick(g.dataset.pick,e)};
 }
 const ZC2={"North East":"#0033A0","North Central":"#1A8C7E","North West":"#E0A100"};
+function typeLegend(el,rs){const present=new Set(rs.map(r=>r.component_key));
+  el.innerHTML=COMPONENTS.filter(c=>present.has(c.key)).map(c=>`<span><i style="background:${PALETTE[c.key]}"></i>${esc(c.label)}</span>`).join("")}
 function renderBarsAll(rs){
+  typeLegend($("#legYear"),rs);typeLegend($("#legMonth"),rs.filter(r=>r.month));
   const ys=sortedYears();
   stackedBars($("#barYear"),ys,k=>String(k),rs.map(r=>({...r,_k:r.year})));
   stackedBars($("#barMonth"),range(1,12).filter(m=>F.months.has(m)),k=>MONTHS[k-1],rs.map(r=>({...r,_k:r.month})),{H:260});
-  const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));
-  const items=[];Object.entries(STATES).forEach(([z,ss])=>{items.push({head:z,c:ZC2[z]});
-    ss.forEach(st=>items.push({key:st,label:st,v:sc[st]||0,c:ZC2[z],dim:F.stateFilterOn&&!F.states.has(st)}))});
-  hBars($("#barState"),items,st=>{if(F.stateFilterOn&&F.states.size===1&&F.states.has(st)){F.states=new Set(ALL_STATES);F.stateFilterOn=false}else{F.states=new Set([st]);F.stateFilterOn=true}drill=null;syncFilterInputs();render()});
+  const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));const smax=Math.max(1,...Object.values(sc));
+  $("#barState").innerHTML=Object.keys(STATES).map((z,i)=>`<div><h4 style="color:${ZONE_COL[z]}">${z}</h4><div id="bs${i}"></div></div>`).join("");
+  Object.entries(STATES).forEach(([z,ss],i)=>hBars($("#bs"+i),ss.map(st=>({key:st,label:st==="FCT"?"FCT (Abuja)":st,v:sc[st]||0,c:ZONE_COL[z],dim:F.stateFilterOn&&!F.states.has(st)})),
+    st=>{if(F.stateFilterOn&&F.states.size===1&&F.states.has(st)){F.states=new Set(ALL_STATES);F.stateFilterOn=false}else{F.states=new Set([st]);F.stateFilterOn=true}drill=null;syncFilterInputs();render()},110,380,smax));
   const has=(r,z)=>(r.regions||[]).includes(z);
   const ne=rs.filter(r=>has(r,"North East")).length,nc=rs.filter(r=>has(r,"North Central")).length,nw=rs.filter(r=>has(r,"North West")).length,
         ncnw=rs.filter(r=>has(r,"North Central")||has(r,"North West")).length,none=rs.filter(r=>!(r.regions||[]).length).length;
@@ -790,6 +937,7 @@ function renderBarsAll(rs){
     {key:"NCNW",label:"North Central & North West",v:ncnw,c:"#1A8C7E",bold:1,dim:!F.regions.has("NCNW")},
     {key:"NCNW",label:"of which North Central",v:nc,c:"#5CB8B2",dim:!F.regions.has("NCNW")},
     {key:"NCNW",label:"of which North West",v:nw,c:"#E0A100",dim:!F.regions.has("NCNW")},
+    {key:"SOUTH",label:"Southern states",v:rs.filter(r=>(r.regions||[]).some(z=>z.startsWith("South"))).length,c:"#6E3C8C",bold:1,dim:!F.regions.has("SOUTH")},
     {key:"NONE",label:"Region not stated",v:none,c:"#9AA5B6",bold:1,dim:!F.regions.has("NONE")}],
     k=>{F.regions=(F.regions.size===1&&F.regions.has(k))?new Set(REGIONS.map(r=>r.key)):new Set([k]);drill=null;syncFilterInputs();render()},215);
 }
@@ -878,7 +1026,7 @@ async function askServer(text){
   const j=await r.json();bubble.textContent=j.reply||"Done.";TURNS.push({role:"assistant",content:j.reply||"Done."});
   (j.actions||[]).forEach(a=>{if(a.type==="set_filters")applyFilters(a.filters);if(a.type==="harvest_started")watchHarvest()});
 }
-const SAMPLE_RULES=()=>`You are the assistant inside the IOM DTM Nigeria publications tracker dashboard. The page holds ${REPORTS.length} report records ${SOURCE==="sample"?"(SAMPLE data, not real, so say so when giving numbers)":"harvested from dtm.iom.int/nigeria"}.
+const SAMPLE_RULES=()=>`You are the assistant inside the IOM DTM Nigeria Publications Tracker dashboard. The page holds ${REPORTS.length} report records ${SOURCE==="sample"?"(SAMPLE data, not real, so say so when giving numbers)":"harvested from dtm.iom.int/nigeria"}.
 Component keys: ${COMPONENTS.map(c=>c.key+" = "+c.label).join("; ")}.
 Regions: North East, North Central, North West ("North Central & North West" means both). States: ${ALL_STATES.join(", ")}. Years ${YEAR_MIN}-${YEAR_MAX}.
 Always use the tools for numbers, never guess. When the user asks to show or filter, call set_dashboard_filters. You cannot browse the web from here: if asked to fetch, crawl or update from the website, explain that the harvester runs on their computer or server (python server.py, then Harvest now, or python scrape.py --keywords "..."), then they load the new reports.json with "Load data file". Answer briefly and plainly.`;
@@ -908,7 +1056,7 @@ const COMP_WORDS=[["compendium",["compendium"]],["ewer",["early warning","ewer",
   ["return_intention",["return intention","camp closure"]],["joint_flood",["joint flood","joint post"]],["flash",["flash","incident"]],["flood",["flood"]],
   ["biometric",["biometric","registration"]],["intention_state",["state-wide intention","statewide intention","state intention"]],["intention",["intention"]],
   ["smi",["solutions mobility","solution mobility","mobility index"," smi"]],["si",["stability index","stability"]],["ses_fm",["facility mapping"]],["ses",["socio","economic survey"]],
-  ["poe",["point of entry","poe"]],["climate",["climate","environmental"]],["needs",["needs monitoring","needs","displacement report"]],
+  ["covid_sa",["situational analysis","covid situational","covid-19 situational"]],["poe",["point of entry","poe"]],["climate",["climate","environmental"]],["needs",["needs monitoring","needs","displacement report"]],
   ["transhumance",["transhumance","herder"]],["fmp",["migrant flow","flow monitoring"]],["atlas",["atlas","mobility tracking","baseline","site assessment"]],["other",["unclassified"]]];
 function parseQuery(t){
   const s=" "+t.toLowerCase().replace(/[?!.,]/g," ")+" ",q={};
@@ -1012,8 +1160,8 @@ function showToast(added){
     added.slice(0,5).map(r=>`<li>${esc(r.title)}</li>`).join("")+`</ul>`+(added.length>5?`<div>and ${added.length-5} more.</div>`:"")+
     `<button class="btn" type="button" id="toastClose">Dismiss</button>`;
   t.style.display="block"; $("#toastClose").onclick=()=>t.style.display="none";
-  document.title=`(${added.length} new) DTM Nigeria publications tracker`;
-  setTimeout(()=>{document.title="DTM Nigeria publications tracker"},60000);
+  document.title=`(${added.length} new) DTM Nigeria Publications Tracker`;
+  setTimeout(()=>{document.title="DTM Nigeria Publications Tracker"},60000);
 }
 let checking=false;
 async function checkForUpdates(){
@@ -1066,6 +1214,7 @@ function sampleData(){
 }
 
 /* ------------------------------------------------------------ boot */
+document.body.dataset.view=/^#(sec-|dashboard)/.test(location.hash)?"dash":"home";
 loadInitial().then(()=>{detectServer();setEngine();checkForUpdates()});
 if(window.claude){window.claude.use("sample").then(s=>{SAMPLE=s;setEngine()}).catch(()=>{})}
 if("serviceWorker" in navigator && location.protocol.startsWith("http") && !window.claude && /localhost|127\.0\.0\.1|github\.io|\.local|:\d+$/.test(location.host)){

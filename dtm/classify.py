@@ -70,6 +70,12 @@ class Classifier:
 
     def regions(self, title: str, summary: str, states: list[str]) -> list[str]:
         found = {self.state_region[s] for s in states}
+        # A state named in the title is decisive; some DTM titles carry the wrong zone
+        # (e.g. "North-west — Yobe State Flash Report").
+        title_states = self.states(title)
+        if title_states:
+            order = list(self.tax["regions"].keys())
+            return sorted({self.state_region[s] for s in title_states}, key=order.index)
         t = _norm(title)
         for region, rxs in self.region_rx.items():
             if any(rx.search(t) for rx in rxs):

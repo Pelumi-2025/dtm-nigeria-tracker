@@ -167,6 +167,17 @@
    "exclude": []
   },
   {
+   "key": "covid_sa",
+   "label": "COVID-19 Situational Analysis Reports",
+   "include": [
+    "covid-19 situational analysis",
+    "covid 19 situational analysis",
+    "covid situational analysis",
+    "situational analysis"
+   ],
+   "exclude": []
+  },
+  {
    "key": "poe",
    "label": "Point of Entry (POE) Reports",
    "include": [
@@ -278,11 +289,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ]
   },
   "North Central": {
@@ -297,10 +308,12 @@
    ],
    "states": [
     "Benue",
-    "Nasarawa",
-    "Plateau",
+    "FCT",
     "Kogi",
-    "Niger"
+    "Kwara",
+    "Nasarawa",
+    "Niger",
+    "Plateau"
    ]
   },
   "North West": {
@@ -314,18 +327,68 @@
     "nc nw"
    ],
    "states": [
-    "Kano",
+    "Jigawa",
     "Kaduna",
+    "Kano",
     "Katsina",
+    "Kebbi",
     "Sokoto",
     "Zamfara"
+   ]
+  },
+  "South East": {
+   "aliases": [
+    "south-east",
+    "south east",
+    "southeast"
+   ],
+   "states": [
+    "Abia",
+    "Anambra",
+    "Ebonyi",
+    "Enugu",
+    "Imo"
+   ]
+  },
+  "South South": {
+   "aliases": [
+    "south-south",
+    "south south"
+   ],
+   "states": [
+    "Akwa Ibom",
+    "Bayelsa",
+    "Cross River",
+    "Delta",
+    "Edo",
+    "Rivers"
+   ]
+  },
+  "South West": {
+   "aliases": [
+    "south-west",
+    "south west",
+    "southwest"
+   ],
+   "states": [
+    "Ekiti",
+    "Lagos",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo"
    ]
   }
  },
  "_state_patterns_readme": "Optional regex overrides per state. Default is the state name as a whole word, so 'Niger' never matches 'Nigeria'.",
  "state_patterns": {
   "Nasarawa": "\\bnas+arawa\\b",
-  "Niger": "\\bniger\\b(?!\\s+republic)"
+  "Niger": "\\bniger\\b(?!\\s+(republic|delta))(?!\\s*\\()",
+  "FCT": "\\bfct\\b|\\babuja\\b|federal capital territory",
+  "Akwa Ibom": "\\bakwa[\\s-]*ibom\\b",
+  "Cross River": "\\bcross[\\s-]*river\\b",
+  "Delta": "(?<!niger\\s)\\bdelta\\b(?!\\s+(region|area))",
+  "Rivers": "\\brivers\\s+state\\b|\\brivers\\s*(,|and\\b|&)|(,|and|&)\\s*rivers\\b"
  },
  "year_min": 2015,
  "year_max": 2030,
