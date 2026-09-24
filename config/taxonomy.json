@@ -335,5 +335,16 @@
   "_readme": "Expected Mobility Tracking rounds per region, used for the round-coverage check.",
   "NE": 52,
   "NCNW": 19
+ },
+ "needs_monitoring_rounds": {
+  "_readme": "Round ranges whose main round report is always counted as Needs Monitoring (DTM Nigeria rule). Other rounds are decided from the PDF file name / PDF text.",
+  "NE": [
+   1,
+   40
+  ],
+  "NCNW": [
+   1,
+   9
+  ]
  }
 }

@@ -173,6 +173,11 @@ class Classifier:
                 date, basis = tdate, "date in title (page shows no publication date)"
         if not date and tdate:
             date, basis = tdate, "date in title (page shows no publication date)"
+        # Pages saved before the harvester recorded read dates were all read on 24 Sep 2026.
+        seen = rec.get("fetched") or ("2026-09-24" if rec.get("v") == 2 else None)
+        if date and not tdate and seen and basis == "publication date":
+            if abs((datetime.fromisoformat(date[:10]) - datetime.fromisoformat(seen[:10])).days) <= 1:
+                basis = "no date on the site (counted on the day it was read)"
         year = int(date[:4]) if date else self.year_from_title(title)
         out = dict(rec)
         out.update({

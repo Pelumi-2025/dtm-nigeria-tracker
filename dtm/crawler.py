@@ -44,6 +44,12 @@ ATLAS_FILE_RX = re.compile(r"atlas", re.I)
 PDF_MAX_BYTES = 60_000_000
 
 
+def nm_rule(tax: dict, zone: str, rnd: int | None) -> bool:
+    """True when a round is inside the configured Needs Monitoring round range for its region."""
+    rng = (tax.get("needs_monitoring_rounds") or {}).get(zone)
+    return bool(rnd and rng and rng[0] <= rnd <= rng[1])
+
+
 def file_name(f: str) -> str:
     return unquote(f.rsplit("/", 1)[-1])
 
@@ -152,6 +158,8 @@ class Crawler:
         for key, e in cache.items():
             if not Classifier.is_mt_main(e.get("title", "")):
                 continue
+            if nm_rule(self.clf.tax, Classifier.mt_zone(e["title"]), Classifier.mt_round(e["title"])):
+                continue  # decided by the round rule, no need to open the PDF
             pdfs = [f for f in e.get("files") or [] if f.lower().endswith(".pdf")]
             if not pdfs or any(NM_FILE_RX.search(" " + file_name(f)) or ATLAS_FILE_RX.search(file_name(f)) for f in pdfs):
                 continue
@@ -430,6 +438,10 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
         rnd = Classifier.mt_round(c["title"])
         if c["component_key"] in ("needs", "atlas") and rnd:
             c["round"], c["round_zone"] = rnd, Classifier.mt_zone(c["title"])
+            # a round report belongs to the operation that produced it
+            zones = ["North East"] if c["round_zone"] == "NE" else ["North Central", "North West"]
+            c["regions"] = zones
+            c["states"] = [st for st in c["states"] if clf.state_region.get(st) in zones]
         if not Classifier.is_mt_main(c["title"]) or c["component_key"] not in ("needs", "atlas"):
             continue
         c["mt_main"] = True
@@ -437,7 +449,11 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
         nm_f = [f for f in pdfs if NM_FILE_RX.search(" " + file_name(f))]
         at_f = [f for f in pdfs if ATLAS_FILE_RX.search(file_name(f))]
         chk = rr.get("pdf_check") or {}
-        if nm_f and at_f:
+        zone, rnd = Classifier.mt_zone(c["title"]), Classifier.mt_round(c["title"])
+        if nm_rule(clf.tax, zone, rnd):
+            rng = clf.tax["needs_monitoring_rounds"][zone]
+            kind, why = "needs", f"DTM Nigeria rule: {'North-East' if zone == 'NE' else 'NC/NW'} rounds {rng[0]}\u2013{rng[1]} are Needs Monitoring"
+        elif nm_f and at_f:
             kind, why = "atlas", "file name: " + file_name(at_f[0])[:70]
             extra.append((rr, c, nm_f[0]))
         elif nm_f:
@@ -483,7 +499,9 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     prev_path = DATA / "reports.json"
     prev = json.loads(prev_path.read_text("utf-8")) if prev_path.exists() else {}
-    fp = lambda rs: sorted((r["url"], r["title"], r.get("date") or "", r["component_key"]) for r in rs)  # noqa: E731
+    FIELDS = ("url", "title", "date", "component_key", "regions", "states", "round", "round_zone",
+              "mt_main", "matched_on", "date_basis", "period_date", "pdf")
+    fp = lambda rs: sorted(json.dumps([r.get(k) for k in FIELDS], default=str) for r in rs)  # noqa: E731
     changed = not prev or fp(prev.get("reports", [])) != fp(classified)
     prev_urls = {r["url"] for r in prev.get("reports", [])}
     if changed:
