@@ -1,13 +1,15 @@
-﻿component,2026,total
-Biometric Registration Report,32,32
-Early Warning & Early Response Dashboard,72,72
-Emergency Tracking Tool (ETT),565,565
-Incident / Flash Report,474,474
-Intention Surveys,37,37
-Mobility Tracking – IDP & Returnee Atlas,115,115
-Other / Unclassified,400,400
-Post-Flood Situation Report (Ad-Hoc),65,65
-Socio Economic Survey,5,5
-Socio-Economic Survey & Facility Mapping,1,1
-Solutions Mobility Index / Stability Index,10,10
-Transhumance Flow Monitoring Report,88,88
+﻿component,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,total
+Biometric Registration Report,0,0,0,7,7,3,2,1,1,4,4,2,1,32
+Early Warning & Early Response Dashboard,0,0,0,0,0,0,0,0,11,14,34,6,9,74
+Emergency Tracking Tool (ETT),0,1,0,46,51,54,58,53,54,53,75,109,11,565
+Flow Monitoring (migrants) – extra category,0,0,0,6,12,12,12,4,7,1,1,0,0,55
+Incident / Flash Report,0,0,0,10,3,17,51,106,69,53,52,83,33,477
+Intention Surveys,0,0,0,0,0,0,0,10,0,0,22,5,0,37
+Mobility Tracking – IDP & Returnee Atlas,1,25,37,64,39,28,29,60,25,4,8,6,9,335
+Mobility Tracking – Needs Monitoring,0,0,0,0,0,0,0,0,0,1,3,2,2,8
+Other / Unclassified,0,0,0,1,0,5,45,77,37,0,3,1,0,169
+Post-Flood Situation Report (Ad-Hoc),0,0,0,0,0,0,0,0,10,1,48,9,0,68
+Socio Economic Survey,0,0,0,0,0,0,0,0,1,0,0,4,0,5
+Socio-Economic Survey & Facility Mapping,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+Solutions Mobility Index / Stability Index,0,0,0,0,0,0,1,1,1,1,0,1,4,9
+Transhumance Flow Monitoring Report,0,0,0,0,0,0,0,0,0,2,12,2,10,26
