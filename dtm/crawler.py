@@ -30,13 +30,14 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 from .classify import Classifier, ROOT
+from . import facts as factlib
 
 DATA = ROOT / "data"
 CITATION_RX = re.compile(
     r"International Organization for Migration \(IOM\),\s*([A-Z][a-z]{2,9}\.?\s+\d{1,2},?\s+\d{4})")
 
 Log = Callable[[str], None]
-CACHE_VERSION = 2  # v2 adds attached files and page text (needed to find Needs Monitoring reports)
+CACHE_VERSION = 3  # v2: attached files; v3: the report's own description text (for figures)
 FILE_RX = re.compile(r"""((?:https?:)?(?://[a-z0-9.-]+)?/sites/g/files/[^\s"'<>]*?\.(?:pdf|xlsx?|zip|docx?))""", re.I)
 NM_FILE_RX = re.compile(r"needs?[\s_-]*monitoring|(?:^|[\s_(-])NM[\s_-]", re.I)
 NM_TEXT_RX = re.compile(r"needs?\s+monitoring", re.I)
@@ -150,6 +151,35 @@ class Crawler:
         except requests.RequestException as e:
             self.log(f"  error: {url} ({e.__class__.__name__})")
         return None
+
+    def collect_pdf_text(self, cache: dict, budget: int) -> int:
+        """Read the first pages of report PDFs, newest reports first, a few per run, so every
+        figure in a report's summary pages becomes searchable. Each PDF is read once."""
+        todo = []
+        for key, e in cache.items():
+            pdfs = [f for f in e.get("files") or [] if f.lower().endswith(".pdf")]
+            if not pdfs or (e.get("pdf_text") or {}).get("file") == pdfs[0]:
+                continue
+            todo.append((Classifier.parse_date(e.get("date_raw", "")) or "", key, pdfs[0]))
+        todo.sort(reverse=True)
+        todo = todo[:budget]
+        if not todo:
+            return 0
+        self.log(f"Reading text from {len(todo)} report PDFs (newest first) for the assistant's figures…")
+        for i, (_, key, f) in enumerate(todo, 1):
+            data = self.get_bytes(f)
+            text = ""
+            if data:
+                try:
+                    text = re.sub(r"\s+", " ", pdf_text(data, pages=4)).strip()[:9000]
+                except Exception:
+                    text = ""
+            cache[key]["pdf_text"] = {"file": f, "text": text}
+            if i % 20 == 0:
+                self.log(f"  {i}/{len(todo)} PDFs read")
+            if self.stop.is_set():
+                break
+        return len(todo)
 
     def check_round_pdfs(self, cache: dict) -> int:
         """Open the PDF of every Mobility Tracking round report whose file name does not already
@@ -304,10 +334,16 @@ class Crawler:
                 files.append(f)
         pdf = next((f for f in files if f.lower().endswith(".pdf")), "")
         # page text from the title onwards (skips site navigation), kept short
-        body = text[text.find(title.strip()):] if title.strip() and title.strip() in text else text
+        # the report's description sits between its heading and the citation line; the page text
+        # also starts with the site menu, so take the LAST occurrence of the title before the citation
+        t = title.strip()
+        cite_at = text.find("International Organization for Migration (IOM),")
+        head = text.rfind(t, 0, cite_at) if (t and cite_at > 0) else text.find(t) if t else -1
+        body = text[head + len(t): cite_at if cite_at > head else None] if head >= 0 else ""
+        body = re.sub(r"\s+", " ", body).strip()
         return {"url": url, "title": title.strip(), "date_raw": date_raw,
-                "date": Classifier.parse_date(date_raw), "summary": summary[:600],
-                "series": series, "pdf": pdf, "files": files[:20], "body": body[:3000],
+                "date": Classifier.parse_date(date_raw), "summary": summary[:1500],
+                "series": series, "pdf": pdf, "files": files[:20], "body": body[:6000],
                 "fetched": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                 "v": CACHE_VERSION}
 
@@ -391,6 +427,8 @@ class Crawler:
             subprocess.run([sys.executable, "-m", "pip", "install", "-q", "pypdf"], check=False)
         try:
             if self.check_round_pdfs(cache):
+                _write_json(cache_path, cache)
+            if self.collect_pdf_text(cache, budget=40 if quick else self.cfg.get("pdf_text_per_full_run", 300)):
                 _write_json(cache_path, cache)
         except ImportError:
             self.log("pypdf could not be installed, so round-report PDFs were not opened.")
@@ -505,6 +543,21 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
     classified.sort(key=lambda r: (r.get("date") or "", r["title"]), reverse=True)
     for i, r in enumerate(classified):
         r["id"] = i + 1
+
+    # figures for the assistant: every number found in each report's text, with its sentence
+    fact_index = {}
+    for rr, c in pages:
+        fx = factlib.extract(rr.get("body", ""), rr.get("summary", ""), (rr.get("pdf_text") or {}).get("text", ""))
+        if fx["s"]:
+            fact_index[c["url"]] = fx
+    fpay = {"v": 1, "reports": fact_index,
+            "pdf_read": sum(1 for rr, _ in pages if (rr.get("pdf_text") or {}).get("text")),
+            "pages": len(pages)}
+    _write_json(DATA / "facts.json", fpay)
+    (DATA / "facts.js").write_text("window.DTM_FACTS = " + json.dumps(fpay, ensure_ascii=False, separators=(",", ":")) + ";\n",
+                                   encoding="utf-8")
+    log(f"Figures: {sum(len(v['f']) for v in fact_index.values())} numbers from {len(fact_index)} reports "
+        f"({fpay['pdf_read']} PDFs read so far).")
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     prev_path = DATA / "reports.json"

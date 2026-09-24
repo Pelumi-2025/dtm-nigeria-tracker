@@ -157,6 +157,8 @@ TOOLS = [
     {"name": "start_harvest", "description": "Start a new crawl of dtm.iom.int for Nigeria reports, searching the given keywords/terminologies in addition to the standard listings. Runs in the background for several minutes.",
      "input_schema": {"type": "object", "properties": {"keywords": {"type": "array", "items": {"type": "string"}},
                                                        "refresh": {"type": "boolean"}}}},
+    {"name": "report_figures", "description": "Find numbers stated inside reports (households, individuals, IDPs, returnees, camps, arrivals, people displaced...). Give words from the report title (e.g. 'Round 49', 'Flash Report 299') and optionally a keyword to look for in sentences.",
+     "input_schema": {"type": "object", "properties": {"title_words": {"type": "string"}, "keyword": {"type": "string"}, "limit": {"type": "integer"}}}},
     {"name": "harvest_status", "description": "Check whether a harvest is running and see its latest log lines.",
      "input_schema": {"type": "object", "properties": {}}},
 ]
@@ -176,6 +178,25 @@ def run_tool(name, args, actions):
         ok = start_harvest(args.get("keywords") or None, bool(args.get("refresh")))
         actions.append({"type": "harvest_started" if ok else "harvest_busy"})
         return {"started": ok}
+    if name == "report_figures":
+        fp = DATA / "facts.json"
+        facts = json.loads(fp.read_text("utf-8"))["reports"] if fp.exists() else {}
+        words = [w for w in (args.get("title_words") or "").lower().split() if w]
+        kw = (args.get("keyword") or "").lower()
+        out = []
+        for r in sorted(reports, key=lambda r: r.get("date") or "", reverse=True):
+            if words and not all(w in r["title"].lower() for w in words):
+                continue
+            fx = facts.get(r["url"].split("#")[0])
+            if not fx:
+                continue
+            sents = [x for x in fx["s"] if not kw or kw in x.lower()]
+            if sents:
+                out.append({"title": r["title"], "date": r.get("date"), "url": r["url"],
+                            "figures": [[f[0], f[1], fx["s"][f[2]]] for f in fx["f"]][:25], "sentences": sents[:15]})
+            if len(out) >= min(int(args.get("limit") or 5), 20):
+                break
+        return out or {"note": "no matching report text collected yet"}
     if name == "harvest_status":
         return {"running": JOB["running"], "log_tail": JOB["log"][-8:], "error": JOB["error"]}
     return {"error": "unknown tool"}
@@ -184,7 +205,7 @@ def run_tool(name, args, actions):
 SYSTEM = """You are the assistant inside the IOM DTM Nigeria report-tracker dashboard.
 The data is a harvest of reports published on https://dtm.iom.int/nigeria, classified by
 component, geopolitical zone (North East, North Central, North West) and state, with a
-publication year. Use the tools to answer with exact counts; never guess numbers. When the
+publication year. Use the tools to answer with exact counts; never guess numbers. For figures inside reports (households, individuals, IDPs, camps...), call report_figures and quote the sentence it returns. When the
 user asks to "show" or "filter", call set_dashboard_filters. When they ask you to fetch,
 update, crawl or search the website for keywords, call start_harvest. Keep answers short,
 give numbers plainly, and say which filters you applied. Data harvested at: {gen}."""

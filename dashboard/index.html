@@ -127,6 +127,10 @@ table.list{border-collapse:collapse;width:100%;font-size:.86rem;min-width:720px}
 .msg{max-width:92%;padding:9px 12px;border-radius:10px;font-size:.9rem;white-space:pre-wrap;word-wrap:break-word}
 .msg.user{align-self:flex-end;background:var(--iom);color:#fff}
 .msg.bot{align-self:flex-start;background:var(--soft)}
+.msg.bot .fig{font-weight:800;color:#0033A0}
+.msg.bot .ev{display:block;font-size:.8rem;color:var(--muted);border-left:3px solid #C9D3E6;padding-left:8px;margin:3px 0 8px}
+.msg.bot a{color:#0033A0;font-weight:700}
+.msg.bot .rt{display:block;font-weight:800;margin-top:6px}
 .msg.sys{align-self:center;font-size:.8rem;color:var(--muted);background:none;padding:0}
 .suggest{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
 .suggest button{font-size:.8rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:4px 10px;cursor:pointer}
@@ -1001,8 +1005,8 @@ function applyFilters(q){
 const chat=$("#chat"),msgs=$("#msgs");let TURNS=[],busy=false,ctl=null;
 $("#chatOpen").onclick=()=>{chat.classList.add("open");chat.setAttribute("aria-hidden","false");$("#chatIn").focus()};
 $("#chatClose").onclick=()=>{chat.classList.remove("open");chat.setAttribute("aria-hidden","true");$("#chatOpen").focus()};
-function addMsg(role,text){const d=document.createElement("div");d.className="msg "+role;d.textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d}
-const SUGGEST=["Flash reports per year in Borno since 2021","ETT reports per month in 2024","Compare ETT reports in 2023 and 2024","How many intention surveys in North East?","Show transhumance and early warning reports for Katsina","Fetch latest reports on flood"];
+function addMsg(role,text){const d=document.createElement("div");d.className="msg "+role;if(text&&text.__html)d.innerHTML=text.__html;else d.textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d}
+const SUGGEST=["How many IDPs and households in Round 49?","Total people displaced by Katsina flash reports in 2025","New arrivals in the latest ETT report","Search “Bama”","Flash reports per year in Borno since 2021","ETT reports per month in 2024","Compare ETT reports in 2023 and 2024","How many intention surveys in North East?","Show transhumance and early warning reports for Katsina","Fetch latest reports on flood"];
 $("#suggest").innerHTML=SUGGEST.map(s=>`<button type="button">${esc(s)}</button>`).join("");
 $("#suggest").onclick=e=>{if(e.target.tagName==="BUTTON"){$("#chatIn").value=e.target.textContent;send()}};
 $("#chatForm").onsubmit=e=>{e.preventDefault();send()};
@@ -1015,8 +1019,8 @@ async function send(){
   try{
     if(SERVER?.ai) await askServer(text);
     else if(SAMPLE) await askSample(text);
-    else addMsg("bot",localAssistant(text));
-  }catch(e){addMsg("bot",localAssistant(text))}
+    else addMsg("bot",await localAssistantAsync(text));
+  }catch(e){addMsg("bot",await localAssistantAsync(text))}
   busy=false;
 }
 async function askServer(text){
@@ -1029,7 +1033,7 @@ async function askServer(text){
 const SAMPLE_RULES=()=>`You are the assistant inside the IOM DTM Nigeria Publications Tracker dashboard. The page holds ${REPORTS.length} report records ${SOURCE==="sample"?"(SAMPLE data, not real, so say so when giving numbers)":"harvested from dtm.iom.int/nigeria"}.
 Component keys: ${COMPONENTS.map(c=>c.key+" = "+c.label).join("; ")}.
 Regions: North East, North Central, North West ("North Central & North West" means both). States: ${ALL_STATES.join(", ")}. Years ${YEAR_MIN}-${YEAR_MAX}.
-Always use the tools for numbers, never guess. When the user asks to show or filter, call set_dashboard_filters. You cannot browse the web from here: if asked to fetch, crawl or update from the website, explain that the harvester runs on their computer or server (python server.py, then Harvest now, or python scrape.py --keywords "..."), then they load the new reports.json with "Load data file". Answer briefly and plainly.`;
+Always use the tools for numbers, never guess. For figures inside reports (households, individuals, IDPs, returnees, camps, arrivals, people displaced and similar), call report_figures and quote the source sentence and link it returns; say plainly when a figure is not in the collected text. When the user asks to show or filter, call set_dashboard_filters. You cannot browse the web from here: if asked to fetch, crawl or update from the website, explain that the harvester runs on their computer or server (python server.py, then Harvest now, or python scrape.py --keywords "..."), then they load the new reports.json with "Load data file". Answer briefly and plainly.`;
 async function askSample(text){
   TURNS.push({role:"user",content:text});const bubble=addMsg("bot","Thinking…");ctl=new AbortController();
   const fs={type:"object",properties:{components:{type:"array",items:{type:"string"}},years:{type:"array",items:{type:"integer"}},year_from:{type:"integer"},year_to:{type:"integer"},months:{type:"array",items:{type:"integer"},description:"calendar months 1-12"},
@@ -1037,7 +1041,10 @@ async function askSample(text){
   const tools=[
     {name:"count_reports",description:"Count reports matching filters; group_by one of none, year, month, component, region, state.",inputSchema:{...fs,properties:{...fs.properties,group_by:{type:"string"}}},execute:q=>countReports(q)},
     {name:"list_reports",description:"List matching reports newest first.",inputSchema:{...fs,properties:{...fs.properties,limit:{type:"integer"}}},execute:q=>listReports(q)},
-    {name:"set_dashboard_filters",description:"Change the dashboard filters the user sees.",inputSchema:fs,execute:q=>{applyFilters(q);return{ok:true}}}];
+    {name:"set_dashboard_filters",description:"Change the dashboard filters the user sees.",inputSchema:fs,execute:q=>{applyFilters(q);return{ok:true}}},
+    {name:"report_figures",description:"Look up numbers stated inside DTM Nigeria reports: households, individuals, IDPs, returnees, camps, locations, new arrivals, people displaced, herders, alerts and more. Pass the user's question in plain words, e.g. 'IDPs and households in Round 49 north-east', 'new arrivals in the latest ETT report', 'total people displaced by Katsina flash reports in 2025', or 'search Bama'. Returns each figure with the exact sentence it came from and the report link.",
+     inputSchema:{type:"object",properties:{question:{type:"string"}},required:["question"]},
+     execute:async({question})=>{await loadFacts();const a=figuresAnswer(question);return typeof a==="string"?a:a.__html.replace(/<a href="([^"]+)"[^>]*>[^<]*<\/a>/g," $1 ").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim()}}];
   try{
     const {text:out}=await SAMPLE([{role:"user",content:SAMPLE_RULES()},{role:"assistant",content:"Understood."},...TURNS],
       {tools,cache:false,signal:ctl.signal,onText:({text})=>{bubble.textContent=text}});
@@ -1092,6 +1099,94 @@ function parseQuery(t){
   else if(/by region|by zone|per region/.test(s))q.group_by="region";
   return q;
 }
+/* ======== figures from inside the reports (households, individuals, camps, ...) ======== */
+let FACTS=window.DTM_FACTS||null, factsLoading=null;
+function loadFacts(){
+  if(FACTS)return Promise.resolve(FACTS);
+  if(!factsLoading)factsLoading=(location.protocol.startsWith("http")?fetch("data/facts.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null):Promise.resolve(null)).then(f=>FACTS=f);
+  return factsLoading;
+}
+const METRIC_WORDS=[["households",/household|\bhhs?\b|families/],["new arrivals",/arriv/],["departures",/depart/],["returnees",/returnee/],
+  ["IDPs",/\bidps?\b|internally displaced/],["camps",/\bcamps?\b/],["host communities",/host communit/],["locations",/location|\bsites?\b|communities|settlements/],
+  ["wards",/\bwards?\b/],["LGAs",/\blgas?\b|local government/],["shelters",/shelter/],["herders",/herder/],["animals",/animal|livestock|cattle/],
+  ["alerts",/\balerts?\b/],["fatalities",/fatalit|death|killed/],["injuries",/injur/],["children",/children/],["women",/\bwomen\b/],["men",/\bmen\b/],
+  ["migrants",/migrant|travell?er/],["individuals",/individual|people|persons|population|\bdisplaced\b/]];
+function metricsIn(s){return METRIC_WORDS.filter(([,rx])=>rx.test(s)).map(([m])=>m)}
+function subjectIn(s){return /returnee/.test(s)?"returnees":/\bidps?\b|internally displaced/.test(s)?"IDPs":/displaced/.test(s)?"displaced":""}
+const factsOf=r=>FACTS&&FACTS.reports?FACTS.reports[(r.url||"").split("#")[0]]:null;
+function pickFig(fx,metric,subj){
+  if(!fx)return null;
+  let c=fx.f.filter(f=>f[0]===metric);
+  if(metric==="individuals"&&subj==="IDPs"){const idp=fx.f.filter(f=>f[0]==="IDPs");if(idp.length)c=idp}
+  if(metric==="individuals"&&subj==="returnees"){const rt=fx.f.filter(f=>f[0]==="returnees");if(rt.length)c=rt}
+  if(subj==="displaced"){c=c.filter(f=>f[3]==="displaced")}
+  else if(subj&&c.some(f=>f[3]===subj))c=c.filter(f=>f[3]===subj);
+  c.sort((a,b)=>(a[4]==="pdf")-(b[4]==="pdf")||a[2]-b[2]);   // page/summary before PDF, earliest sentence first
+  return c[0]||null;
+}
+function reportLine(r){return `<span class="rt">${esc(r.title.replace(/^Nigeria\s*[—–-]\s*/,""))}</span>${esc(r.pub_date||r.date||"")} · <a href="${esc(r.url.split("#")[0])}" target="_blank" rel="noopener">open on dtm.iom.int</a>${r.pdf?` · <a href="${esc(r.pdf)}" target="_blank" rel="noopener">PDF</a>`:""}`}
+function findReports(t,s){
+  const q=parseQuery(t);let rs=queryFilter({...q,group_by:undefined});
+  const specific=[];
+  const rm=s.match(/\bround\s*#?\s*(\d{1,2})\b|\br(\d{1,2})\b(?!\s*%)/);
+  if(rm){const n=+(rm[1]||rm[2]);const z=/north[\s-]*central|north[\s-]*west|ncnw|nwnc|\bnc\b|\bnw\b/.test(s)?"NCNW":/north[\s-]*east|\bne\b/.test(s)?"NE":null;
+    let x=REPORTS.filter(r=>r.round===n&&(!z||r.round_zone===z));
+    if(!x.length)x=REPORTS.filter(r=>new RegExp("round\\s*"+n+"\\b","i").test(r.title));
+    const main=x.filter(r=>r.mt_main);specific.push(...(main.length?main:x))}
+  const nm=s.match(/(?:flash|ett|emergency tracking tool|dashboard|report|update|analysis|profile)\s*(?:report\s*)?(?:no\.?|number|#)?\s*(\d{1,4})\b/);
+  if(!specific.length&&nm){const n=nm[1];const x=rs.filter(r=>new RegExp("(report|dashboard|update|analysis|profile|tool)\\s*#?\\s*"+n+"\\b","i").test(r.title));if(x.length)specific.push(...x)}
+  const quoted=t.match(/["“]([^"”]+)["”]/);
+  if(!specific.length&&quoted){const w=quoted[1].toLowerCase();const x=REPORTS.filter(r=>r.title.toLowerCase().includes(w));if(x.length&&x.length<=40)rs=x}
+  let list=specific.length?specific:rs;
+  list=[...list].sort((a,b)=>(b.pub_date||"").localeCompare(a.pub_date||""));
+  const latest=/\b(latest|most recent|newest|last)\b/.test(s);
+  if(latest&&list.length)list=[list[0]];
+  return {list,specific:specific.length>0||latest,q};
+}
+function figuresAnswer(t){
+  const s=t.toLowerCase();
+  if(!FACTS)return "The report figures haven't loaded. Check the internet connection and ask again.";
+  // free-text search across every sentence
+  const sm=t.match(/^\s*(?:search|find|look up|where)\b[^"“]*["“]?([^"”?]+)["”]?/i);
+  if(sm&&!metricsIn(s).length){const w=sm[1].trim().toLowerCase().replace(/^for\s+/,"");if(w.length<2)return "What should I search for?";
+    const hits=[];for(const r of REPORTS){const fx=factsOf(r);if(!fx)continue;fx.s.forEach(x=>{if(x.toLowerCase().includes(w))hits.push([r,x])})}
+    if(!hits.length)return `No sentence mentioning “${w}” was found in the report texts collected so far.`;
+    hits.sort((a,b)=>(b[0].pub_date||"").localeCompare(a[0].pub_date||""));
+    return {__html:`<b>${fmt(hits.length)}</b> sentence${hits.length===1?"":"s"} mention “${esc(w)}”. Most recent first:`+hits.slice(0,8).map(([r,x])=>reportLine(r)+`<span class="ev">${esc(x)}</span>`).join("")+(hits.length>8?`…and ${fmt(hits.length-8)} more.`:"")};
+  }
+  const metrics=metricsIn(s), subj=subjectIn(s);
+  const {list,specific}=findReports(t,s);
+  if(!list.length)return "I couldn't find a report matching that. Try a round number (“Round 49”), a report number (“Flash Report 299”), a type, a state or a year.";
+  const aggregate=!specific||/\b(total|sum|altogether|in all|combined|overall|across)\b/.test(s);
+  if(!aggregate||list.length===1){
+    const shown=list.slice(0,3);
+    return {__html:shown.map(r=>{const fx=factsOf(r);
+      if(!fx||!fx.f.length)return reportLine(r)+`<span class="ev">No figures have been collected from this report yet. PDFs are read a few at a time, newest first; the report itself is linked above.</span>`;
+      const want=metrics.length?metrics:[...new Set(fx.f.map(f=>f[0]))].slice(0,8);
+      const lines=want.map(m=>{const f=pickFig(fx,m,subj);return f?`<div><span class="fig">${fmt(f[1])}</span> ${esc(f[0])}${f[3]?` (${esc(f[3])})`:""}<span class="ev">“${esc(fx.s[f[2]])}”${f[4]==="pdf"?" (from the PDF)":""}</span></div>`:`<div>${esc(m)}: not stated in the text collected for this report.</div>`}).join("");
+      return reportLine(r)+lines}).join("")+(list.length>3?`<div class="ev">${fmt(list.length-3)} more reports match; add a number, state or date to narrow it down.</div>`:"")};
+  }
+  // aggregate across many reports: one total per figure asked for
+  const want=(metrics.length?metrics:["individuals"]).filter((m,i,a)=>!(m==="individuals"&&a.length>1&&subj===""&&a.includes("households")&&false)).slice(0,3);
+  const blocks=[];let anyFound=false;
+  for(const m of want){let total=0,found=[];
+    for(const r of list){const f=pickFig(factsOf(r),m,subj);if(f){total+=+f[1];found.push([r,f])}}
+    if(!found.length){blocks.push(`<div>${esc(m)}: none of the ${fmt(list.length)} matching reports states a figure in the text collected so far.</div>`);continue}
+    anyFound=true;found.sort((a,b)=>b[1][1]-a[1][1]);
+    blocks.push(`<div><span class="fig">${fmt(total)}</span> ${esc(m)}${subj?` (${esc(subj)})`:""} in total, from <b>${fmt(found.length)}</b> of the ${fmt(list.length)} matching reports.</div>`+
+      `<div class="ev">Largest: `+found.slice(0,4).map(([r,f])=>`${fmt(f[1])} in ${esc(r.title.replace(/^Nigeria\s*[—–-]\s*/,"").slice(0,70))}`).join("; ")+`</div>`);
+  }
+  if(!anyFound)return {__html:blocks.join("")};
+  const ex=list.map(r=>[r,pickFig(factsOf(r),want[0],subj)]).filter(x=>x[1]).sort((a,b)=>b[1][1]-a[1][1]).slice(0,3);
+  return {__html:blocks.join("")+`<div class="ev">Each report contributes its headline figure, quoted below. Reports can overlap (the same people counted in consecutive rounds or reports), so treat totals across rounds with care.</div>`+
+    ex.map(([r,f])=>reportLine(r)+`<div><span class="fig">${fmt(f[1])}</span><span class="ev">“${esc(factsOf(r).s[f[2]])}”</span></div>`).join("")};
+}
+const FIG_INTENT=/household|individual|\bpeople\b|persons|population|\bidps?\b|returnee|\bcamps?\b|arrival|departure|herder|livestock|cattle|animals|alerts|fatalit|killed|injur|shelter|figures|numbers|statistics|how many (were|was)?\s*displaced|displaced people|^\s*(search|find|look up)\b/;
+async function localAssistantAsync(t){
+  const s=t.toLowerCase();
+  if(FIG_INTENT.test(s)&&!/how many (reports|report)\b|number of reports|reports? (per|by)\b/.test(s)){await loadFacts();return figuresAnswer(t)}
+  return localAssistant(t);
+}
 function localAssistant(t){
   const s=t.toLowerCase();
   if(/^(reset|clear)/.test(s)){resetFilters();return"Filters reset: all report types, 2019–2030, all regions and states."}
@@ -1099,7 +1194,7 @@ function localAssistant(t){
     const kws=(t.match(/(?:on|for|about)\s+["“]?([^"”?]+)["”]?/i)||[])[1];
     if(SERVER){startHarvest(kws?[kws.trim()]:null);return`Started a harvest of dtm.iom.int${kws?` including a site search for “${kws.trim()}”`:""}. Progress shows at the top of the page and the dashboard reloads when it finishes.`}
     return`This copy of the dashboard can't reach the website by itself. To fetch new reports${kws?` on “${kws.trim()}”`:""}, run on your computer:\n\npython scrape.py${kws?` --keywords "${kws.trim()}"`:""}\n\nthen use “Load data file” to open data/reports.json. Or run python server.py and use the Harvest button.`}
-  if(/^(help|what can you do)/.test(s))return"Ask things like:\n• Flash reports per year in Borno since 2021\n• ETT reports per month in 2024\n• Intention surveys January to June 2024\n• Compare ETT reports in 2023 and 2024\n• Intention surveys by state\n• Show transhumance reports for Katsina (changes the dashboard)\n• List the latest 5 needs monitoring reports\n• Fetch latest reports on “flood”\n• Reset";
+  if(/^(help|what can you do)/.test(s))return"Ask things like:\n• How many IDPs and households in Round 49?\n• Total people displaced by Katsina flash reports in 2025\n• New arrivals in the latest ETT report\n• Camps in Round 18 NC/NW\n• Search “Bama”\n• Flash reports per year in Borno since 2021\n• ETT reports per month in 2024\n• Intention surveys January to June 2024\n• Compare ETT reports in 2023 and 2024\n• Intention surveys by state\n• Show transhumance reports for Katsina (changes the dashboard)\n• List the latest 5 needs monitoring reports\n• Fetch latest reports on “flood”\n• Reset";
   const q=parseQuery(t);
   if(!Object.keys(q).length)return"I couldn't find a report type, place or year in that. Try “flash reports in Borno in 2024”, or type help.";
   const note=SOURCE==="sample"?"\n(Sample data, not real counts.)":"";

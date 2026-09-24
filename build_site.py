@@ -20,7 +20,7 @@ def main():
     (SITE / "data").mkdir(parents=True)
     for f in ("index.html", "sw.js", "manifest.webmanifest"):
         shutil.copy(DASH / f, SITE / f)
-    for f in ("reports.json", "reports.js", "reports.csv", "counts_component_by_year.csv", "status.json"):
+    for f in ("reports.json", "reports.js", "reports.csv", "counts_component_by_year.csv", "status.json", "facts.json"):
         if (DATA / f).exists():
             shutil.copy(DATA / f, SITE / "data" / f)
 
@@ -28,6 +28,9 @@ def main():
     payload = json.loads((DATA / "reports.json").read_text("utf-8")) if (DATA / "reports.json").exists() else None
     inline = ("<script>window.DTM_DATA = " + json.dumps(payload, ensure_ascii=False).replace("</", "<\\/") + ";</script>"
               if payload else "")
+    fx = DATA / "facts.json"
+    if fx.exists():
+        inline += "<script>window.DTM_FACTS = " + fx.read_text("utf-8").replace("</", "<\\/") + ";</script>"
     offline = re.sub(r"<!--DTM_DATA-->.*?<!--/DTM_DATA-->", lambda m: inline, html, flags=re.S)
     offline = offline.replace('<link rel="manifest" href="manifest.webmanifest">', "")
     (SITE / "DTM_Nigeria_Dashboard_OFFLINE.html").write_text(offline, "utf-8")
