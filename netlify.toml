@@ -1,0 +1,14 @@
+# Netlify settings: rebuilds the dashboard whenever GitHub saves new report data.
+# The hourly harvesting still runs on GitHub; Netlify only publishes the website.
+[build]
+  command = "pip install requests beautifulsoup4 && python scrape.py --reclassify && python build_site.py"
+  publish = "site"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+# always fetch fresh data so open dashboards see new reports quickly
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "no-cache"
