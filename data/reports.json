@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T15:59:28Z",
+ "generated_at": "2026-09-24T19:44:39Z",
  "source": "https://dtm.iom.int/nigeria",
  "keywords": [
   "Nigeria flash report",
@@ -75,6 +75,10 @@
    "label": "Socio Economic Survey"
   },
   {
+   "key": "covid_sa",
+   "label": "COVID-19 Situational Analysis Reports"
+  },
+  {
    "key": "poe",
    "label": "Point of Entry (POE) Reports"
   },
@@ -106,25 +110,52 @@
  "regions": {
   "North East": [
    "Adamawa",
+   "Bauchi",
    "Borno",
-   "Yobe",
    "Gombe",
    "Taraba",
-   "Bauchi"
+   "Yobe"
   ],
   "North Central": [
    "Benue",
-   "Nasarawa",
-   "Plateau",
+   "FCT",
    "Kogi",
-   "Niger"
+   "Kwara",
+   "Nasarawa",
+   "Niger",
+   "Plateau"
   ],
   "North West": [
-   "Kano",
+   "Jigawa",
    "Kaduna",
+   "Kano",
    "Katsina",
+   "Kebbi",
    "Sokoto",
    "Zamfara"
+  ],
+  "South East": [
+   "Abia",
+   "Anambra",
+   "Ebonyi",
+   "Enugu",
+   "Imo"
+  ],
+  "South South": [
+   "Akwa Ibom",
+   "Bayelsa",
+   "Cross River",
+   "Delta",
+   "Edo",
+   "Rivers"
+  ],
+  "South West": [
+   "Ekiti",
+   "Lagos",
+   "Ogun",
+   "Ondo",
+   "Osun",
+   "Oyo"
   ]
  },
  "mt_rounds": {
@@ -977,7 +1008,6 @@
    "component_key": "flash",
    "component": "Incident / Flash Report",
    "regions": [
-    "North East",
     "North West"
    ],
    "states": [
@@ -1380,11 +1410,11 @@
    ],
    "states": [
     "Benue",
-    "Nasarawa",
     "Kogi",
+    "Nasarawa",
     "Niger",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-central-and-north-west-round-18-idp-atlas-october-2025",
@@ -1999,7 +2029,7 @@
     "North West"
    ],
    "states": [
-    "Zamfara"
+    "Kebbi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-west-nigeria-kebbi-state-flash-report-271-22-november-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20Flash%20Report%20North-west%20Kebbi%20State%20271%20v3.pdf",
@@ -2934,7 +2964,9 @@
    "regions": [
     "North West"
    ],
-   "states": [],
+   "states": [
+    "Jigawa"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-north-west-nigeria-jigawa-state-flash-report-261-30-september-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20Flash%20Report%20261-%20North-West-%20JIGAWA%20State%20-%2030%20September%202025.pdf",
    "summary": "Between 21 and 26 September 2025, severe flooding caused by heavy rainfall and river overflows affected five local government areas (LGAs) across Jigawa State, including Guri, Kiri Kasamma, Birniwa, Jahun, and Ringim. The incident led to widespread damage to homes, shelters, and community infrastructure across host communities. Although all affected individuals remain within their communities, with no displacement to other wards or LGAs, others expressed intentions to relocate to safer areas or return to the location of incident once floodwaters recede. The primary needs identified across all ",
@@ -3829,8 +3861,7 @@
    "component_key": "flash",
    "component": "Incident / Flash Report",
    "regions": [
-    "North East",
-    "North West"
+    "North East"
    ],
    "states": [
     "Yobe"
@@ -4244,8 +4275,7 @@
    "component_key": "flash",
    "component": "Incident / Flash Report",
    "regions": [
-    "North East",
-    "North West"
+    "North East"
    ],
    "states": [
     "Yobe"
@@ -5027,7 +5057,6 @@
    "component_key": "flash",
    "component": "Incident / Flash Report",
    "regions": [
-    "North Central",
     "North West"
    ],
    "states": [
@@ -6088,9 +6117,9 @@
     "North East"
    ],
    "states": [
+    "Bauchi",
     "Gombe",
-    "Taraba",
-    "Bauchi"
+    "Taraba"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-gombe-taraba-and-bauchi-state-return-dashboard-1-march-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Return%20assessment%20dashboard%20GTB%20states%20March%202025_final.pdf",
@@ -6115,8 +6144,8 @@
    ],
    "states": [
     "Benue",
-    "Kano",
-    "Kaduna"
+    "Kaduna",
+    "Kano"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-central-and-north-west-round-16-idp-atlas-february-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20IDP%20ATLAS%20-%20NWNC%20R16%20February%202025_.pdf",
@@ -6141,11 +6170,11 @@
    ],
    "states": [
     "Benue",
+    "Kogi",
     "Nasarawa",
     "Plateau",
-    "Kogi",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -6196,11 +6225,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-report-round-49-march-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20-%20Round%2049%20-%20Needs%20Monitoring%20Report.pdf",
@@ -6839,7 +6868,8 @@
     "North West"
    ],
    "states": [
-    "Niger"
+    "Niger",
+    "Jigawa"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-central-north-west-flash-report-188-30-december-2024-5-january-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20Flash%20Report%20North-central%20and%20North-west%20188_final.pdf",
@@ -6998,8 +7028,12 @@
    "year": 2025,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South West"
+   ],
+   "states": [
+    "Ekiti"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-ekiti-state-09-january-2025",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post%20-%20flood%20assessment%20Ekiti%20State%20%2809%20January%202025%29%20final.pdf",
    "summary": "Between 1 and 6 December 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Ekiti State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 19 locations in Ekiti State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the joint assessment team conducted assessments in these locations to provide insigh",
@@ -7155,8 +7189,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South West"
+   ],
+   "states": [
+    "Ondo"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-ondo-state-31-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Ondo%20state%20%2831%20December%202024%29_final.pdf",
    "summary": "Between 3 and 6 December 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Ondo State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 30 locations in Ondo State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessments were jointly conducted in these locations to provide insights to the g",
@@ -7220,8 +7258,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Akwa Ibom"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-akwa-ibom-state-31-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20Flood%20Report%20-%20Akwa%20Ibom%20state%20%2831%20December%202024%29_final.pdf",
    "summary": "Between 1 and 6 December 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Akwa Ibom State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS) identified 52 locations in Akwa Ibom State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide insights t",
@@ -7295,8 +7337,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -7341,8 +7383,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South West"
+   ],
+   "states": [
+    "Lagos"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-lagos-state-30-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Lagos%20State%20%2830%20December%202024%29_Final..pdf",
    "summary": "Between 1 and 6 December 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), Lagos State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 81 locations in Lagos State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessments were jointly conducted in these locations to provide insights to the gov",
@@ -7383,8 +7429,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North Central"
+   ],
+   "states": [
+    "FCT"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-fct-30-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20FCT%20%2830%20December%202024%29_Final.pdf",
    "summary": "Between 1 and 6 December 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), Federal Emergency Management Agency (FEMA), and the Nigerian Red Cross Society (NRCS), identified 10 locations in the FCT that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of 15 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide insights to the government",
@@ -7425,8 +7475,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South East"
+   ],
+   "states": [
+    "Abia"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-abia-state-30-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Abia%20state%20%2830%20December%202024%29_Final_0.pdf",
    "summary": "Between 28 November and 10 December 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Abia State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS) identified 43 locations in Abia State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of 70 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide insigh",
@@ -7631,8 +7685,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Rivers"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-rivers-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Rivers%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 01 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Rivers State Emergency Management Agency (SEMA) and the Nigerian Red Cross Society (NRCS), identified 39 locations in Rivers State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the joint assessment team conducted assessments in these locations to pro",
@@ -7650,8 +7708,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South West"
+   ],
+   "states": [
+    "Oyo"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-oyo-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Oyo%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Oyo State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 32 locations in Oyo State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessments were jointly conducted in these locations to provide insights t",
@@ -7715,8 +7777,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North Central"
+   ],
+   "states": [
+    "Kwara"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-kwara-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Kwara%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Kwara State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 64 locations in Kwara State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities. The assessment was jointly conducted in these locations to provide insights",
@@ -7757,8 +7823,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North West"
+   ],
+   "states": [
+    "Kebbi"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-kebbi-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Kebbi%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Kebbi State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS) identified 117 locations in Kebbi State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of 115 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide insi",
@@ -7776,8 +7846,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North West"
+   ],
+   "states": [
+    "Jigawa"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-jigawa-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Jigawa%20state%20%2810%20December%202024%29_final%201.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Jigawa State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 58 locations in Jigawa State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of 45 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide ins",
@@ -7795,8 +7869,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South East"
+   ],
+   "states": [
+    "Imo"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-imo-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Imo%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration the National Emergency Management Agency (NEMA), Imo State Emergency Management Agency (SEMA) and the Nigerian Red Cross Society (NRCS), identified 53 locations in Imo State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessments were jointly conducted in these locations to provide insights to the gove",
@@ -7814,8 +7892,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South East"
+   ],
+   "states": [
+    "Enugu"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-enugu-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Enugu%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration the National Emergency Management Agency (NEMA), the State Emergency Management Agency (SEMA)  and the Nigerian Red Cross Society (NRCS), identified 16 locations in Enugu State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide insights to the hum",
@@ -7833,8 +7915,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Edo"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-edo-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Edo%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 03 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Edo State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 16 locations in Edo State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the joint assessment team conducted assessments in these locations to provide ",
@@ -7852,8 +7938,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South East"
+   ],
+   "states": [
+    "Ebonyi"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-ebonyi-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Ebonyi%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 01 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Ebonyi State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 39 locations in Ebonyi State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the joint assessment team conducted assessments in these locations to pr",
@@ -7871,8 +7961,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Delta"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-delta-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Delta%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Delta State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS) identified 36 locations in Delta State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide insights ",
@@ -7890,8 +7984,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Cross River"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-cross-river-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Cross%20River%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Cross River State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS), identified 36 locations in Cross River State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of 44 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to p",
@@ -7909,8 +8007,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Bayelsa"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-bayelsa-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Bayelsa%20state%20%2810%20December%202024%29_final_updated.pdf",
    "summary": "Between 29 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Bayelsa State Emergency Management Agency (BYSEMA), and the Nigerian Red Cross Society (NRCS), identified 54 locations in Bayelsa State that were impacted by floods. Through a network of 82 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessments were jointly conducted in these locations to provide insights to the humanitarian community on the affected population",
@@ -7928,8 +8030,12 @@
    "year": 2024,
    "component_key": "joint_flood",
    "component": "Joint Flood Reports",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South East"
+   ],
+   "states": [
+    "Anambra"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-anambra-state-10-december-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%20Anambra%20state%20%2810%20December%202024%29_final.pdf",
    "summary": "Between 28 October and 8 November 2024, the Displacement Tracking Matrix (DTM), in collaboration with the National Emergency Management Agency (NEMA), the Anambra State Emergency Management Agency (SEMA), and the Nigerian Red Cross Society (NRCS) identified 37 locations in Anambra State that were impacted by floods or received internally displaced persons (IDPs) due to the flooding. Through a network of 51 key informants and field focal points, and in close coordination with other humanitarian partners and local authorities, the assessment was jointly conducted in these locations to provide in",
@@ -7972,14 +8078,31 @@
    "component": "Joint Flood Reports",
    "regions": [
     "North East",
-    "North Central"
+    "North Central",
+    "North West",
+    "South East",
+    "South South",
+    "South West"
    ],
    "states": [
     "Adamawa",
     "Taraba",
-    "Nasarawa",
     "Kogi",
-    "Niger"
+    "Kwara",
+    "Nasarawa",
+    "Niger",
+    "Jigawa",
+    "Kebbi",
+    "Anambra",
+    "Ebonyi",
+    "Enugu",
+    "Imo",
+    "Bayelsa",
+    "Cross River",
+    "Delta",
+    "Edo",
+    "Rivers",
+    "Oyo"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-joint-post-flood-situation-report-18-states-30-november-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Joint%20Post-Flood%20Assessment%2018%20states%20%2830%20November%202024%29_final.pdf",
@@ -8893,12 +9016,12 @@
    ],
    "states": [
     "Benue",
-    "Nasarawa",
-    "Plateau",
     "Kogi",
+    "Nasarawa",
     "Niger",
-    "Kano",
+    "Plateau",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -9766,8 +9889,12 @@
    "year": 2024,
    "component_key": "flood",
    "component": "Post-Flood Situation Report (Ad-Hoc)",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North West"
+   ],
+   "states": [
+    "Jigawa"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-situation-report-jigawa-state-13-september-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeraia%20-%20Flood%20Assessment%20Report_Jigawa%20State%2012%20september%202024_Final.pdf",
    "summary": "The annual rainy season in Nigeria occurs from April to October with the highest concentration of rainfall. During July-August 2024, many states nationwide were impacted by hefty rains, resulting in significant flooding that devastated various communities. The floods caused extensive damage to infrastructure, crops, and shelters, severely affecting livelihoods and displacing many households. Climate variability and human-induced factors have exacerbated the flood recently, leading to increased displacement across Nigeria. In the 20 local government areas (LGAs) of Jigawa State that were assess",
@@ -10166,9 +10293,9 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Gombe",
-    "Bauchi"
+    "Gombe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-heavy-rainfall-flash-report-adamawa-bauchi-borno-and-gombe-states-28-august-2024",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20Flash%20Report%20North-east%20Adamawa%2C%20Bauchi%2C%20Borno%20and%20Gombe%20state%2028%20August%202024_final_0.pdf",
@@ -10192,6 +10319,7 @@
     "North West"
    ],
    "states": [
+    "FCT",
     "Katsina"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-central-north-west-flash-report-173-12-18-august-2024",
@@ -11043,12 +11171,12 @@
    ],
    "states": [
     "Benue",
-    "Nasarawa",
-    "Plateau",
     "Kogi",
+    "Nasarawa",
     "Niger",
-    "Kano",
+    "Plateau",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -12311,8 +12439,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -13076,11 +13204,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-factsheet-46-december-2023",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%2046%20-%20Factsheet%20final.pdf",
@@ -13131,8 +13259,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -15517,11 +15645,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-displacement-report-43-february-2023",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20NE%20Report%20Round%2043%20%28February%202023%29%20updated_July7%202023.pdf",
@@ -15979,8 +16107,12 @@
    "year": 2023,
    "component_key": "flood",
    "component": "Post-Flood Situation Report (Ad-Hoc)",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Cross River"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-rapid-needs-assessment-dashboard-cross-river-state-30-december-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20DTM%20Flood%20Report%20-%20Cross%20River%20Flood%20Response_V2.pdf",
    "summary": "The rainy season in Nigeria typically occurs annually with the greatest concentration between the months of June and September. Many states in Nigeria have been affected by unprecedented heavy rainfalls and floods have devastated various communities. Infrastructure, crops, and shelters have been damaged which led to decimated livelihoods and the displacement of numerous households. Over the past months, the increasing climate variability and the release of excess water from the Lagdo dam in northern Cameroon, have worsened the flood situation which resulted in a renewed situation of widespread",
@@ -16125,8 +16257,12 @@
    "year": 2022,
    "component_key": "flood",
    "component": "Post-Flood Situation Report (Ad-Hoc)",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Delta"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-rapid-needs-assessment-dashboard-delta-state-30-december-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20DTM%20Flood%20Report%20SS%20-%20Delta%20State%20%2823%20December%202022%29_Final%20%281%29.pdf",
    "summary": "The rainy season in Nigeria typically occurs annually with the greatest concentration of precipitation between the months of June and September. Many states in Nigeria have been aﬀected by unprecedented heavy rainfalls and floods have devastated various communities. Infrastructure, crops, and shelters have been damaged which led to decimated livelihoods and the displacement of numerous households.",
@@ -16168,8 +16304,12 @@
    "year": 2022,
    "component_key": "flood",
    "component": "Post-Flood Situation Report (Ad-Hoc)",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South South"
+   ],
+   "states": [
+    "Rivers"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-rapid-needs-assessment-dashboard-rivers-state-28-december-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20DTM%20Flood%20Report%20SS%20-%20Rivers%20State%20%2828%20December%202022%29.pdf",
    "summary": "The rainy season in Nigeria typically occurs annually with the greatest concentration of precipitation between the months of June and September. Many states in Nigeria have been aﬀected by unprecedented heavy rainfalls and floods have devastated various communities. Infrastructure, crops, and shelters have been damaged which led to decimated livelihoods and the displacement of numerous households.",
@@ -16811,8 +16951,12 @@
    "year": 2022,
    "component_key": "flood",
    "component": "Post-Flood Situation Report (Ad-Hoc)",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "South East"
+   ],
+   "states": [
+    "Anambra"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-rapid-needs-assessment-dashboard-anambra-state-8-november-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Anambra%20Flood%20Assessment%20Dashboard%20%289%20November%202022%29_3.pdf",
    "summary": "The rainy season in Nigeria typically occurs annually with the greatest concentration of precipitation between the months of June and September. Many states in Nigeria have been affected by unprecedented heavy rainfalls and floods have devastated various communities. Infrastructure, crops, and shelters have been damaged which led to decimated livelihoods and the displacement of numerous households. Over the past months, climate variability and the release of excess water from the Lagdo dam in northern Cameroon, have worsened the flood situation and has resulted in a renewed situation of widesp",
@@ -17089,8 +17233,8 @@
     "North East"
    ],
    "states": [
-    "Yobe",
-    "Bauchi"
+    "Bauchi",
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-flash-report-bauchi-and-yobe-states-11-october2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20DTM%20Flash%20Report%20NE-%20Geidam%2C%20Karasuwa%20and%20Warji%20LGAs%20%2811%20October2022%29.pdf",
@@ -17180,9 +17324,9 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-flood-flash-report-borno-adamawa-bauchi-and-yobe-states-14-26-september-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20Nigeria%20DTM%20Flash%20Report%20NE%20-Borno%20Adamawa%20Bauchi%20and%20Yobe%20State%20%2814%20-%2026%20September%202022%29_0.pdf",
@@ -18112,11 +18256,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-report-41-june-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2041%20%20%28June%202022%29.pdf",
@@ -18382,11 +18526,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-factsheet-41-14-february-30-march-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%2041%20-%20Factsheet_0.pdf",
@@ -18964,23 +19108,23 @@
    "title": "Nigeria — COVID-19 Situational Analysis 10: North-east (April 2022)",
    "date": "2022-04-29",
    "year": 2022,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-covid-19-situational-analysis-10-north-east-april-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%2010%20-%20North-East%20Nigeria%20v2.pdf",
    "summary": "This Round 10 of the COVID-19 Situation Analysis is based on the assessment of knowledge, practice and impact of the pandemic on internally displaced persons (IDPs) in conflict-affected communities of north-east Nigeria. Conducted by the Displacement Tracking Matrix (DTM) unit of the International Organization for Migration (IOM), the report covers the period between 14 February and 30 March 2022 and reflects trends from the states Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe in north-east Nigeria.",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2022-04-01",
    "round": null,
@@ -19331,8 +19475,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -19972,8 +20116,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 6: North-central and North-west (March 2022)",
    "date": "2022-03-09",
    "year": 2022,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North Central",
     "North West"
@@ -19982,8 +20126,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -19991,7 +20135,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-covid-19-situational-analysis-6-north-central-and-north-west-march-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/NC%20AND%20NW%20COVID%2019%20REPORT%206.pdf",
    "summary": "Round 6 of the COVID-19 Situation Analysis is based on the assessment of knowledge, practice and impact of the pandemic on internally displaced persons (IDPs) in conflict-affected communities in the geopolitical zones north-central and north-west Nigeria. Conducted by the Displacement Tracking Matrix (DTM) unit of the International Organization for Migration (IOM), the report covers the period between 16 November and 30 December 2021 and reflects trends from the states Benue, Kaduna, Kano, Katsina, Nasarawa, Plateau, Sokoto and Zamfara.",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
    "round": null,
@@ -20120,23 +20264,23 @@
    "title": "Nigeria — COVID-19 Situational Analysis 9: North-east (February 2022)",
    "date": "2022-02-28",
    "year": 2022,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-covid-19-situational-analysis-9-north-east-february-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%209%20-%20North-East%20Nigeria1.pdf",
    "summary": "This Round 9 of the COVID-19 Situation Analysis is based on the assessment of knowledge, practice and impact of the pandemic on internally displaced persons (IDPs) in conflict-affected communities of northeast Nigeria. Conducted by the Displacement Tracking Matrix (DTM) unit of the International Organization for Migration (IOM), the report covers the period between 16 November and 30 December 2022 and reflects trends from the states Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe in north-east Nigeria. The first assessment was conducted in May 2020, two months after the index case was reported ",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2022-02-01",
    "round": null,
@@ -20572,8 +20716,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -21807,23 +21951,23 @@
    "title": "Nigeria — COVID-19 Situational Analysis 8: North East (November 2021)",
    "date": "2021-11-22",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-covid-19-situational-analysis-8-north-east-november-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%208%20-%20North%20East%20Nigeria.pdf",
    "summary": "This Round 8 of the COVID-19 Situation Analysis is based on the assessment of knowledge, practice and impact of the pandemic on internally displaced persons (IDPs) in conflict-affected communities of North East Nigeria. Conducted by the Displacement Tracking Matrix (DTM) unit of the International Organization for Migration (IOM), the report covers the period between 30 August and 15 October 2021 and reflects trends from the states Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe in North East Nigeria.",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-11-01",
    "round": null,
@@ -21859,8 +22003,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 5: North Central and North West November 2021)",
    "date": "2021-11-18",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North Central",
     "North West"
@@ -21869,8 +22013,8 @@
     "Benue",
     "Nasarawa",
     "Plateau",
-    "Kano",
     "Kaduna",
+    "Kano",
     "Katsina",
     "Sokoto",
     "Zamfara"
@@ -21878,7 +22022,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-covid-19-situational-analysis-5-north-central-and-north-west-november-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID%20-%2019%20Situation%20Report%20-%20North%20Central%20and%20North%20West%20Nigeria%205.pdf",
    "summary": "This Round 5 of the COVID-19 Situation Analysis is based on the assessment of knowledge, practice and impact of the pandemic on internally displaced persons (IDPs) in conflict-affected communities in the geopolitical zones North Central and North West Nigeria. Conducted by the Displacement Tracking Matrix (DTM) unit of the International Organization for Migration (IOM), the report covers the period between 27 August and 11 September 2021 and reflects trends from the states Benue, Kaduna, Kano, Katsina, Nasarawa, Plateau, Sokoto and Zamfara. A total of 98,774 respondents – or 10% of the total I",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-11-01",
    "round": null,
@@ -22050,11 +22194,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-report-38-june-july-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2038%20.pdf",
@@ -23031,8 +23175,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 7: North East (September 2021)",
    "date": "2021-09-02",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
@@ -23040,7 +23184,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-7-north-east-september-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situational%20Analysis%207%20-%20North-East%20Nigeria.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-09-01",
    "round": null,
@@ -23052,8 +23196,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 4: North Central and North West (September 2021)",
    "date": "2021-09-02",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North Central",
     "North West"
@@ -23062,7 +23206,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-4-north-central-and-north-west-september-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID%20-%2019%20Situation%20Report%20-%20North%20Central%20and%20North%20West%20Nigeria%204.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-09-01",
    "round": null,
@@ -23639,8 +23783,8 @@
    ],
    "states": [
     "Adamawa",
-    "Borno",
-    "Bauchi"
+    "Bauchi",
+    "Borno"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-east-displacement-factsheet-round-37-july-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%2037%20NE%20Nigeria%20-%20Factsheet.pdf",
@@ -24179,8 +24323,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 6: North East (June 2021)",
    "date": "2021-07-01",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
@@ -24188,7 +24332,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-6-north-east-june-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%206%20-%20North-East%20Nigeria.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-06-01",
    "round": null,
@@ -25815,8 +25959,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 5: North East (April 2021)",
    "date": "2021-04-19",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
@@ -25824,7 +25968,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-5-north-east-april-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%205%20-%20North%20East%20Nigeria_.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-04-01",
    "round": null,
@@ -25917,8 +26061,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 3: North Central and North West (April 2021)",
    "date": "2021-04-12",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North Central",
     "North West"
@@ -25927,7 +26071,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-3-north-central-and-north-west-april-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID%20-%2019%20Situation%20Report%20-%20North%20Central%20and%20North%20West%20Nigeria%203.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-04-01",
    "round": null,
@@ -26186,7 +26330,6 @@
    "component_key": "flash",
    "component": "Incident / Flash Report",
    "regions": [
-    "North Central",
     "North West"
    ],
    "states": [
@@ -26745,6 +26888,7 @@
     "North West"
    ],
    "states": [
+    "FCT",
     "Nasarawa"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-displacement-factsheet-round-5-january-2021",
@@ -27000,8 +27144,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 2: North Central and North West (January 2021)",
    "date": "2021-02-09",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North Central",
     "North West"
@@ -27010,7 +27154,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-2-north-central-and-north-west-january-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID%20-%2019%20Situation%20Report%20-%20North%20Central%20and%20North%20West%20Nigeria%202.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2021-01-01",
    "round": null,
@@ -27382,8 +27526,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis 4: North East (December 2020)",
    "date": "2021-01-18",
    "year": 2021,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
@@ -27391,7 +27535,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-4-north-east-december-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%204%20-%20North%20East%20Nigeria%20-%20_0.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2020-12-01",
    "round": null,
@@ -28060,8 +28204,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis: North East #3 (September 2020)",
    "date": "2020-11-14",
    "year": 2020,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
@@ -28069,7 +28213,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-north-east-3-september-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID%20-%2019%20Situation%20Report%203%20-%20North%20East%20Nigeria.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2020-09-01",
    "round": null,
@@ -29044,8 +29188,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis: North East #2 (August 2020)",
    "date": "2020-08-31",
    "year": 2020,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
@@ -29053,7 +29197,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-north-east-2-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID%20-%2019%20Situation%20Report%202%20-%20North%20East%20Nigeria.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
    "round": null,
@@ -29186,8 +29330,8 @@
    "title": "Nigeria — COVID-19 Situational Analysis: North Central and North West (July 2020)",
    "date": "2020-08-21",
    "year": 2020,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North Central",
     "North West"
@@ -29196,7 +29340,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-north-central-and-north-west-july-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Report%20-%20North%20Central%20and%20North%20West%20Nigeria.pdf",
    "summary": "",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2020-07-01",
    "round": null,
@@ -30489,23 +30633,23 @@
    "title": "Nigeria — COVID-19 Situational Analysis: North East (May 2020)",
    "date": "2020-05-25",
    "year": 2020,
-   "component_key": "other",
-   "component": "Other / Unclassified",
+   "component_key": "covid_sa",
+   "component": "COVID-19 Situational Analysis Reports",
    "regions": [
     "North East"
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-covid-19-situational-analysis-north-east-may-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/COVID-19%20Situation%20Analysis%20-%20Northeast%20Nigeria_0.pdf",
    "summary": "COVID-19 Situation Analysis is based on assessment of knowledge, impact and practice of internally displaced persons (IDPs) and impacted populations in the six conflict-affected states of northeastern Nigeria. Conducted alongside Round 32 Displacement Tracking Matrix (DTM) assessment by the International Organization for Migration (IOM), the report covers the period 16 April to 6 May 2020 and reflects trends from the six states of Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe.",
-   "matched_on": "",
+   "matched_on": "title:covid-19 situational analysis",
    "date_basis": "publication date",
    "period_date": "2020-05-01",
    "round": null,
@@ -31098,11 +31242,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-30-december-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2030%20Dashboard.pdf",
@@ -32372,11 +32516,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-28-august-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria_DTM_Round_28_Report_August%202019.pdf",
@@ -32400,11 +32544,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-28-august-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2028%20Dashboard_0.pdf",
@@ -32967,11 +33111,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-27-may-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2027%20Report%20%28May%202019%29_0.pdf",
@@ -32995,11 +33139,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-27-may-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2027%20Baseline%20Dashboard_0.pdf",
@@ -33193,11 +33337,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-26-addendum",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Displacement%20Report%2026%20%28Addendum%29.pdf",
@@ -33714,11 +33858,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-26-january-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2026%20Report%20%28January%202019%29.pdf",
@@ -33799,11 +33943,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-26-january-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2026%20Baseline%20Dashboard_0.pdf",
@@ -34495,11 +34639,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-25-october-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2025%20Baseline%20Dashboard.pdf",
@@ -34901,11 +35045,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-24-august-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2024%20Report%20%28August%202018%29_1.pdf",
@@ -35296,11 +35440,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Displacement%20Report%2023%20%28June%202018%29.pdf",
@@ -35324,11 +35468,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-baseline-dashboard-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%2023%20Dashboard%20of%20Baseline%20Assessment.pdf",
@@ -35839,11 +35983,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-22-april-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XXII%20Dashboard%20of%20Baseline%20Assessment_2.pdf",
@@ -35867,11 +36011,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/dtm-nigeria-round-xxii-report-april-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XXII%20Report%20April%202018_0.pdf",
@@ -36378,11 +36522,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-21-january-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XXI%20Dashboard%20of%20Baseline%20Assessment.pdf",
@@ -36851,11 +36995,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-20-december-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XX%20Dashboard%20of%20Baseline%20Assessment%20%281%29.pdf",
@@ -37377,11 +37521,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-19-october-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XIX%20Dashboard%20of%20Baseline%20Assessment_0.pdf",
@@ -37825,11 +37969,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-18-august-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XVIII%20Report%20August%202017.pdf",
@@ -37853,11 +37997,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-18-august-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2018%20Displacement%20Dashboard.pdf",
@@ -38169,11 +38313,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-17-june-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XVII%20Report%20June%202017.pdf",
@@ -38996,11 +39140,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-15-march-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XV%20Report%20March%202017.pdf",
@@ -39024,11 +39168,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-15-march-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XV%20Dashboard%20of%20Baseline%20Assessment.pdf",
@@ -39260,11 +39404,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-14-january-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XIV%20Dashboard%20of%20Baseline%20Assessment.pdf",
@@ -39512,11 +39656,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-location-based-assessment-report-13-1-july-2014%E2%80%9431-december-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/13%20DTM%20Nigeria%20Round%20XIII%20Location%20Assessment%20Report%20December%202016.pdf",
@@ -39609,11 +39753,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-13-1-july-2014%E2%80%9431-december-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/public/reports/13%20DTM%20Nigeria%20Round%20XIII%20Location%20Assessment%20Report%20December%202016.pdf",
@@ -39637,11 +39781,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-13-december-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Dec2016_Report_nigeria%20displacement%20r.pdf",
@@ -39711,11 +39855,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-11-august-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XI%20Report%20August%202016.pdf",
@@ -39739,11 +39883,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-10-june-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20X%20Report_20160630.pdf",
@@ -39959,8 +40103,12 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North Central"
+   ],
+   "states": [
+    "FCT"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-federal-capital-territory-site-profiles-9-1-march-2016%E2%80%9430-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20Round%209%20FCT%20%20Site%20Profiles%20combined.pdf",
    "summary": "This document contains the site profiles for all displacement sites identified in the Federal Capital Territory, Nigeria.",
@@ -39983,11 +40131,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-9-1-march-2016%E2%80%9430-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20IX%20Report_20160430.pdf",
@@ -40293,8 +40441,12 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
-   "states": [],
+   "regions": [
+    "North Central"
+   ],
+   "states": [
+    "FCT"
+   ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-federal-capital-territory-site-profiles-8-1-january-%E2%80%94-2-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20Round%208%20FCT%20Site%20Profiles%20combined.pdf",
    "summary": "This document contains the site profiles for all displacement sites identified in the Federal Capital Territory, Nigeria.",
@@ -40317,11 +40469,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-8-1-january-%E2%80%94-28-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20VIII%20Report_20160229.pdf",
@@ -40475,11 +40627,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-7-1-november-%E2%80%94-31-december-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20VII%20Report_20151223.pdf",
@@ -40543,11 +40695,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-6-1-september-%E2%80%94-31-october-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20VI%20Report_20151031.pdf",
@@ -40641,11 +40793,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-5-1-july-%E2%80%94-31-august-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20V%20Report_20150831.pdf",
@@ -40832,11 +40984,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-3-1-march-%E2%80%94-30-april-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20III%20Report_20150429.pdf",
@@ -40923,11 +41075,11 @@
    ],
    "states": [
     "Adamawa",
+    "Bauchi",
     "Borno",
-    "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-2-1-january-%E2%80%94-28-february-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20DTM%20Nigeria%20II%20Round%20Report_Feb_2015.pdf",
@@ -41037,10 +41189,10 @@
    ],
    "states": [
     "Adamawa",
-    "Yobe",
+    "Bauchi",
     "Gombe",
     "Taraba",
-    "Bauchi"
+    "Yobe"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-emergency-tracking-tool-report-1-december-2014",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Round%20I%20Report%20December%202014.pdf",
