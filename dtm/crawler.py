@@ -40,6 +40,32 @@ CACHE_VERSION = 2  # v2 adds attached files and page text (needed to find Needs 
 FILE_RX = re.compile(r"""((?:https?:)?(?://[a-z0-9.-]+)?/sites/g/files/[^\s"'<>]*?\.(?:pdf|xlsx?|zip|docx?))""", re.I)
 NM_FILE_RX = re.compile(r"needs?[\s_-]*monitoring|(?:^|[\s_(-])NM[\s_-]", re.I)
 NM_TEXT_RX = re.compile(r"needs?\s+monitoring", re.I)
+ATLAS_FILE_RX = re.compile(r"atlas", re.I)
+PDF_MAX_BYTES = 60_000_000
+
+
+def file_name(f: str) -> str:
+    return unquote(f.rsplit("/", 1)[-1])
+
+
+def pdf_text(data: bytes, pages: int = 6) -> str:
+    """Text of the first pages of a PDF (cover, summary, methodology)."""
+    from io import BytesIO
+    from pypdf import PdfReader
+    reader = PdfReader(BytesIO(data))
+    return " ".join((p.extract_text() or "") for p in reader.pages[:pages])
+
+
+def classify_pdf_text(text: str) -> tuple[str, str]:
+    t = re.sub(r"\s+", " ", text)
+    m = re.search(r".{0,70}needs?\s+monitoring.{0,70}", t, re.I)
+    if m:
+        return "needs", m.group(0).strip()
+    m = re.search(r".{0,70}(idp and returnee atlas|idp atlas|\batlas\b).{0,50}", t, re.I)
+    if m:
+        return "atlas", m.group(0).strip()
+    m = re.search(r".{0,60}(baseline assessment|site assessment|mobility tracking).{0,60}", t, re.I)
+    return ("atlas", m.group(0).strip()) if m else ("unknown", "")
 
 
 def load_config(path: Path | None = None) -> dict:
@@ -94,6 +120,60 @@ class Crawler:
         except requests.RequestException as e:
             self.log(f"  error: {url} ({e.__class__.__name__})")
         return None
+
+    def get_bytes(self, url: str) -> bytes | None:
+        if self.stop.is_set() or not self._allowed(url):
+            return None
+        with self._lock:
+            wait = self.cfg["delay_seconds"] - (time.time() - self._last)
+            if wait > 0:
+                time.sleep(wait)
+            self._last = time.time()
+        try:
+            with self.session.get(url, timeout=self.cfg["timeout_seconds"] * 4, stream=True) as r:
+                if r.status_code != 200:
+                    self.log(f"  HTTP {r.status_code}: {url}")
+                    return None
+                buf = bytearray()
+                for chunk in r.iter_content(1 << 16):
+                    buf += chunk
+                    if len(buf) > PDF_MAX_BYTES:
+                        self.log(f"  file too large to check: {url}")
+                        return None
+                return bytes(buf)
+        except requests.RequestException as e:
+            self.log(f"  error: {url} ({e.__class__.__name__})")
+        return None
+
+    def check_round_pdfs(self, cache: dict) -> int:
+        """Open the PDF of every Mobility Tracking round report whose file name does not already
+        say whether it is a Needs Monitoring report or an Atlas, and read its first pages."""
+        todo = []
+        for key, e in cache.items():
+            if not Classifier.is_mt_main(e.get("title", "")):
+                continue
+            pdfs = [f for f in e.get("files") or [] if f.lower().endswith(".pdf")]
+            if not pdfs or any(NM_FILE_RX.search(" " + file_name(f)) or ATLAS_FILE_RX.search(file_name(f)) for f in pdfs):
+                continue
+            if (e.get("pdf_check") or {}).get("file") == pdfs[0]:
+                continue
+            todo.append((key, pdfs[0]))
+        if not todo:
+            return 0
+        self.log(f"Reading inside {len(todo)} round-report PDFs to tell Needs Monitoring from Atlas…")
+        for i, (key, f) in enumerate(todo, 1):
+            data = self.get_bytes(f)
+            kind, evidence = ("unknown", "")
+            if data:
+                try:
+                    kind, evidence = classify_pdf_text(pdf_text(data))
+                except Exception as ex:  # damaged or scanned PDF
+                    kind, evidence = "unknown", f"could not read PDF ({ex.__class__.__name__})"
+            cache[key]["pdf_check"] = {"file": f, "kind": kind, "evidence": evidence[:200]}
+            self.log(f"  {i}/{len(todo)} {kind:7} {file_name(f)[:70]}")
+            if self.stop.is_set():
+                break
+        return len(todo)
 
     # ---- URL helpers -----------------------------------------------------
     def canon(self, href: str, page_url: str) -> str:
@@ -220,6 +300,7 @@ class Crawler:
         return {"url": url, "title": title.strip(), "date_raw": date_raw,
                 "date": Classifier.parse_date(date_raw), "summary": summary[:600],
                 "series": series, "pdf": pdf, "files": files[:20], "body": body[:3000],
+                "fetched": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                 "v": CACHE_VERSION}
 
     def fetch_report(self, url: str) -> dict | None:
@@ -285,6 +366,16 @@ class Crawler:
                 if self.stop.is_set():
                     break
         _write_json(cache_path, cache)
+        try:
+            import pypdf  # noqa: F401
+        except ImportError:  # install on the fly so the GitHub workflow needs no change
+            import subprocess, sys
+            subprocess.run([sys.executable, "-m", "pip", "install", "-q", "pypdf"], check=False)
+        try:
+            if self.check_round_pdfs(cache):
+                _write_json(cache_path, cache)
+        except ImportError:
+            self.log("pypdf could not be installed, so round-report PDFs were not opened.")
 
         result = export(cache.values(), self.clf, keywords=kws,
                         seconds=round(time.time() - t0, 1), log=self.log)
@@ -305,33 +396,9 @@ def _write_json(path: Path, obj) -> None:
     tmp.replace(path)
 
 
-def needs_monitoring_records(page: dict, base_key: str) -> list[dict]:
-    """DTM publishes Needs Monitoring as PDFs attached to Mobility Tracking pages, or as
-    findings inside the displacement report itself. Turn each into its own countable record."""
-    out, names = [], set()
-    for f in page.get("files") or []:
-        name = unquote(f.rsplit("/", 1)[-1])
-        stem = re.sub(r"(_final|_v\d+|_\d+)*\.[a-z]+$", "", name, flags=re.I)
-        if NM_FILE_RX.search(" " + stem) and stem.lower() not in names:
-            names.add(stem.lower())
-            out.append({"file": f, "stem": re.sub(r"^\s*(dtm\s+)?nigeria\s*[-—–]\s*", "", stem, flags=re.I)})
-    recs = []
-    for i, nm in enumerate(out):
-        recs.append({**page, "url": page["url"] + f"#needs-monitoring-{i + 1}",
-                     "title": f"Nigeria — Needs Monitoring — {nm['stem'].replace('_', ' ').strip()}",
-                     "summary": page.get("title", ""), "pdf": nm["file"], "series": [],
-                     "force_component": "needs", "matched_on": "attached file: " + nm["stem"][:60]})
-    if not recs and base_key in ("atlas", "other") and NM_TEXT_RX.search(page.get("body") or page.get("summary") or ""):
-        recs.append({**page, "url": page["url"] + "#needs-monitoring",
-                     "title": page["title"] + " — Needs Monitoring findings",
-                     "summary": page.get("title", ""), "series": [],
-                     "force_component": "needs", "matched_on": "report text mentions needs monitoring"})
-    return recs
-
-
 def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None, log: Log = print) -> dict:
     classified = []
-    skipped = 0
+    skipped, pages = 0, []
     for r in records:
         if not clf.in_scope(r):
             skipped += 1
@@ -341,12 +408,74 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
         c = clf.classify({**rr, "summary": (extra + " " + rr.get("summary", "")).strip()})
         c["summary"] = rr.get("summary", "")
         classified.append(c)
-        for nm in needs_monitoring_records(rr, c["component_key"]):
-            n = clf.classify({**nm, "title": nm["title"]})
-            label = next(x["label"] for x in clf.components if x["key"] == "needs")
-            n.update(component_key="needs", component=label, matched_on=nm["matched_on"],
-                     regions=n["regions"] or c["regions"], states=n["states"] or c["states"], summary=nm["summary"])
-            classified.append(n)
+        pages.append((rr, c))
+
+    # The DTM site sometimes publishes the same report twice; count each title once (earliest date).
+    norm = lambda t: re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()  # noqa: E731
+    first: dict[str, tuple] = {}
+    for rr, c in sorted(pages, key=lambda p: (p[1].get("date") or "9999", p[1]["url"])):
+        first.setdefault(norm(c["title"]), (rr, c))
+    dupes = len(pages) - len(first)
+    pages = list(first.values())
+    classified = [c for _, c in pages]
+    if dupes:
+        log(f"Counted {dupes} duplicate report pages once each (same title published twice).")
+
+    # Mobility Tracking: decide Needs Monitoring vs Atlas for each round's main report, using (in order)
+    # the attached file names, the text inside the PDF, the page text, and finally the title.
+    needs_label = next(x["label"] for x in clf.components if x["key"] == "needs")
+    atlas_label = next(x["label"] for x in clf.components if x["key"] == "atlas")
+    extra = []
+    for rr, c in pages:
+        rnd = Classifier.mt_round(c["title"])
+        if c["component_key"] in ("needs", "atlas") and rnd:
+            c["round"], c["round_zone"] = rnd, Classifier.mt_zone(c["title"])
+        if not Classifier.is_mt_main(c["title"]) or c["component_key"] not in ("needs", "atlas"):
+            continue
+        c["mt_main"] = True
+        pdfs = [f for f in rr.get("files") or [] if f.lower().endswith(".pdf")]
+        nm_f = [f for f in pdfs if NM_FILE_RX.search(" " + file_name(f))]
+        at_f = [f for f in pdfs if ATLAS_FILE_RX.search(file_name(f))]
+        chk = rr.get("pdf_check") or {}
+        if nm_f and at_f:
+            kind, why = "atlas", "file name: " + file_name(at_f[0])[:70]
+            extra.append((rr, c, nm_f[0]))
+        elif nm_f:
+            kind, why = "needs", "file name: " + file_name(nm_f[0])[:70]
+        elif at_f:
+            kind, why = "atlas", "file name: " + file_name(at_f[0])[:70]
+        elif chk.get("kind") in ("needs", "atlas"):
+            kind, why = chk["kind"], "inside PDF: \u201c" + chk.get("evidence", "")[:120] + "\u201d"
+        elif NM_TEXT_RX.search(rr.get("body") or ""):
+            kind, why = "needs", "report page says it contains needs monitoring findings"
+        else:
+            kind = c["component_key"]
+            why = c.get("matched_on", "") + " (title only; PDF not yet checked)"
+        c["component_key"], c["component"], c["matched_on"] = kind, (needs_label if kind == "needs" else atlas_label), why
+        if pdfs and not c.get("pdf"):
+            c["pdf"] = (nm_f or at_f or pdfs)[0]
+    # A round's main report published twice (different page titles) counts once, earliest date.
+    seen_main, keep = set(), []
+    for c in sorted(classified, key=lambda c: c.get("date") or "9999"):
+        k = (c.get("round_zone"), c.get("round"), c["component_key"]) if c.get("mt_main") and c.get("round") else None
+        if k and k in seen_main:
+            log(f"Round report counted once: {c['title'][:90]}")
+            continue
+        if k:
+            seen_main.add(k)
+        keep.append(c)
+    classified = keep
+
+    # A page carrying both an Atlas and a Needs Monitoring PDF holds two reports.
+    have = {(c.get("round_zone"), c.get("round")) for c in classified if c["component_key"] == "needs" and c.get("round")}
+    for rr, c, f in extra:
+        if (c.get("round_zone"), c.get("round")) in have:
+            continue
+        n = dict(c)
+        n.update(url=c["url"] + "#needs-monitoring", component_key="needs", component=needs_label, pdf=f,
+                 title=f"{c['title']} \u2014 Needs Monitoring report", matched_on="file name: " + file_name(f)[:70])
+        classified.append(n)
+
     classified.sort(key=lambda r: (r.get("date") or "", r["title"]), reverse=True)
     for i, r in enumerate(classified):
         r["id"] = i + 1
@@ -372,9 +501,11 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
         "components": [{"key": c["key"], "label": c["label"]} for c in clf.components] +
                       [{"key": clf.tax.get("unclassified_key", "other"), "label": clf.tax["unclassified_label"]}],
         "regions": {k: v["states"] for k, v in clf.tax["regions"].items()},
+        "mt_rounds": {k: v for k, v in clf.tax.get("mobility_tracking_rounds", {}).items() if not k.startswith("_")},
         "count": len(classified),
         "reports": [{k: r.get(k) for k in ("id", "title", "date", "year", "component_key", "component",
-                                            "regions", "states", "url", "pdf", "summary", "matched_on")}
+                                            "regions", "states", "url", "pdf", "summary", "matched_on", "date_basis",
+                                            "period_date", "round", "round_zone", "mt_main")}
                     for r in classified],
     }
     status = {"checked_at": now, "last_changed": payload["generated_at"], "count": len(classified),

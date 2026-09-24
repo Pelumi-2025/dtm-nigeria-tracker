@@ -1,4 +1,5 @@
 requests>=2.31
 beautifulsoup4>=4.12
 flask>=3.0
+pypdf>=4.0   # reads round-report PDFs (Needs Monitoring vs Atlas)
 anthropic>=0.40   # only needed for the AI assistant on the server

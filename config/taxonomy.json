@@ -1,6 +1,14 @@
 {
- "_readme": "Edit these keyword lists to tune classification. Rules are checked top to bottom against the report TITLE first, then the summary; the first matching rule wins. Matching is case-insensitive. 'exclude' blocks a rule if any of its terms appear.",
+ "_readme": "Edit these keyword lists to tune classification. Rules are checked top to bottom against the report TITLE first, then the summary; the first matching rule wins. Matching is case-insensitive. 'exclude' blocks a rule if any of its terms appear. A rule with require_state=true only matches when the title names a state.",
  "components": [
+  {
+   "key": "compendium",
+   "label": "Compendium Reports",
+   "include": [
+    "compendium"
+   ],
+   "exclude": []
+  },
   {
    "key": "ewer",
    "label": "Early Warning & Early Response Dashboard",
@@ -23,6 +31,29 @@
     "emergency tracking tool",
     " ett ",
     "ett report"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "return_intention",
+   "label": "Return Intention & Camp Closure Reports",
+   "include": [
+    "return intention",
+    "camp closure",
+    "closure of camp",
+    "camps closure"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "joint_flood",
+   "label": "Joint Flood Reports",
+   "include": [
+    "joint flood",
+    "joint post - flood",
+    "joint post-flood",
+    "joint post flood",
+    "joint rapid flood"
    ],
    "exclude": []
   },
@@ -68,25 +99,46 @@
    "exclude": []
   },
   {
+   "key": "intention_state",
+   "label": "State-wide Intention Surveys",
+   "include": [
+    "intention survey",
+    "intentions survey"
+   ],
+   "exclude": [
+    "return intention"
+   ],
+   "require_state": true
+  },
+  {
    "key": "intention",
-   "label": "Intention Surveys",
+   "label": "Intention Surveys (general / regional)",
    "include": [
     "intention survey",
     "intentions survey",
-    "return intention",
     "intentions of idps"
+   ],
+   "exclude": [
+    "return intention"
+   ]
+  },
+  {
+   "key": "smi",
+   "label": "Solutions Mobility Index",
+   "include": [
+    "solutions and mobility index",
+    "solution and mobility index",
+    "solutions mobility index",
+    "solution mobility index",
+    "mobility index"
    ],
    "exclude": []
   },
   {
-   "key": "smi",
-   "label": "Solutions Mobility Index / Stability Index",
+   "key": "si",
+   "label": "Stability Index",
    "include": [
-    "solutions mobility index",
-    "solution mobility index",
-    "stability index",
-    "mobility index",
-    "durable solutions index"
+    "stability index"
    ],
    "exclude": []
   },
@@ -115,15 +167,45 @@
    "exclude": []
   },
   {
+   "key": "poe",
+   "label": "Point of Entry (POE) Reports",
+   "include": [
+    "point of entry",
+    "points of entry",
+    "poe dashboard",
+    "poe report",
+    " poe ",
+    "border point"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "climate",
+   "label": "Climate & Environmental Vulnerability Reports",
+   "include": [
+    "climate",
+    "environmental vulnerability",
+    "environmental",
+    "environment",
+    "vulnerability assessment"
+   ],
+   "exclude": []
+  },
+  {
    "key": "needs",
    "label": "Mobility Tracking – Needs Monitoring",
    "include": [
     "needs monitoring",
     "nm round",
     "multi-sectoral needs",
-    "multisectoral needs"
+    "multisectoral needs",
+    "displacement report"
    ],
-   "exclude": []
+   "exclude": [
+    "dashboard",
+    "factsheet",
+    "fact sheet"
+   ]
   },
   {
    "key": "transhumance",
@@ -131,9 +213,7 @@
    "include": [
     "transhumance"
    ],
-   "exclude": [
-    "early warning"
-   ]
+   "exclude": []
   },
   {
    "key": "fmp",
@@ -152,7 +232,6 @@
    "include": [
     "atlas",
     "mobility tracking",
-    "displacement report",
     "baseline assessment",
     "site assessment",
     "location assessment",
@@ -181,7 +260,9 @@
     "dashboard round",
     "idp dashboard",
     "location based assessment",
-    "location assessment report"
+    "location assessment report",
+    "round xxii report",
+    "round report"
    ],
    "exclude": []
   }
@@ -246,8 +327,13 @@
   "Nasarawa": "\\bnas+arawa\\b",
   "Niger": "\\bniger\\b(?!\\s+republic)"
  },
- "year_min": 2019,
+ "year_min": 2015,
  "year_max": 2030,
  "_scope_readme": "Only pages whose TITLE matches this pattern are counted (DTM Nigeria products are titled 'Nigeria — …'). Set to empty to count everything found.",
- "scope_title_regex": "^\\s*(dtm\\s+)?nig[eé]ria\\b"
+ "scope_title_regex": "^\\s*(dtm\\s+)?nig[eé]ria\\b",
+ "mobility_tracking_rounds": {
+  "_readme": "Expected Mobility Tracking rounds per region, used for the round-coverage check.",
+  "NE": 52,
+  "NCNW": 19
+ }
 }

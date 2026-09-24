@@ -50,6 +50,8 @@ class Classifier:
         """Return (key, label, matched_term). Title is decisive; summary is a fallback."""
         for text, where in ((_norm(title), "title"), (_norm(summary), "summary")):
             for rule in self.components:
+                if rule.get("require_state") and not self.states(title):
+                    continue
                 if any(_norm(x).strip() in text for x in rule.get("exclude", []) if x.strip()):
                     continue
                 for term in rule["include"]:
@@ -100,6 +102,16 @@ class Classifier:
         return None
 
     @staticmethod
+    def title_date(title: str) -> str | None:
+        """Latest date named in a title, e.g. '(19 December 2016—25 January 2017)' -> 2017-01-25."""
+        best = None
+        for m in re.finditer(r"(?:(\d{1,2})\s*(?:st|nd|rd|th)?\s+)?([A-Za-z]{3,9})\.?,?\s+(\d{4})\b", title or ""):
+            mon = m.group(2)[:3].lower()
+            if mon in MONTHS and 2010 <= int(m.group(3)) <= 2035:
+                best = f"{m.group(3)}-{MONTHS[mon]:02d}-{int(m.group(1) or 1):02d}"
+        return best
+
+    @staticmethod
     def year_from_title(title: str) -> int | None:
         years = [int(y) for y in re.findall(r"\b(20[1-3]\d)\b", title or "")]
         return years[-1] if years else None
@@ -108,12 +120,59 @@ class Classifier:
         rx = self.tax.get("scope_title_regex")
         return not rx or bool(re.search(rx, rec.get("title", ""), re.I))
 
+    # ---- Mobility Tracking rounds
+    _ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50}
+
+    @classmethod
+    def _roman(cls, s: str) -> int:
+        total = 0
+        for i, ch in enumerate(s):
+            v = cls._ROMAN[ch]
+            total += -v if i + 1 < len(s) and cls._ROMAN[s[i + 1]] > v else v
+        return total
+
+    @classmethod
+    def mt_round(cls, title: str) -> int | None:
+        """Round number of a Mobility Tracking product ('Round 44', 'Displacement Report 43', 'Round XXII')."""
+        if re.search(r"index|flash|intention|emergency tracking|transhumance|early warning|point of entry", title, re.I):
+            return None
+        m = re.search(r"\bround\s*#?\s*(\d{1,2})\b", title, re.I) or \
+            re.search(r"(?:displacement report|displacement dashboard|site assessment dashboard|displacement factsheet)\s*#?\s*(\d{1,2})\b", title, re.I)
+        if m:
+            return int(m.group(1))
+        m = re.search(r"\b[Rr]ound\s+([IVXL]{1,7})\b", title)
+        return cls._roman(m.group(1).upper()) if m else None
+
+    @staticmethod
+    def mt_zone(title: str) -> str:
+        return "NCNW" if re.search(r"north[\s-]*central|north[\s-]*west|ncnw|nwnc", title, re.I) else "NE"
+
+    @staticmethod
+    def is_mt_main(title: str) -> bool:
+        """The round's main report (Atlas or Displacement/Needs Monitoring report), not its dashboards or lists."""
+        return bool(re.search(r"displacement report|round\s+[ivxl\d]+\s+report|atlas|idp and returnee report|mobility tracking round", title, re.I)) \
+            and not re.search(r"dashboard|factsheet|fact sheet|list of|index|addendum", title, re.I)
+
     # ---- full record -----------------------------------------------------
     def classify(self, rec: dict) -> dict:
         title, summary = rec.get("title", ""), rec.get("summary", "")
         key, label, why = self.component(title, summary)
         states = self.states(title) or self.states(summary)
         date = self.parse_date(rec.get("date_raw", "")) or rec.get("date")
+        tdate = self.title_date(title)
+        basis = "publication date"
+        if date and tdate:
+            # Pages without a publication date show the day they were viewed in their citation line.
+            fetched = rec.get("fetched")
+            d = lambda a, b: abs((datetime.fromisoformat(a[:10]) - datetime.fromisoformat(b[:10])).days)  # noqa: E731
+            if fetched:
+                placeholder = d(date, fetched) <= 2 and int(date[:4]) > int(tdate[:4])
+            else:
+                placeholder = int(date[:4]) - int(tdate[:4]) >= 2 and d(date, datetime.utcnow().isoformat()) <= 45
+            if placeholder:
+                date, basis = tdate, "date in title (page shows no publication date)"
+        if not date and tdate:
+            date, basis = tdate, "date in title (page shows no publication date)"
         year = int(date[:4]) if date else self.year_from_title(title)
         out = dict(rec)
         out.update({
@@ -123,6 +182,8 @@ class Classifier:
             "states": states,
             "regions": self.regions(title, summary, states),
             "date": date,
+            "date_basis": basis,
+            "period_date": tdate,
             "year": year,
             "classified_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         })
