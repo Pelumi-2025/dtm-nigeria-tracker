@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T14:58:10Z",
+ "generated_at": "2026-09-24T15:59:28Z",
  "source": "https://dtm.iom.int/nigeria",
  "keywords": [
   "Nigeria flash report",
@@ -16,13 +16,7 @@
   "Nigeria flood",
   "Nigeria atlas"
  ],
- "latest_additions": [
-  {
-   "title": "Nigeria — Transhumance Tracking Tool Report — Early Warning Dashboard 27 — Katsina and Zamfara States (August 2026)",
-   "url": "https://dtm.iom.int/reports/nigeria-transhumance-tracking-tool-report-early-warning-dashboard-27-katsina-and-zamfara",
-   "date": "2026-09-24"
-  }
- ],
+ "latest_additions": [],
  "components": [
   {
    "key": "compendium",
@@ -180,7 +174,7 @@
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20MSLA%20R7%20and%20R38%20-%20SUMMARY%20REPORT%20ON%20ENERGY%20ACCESS%20-%20Nigeria%2011_2021.pdf",
    "summary": "This report presents a summary of the analysis of the Round 7 data collection of the Displacement Tracking Matrix (DTM) Multi-Sectoral Location Assessment (MLSA) in the North Central and North West Geopolitical Zones of Nigeria and Round 38 of the DTM MSLA in the North East Geopolitical Zone. For the first time, these assessments specifically included energy-related questions.",
    "matched_on": "title:location assessment",
-   "date_basis": "publication date",
+   "date_basis": "no date on the site (counted on the day it was read)",
    "period_date": null,
    "round": null,
    "round_zone": null,
@@ -19346,7 +19340,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-central-and-north-west-zones-displacement-report-9-march-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%209%20North-central%20and%20North-west%20mobility%20report.pdf",
    "summary": "Round 9 of DTM data collection in Nigeria’s north-west and north-central geopolitical zones was conducted between 16 November and 30 December 2021. During the assessments, DTM deployed teams of enumerators to conduct assessments in 859 wards (down from the 861 wards that were assessed in Round 8 of DTM assessments), located in 177 LGAs (down from 178 LGAs in Round 8). Eight states were covered, including Benue, Nasarawa and Plateau (north-central) and Kaduna, Kano, Sokoto, Katsina and Zamfara (north-west). DTM enumerators conducted assessments in 1,654 locations (a decrease of 10 locations com",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
    "round": 9,
@@ -19787,8 +19781,8 @@
    "title": "Nigeria — North-east — Displacement Report 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -19799,7 +19793,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-report-40-march-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2040%20.pdf",
    "summary": "This report, which presents the results from Round 40 of Displacement Tracking Matrix (DTM) assessments carried out by the International Organization for Migration (IOM), aims to improve the understanding of the scope of internal displacement, the plight of returnees and the needs of the displacement affected populations in north-east Nigeria. The report covers the period from 16 November to 30 December 2021 and reflects the trends from the six states in Nigeria’s north-east geopolitical zone.  This zone is the most affected by the conflict and consists of the following states: Adamawa, Bauchi",
-   "matched_on": "inside PDF: “nd 40 (March 2022) | AIOM DISPLACEMENT TRACKING MATRIX 2 1. BASELINE ASSESSMENT OF DISPLACEMENT 10 1A: PROFILE OF DISPLA”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
    "round": 40,
@@ -20587,7 +20581,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-central-and-north-west-zones-displacement-report-8-december-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%208%20North%20Central%20and%20North%20west%20Report.pdf",
    "summary": "Round 8 of DTM data collection in Nigeria’s north-west and north-central geo-political zones were conducted between 27 August and 11 September. During the assessments, DTM deployed teams of enumerators to conduct assessments in 871 wards (up from the 828 wards that were assessed in Round 7 of DTM assessments, located in 178 LGAs (up from 174 LGAs in Round 7). Eight States were covered, including Benue, Nasarawa and Plateau (north-central) and Kaduna, Kano, Sokoto, Katsina and Zamfara (north-west). DTM enumerators conducted assessments in 1,664 locations (an increase of 60 locations compared to",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
    "round": 8,
@@ -21350,8 +21344,8 @@
    "title": "Nigeria — north-east — Displacement Report 39 (December 2021)",
    "date": "2021-12-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -21362,7 +21356,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-report-39-december-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2039%20%281%29.pdf",
    "summary": "This report, which presents the results from Round 39 of Displacement Tracking Matrix (DTM) assessments carried out by the International Organization for Migration (IOM), aims to improve the understanding of the scope of internal displacement, the plight of returnees and the needs of the displacement affected populations in north-east Nigeria. The report covers the period from 30 August to 15 October 2021 and reflects the trends from the six states in Nigeria’s north-east geopolitical zone. This zone is the most affected by the conflict and consists of the following states: Adamawa, Bauchi, Bo",
-   "matched_on": "inside PDF: “Y 6 B ACKGROUND 7 O VERVIEW: DTM ROUND 39 ASSESSMENTS 8 1 . BASELINE ASSESSMENT OF DISPLACEMENT 10 1 A: PROFILE OF DISPL”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
    "round": 39,
@@ -22049,8 +22043,8 @@
    "title": "Nigeria — North East — Displacement Report 38 (June — July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -22065,7 +22059,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-east-displacement-report-38-june-july-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2038%20.pdf",
    "summary": "This report presents the results from Round 38 of Displacement Tracking Matrix (DTM) assessments carried out by the International Organization for Migration (IOM) and aims to improve the understanding of the scope of internal displacement, the plight of returnees and the needs of the displacement affected populations in North East Nigeria. The report covers the period from 21 June to 27 July 2021 and reflects the trends from the six states in Nigeria’s North East Geopolitical Zone (Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe).",
-   "matched_on": "inside PDF: “MARY 5 BACKGROUND 6 OVERVIEW: DTM ROUND 38 ASSESSMENTS 6 1. BASELINE ASSESSMENT OF DISPLACEMENT 9 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-07-01",
    "round": 38,
@@ -22658,7 +22652,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-7-september-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%207%20North%20Central%20and%20North%20West%20Report.pdf",
    "summary": "",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-09-01",
    "round": 7,
@@ -23393,7 +23387,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-37-august-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2037%20Dashboard%20of%20Site%20Assessment_0.pdf",
@@ -23467,14 +23463,16 @@
    "title": "Nigeria — Displacement Report 37 (August 2021)",
    "date": "2021-08-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-37-august-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2037%20%20NE.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “4 Overview: DTM Round 37 Assessments 5 Key Highlights 6 1. BASELINE ASSESSMENT OF DISPLACEMENT 7 1A: PROFILE OF DISPLACE”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-08-01",
    "round": 37,
@@ -23488,7 +23486,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-37-august-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2037%20Baseline%20Dashboard.pdf",
@@ -24592,7 +24592,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-6-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%206%20North%20Central%20and%20North%20west%20Report%20.pdf",
    "summary": "",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
    "round": 6,
@@ -25045,7 +25045,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-36-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2036%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -25119,14 +25121,16 @@
    "title": "Nigeria — Displacement Report 36 (May 2021)",
    "date": "2021-05-19",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-36-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2036%20.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “4 Overview: DTM Round 36 Assessments 5 Key highlights 6 1. BASELINE ASSESSMENT OF DISPLACEMENT 7 1A: PROFILE OF DISPLACE”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
    "round": 36,
@@ -25140,7 +25144,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-36-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2036%20Baseline%20Dashboard.pdf",
@@ -26365,7 +26371,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-35-december-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2035%20Dashboard%20of%20Site%20Assessment_0.pdf",
@@ -26500,14 +26508,16 @@
    "title": "Nigeria — Displacement Report 35 (December 2020)",
    "date": "2021-03-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-35-december-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2035%20_0.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “3 Overview: DTM Round 35 Assessments 4 Key highlights 5 1. BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLACE”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2020-12-01",
    "round": 35,
@@ -26521,7 +26531,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-35-december-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2035%20Baseline%20Dashboard.pdf",
@@ -26611,7 +26623,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-5-january-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%205%20North%20Central%20and%20North%20west%20Report%20.pdf",
    "summary": "",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2021-01-01",
    "round": 5,
@@ -27151,7 +27163,9 @@
    "year": 2021,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-34-november-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2034%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -27244,14 +27258,16 @@
    "title": "Nigeria — Displacement Report 34 (November 2020)",
    "date": "2021-01-28",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-34-november-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2034%20.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “3 Overview: DTM Round 34 Assessments 4 Key highlights 5 1. BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLACE”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2020-11-01",
    "round": 34,
@@ -28337,7 +28353,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-4-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Round%204%20North%20Central%20and%20North%20west%20Report%20.pdf",
    "summary": "",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
    "round": 4,
@@ -28651,7 +28667,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-33-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2033%20Dashboard%20of%20Site%20Assessment%20%28North%20East%29.pdf",
@@ -28744,14 +28762,16 @@
    "title": "Nigeria — Displacement Report 33 (August 2020)",
    "date": "2020-09-24",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-33-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2033%20%28North%20East%29_0.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “MARY 3 BACKGROUND 3 OVERVIEW: DTM ROUND 33 ASSESSMENTS 4 1. BASELINE ASSESSMENT OF DISPLACEMENT 7 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
    "round": 33,
@@ -28765,7 +28785,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-33-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2033%20Baseline%20Dashboard%20%28North%20East%29.pdf",
@@ -29649,7 +29671,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-32-june-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2032%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -29723,14 +29747,16 @@
    "title": "Nigeria — Displacement Report 32 (June 2020)",
    "date": "2020-07-13",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-32-june-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Report%20Round%2032.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “mmary 3 Background 3 Overview: DTM Round 32 Assessments 4 1.BASELINE ASSESSMENT OF DISPLACEMENT 7 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2020-06-01",
    "round": 32,
@@ -29744,7 +29770,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-32-june-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2032%20Baseline%20Dashboard.pdf",
@@ -30609,7 +30637,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-31-february-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2031%20Dashboard%20of%20Site%20Assessment_0.pdf",
@@ -30683,14 +30713,16 @@
    "title": "Nigeria — Displacement Report 31 (February 2020)",
    "date": "2020-04-30",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-31-february-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Displacement%20Report%2031%20%28February%202020%29.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “mmary 3 Background 3 Overview: DTM Round 31 Assessments 4 1.BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2020-02-01",
    "round": 31,
@@ -30704,7 +30736,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-31-february-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20%20Round%2031%20Baseline%20Dashboard.pdf",
@@ -30960,7 +30994,9 @@
    "year": 2020,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-30-december-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2030%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -31034,14 +31070,16 @@
    "title": "Nigeria — Displacement Report 30 (December 2019)",
    "date": "2020-03-07",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-30-december-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2030%20Report%20December%202019.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “mmary 3 Background 3 Overview: DTM Round 30 Assessments 4 1.BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-12-01",
    "round": 30,
@@ -31309,7 +31347,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-3-december-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/North%20Central%20and%20North%20West%20Report%20R3.pdf",
    "summary": "",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-12-01",
    "round": 3,
@@ -31425,14 +31463,16 @@
    "title": "Nigeria — Displacement Report 29 (November 2019)",
    "date": "2019-12-30",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-29-november-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2029%20Report%20November%202019_0.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “mmary 3 Background 3 Overview: DTM Round 29 Assessments 4 1.BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-11-01",
    "round": 29,
@@ -31446,7 +31486,9 @@
    "year": 2019,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-29-november-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2029%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -31522,7 +31564,9 @@
    "year": 2019,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-29-november-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2029%20Dashboard_0.pdf",
@@ -31709,8 +31753,8 @@
    "title": "Nigeria — North Central And North West Zones Displacement Report 2 (October 2019)",
    "date": "2019-11-25",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North Central",
     "North West"
@@ -31719,7 +31763,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-2-october-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/North%20Central%20%20North%20West%20zones%20Report%20Round%202%20%28October%202019%29_0.pdf",
    "summary": "The geopolitical zones of North Central and North West in Nigeria have been affected by a multidimensional crisis, rooted in deep and historic rifts and rekindled in 2013 by worsening socioeconomic and environmental conditions in the two regions. The crisis accelerated in January 2018 with the intensification of attacks, leading to the displacement of hundreds of thousands of individuals. By the end of 2018, one million individuals had been displaced. While many of the IDPs displaced that year have been able to return, hundreds of thousands remain displaced for lack of security and the fear of",
-   "matched_on": "inside PDF: “Round 2 ( 4 September - 16 October) METHODOLOGY Round 2 of Mobility Tracking data collection in the North West and North”",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-10-01",
    "round": 2,
@@ -32245,7 +32289,9 @@
    "year": 2019,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-28-august-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Site%20Assessment%20Dashboard%2028%20%28August%202019%29.pdf",
@@ -32319,8 +32365,8 @@
    "title": "Nigeria — Displacement Report 28 (August 2019)",
    "date": "2019-09-24",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -32335,7 +32381,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-28-august-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria_DTM_Round_28_Report_August%202019.pdf",
    "summary": "This report of the Round 28 Displacement Tracking Matrix (DTM) assessment by the International Organization for Migration (IOM) aims to improve the understanding about the scope of internal displacements, returns and the needs of affected populations in conflict-affected states of north-eastern Nigeria. The report covers the period of 1 July to 16 July 2019 and reflects trends from the six most affected north-eastern states of Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe.",
-   "matched_on": "inside PDF: “mmary 3 Background 3 Overview: DTM Round 28 Assessments 4 1.BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-08-01",
    "round": 28,
@@ -32494,8 +32540,8 @@
    "title": "Nigeria — North Central and North West Zones Displacement Report 1 (August 2019)",
    "date": "2019-08-28",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North Central",
     "North West"
@@ -32504,7 +32550,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-displacement-report-1-august-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20North%20Central%20and%20North%20West%20Zones%20Displacement%20Report%201%20%28August%202019%29_0.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “been identified as having IDP populations in the LGA list. Site assessment: This is undertaken in identified IDP locatio”",
+   "matched_on": "DTM Nigeria rule: NC/NW rounds 1–9 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-08-01",
    "round": 1,
@@ -32838,7 +32884,9 @@
    "year": 2019,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-27-may-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Site%20Assessment%20Dashboard%2027%20%28May%202019%29.pdf",
@@ -32912,8 +32960,8 @@
    "title": "Nigeria — Displacement Report 27 (May 2019)",
    "date": "2019-07-09",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -32928,7 +32976,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-27-may-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2027%20Report%20%28May%202019%29_0.pdf",
    "summary": "DTM Round 27 assessments were carried out from 25 March to 29 May 2019 in 107 LGAs including 795 wards in the conflict-affected north-eastern Nigerian states of Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe. As per the assessment, 1,980,036 individuals were recorded as being displaced in the affected states, a nominal increase of less than two per cent, or 31,687 individuals, from the number of IDPs recorded in the previous round of assessment conducted in January 2019.",
-   "matched_on": "inside PDF: “mmary 3 Background 3 Overview: DTM Round 27 Assessments 4 1.BASELINE ASSESSMENT OF DISPLACEMENT 6 1A: PROFILE OF DISPLAC”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-05-01",
    "round": 27,
@@ -33659,8 +33707,8 @@
    "title": "Nigeria — Displacement Report 26 (January 2019)",
    "date": "2019-03-16",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -33675,7 +33723,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-26-january-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2026%20Report%20%28January%202019%29.pdf",
    "summary": "This report of the Round 26 Displacement Tracking Matrix (DTM) assessment by the International Organization for Migration (IOM) aims to improve the understanding about the scope of internal displacements, returns and the needs of affected populations in conflict-affected states of northeastern Nigeria. The report covers the period of 20 October 2018 to 20 January 2019 and reflects trends from the six states most affected by displacement: Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe. Round 26 assessments could not be carried out in 13 wards due to escalation in hostilities and insecurity. As ",
-   "matched_on": "inside PDF: “d 3 Overview: DTM Round 26 Assessments 4 KEY HIGHLIGHTS 5 1.BASELINE ASSESSMENT OF DISPLACEMENT 6 A: PROFILE OF DISPLACE”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2019-01-01",
    "round": 26,
@@ -34343,7 +34391,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-25-october-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2025%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -34417,14 +34467,16 @@
    "title": "Nigeria — Displacement Report 25 (October 2018)",
    "date": "2018-11-13",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-25-october-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2025%20Report%20%28October%202018%29_1.pdf",
    "summary": "",
-   "matched_on": "inside PDF: “..................................................... 26 2. SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2018-10-01",
    "round": 25,
@@ -34766,7 +34818,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-24-august-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20%20DTM%20%20Round%2024%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -34840,8 +34894,8 @@
    "title": "Nigeria — Displacement Report 24 (August 2018)",
    "date": "2018-09-05",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -34856,7 +34910,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-24-august-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2024%20Report%20%28August%202018%29_1.pdf",
    "summary": "This Displacement Tracking Matrix (DTM) Round 24 assessment report, prepared by the International Organization for Migration (IOM), aims to improve the humanitarian community's understanding of the scope of internal displacements and returns, as well as the needs of the conflict-affected populations in north-east Nigeria. The report covers the period of 23 July to 6 August 2018 and reflects trends from the six states most affected by the ongoing conflict: Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe.",
-   "matched_on": "inside PDF: “..................................................... 26 2. SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2018-08-01",
    "round": 24,
@@ -34870,7 +34924,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-24-august-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2024%20Baseline%20Dashboard.pdf",
@@ -35151,7 +35207,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%2023%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -35170,7 +35228,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/08%20DTM%20Nigeria%20Round%2023%20List%20of%20Assessed%20Wards.pdf",
@@ -35189,7 +35249,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/07%20DTM%20Nigeria%20Round%2023%20List%20of%20Assessed%20Sites.pdf",
@@ -35208,7 +35270,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20DTM%20Nigeria%20Round%2023%20Dashboard%20of%20IDP%20Population%20Variation_0_0.pdf",
@@ -35225,8 +35289,8 @@
    "title": "Nigeria — Displacement Report  23 (June 2018)",
    "date": "2018-06-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -35241,7 +35305,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Displacement%20Report%2023%20%28June%202018%29.pdf",
    "summary": "This report of the Round XXIII Displacement Tracking Matrix (DTM) assessment by the International Organization for Migration (IOM) aims to improve the understanding about the scope of internal displacements, returns and the needs of affected populations in conflict-affected states of north-eastern Nigeria. The report covers the period of 28 May to 16 June 2018 and reflects trends from the six states most affected by displacement: Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe.",
-   "matched_on": "inside PDF: “..................................................... 25 2. SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2018-06-01",
    "round": 23,
@@ -35690,7 +35754,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-22-april-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XXII%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -35794,8 +35860,8 @@
    "title": "DTM Nigeria Round XXII Report April 2018",
    "date": "2018-04-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -35810,7 +35876,7 @@
    "url": "https://dtm.iom.int/reports/dtm-nigeria-round-xxii-report-april-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XXII%20Report%20April%202018_0.pdf",
    "summary": "This report of the Round XXII Displacement Tracking Matrix (DTM) assessment by the International Organization for Migration (IOM) aims to improve understanding of the scope of internal displacements, returns and the needs of aﬀected populations in conﬂict-aﬀected states of north-eastern Nigeria. The report covers the period of 18 March to 18 April and reﬂects trends from the six states most aﬀected by displacement: Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe. Round XXII identiﬁed 1,881,198 individuals as displaced in the aﬀected states, representing a six per  cent increase (or 98,708 peopl",
-   "matched_on": "inside PDF: “..................................................... 25 2. SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
    "round": 22,
@@ -36206,7 +36272,9 @@
    "year": 2018,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-21-january-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XXI%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -36282,14 +36350,16 @@
    "title": "Nigeria — Displacement Report 21 (February 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-21-february-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XXI%20Report%20February%202018.pdf",
    "summary": "Round XXI identified 1,782,490 individuals as displaced in the affected states, representing a 4.5 per cent increase (79,810 people) in comparison to the 1,702,680 individuals identified in Round XX (December 2017). The increase is a deviation from the downward trend in the number of internally displaced persons (IDPs) recorded over the last few months. To gain insights into the demographic profile of IDPs; reasons for displacement; places of origin; dwelling types; mobility and unfulfilled needs; and changes in the percentages of displaced persons over time, 5 per cent of the identified IDP p",
-   "matched_on": "inside PDF: “..................................................... 25 2. SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
    "round": 21,
@@ -36675,7 +36745,9 @@
    "year": 2017,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-20-december-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XX%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -36751,14 +36823,16 @@
    "title": "Nigeria — Displacement Report 20 (December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-20-december-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XX%20Report%20December%202017%20%282%29.pdf",
    "summary": "Round XX identified 1,702,680 individuals as displaced in the affected states, representing a marginal decrease of less than 1% decrease compared to the population identified in Round XIX (October 2017). This is in line with the trend that has been observed over the last few months, mainly on account of increase in returnees. 82,274 displaced persons were interviewed in this round of assessment, representing five per cent of the identified IDP population. This report also includes site assessments that were carried out in 2,192 sites. The sites included 251 camps and camp-like settings and 1,9",
-   "matched_on": "inside PDF: “...................................................... 25 2 SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2017-12-01",
    "round": 20,
@@ -37036,7 +37110,9 @@
    "year": 2017,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-19-october-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XIX%20Dashboard%20of%20Site%20Assessment_0.pdf",
@@ -37273,14 +37349,16 @@
    "title": "Nigeria — Displacement Report 19 (October 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-19-october-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria_DTM_Round_XIX_Report_201710.pdf",
    "summary": "Round XIX identified 1,713,771 individuals as displaced in the affected states, representing a marginal decrease of 3% decrease compared to the population of 1,757,288 that was identified in Round XVIII (August 2017). This is in line with the trend that has been observed over the last few months, mainly on account of increase in returns.",
-   "matched_on": "inside PDF: “...................................................... 10 3 SITE ASSESSMENTS AND SECTORAL NEEDS ........................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2017-10-01",
    "round": 19,
@@ -37683,7 +37761,9 @@
    "year": 2017,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-18-august-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2018%20Site%20Assessment%20Dashboard.pdf",
@@ -37738,8 +37818,8 @@
    "title": "Nigeria — Displacement Report 18 (August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -37754,7 +37834,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-18-august-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XVIII%20Report%20August%202017.pdf",
    "summary": "This dispalcement report covers the period of 25 July to 15 August 2017 and includes the six most-affected states of Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe.  This round identified 1,757,288 individuals as displaced in the affected states, representing a decrease of 68,033 persons compared to the population of 1,825,321 that was identified in the previous round (June 2017). The data was collected by enumerators at various administrative levels, such as at the Local Government Areas (LGAs), wards and displacement sites. A total of 66,080 displaced people were assessed in this round of as",
-   "matched_on": "inside PDF: “...................................................... 10 3 SITE ASSESSMENTS ...........................................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2017-08-01",
    "round": 18,
@@ -38082,8 +38162,8 @@
    "title": "Nigeria — Displacement Report 17 (June 2017)",
    "date": "2017-07-17",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -38098,7 +38178,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-17-june-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XVII%20Report%20June%202017.pdf",
    "summary": "This report of the Round XVII Displacement Tracking Matrix (DTM) assessment by the International Organization for Migration (IOM) aims to improve understanding of the scope of displacement and the needs of affected populations in conflict-affected states of northeast Nigeria. The report covers the period of 15 May to 25 June 2017 and includes the six most-affected states of Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe.",
-   "matched_on": "inside PDF: “...................................................... 12 3 SITE ASSESSMENTS ...........................................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2017-06-01",
    "round": 17,
@@ -38431,8 +38511,8 @@
    "title": "Nigeria — Displacement Report 16 (May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -38444,7 +38524,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-16-may-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XVI%20Report%20May%202017.pdf",
    "summary": "Total number of identified IDPs increased by 51,588 (3%) individuals from last DTM round. The number of identified returnees increased by 83,467 (7%) individuals from the last DTM round. A survey of unmet needs showed  that food remains the predominant need in majority (70%) of IDP sites. The largest IDP populations are located in Borno (79%), Adamawa (8%) and Yobe (6%). 97% of displacements were due to the Insurgency.",
-   "matched_on": "inside PDF: “...................................................... 11 3 SITE ASSESSMENTS ...........................................”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2017-05-01",
    "round": 16,
@@ -38665,7 +38745,9 @@
    "year": 2017,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-round-16-may-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XVI%20Dashboard%20of%20Baseline%20Assessment.pdf",
@@ -38907,8 +38989,8 @@
    "title": "Nigeria — Displacement Report 15 (March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -38923,7 +39005,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-15-march-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XV%20Report%20March%202017.pdf",
    "summary": "The report covers the period of 15 February to 31 March 2017 and includes six most-a­ffected states of Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe. As of 31 March 2017, the estimated number of IDPs in these states is 1,832,743 (326,010 households), representing a decrease of 77,223 (4%) from the figure of 1,899,830 in the last round (DTM Round XIV). The key reasons for population movement continue to be to return to their place of origin and to search for livelihood opportunities. People were also displaced due to continuing military action and in some instances, due to communal clashes. Bo",
-   "matched_on": "inside PDF: “d the needs of the aﬀected population, this report includes site assessments carried out in 207 displacement sites (camp”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2017-03-01",
    "round": 15,
@@ -39381,12 +39463,14 @@
    "year": 2017,
    "component_key": "needs",
    "component": "Mobility Tracking – Needs Monitoring",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-14-19-december-2016%E2%80%9425-january-2017-0",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/public/reports/01%20DTM%20Nigeria%20Round%20XIV%20Report%20January%202017.pdf",
    "summary": "Between December 2016 and January 2017, the number of identified IDPs increased by 129,386 individuals (7.3% increase). This brings the total number if IDPs in Nigeria to 1,899,830 (337,353 households). The return to relative safety in some of the areas previously held by Boko Haram has led to an increase in returnees from 1,039,267 in the previous round to 1,099,509 this round.",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "date in title (page shows no publication date)",
    "period_date": "2017-01-25",
    "round": 14,
@@ -39562,7 +39646,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-13-december-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Dec2016_Report_nigeria%20displacement%20r.pdf",
    "summary": "The DTM Round 13 assessment focused on the six northeastern Nigerian states most affected by the ongoing conflict; Adamawa, Bauchi, Borno, Gombe, Taraba, and Yobe. The following DTM report covers a total of 106 LGAs and 751 wards. 1,770,444 Internally Displaced Persons (IDPs) or 314,574 households were identified during this round.",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2016-12-01",
    "round": 13,
@@ -39576,7 +39660,9 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-7-october-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20DTM%20Nigeria%20Round%20XII%20Dashboard%20of%20Site%20Assessment.pdf",
@@ -39606,7 +39692,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-12-october-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XII%20Report%20October%202016.pdf",
    "summary": "As of 31 October 2016, the Displacement Tracking Matrix (DTM) has identified 1,822,541 internally displaced persons (IDPs) - 321, 514 families - displaced since the escalation of violence in 2014. The largest IDP populations are located in Borno, Adamawa and Yobe, corresponding to 93% of the total IDP population.",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2016-10-01",
    "round": 12,
@@ -39621,9 +39707,7 @@
    "component_key": "needs",
    "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -39631,18 +39715,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Benue",
-    "Nasarawa",
-    "Plateau",
-    "Kano",
-    "Kaduna",
-    "Zamfara"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-11-august-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01%20DTM%20Nigeria%20Round%20XI%20Report%20August%202016.pdf",
    "summary": "2,093,030 IDPs (370,389 households) were identified in Adamawa, Bauchi, Benue, Borno, Gombe, Taraba, Yobe, Nasarawa, Plateau, Kaduna, Kano, Zamfara states and Abuja FCT. In total, 1,878,205 IDPs captured through the DTM assessments have been displaced by the insurgency (89.74% of the total IDP population). The majority of the IDPs were identified in Borno (1,446,829), followed by Adamawa (163,559) and Yobe (135,442).",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2016-08-01",
    "round": 11,
@@ -39657,9 +39735,7 @@
    "component_key": "needs",
    "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -39667,18 +39743,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Benue",
-    "Nasarawa",
-    "Plateau",
-    "Kano",
-    "Kaduna",
-    "Zamfara"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-10-june-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20X%20Report_20160630.pdf",
    "summary": "2,066,783 IDPs (344,564 households) were identified in Adamawa, Bauchi, Benue, Borno, Gombe, Taraba, Yobe, Nasarawa, Plateau, Kaduna, Kano, Zamfara states and Abuja FCT. In total, 1,808,021 IDPs captured through the DTM assessments have been displaced by the insurgency (87.5% of the total IDP population). Majority of the IDPs are identified in Borno (1,404,483) followed by Adamawa (159,445) and Yobe (112,671).",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2016-06-01",
    "round": 10,
@@ -39738,7 +39808,9 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-9-1-march-%E2%80%94-30-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b_IOM%20DTM%20Nigeria_Sites_Dashboard_Round%20IX%20Report_20150430.pdf",
@@ -39907,9 +39979,7 @@
    "component_key": "needs",
    "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -39917,18 +39987,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Benue",
-    "Nasarawa",
-    "Plateau",
-    "Kano",
-    "Kaduna",
-    "Zamfara"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-9-1-march-2016%E2%80%9430-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20IX%20Report_20160430.pdf",
    "summary": "2,155,618 IDPs (352,840 households) were identified in Adamawa, Bauchi, Benue, Borno, Gombe, Taraba, Yobe, Nasarawa, Plateau, Kaduna, Kano, Zamfara states and Abuja. The highest number of IDPs are in Borno (1,427,999 IDPs), followed by Adamawa (150,718) and Adawama (134,415 IDPs). The report contains details of demographics, location, cause and duration of displacement, place of origin of IDPs, type of location of IDPs and data on returnees. 97 displacement sites were assessed, and the report presents data on their location and sectoral needs at the sites including shelter, WASH, food and nutr",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
    "round": 9,
@@ -39942,7 +40006,9 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-9-1-march-%E2%80%94-30-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a_IOM%20DTM%20Nigeria_Baseline_Dashboard_Round%20IX%20Report_20160430.pdf",
@@ -40076,7 +40142,9 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-8-1-january-%E2%80%94-28-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b_IOM%20DTM%20Nigeria_Sites_Dashboard_Round%20VIII%20Report_20150229.pdf",
@@ -40245,9 +40313,7 @@
    "component_key": "needs",
    "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -40255,18 +40321,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Benue",
-    "Nasarawa",
-    "Plateau",
-    "Kano",
-    "Kaduna",
-    "Zamfara"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-8-1-january-%E2%80%94-28-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20VIII%20Report_20160229.pdf",
    "summary": "2,241,484 IDPs (334,608 households) were identified in Adamawa, Bauchi, Benue, Borno, Gombe, Taraba, Yobe, Nasarawa, Plateau, Kaduna, Kano, Zamfara states and Abuja. The highest number of IDPs are in Borno (1,525,404 IDPs), followed by Yobe (139,550) and Adawama (132,626 IDPs). The report contains details of demographics, cause and duration of displacement, place of origin of IDPs, type of location of IDPs and data on returnees. 84 displacement sites were assessed, and the report presents data on their location and sectoral needs at the sites including shelter, WASH, food and nutrition, health",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
    "round": 8,
@@ -40280,7 +40340,9 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-8-1-january-%E2%80%94-28-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a_IOM%20DTM%20Nigeria_Baseline_Dashboard_Round%20VIII%20Report_20160229.pdf",
@@ -40387,7 +40449,9 @@
    "year": 2016,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-7-november-%E2%80%94-december-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20VII%20Dashboard%20of%20Baseline%20Assessment%20Nigeria.pdf",
@@ -40404,12 +40468,10 @@
    "title": "Nigeria — Displacement Report 7 (1 November — 31 December 2015)",
    "date": "2015-12-31",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -40417,18 +40479,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Benue",
-    "Nasarawa",
-    "Plateau",
-    "Kano",
-    "Kaduna",
-    "Zamfara"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-7-1-november-%E2%80%94-31-december-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20VII%20Report_20151223.pdf",
    "summary": "2,151,979 IDPs (313,575 households) were identified in Adamawa, Bauchi, Benue, Borno, Gombe, Taraba, Yobe, Nasarawa, Plateau, Kaduna, Kano, Zamfara states and Abuja. Borno state (1,434,149 IDPs) has the highest number of IDPs, followed by Adamawa (136,010 IDPs) and Yobe (131,203 IDPs). 55.73% of the IDP population are children and 28.13% are less than five years old. 92.44% of IDPs live in host families while 7.56% live in camps. 78 camps and camp-like sites were identified. The report contains details of location of displacement, demographics, reasons for displacement, duration of displacemen",
-   "matched_on": "inside PDF: “GAs and 1266 wards. This report includes the results of the baseline assessments co nducted at Local Government areas (L”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2015-12-31",
    "round": 7,
@@ -40461,7 +40517,9 @@
    "year": 2015,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-6-september-%E2%80%94-october-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20VI%20Dashboard%20of%20Baseline%20Assessment%20Nigeria.pdf",
@@ -40478,12 +40536,10 @@
    "title": "Nigeria — Displacement Report 6 (1 September — 31 October 2015)",
    "date": "2015-10-31",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -40491,15 +40547,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Nasarawa",
-    "Plateau",
-    "Kaduna"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-6-1-september-%E2%80%94-31-october-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20VI%20Report_20151031.pdf",
    "summary": "2,233,506 IDPs (318,937 households) were identified in Adamawa, Bauchi, Borno, Gombe, Taraba, Yobe, Nasarawa, Plateau, Kaduna states and Abuja. Borno state (1,606,406 IDPs) has the highest number of IDPs, followed by Yobe (144,302 IDPs) and Adamawa (135,605 IDPs). 57.4% of the IDP population are children and 28% are less than five years old. 92% of IDPs live in host families while 8% live in camps. 76 camps and camp-like sites were identified. The report contains details of location of displacement, demographics, reasons for displacement, duration of displacement, place of origin of IDPs, type",
-   "matched_on": "inside PDF: “LGAs and 987 wards. This report includes the results of the baseline assessments co nducted at Local Government areas (L”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2015-10-31",
    "round": 6,
@@ -40562,7 +40615,9 @@
    "year": 2015,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-5-july-%E2%80%94-august-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20V%20Dashboard%20of%20Baseline%20Assessment%20Nigeria.pdf",
@@ -40579,11 +40634,10 @@
    "title": "Nigeria — Displacement Report 5 (1 July — 31 August 2015)",
    "date": "2015-08-31",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -40591,13 +40645,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Nasarawa"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-5-1-july-%E2%80%94-31-august-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20V%20Report_20150831.pdf",
    "summary": "2,150,451 IDPs (300,992 households) were identified in Adamawa, Bauchi, Borno, Gombe, Taraba, Yobe, Nasarawa states and Abuja. Borno state (1,650,799 IDPs) has the highest number of IDPs, followed by Yobe (195,918 IDPs) and Adamawa (117,729 IDPs). 262,324 individuals (37,073 households) have returned to Adamawa state. The IDP population is 53% female and 47% male. 58% of the IDP population are children and 28% are less than five years old. 92% of IDPs live in host families while 8% live in camps. The report contains details of location of displacement, demographics, reasons for displacement, d",
-   "matched_on": "inside PDF: “during this period. This report includes the results of the baseline assessments conducted at Local Government area (LGA”",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2015-08-31",
    "round": 5,
@@ -40654,7 +40707,9 @@
    "year": 2015,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-4-may-%E2%80%94-june-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20IV%20Dashboard%20of%20Baseline%20Assessment%20nigeria.pdf",
@@ -40692,7 +40747,9 @@
    "year": 2015,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-3-1-march-%E2%80%94-29-april-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20III%20Dashboard%20of%20Baseline%20Assessment%20NIgeria.pdf",
@@ -40711,7 +40768,9 @@
    "year": 2015,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-3-29-april-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20Round%20III%20Dashboard%20of%20Displacement%20Sites_0.pdf",
@@ -40782,7 +40841,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-3-1-march-%E2%80%94-30-april-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM%20DTM%20Nigeria_Round%20III%20Report_20150429.pdf",
    "summary": "A total of 1,491,706 IDPs (194,145 households) were identified in Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe states. Borno state (939,290 IDPs) has the highest number of IDPs, followed by Adamawa (222,882 IDPs) and Yobe (139,591 IDPs). The report contains details of location of displacement, demographics, reasons for displacement, patterns of displacement, place of origin of IDPs, types of location, site profiles, and sectoral needs including shelter, WASH, food and nutrition, health, education, protection, communication and livelihoods.",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2015-04-30",
    "round": 3,
@@ -40860,9 +40919,7 @@
    "component_key": "needs",
    "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
-    "North East",
-    "North Central",
-    "North West"
+    "North East"
    ],
    "states": [
     "Adamawa",
@@ -40870,16 +40927,12 @@
     "Yobe",
     "Gombe",
     "Taraba",
-    "Bauchi",
-    "Nasarawa",
-    "Plateau",
-    "Kano",
-    "Kaduna"
+    "Bauchi"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-2-1-january-%E2%80%94-28-february-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/IOM%20DTM%20Nigeria%20II%20Round%20Report_Feb_2015.pdf",
    "summary": "A total of 1,235,294 IDPs were identified in northern Nigeria. 1,188,018 IDPs (149,357 households) were identified in Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe states. Another 47,276 IDPs (5,910 households) were identified in Plateau, Nasarawa, Abuja, Kano and Kaduna states. The highest number of IDPs are in Borno (672,714 IDPs), followed by Adawama (220,159 IDPs) and Yobe (135,810 IDPs). The report contains details of demographics, cause of displacement, place of origin of IDPs and sectoral needs including shelter, WASH, food and nutrition, health, education and protection.",
-   "matched_on": "title:displacement report (title only; PDF not yet checked)",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring",
    "date_basis": "publication date",
    "period_date": "2015-02-28",
    "round": 2,
@@ -40893,7 +40946,9 @@
    "year": 2015,
    "component_key": "atlas",
    "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [],
+   "regions": [
+    "North East"
+   ],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-2-1-january-%E2%80%94-28-february-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM_DTM_Nigeria_Dashboard_Baseline_Assessment_R2.pdf",
