@@ -18,7 +18,7 @@ import threading
 import time
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable, Iterable
 from urllib.parse import quote_plus, unquote, urljoin, urlparse, urlunparse, parse_qs
@@ -357,6 +357,16 @@ class Crawler:
         if upgrade:
             self.log(f"Re-reading {len(upgrade)} saved pages once to collect attached files and page text…")
             todo = sorted(set(todo) | set(upgrade))
+        if not quick:
+            # re-read up to 100 of the longest-unchecked pages each full run (all pages every ~3 weeks),
+            # so titles or dates DTM corrects later on dtm.iom.int are picked up too
+            stale = sorted((v.get("fetched") or "0000", v["url"]) for v in cache.values()
+                           if not v.get("from_listing_only"))
+            cutoff = (datetime.now(timezone.utc) - timedelta(days=21)).strftime("%Y-%m-%d")
+            recheck = [u for f, u in stale if f < cutoff][:100]
+            if recheck:
+                self.log(f"Re-checking {len(recheck)} older report pages for corrections on dtm.iom.int…")
+                todo = sorted(set(todo) | set(recheck))
         if max_reports:
             todo = todo[:max_reports]
         self.log(f"Fetching {len(todo)} new report pages ({len(cache)} cached)…")
@@ -504,11 +514,10 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
     fp = lambda rs: sorted(json.dumps([r.get(k) for k in FIELDS], default=str) for r in rs)  # noqa: E731
     changed = not prev or fp(prev.get("reports", [])) != fp(classified)
     prev_urls = {r["url"] for r in prev.get("reports", [])}
-    if changed:
-        added = [{"title": r["title"], "url": r["url"], "date": r.get("date")}
-                 for r in classified if r["url"] not in prev_urls][:50] if prev else []
-    else:
-        added = prev.get("latest_additions", [])
+    fresh = [{"title": r["title"], "url": r["url"], "date": r.get("date"), "added": now[:10]}
+             for r in classified if r["url"] not in prev_urls][:50] if prev else []
+    # keep the previous "new" list until genuinely new reports arrive (reclassifying is not "new")
+    added = fresh or prev.get("latest_additions", [])
 
     payload = {
         # generated_at = when the report list last CHANGED, so the dashboard can tell new data apart
@@ -527,7 +536,7 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
                     for r in classified],
     }
     status = {"checked_at": now, "last_changed": payload["generated_at"], "count": len(classified),
-              "changed_this_run": changed, "new_this_run": len(added) if changed else 0, "crawl_seconds": seconds}
+              "changed_this_run": changed, "new_this_run": len(fresh), "crawl_seconds": seconds}
     _write_json(DATA / "status.json", status)
     if not changed:
         log(f"No new or changed reports ({len(classified)} total). Data files left as they were.")
@@ -558,5 +567,5 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
     unclassified = sum(1 for r in classified if r["component_key"] == payload["components"][-1]["key"])
     if skipped:
         log(f"Left out {skipped} pages that are not DTM Nigeria reports (see scope_title_regex in taxonomy.json).")
-    log(f"Exported {len(classified)} reports ({len(added)} new, {unclassified} unclassified) -> data/reports.json, .csv, .js")
+    log(f"Exported {len(classified)} reports ({len(fresh)} new, {unclassified} unclassified) -> data/reports.json, .csv, .js")
     return payload
