@@ -21,7 +21,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable
-from urllib.parse import quote_plus, urljoin, urlparse, urlunparse, parse_qs
+from urllib.parse import quote_plus, unquote, urljoin, urlparse, urlunparse, parse_qs
 from urllib import robotparser
 
 import requests
@@ -36,6 +36,10 @@ CITATION_RX = re.compile(
     r"International Organization for Migration \(IOM\),\s*([A-Z][a-z]{2,9}\.?\s+\d{1,2},?\s+\d{4})")
 
 Log = Callable[[str], None]
+CACHE_VERSION = 2  # v2 adds attached files and page text (needed to find Needs Monitoring reports)
+FILE_RX = re.compile(r"""((?:https?:)?(?://[a-z0-9.-]+)?/sites/g/files/[^\s"'<>]*?\.(?:pdf|xlsx?|zip|docx?))""", re.I)
+NM_FILE_RX = re.compile(r"needs?[\s_-]*monitoring|(?:^|[\s_(-])NM[\s_-]", re.I)
+NM_TEXT_RX = re.compile(r"needs?\s+monitoring", re.I)
 
 
 def load_config(path: Path | None = None) -> dict:
@@ -203,11 +207,20 @@ class Crawler:
             summary = next((p for p in ps if len(p) > 80), "")
         series = sorted({a.get_text(" ", strip=True) for a in soup.find_all("a", href=True)
                          if "/product-series/" in a["href"] and a.get_text(strip=True)})
-        pdf = next((urljoin(url, a["href"]) for a in soup.find_all("a", href=True)
-                    if ".pdf" in a["href"].lower()), "")
+        # every file the page references, wherever it appears (links, download forms, scripts)
+        files, seen = [], set()
+        for m in FILE_RX.findall(html):
+            f = urljoin(url, m.replace("&amp;", "&")).split("?")[0]
+            if f not in seen:
+                seen.add(f)
+                files.append(f)
+        pdf = next((f for f in files if f.lower().endswith(".pdf")), "")
+        # page text from the title onwards (skips site navigation), kept short
+        body = text[text.find(title.strip()):] if title.strip() and title.strip() in text else text
         return {"url": url, "title": title.strip(), "date_raw": date_raw,
                 "date": Classifier.parse_date(date_raw), "summary": summary[:600],
-                "series": series, "pdf": pdf}
+                "series": series, "pdf": pdf, "files": files[:20], "body": body[:3000],
+                "v": CACHE_VERSION}
 
     def fetch_report(self, url: str) -> dict | None:
         html = self.get(url)
@@ -250,6 +263,11 @@ class Crawler:
                                "connection or proxy settings; existing data was left unchanged.")
 
         todo = [u for u in sorted(urls) if self.report_key(u) not in cache]
+        # pages saved by an older harvester version are read again once, to pick up new fields
+        upgrade = [v["url"] for v in cache.values() if v.get("v", 1) < CACHE_VERSION and not v.get("from_listing_only")]
+        if upgrade:
+            self.log(f"Re-reading {len(upgrade)} saved pages once to collect attached files and page text…")
+            todo = sorted(set(todo) | set(upgrade))
         if max_reports:
             todo = todo[:max_reports]
         self.log(f"Fetching {len(todo)} new report pages ({len(cache)} cached)…")
@@ -287,14 +305,48 @@ def _write_json(path: Path, obj) -> None:
     tmp.replace(path)
 
 
+def needs_monitoring_records(page: dict, base_key: str) -> list[dict]:
+    """DTM publishes Needs Monitoring as PDFs attached to Mobility Tracking pages, or as
+    findings inside the displacement report itself. Turn each into its own countable record."""
+    out, names = [], set()
+    for f in page.get("files") or []:
+        name = unquote(f.rsplit("/", 1)[-1])
+        stem = re.sub(r"(_final|_v\d+|_\d+)*\.[a-z]+$", "", name, flags=re.I)
+        if NM_FILE_RX.search(" " + stem) and stem.lower() not in names:
+            names.add(stem.lower())
+            out.append({"file": f, "stem": re.sub(r"^\s*(dtm\s+)?nigeria\s*[-—–]\s*", "", stem, flags=re.I)})
+    recs = []
+    for i, nm in enumerate(out):
+        recs.append({**page, "url": page["url"] + f"#needs-monitoring-{i + 1}",
+                     "title": f"Nigeria — Needs Monitoring — {nm['stem'].replace('_', ' ').strip()}",
+                     "summary": page.get("title", ""), "pdf": nm["file"], "series": [],
+                     "force_component": "needs", "matched_on": "attached file: " + nm["stem"][:60]})
+    if not recs and base_key in ("atlas", "other") and NM_TEXT_RX.search(page.get("body") or page.get("summary") or ""):
+        recs.append({**page, "url": page["url"] + "#needs-monitoring",
+                     "title": page["title"] + " — Needs Monitoring findings",
+                     "summary": page.get("title", ""), "series": [],
+                     "force_component": "needs", "matched_on": "report text mentions needs monitoring"})
+    return recs
+
+
 def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None, log: Log = print) -> dict:
     classified = []
+    skipped = 0
     for r in records:
+        if not clf.in_scope(r):
+            skipped += 1
+            continue
         rr = dict(r)
         extra = " ".join(rr.get("series") or [])
         c = clf.classify({**rr, "summary": (extra + " " + rr.get("summary", "")).strip()})
         c["summary"] = rr.get("summary", "")
         classified.append(c)
+        for nm in needs_monitoring_records(rr, c["component_key"]):
+            n = clf.classify({**nm, "title": nm["title"]})
+            label = next(x["label"] for x in clf.components if x["key"] == "needs")
+            n.update(component_key="needs", component=label, matched_on=nm["matched_on"],
+                     regions=n["regions"] or c["regions"], states=n["states"] or c["states"], summary=nm["summary"])
+            classified.append(n)
     classified.sort(key=lambda r: (r.get("date") or "", r["title"]), reverse=True)
     for i, r in enumerate(classified):
         r["id"] = i + 1
@@ -355,5 +407,7 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
             w.writerow([comp, *[cnt.get(y, 0) for y in years], sum(cnt.values())])
 
     unclassified = sum(1 for r in classified if r["component_key"] == payload["components"][-1]["key"])
+    if skipped:
+        log(f"Left out {skipped} pages that are not DTM Nigeria reports (see scope_title_regex in taxonomy.json).")
     log(f"Exported {len(classified)} reports ({len(added)} new, {unclassified} unclassified) -> data/reports.json, .csv, .js")
     return payload

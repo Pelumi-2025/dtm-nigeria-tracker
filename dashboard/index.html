@@ -286,10 +286,10 @@ const DEFAULT_COMPONENTS = [
   ["ses","Socio Economic Survey"],["smi","Solutions Mobility Index / Stability Index"],
   ["transhumance","Transhumance Flow Monitoring Report"],["ewer","Early Warning & Early Response Dashboard"],
   ["flood","Post-Flood Situation Report (Ad-Hoc)"],["biometric","Biometric Registration Report"],
-  ["ses_fm","Socio-Economic Survey & Facility Mapping"],["other","Other / Unclassified"]].map(([key,label])=>({key,label}));
-const DISPLAY_ORDER = ["atlas","needs","flash","ett","intention","ses","smi","transhumance","ewer","flood","biometric","ses_fm","other"];
+  ["ses_fm","Socio-Economic Survey & Facility Mapping"],["fmp","Flow Monitoring (migrants) – extra category"],["other","Other / Unclassified"]].map(([key,label])=>({key,label}));
+const DISPLAY_ORDER = ["atlas","needs","flash","ett","intention","ses","smi","transhumance","ewer","flood","biometric","ses_fm","fmp","other"];
 const PALETTE = {atlas:"#0A4B9C",needs:"#5B8FD6",flash:"#C0392B",ett:"#E08E2B",intention:"#7B4FA0",ses:"#2B7A5E",
-  smi:"#1B998B",transhumance:"#8C6D1F",ewer:"#D35D8B",flood:"#2E86AB",biometric:"#5C6B73",ses_fm:"#83B35A",other:"#A7B0B6"};
+  smi:"#1B998B",transhumance:"#8C6D1F",ewer:"#D35D8B",flood:"#2E86AB",biometric:"#5C6B73",ses_fm:"#83B35A",fmp:"#6D5D8C",other:"#A7B0B6"};
 const STATES = {"North East":["Adamawa","Borno","Yobe","Gombe","Taraba","Bauchi"],
   "North Central":["Benue","Nasarawa","Plateau","Kogi","Niger"],"North West":["Kano","Kaduna","Katsina","Sokoto","Zamfara"]};
 const REGIONS = [{key:"NE",label:"North East",zones:["North East"]},
@@ -701,7 +701,7 @@ async function askSample(text){
 const COMP_WORDS=[["ewer",["early warning","ewer","early response","alert"]],["ett",[" ett","emergency tracking"]],["flash",["flash","incident"]],
   ["flood",["flood"]],["biometric",["biometric","registration"]],["intention",["intention"]],["smi",["stability","mobility index"," smi","solutions index"]],
   ["ses_fm",["facility mapping","facilities"]],["ses",["socio","economic survey"]],["needs",["needs monitoring","needs"]],
-  ["transhumance",["transhumance","flow monitoring","herder"]],["atlas",["atlas","mobility tracking","baseline","site assessment","displacement report"]],["other",["unclassified"]]];
+  ["transhumance",["transhumance","herder"]],["fmp",["migrant flow","flow monitoring"]],["atlas",["atlas","mobility tracking","baseline","site assessment","displacement report"]],["other",["unclassified"]]];
 function parseQuery(t){
   const s=" "+t.toLowerCase().replace(/[?!.,]/g," ")+" ",q={};
   let comps=COMP_WORDS.filter(([k,ws])=>ws.some(w=>s.includes(w))).map(([k])=>k);

@@ -1,52 +1,253 @@
 {
-  "_readme": "Edit these keyword lists to tune classification. Rules are checked top to bottom against the report TITLE first, then the summary; the first matching rule wins. Matching is case-insensitive. 'exclude' blocks a rule if any of its terms appear.",
-  "components": [
-    {"key": "ewer", "label": "Early Warning & Early Response Dashboard",
-     "include": ["early warning dashboard", "early warning & early response", "early warning and early response", "ewer", "alert tool"], "exclude": []},
-    {"key": "ett", "label": "Emergency Tracking Tool (ETT)",
-     "include": ["emergency tracking tool", " ett ", "ett report"], "exclude": []},
-    {"key": "flash", "label": "Incident / Flash Report",
-     "include": ["flash report", "flash rep", "incident report", "flash update", "incident update"], "exclude": []},
-    {"key": "flood", "label": "Post-Flood Situation Report (Ad-Hoc)",
-     "include": ["post-flood", "post flood", "flood situation report", "flood situation", "flood assessment", "flood report"], "exclude": []},
-    {"key": "biometric", "label": "Biometric Registration Report",
-     "include": ["biometric", "bio-metric", "registration report"], "exclude": []},
-    {"key": "intention", "label": "Intention Surveys",
-     "include": ["intention survey", "intentions survey", "return intention", "intentions of idps"], "exclude": []},
-    {"key": "smi", "label": "Solutions Mobility Index / Stability Index",
-     "include": ["solutions mobility index", "solution mobility index", "stability index", "mobility index", "durable solutions index"], "exclude": []},
-    {"key": "ses_fm", "label": "Socio-Economic Survey & Facility Mapping",
-     "include": ["facility mapping", "facilities mapping", "service mapping", "infrastructure mapping", "village assessment"], "exclude": []},
-    {"key": "ses", "label": "Socio Economic Survey",
-     "include": ["socio-economic survey", "socio economic survey", "socioeconomic survey", "socio-economic", "livelihood survey"], "exclude": []},
-    {"key": "needs", "label": "Mobility Tracking – Needs Monitoring",
-     "include": ["needs monitoring", "nm round", "multi-sectoral needs", "multisectoral needs"], "exclude": []},
-    {"key": "transhumance", "label": "Transhumance Flow Monitoring Report",
-     "include": ["transhumance", "flow monitoring"], "exclude": ["early warning"]},
-    {"key": "atlas", "label": "Mobility Tracking – IDP & Returnee Atlas",
-     "include": ["atlas", "mobility tracking", "displacement report", "baseline assessment", "site assessment", "location assessment", "master list", "idp and returnee", "idps and returnees"], "exclude": []}
-  ],
-  "unclassified_key": "other",
-  "unclassified_label": "Other / Unclassified",
-  "regions": {
-    "North East": {
-      "aliases": ["north-east", "north east", "northeast"],
-      "states": ["Adamawa", "Borno", "Yobe", "Gombe", "Taraba", "Bauchi"]
-    },
-    "North Central": {
-      "aliases": ["north-central", "north central", "northcentral", "ncnw"],
-      "states": ["Benue", "Nasarawa", "Plateau", "Kogi", "Niger"]
-    },
-    "North West": {
-      "aliases": ["north-west", "north west", "northwest", "ncnw"],
-      "states": ["Kano", "Kaduna", "Katsina", "Sokoto", "Zamfara"]
-    }
+ "_readme": "Edit these keyword lists to tune classification. Rules are checked top to bottom against the report TITLE first, then the summary; the first matching rule wins. Matching is case-insensitive. 'exclude' blocks a rule if any of its terms appear.",
+ "components": [
+  {
+   "key": "ewer",
+   "label": "Early Warning & Early Response Dashboard",
+   "include": [
+    "early warning dashboard",
+    "early warning & early response",
+    "early warning and early response",
+    "ewer",
+    "alert tool",
+    "early warning system",
+    "early warning systems",
+    "early warning"
+   ],
+   "exclude": []
   },
-  "_state_patterns_readme": "Optional regex overrides per state. Default is the state name as a whole word, so 'Niger' never matches 'Nigeria'.",
-  "state_patterns": {
-    "Nasarawa": "\\bnas+arawa\\b",
-    "Niger": "\\bniger\\b(?!\\s+republic)"
+  {
+   "key": "ett",
+   "label": "Emergency Tracking Tool (ETT)",
+   "include": [
+    "emergency tracking tool",
+    " ett ",
+    "ett report"
+   ],
+   "exclude": []
   },
-  "year_min": 2019,
-  "year_max": 2030
+  {
+   "key": "flash",
+   "label": "Incident / Flash Report",
+   "include": [
+    "flash report",
+    "flash rep",
+    "incident report",
+    "flash update",
+    "incident update",
+    "fire outbreak",
+    "significant displacement update",
+    "displacement update"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "flood",
+   "label": "Post-Flood Situation Report (Ad-Hoc)",
+   "include": [
+    "post-flood",
+    "post flood",
+    "flood situation report",
+    "flood situation",
+    "flood assessment",
+    "flood report",
+    "flood rapid needs",
+    "flood rapid assessment",
+    "flood needs assessment"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "biometric",
+   "label": "Biometric Registration Report",
+   "include": [
+    "biometric",
+    "bio-metric",
+    "registration report"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "intention",
+   "label": "Intention Surveys",
+   "include": [
+    "intention survey",
+    "intentions survey",
+    "return intention",
+    "intentions of idps"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "smi",
+   "label": "Solutions Mobility Index / Stability Index",
+   "include": [
+    "solutions mobility index",
+    "solution mobility index",
+    "stability index",
+    "mobility index",
+    "durable solutions index"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "ses_fm",
+   "label": "Socio-Economic Survey & Facility Mapping",
+   "include": [
+    "facility mapping",
+    "facilities mapping",
+    "service mapping",
+    "infrastructure mapping",
+    "village assessment"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "ses",
+   "label": "Socio Economic Survey",
+   "include": [
+    "socio-economic survey",
+    "socio economic survey",
+    "socioeconomic survey",
+    "socio-economic",
+    "livelihood survey"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "needs",
+   "label": "Mobility Tracking – Needs Monitoring",
+   "include": [
+    "needs monitoring",
+    "nm round",
+    "multi-sectoral needs",
+    "multisectoral needs"
+   ],
+   "exclude": []
+  },
+  {
+   "key": "transhumance",
+   "label": "Transhumance Flow Monitoring Report",
+   "include": [
+    "transhumance"
+   ],
+   "exclude": [
+    "early warning"
+   ]
+  },
+  {
+   "key": "fmp",
+   "label": "Flow Monitoring (migrants) – extra category",
+   "include": [
+    "flow monitoring"
+   ],
+   "exclude": [
+    "transhumance",
+    "early warning"
+   ]
+  },
+  {
+   "key": "atlas",
+   "label": "Mobility Tracking – IDP & Returnee Atlas",
+   "include": [
+    "atlas",
+    "mobility tracking",
+    "displacement report",
+    "baseline assessment",
+    "site assessment",
+    "location assessment",
+    "master list",
+    "idp and returnee",
+    "idps and returnees",
+    "site profile",
+    "site profiles",
+    "displacement dashboard",
+    "idp population variation",
+    "returnee dashboard",
+    "return dashboard",
+    "displacement factsheet",
+    "displacement fact sheet",
+    "list of wards assessed",
+    "list of displacement sites",
+    "zones dashboard",
+    "round report",
+    "dtm round",
+    "round xx",
+    "round x",
+    "location profile",
+    "ward profile",
+    "lga profile",
+    "master list",
+    "dashboard round",
+    "idp dashboard",
+    "location based assessment",
+    "location assessment report"
+   ],
+   "exclude": []
+  }
+ ],
+ "unclassified_key": "other",
+ "unclassified_label": "Other / Unclassified",
+ "regions": {
+  "North East": {
+   "aliases": [
+    "north-east",
+    "north east",
+    "northeast"
+   ],
+   "states": [
+    "Adamawa",
+    "Borno",
+    "Yobe",
+    "Gombe",
+    "Taraba",
+    "Bauchi"
+   ]
+  },
+  "North Central": {
+   "aliases": [
+    "north-central",
+    "north central",
+    "northcentral",
+    "ncnw",
+    "nwnc",
+    "nw nc",
+    "nc nw"
+   ],
+   "states": [
+    "Benue",
+    "Nasarawa",
+    "Plateau",
+    "Kogi",
+    "Niger"
+   ]
+  },
+  "North West": {
+   "aliases": [
+    "north-west",
+    "north west",
+    "northwest",
+    "ncnw",
+    "nwnc",
+    "nw nc",
+    "nc nw"
+   ],
+   "states": [
+    "Kano",
+    "Kaduna",
+    "Katsina",
+    "Sokoto",
+    "Zamfara"
+   ]
+  }
+ },
+ "_state_patterns_readme": "Optional regex overrides per state. Default is the state name as a whole word, so 'Niger' never matches 'Nigeria'.",
+ "state_patterns": {
+  "Nasarawa": "\\bnas+arawa\\b",
+  "Niger": "\\bniger\\b(?!\\s+republic)"
+ },
+ "year_min": 2019,
+ "year_max": 2030,
+ "_scope_readme": "Only pages whose TITLE matches this pattern are counted (DTM Nigeria products are titled 'Nigeria — …'). Set to empty to count everything found.",
+ "scope_title_regex": "^\\s*(dtm\\s+)?nig[eé]ria\\b"
 }

@@ -83,20 +83,20 @@ class Classifier:
     # ---- dates -----------------------------------------------------------
     @staticmethod
     def parse_date(*candidates: str) -> str | None:
-        """Return ISO date (YYYY-MM-DD) from the first parseable candidate."""
-        for c in candidates:
-            if not c:
-                continue
-            c = c.strip()
-            m = re.search(r"(\d{4})-(\d{2})-(\d{2})", c)
-            if m:
-                return m.group(0)
+        """Return ISO date (YYYY-MM-DD) from the first parseable candidate.
+        A candidate string may hold several dates joined by ' | '; they are tried
+        left to right, so the report's citation date wins over site-wide timestamps."""
+        parts = [p.strip() for c in candidates if c for p in c.split(" | ") if p.strip()]
+        for c in parts:
             m = re.search(r"\b([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})\b", c)
             if m and m.group(1).lower() in MONTHS:
                 return f"{m.group(3)}-{MONTHS[m.group(1).lower()]:02d}-{int(m.group(2)):02d}"
             m = re.search(r"\b(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{4})\b", c)
             if m and m.group(2).lower() in MONTHS:
                 return f"{m.group(3)}-{MONTHS[m.group(2).lower()]:02d}-{int(m.group(1)):02d}"
+            m = re.search(r"(\d{4})-(\d{2})-(\d{2})", c)
+            if m:
+                return m.group(0)
         return None
 
     @staticmethod
@@ -104,12 +104,16 @@ class Classifier:
         years = [int(y) for y in re.findall(r"\b(20[1-3]\d)\b", title or "")]
         return years[-1] if years else None
 
+    def in_scope(self, rec: dict) -> bool:
+        rx = self.tax.get("scope_title_regex")
+        return not rx or bool(re.search(rx, rec.get("title", ""), re.I))
+
     # ---- full record -----------------------------------------------------
     def classify(self, rec: dict) -> dict:
         title, summary = rec.get("title", ""), rec.get("summary", "")
         key, label, why = self.component(title, summary)
         states = self.states(title) or self.states(summary)
-        date = rec.get("date") or self.parse_date(rec.get("date_raw", ""))
+        date = self.parse_date(rec.get("date_raw", "")) or rec.get("date")
         year = int(date[:4]) if date else self.year_from_title(title)
         out = dict(rec)
         out.update({

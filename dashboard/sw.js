@@ -1,5 +1,5 @@
 // Offline cache: the dashboard shell and the last harvested data keep working with no connection.
-const CACHE = "dtm-ng-v2";
+const CACHE = "dtm-ng-v3";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "data/reports.js", "data/reports.json", "data/status.json", "DTM_Nigeria_Dashboard_OFFLINE.html"];
 self.addEventListener("install", e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL).catch(() => {})).then(() => self.skipWaiting())));
 self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
