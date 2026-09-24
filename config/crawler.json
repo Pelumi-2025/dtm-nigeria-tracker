@@ -1,0 +1,27 @@
+{
+  "_readme": "Crawler settings. Seeds are listing pages crawled with their pagination. Any link whose path contains report_path and whose slug contains report_slug_must_contain is treated as a report page. keyword_search_templates are site-search URLs where {q} is replaced by each keyword (edit if the site's search URL changes).",
+  "base_url": "https://dtm.iom.int",
+  "seeds": [
+    "https://dtm.iom.int/nigeria",
+    "https://dtm.iom.int/operations/north-central-and-north-west",
+    "https://dtm.iom.int/product-series/flash-report-0",
+    "https://dtm.iom.int/product-series/displacement-report-15"
+  ],
+  "sitemaps": ["https://dtm.iom.int/sitemap.xml"],
+  "report_path": "/reports/",
+  "report_slug_must_contain": "nigeria",
+  "keyword_search_templates": [
+    "https://dtm.iom.int/reports?search_api_fulltext={q}"
+  ],
+  "keywords": [
+    "Nigeria flash report", "Nigeria emergency tracking tool", "Nigeria intention survey",
+    "Nigeria transhumance", "Nigeria early warning dashboard", "Nigeria needs monitoring",
+    "Nigeria biometric registration", "Nigeria stability index", "Nigeria solutions mobility index",
+    "Nigeria socio-economic survey", "Nigeria facility mapping", "Nigeria flood", "Nigeria atlas"
+  ],
+  "max_listing_pages": 400,
+  "delay_seconds": 0.8,
+  "workers": 3,
+  "timeout_seconds": 30,
+  "user_agent": "DTM-Nigeria-Report-Tracker/1.0 (+contact: DTMNigeria@iom.int)"
+}

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DTM Nigeria publications tracker</title>
+<meta name="theme-color" content="#0A4B9C">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F0; --surface:#FFFFFF; --ink:#17212B; --muted:#56636D; --line:#D3DAD8; --soft:#E4E9E8;
+  --iom:#0A4B9C; --ne:#0A4B9C; --ncnw:#2B7A5E; --warn:#9A5B00; --warnbg:#FFF4DF;
+  --heat0:#F5F7F6; --focus:#0A4B9C;
+  --font:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E151C; --surface:#151F29; --ink:#E4EAEE; --muted:#9AA7B1; --line:#27343F; --soft:#1C2833;
+    --iom:#6EA2E6; --ne:#6EA2E6; --ncnw:#5DBB93; --warn:#F2B35A; --warnbg:#2A2113; --heat0:#18232D; --focus:#8DB8F0;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E151C; --surface:#151F29; --ink:#E4EAEE; --muted:#9AA7B1; --line:#27343F; --soft:#1C2833;
+  --iom:#6EA2E6; --ne:#6EA2E6; --ncnw:#5DBB93; --warn:#F2B35A; --warnbg:#2A2113; --heat0:#18232D; --focus:#8DB8F0;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 var(--font);font-variant-numeric:tabular-nums}
+a{color:var(--iom)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 24px;padding:20px 24px 16px;border-bottom:3px solid var(--iom);background:var(--surface)}
+.brand h1{margin:0;font-size:1.55rem;font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:.93rem}
+.status{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;color:var(--muted)}
+.btn{border:1px solid var(--line);background:var(--surface);padding:7px 12px;border-radius:6px;cursor:pointer;font-weight:600;font-size:.87rem}
+.btn:hover{border-color:var(--iom)}
+.btn.primary{background:var(--iom);border-color:var(--iom);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0E151C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#0E151C}}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--muted);margin-right:5px;vertical-align:1px}
+.dot.live{background:#2E9E5B}.dot.off{background:var(--warn)}
+
+.banner{margin:0;padding:10px 24px;background:var(--warnbg);color:var(--warn);font-size:.9rem;border-bottom:1px solid var(--line)}
+.banner b{color:inherit}
+
+/* layout */
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:calc(100% - 90px)}
+aside.rail{background:var(--surface);border-right:1px solid var(--line);padding:18px 18px 40px;overflow:auto}
+main{padding:22px 24px 60px;min-width:0}
+@media (max-width:900px){.layout{grid-template-columns:1fr}aside.rail{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* filter groups */
+fieldset{border:0;margin:0 0 22px;padding:0}
+legend{font-weight:700;font-size:.95rem;margin-bottom:6px;display:flex;width:100%;align-items:baseline}
+legend .quick{margin-left:auto;font-weight:500;font-size:.8rem}
+legend .quick button{background:none;border:0;color:var(--iom);cursor:pointer;padding:0 0 0 8px;text-decoration:underline}
+.check{display:flex;align-items:flex-start;gap:8px;padding:3px 0;font-size:.88rem;cursor:pointer}
+.check input{margin:3px 0 0;accent-color:var(--iom);flex:none}
+.check .n{margin-left:auto;color:var(--muted);font-size:.8rem;padding-left:6px}
+.swatch{width:10px;height:10px;border-radius:2px;flex:none;margin-top:5px}
+.subhead{font-size:.78rem;color:var(--muted);margin:8px 0 2px;font-weight:600}
+
+/* year slider */
+.range{position:relative;height:30px;margin:6px 4px 0}
+.range input{position:absolute;left:0;right:0;top:6px;width:100%;pointer-events:none;-webkit-appearance:none;appearance:none;background:none;height:18px;margin:0}
+.range input::-webkit-slider-thumb{pointer-events:auto;-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--iom);border:2px solid var(--surface);box-shadow:0 0 0 1px var(--iom);cursor:grab}
+.range input::-moz-range-thumb{pointer-events:auto;width:16px;height:16px;border-radius:50%;background:var(--iom);border:2px solid var(--surface);cursor:grab}
+.range .track{position:absolute;left:0;right:0;top:14px;height:4px;background:var(--soft);border-radius:2px}
+.range .fill{position:absolute;top:14px;height:4px;background:var(--iom);border-radius:2px}
+.yearlabel{display:flex;justify-content:space-between;font-size:.85rem;font-weight:600}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:4px 0;font-size:.82rem;cursor:pointer;text-align:center}
+.chip[aria-pressed="true"]{background:var(--iom);border-color:var(--iom);color:#fff;font-weight:600}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#0E151C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0E151C}}
+.search{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+
+/* summary sentence */
+.lede{font-size:1.2rem;line-height:1.45;max-width:62ch;margin:0 0 20px}
+.lede strong.big{font-size:2.6rem;font-weight:800;color:var(--iom);letter-spacing:-.02em;display:block;line-height:1.05}
+.zones{display:flex;gap:28px;flex-wrap:wrap;margin:-6px 0 22px}
+.zone b{display:block;font-size:1.35rem;font-weight:800}
+.zone span{font-size:.85rem;color:var(--muted)}
+.zone.ne b{color:var(--ne)} .zone.nc b{color:var(--ncnw)}
+
+section.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;margin-bottom:20px}
+.panel h2{font-size:1.05rem;margin:0 0 2px;font-weight:700}
+.panel .hint{margin:0 0 12px;color:var(--muted);font-size:.86rem}
+.panel .tools{float:right;display:flex;gap:6px}
+.scroll{overflow-x:auto}
+
+/* heatmap */
+table.heat{border-collapse:separate;border-spacing:2px;font-size:.85rem;min-width:640px;width:100%}
+.heat th{font-weight:600;text-align:right;padding:4px 6px;color:var(--muted);white-space:nowrap}
+.heat th.row{text-align:left;color:var(--ink);font-weight:500;white-space:normal;min-width:190px;max-width:260px}
+.heat td{text-align:center;padding:7px 4px;border-radius:3px;cursor:pointer;min-width:42px}
+.heat td.z{color:var(--muted);cursor:default}
+.heat td.tot,.heat tr.tot td{font-weight:700;background:var(--soft);cursor:default}
+.heat td:not(.z):not(.tot):hover{outline:2px solid var(--ink)}
+.heat td.sel{outline:2px solid var(--ink)}
+
+/* charts */
+.chart svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.8rem;color:var(--muted);margin-top:8px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:1100px){.twocol{grid-template-columns:1fr}}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--paper);font-size:.8rem;padding:5px 8px;border-radius:4px;z-index:50;display:none;max-width:260px}
+
+/* report table */
+table.list{border-collapse:collapse;width:100%;font-size:.86rem;min-width:720px}
+.list th{text-align:left;border-bottom:2px solid var(--line);padding:6px 8px;font-weight:600;color:var(--muted)}
+.list td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.list td.t{max-width:52ch}
+.pill{display:inline-block;font-size:.75rem;padding:1px 6px;border-radius:3px;background:var(--soft);white-space:nowrap}
+.pager{display:flex;gap:8px;align-items:center;margin-top:10px;font-size:.85rem;color:var(--muted)}
+.drill{font-size:.85rem;background:var(--soft);padding:6px 10px;border-radius:6px;margin-bottom:10px;display:none}
+
+/* assistant */
+.chatbtn{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;border-radius:28px;padding:12px 18px;box-shadow:0 4px 14px rgba(10,40,80,.25)}
+.chat{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--surface);border-left:1px solid var(--line);z-index:40;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .22s ease;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.chat.open{transform:none}
+@media (prefers-reduced-motion:reduce){.chat{transition:none}}
+.chat header{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.chat header h2{margin:0;font-size:1.05rem}
+.chat header .engine{font-size:.78rem;color:var(--muted)}
+.chat header .x{margin-left:auto}
+.msgs{flex:1;overflow:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:92%;padding:9px 12px;border-radius:10px;font-size:.9rem;white-space:pre-wrap;word-wrap:break-word}
+.msg.user{align-self:flex-end;background:var(--iom);color:#fff}
+:root[data-theme="dark"] .msg.user{color:#0E151C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg.user{color:#0E151C}}
+.msg.bot{align-self:flex-start;background:var(--soft)}
+.msg.sys{align-self:center;font-size:.8rem;color:var(--muted);background:none;padding:0}
+.suggest{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.suggest button{font-size:.8rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:4px 10px;cursor:pointer}
+.chat form{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--line)}
+.chat textarea{flex:1;resize:none;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;background:var(--surface);min-height:42px;max-height:120px}
+.log{font:12px/1.4 ui-monospace,Consolas,monospace;background:var(--soft);padding:8px;border-radius:6px;max-height:160px;overflow:auto;white-space:pre-wrap;margin-top:8px;display:none}
+.toast{position:fixed;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:45;max-width:min(440px,calc(100% - 40px));background:var(--surface);border:1px solid var(--line);border-left:4px solid #2E9E5B;border-radius:8px;padding:12px 14px;box-shadow:0 6px 20px rgba(10,40,80,.18);font-size:.88rem;display:none}
+.toast b{display:block;margin-bottom:4px}.toast ul{margin:4px 0 8px;padding-left:18px}.toast li{margin:2px 0}
+.newtag{display:inline-block;font-size:.7rem;font-weight:700;color:#fff;background:#2E9E5B;border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:1px}
+footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>DTM Nigeria publications tracker</h1>
+    <p>Reports published by IOM DTM Nigeria, counted by component, zone, state and year.</p>
+  </div>
+  <div class="status">
+    <span id="dataStatus"><span class="dot"></span>Loading data</span>
+    <button class="btn" id="harvestBtn" hidden>Harvest now</button>
+    <label class="btn" for="fileIn">Load data file</label>
+    <input type="file" id="fileIn" accept=".json,.js,.csv" class="sr">
+    <button class="btn" id="exportBtn">Export CSV</button>
+  </div>
+</header>
+<p class="banner" id="banner" hidden></p>
+<div class="log" id="harvestLog" style="margin:0 24px"></div>
+
+<div class="layout">
+  <aside class="rail" aria-label="Filters">
+    <fieldset>
+      <legend>Years <span class="quick"><button type="button" data-yr="all">2019–2030</button><button type="button" data-yr="data">With data</button></span></legend>
+      <div class="yearlabel"><span id="yFromL">2019</span><span id="yToL">2030</span></div>
+      <div class="range">
+        <div class="track"></div><div class="fill" id="yFill"></div>
+        <input type="range" id="yFrom" min="2019" max="2030" step="1" value="2019" aria-label="From year">
+        <input type="range" id="yTo" min="2019" max="2030" step="1" value="2030" aria-label="To year">
+      </div>
+      <div class="chips" id="yearChips" role="group" aria-label="Pick individual years"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Months <span class="quick"><button type="button" data-mo="all">All</button><button type="button" data-mo="q1">Q1</button><button type="button" data-mo="q2">Q2</button><button type="button" data-mo="q3">Q3</button><button type="button" data-mo="q4">Q4</button></span></legend>
+      <div class="yearlabel"><span id="mFromL">Jan</span><span id="mToL">Dec</span></div>
+      <div class="range">
+        <div class="track"></div><div class="fill" id="mFill"></div>
+        <input type="range" id="mFrom" min="1" max="12" step="1" value="1" aria-label="From month">
+        <input type="range" id="mTo" min="1" max="12" step="1" value="12" aria-label="To month">
+      </div>
+      <div class="chips" id="monthChips" role="group" aria-label="Pick individual months"></div>
+    </fieldset>
+
+    <fieldset id="compSet">
+      <legend>Report types <span class="quick"><button type="button" data-all="comp">All</button><button type="button" data-none="comp">None</button></span></legend>
+      <div id="compList"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Regions <span class="quick"><button type="button" data-all="region">All</button></span></legend>
+      <div id="regionList"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>States <span class="quick"><button type="button" data-all="state">All</button><button type="button" data-none="state">None</button></span></legend>
+      <div id="stateList"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Title contains</legend>
+      <input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama, flood">
+    </fieldset>
+    <button class="btn" id="resetBtn" type="button">Reset all filters</button>
+  </aside>
+
+  <main>
+    <p class="lede" id="lede"></p>
+    <div class="zones" id="zones"></div>
+
+    <section class="panel">
+      <div class="tools"><button class="btn" id="exportMatrix">Download counts</button></div>
+      <h2>Reports per year, by report type</h2>
+      <p class="hint">Select a cell to list those reports below.</p>
+      <div class="scroll"><table class="heat" id="heat"></table></div>
+    </section>
+
+    <section class="panel chart">
+      <h2>Publication volume by year</h2>
+      <p class="hint">Stacked by report type for the current selection.</p>
+      <div id="bars"></div>
+      <div class="legend" id="barsLegend"></div>
+    </section>
+
+    <section class="panel chart">
+      <h2>Publication volume by month</h2>
+      <p class="hint">All selected years combined, stacked by report type. Shows the seasonal rhythm of publishing.</p>
+      <div id="months"></div>
+    </section>
+
+    <div class="twocol">
+      <section class="panel chart">
+        <h2>Reports by state</h2>
+        <p class="hint">A report covering several states counts once in each.</p>
+        <div id="states"></div>
+      </section>
+      <section class="panel chart">
+        <h2>Region split by year</h2>
+        <p class="hint">North East against North Central &amp; North West.</p>
+        <div id="zoneYears"></div>
+        <div class="legend"><span><i class="swatch" style="background:var(--ne)"></i>North East</span><span><i class="swatch" style="background:var(--ncnw)"></i>North Central &amp; North West</span></div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <h2>Reports</h2>
+      <p class="hint" id="listHint"></p>
+      <div class="drill" id="drill"></div>
+      <div class="scroll"><table class="list" id="list"></table></div>
+      <div class="pager"><button class="btn" id="prev">Previous</button><span id="pageInfo"></span><button class="btn" id="next">Next</button></div>
+    </section>
+  </main>
+</div>
+<footer id="foot"></footer>
+
+<button class="btn primary chatbtn" id="chatOpen" aria-controls="chat">Ask the data</button>
+<aside class="chat" id="chat" aria-label="Assistant" aria-hidden="true">
+  <header><div><h2>Assistant</h2><div class="engine" id="engine"></div></div><button class="btn x" id="chatClose">Close</button></header>
+  <div class="msgs" id="msgs" aria-live="polite"></div>
+  <div class="suggest" id="suggest"></div>
+  <form id="chatForm"><label class="sr" for="chatIn">Message</label><textarea id="chatIn" rows="1" placeholder="e.g. Flash reports per year in Borno since 2021"></textarea><button class="btn primary" type="submit">Send</button></form>
+</aside>
+<div class="tip" id="tip"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!--DTM_DATA--><script src="data/reports.js" onerror="void 0"></script><!--/DTM_DATA-->
+<script>
+/* ---------------------------------------------------------------- config */
+const YEAR_MIN = 2019, YEAR_MAX = 2030;
+const DEFAULT_COMPONENTS = [
+  ["atlas","Mobility Tracking – IDP & Returnee Atlas"],["needs","Mobility Tracking – Needs Monitoring"],
+  ["flash","Incident / Flash Report"],["ett","Emergency Tracking Tool (ETT)"],["intention","Intention Surveys"],
+  ["ses","Socio Economic Survey"],["smi","Solutions Mobility Index / Stability Index"],
+  ["transhumance","Transhumance Flow Monitoring Report"],["ewer","Early Warning & Early Response Dashboard"],
+  ["flood","Post-Flood Situation Report (Ad-Hoc)"],["biometric","Biometric Registration Report"],
+  ["ses_fm","Socio-Economic Survey & Facility Mapping"],["other","Other / Unclassified"]].map(([key,label])=>({key,label}));
+const DISPLAY_ORDER = ["atlas","needs","flash","ett","intention","ses","smi","transhumance","ewer","flood","biometric","ses_fm","other"];
+const PALETTE = {atlas:"#0A4B9C",needs:"#5B8FD6",flash:"#C0392B",ett:"#E08E2B",intention:"#7B4FA0",ses:"#2B7A5E",
+  smi:"#1B998B",transhumance:"#8C6D1F",ewer:"#D35D8B",flood:"#2E86AB",biometric:"#5C6B73",ses_fm:"#83B35A",other:"#A7B0B6"};
+const STATES = {"North East":["Adamawa","Borno","Yobe","Gombe","Taraba","Bauchi"],
+  "North Central":["Benue","Nasarawa","Plateau","Kogi","Niger"],"North West":["Kano","Kaduna","Katsina","Sokoto","Zamfara"]};
+const REGIONS = [{key:"NE",label:"North East",zones:["North East"]},
+  {key:"NCNW",label:"North Central & North West",zones:["North Central","North West"]},
+  {key:"NONE",label:"Not specified in title",zones:[]}];
+const STATE_ZONE = Object.fromEntries(Object.entries(STATES).flatMap(([z,ss])=>ss.map(s=>[s,z])));
+const ALL_STATES = Object.values(STATES).flat();
+
+/* ---------------------------------------------------------------- state */
+let DATA = null, REPORTS = [], COMPONENTS = DEFAULT_COMPONENTS, SOURCE = "none";
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const F = { months:new Set(range(1,12)), years:new Set(range(YEAR_MIN,YEAR_MAX)), comps:new Set(), regions:new Set(REGIONS.map(r=>r.key)),
+            states:new Set(ALL_STATES), kw:"", stateFilterOn:false };
+let drill = null, page = 0; const PAGE = 40;
+let SERVER = null, SAMPLE = null, STORE_OK = true, STATUS = null, NEW_URLS = new Set();
+
+function range(a,b){const o=[];for(let i=a;i<=b;i++)o.push(i);return o}
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = n=>n.toLocaleString("en-GB");
+function regionKeysOf(r){const z=r.regions||[];const k=[];if(z.includes("North East"))k.push("NE");
+  if(z.includes("North Central")||z.includes("North West"))k.push("NCNW");if(!k.length)k.push("NONE");return k}
+
+/* ------------------------------------------------------------ data load */
+function store(k,v){try{localStorage.setItem(k,v);return true}catch(e){STORE_OK=false;return false}}
+function recall(k){try{return localStorage.getItem(k)}catch(e){return null}}
+
+function normalise(payload){
+  if(Array.isArray(payload)) payload={reports:payload};
+  const reps=(payload.reports||[]).map((r,i)=>({
+    id:r.id??i+1, title:r.title||"", date:r.date||"", year:r.year?+r.year:(r.date?+String(r.date).slice(0,4):null),
+    month:r.date&&/^\d{4}-\d{2}/.test(r.date)?+String(r.date).slice(5,7):null,
+    component_key:r.component_key||keyForLabel(r.component)||"other",
+    component:r.component||labelFor(r.component_key), url:r.url||"", pdf:r.pdf||"",
+    regions:toArr(r.regions), states:toArr(r.states), summary:r.summary||""}));
+  return {...payload, reports:reps, count:reps.length};
+}
+function toArr(v){return Array.isArray(v)?v:(v?String(v).split(/;\s*/).filter(Boolean):[])}
+function keyForLabel(l){const c=DEFAULT_COMPONENTS.find(c=>c.label===l);return c&&c.key}
+function labelFor(k){const c=COMPONENTS.find(c=>c.key===k)||DEFAULT_COMPONENTS.find(c=>c.key===k);return c?c.label:k}
+
+function parseCSV(text){
+  const rows=[];let row=[],cell="",q=false;
+  for(let i=0;i<text.length;i++){const ch=text[i];
+    if(q){if(ch=='"'&&text[i+1]=='"'){cell+='"';i++}else if(ch=='"')q=false;else cell+=ch}
+    else if(ch=='"')q=true;else if(ch==','){row.push(cell);cell=""}
+    else if(ch=='\n'){row.push(cell);rows.push(row);row=[];cell=""}else if(ch!='\r')cell+=ch}
+  if(cell||row.length){row.push(cell);rows.push(row)}
+  const head=rows.shift().map(h=>h.replace(/^\ufeff/,"").trim());
+  return rows.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]])));
+}
+
+function useData(payload, source){
+  DATA=normalise(payload); REPORTS=DATA.reports; SOURCE=source;
+  NEW_URLS=new Set((payload.latest_additions||[]).map(a=>a.url));
+  const comps=(payload.components&&payload.components.length)?payload.components:DEFAULT_COMPONENTS;
+  COMPONENTS=[...comps].sort((a,b)=>idx(a.key)-idx(b.key));
+  F.comps=new Set(COMPONENTS.map(c=>c.key));
+  buildFilters(); render(); renderStatus();
+}
+const idx=k=>{const i=DISPLAY_ORDER.indexOf(k);return i<0?99:i};
+
+async function loadInitial(){
+  // 1) data embedded in the page or loaded from data/reports.js
+  let best=null;
+  if(window.DTM_DATA && (window.DTM_DATA.reports||[]).length) best={p:window.DTM_DATA,src:"harvest"};
+  // 2) served JSON (local server / GitHub Pages)
+  if(!best && location.protocol.startsWith("http")){
+    try{const r=await fetch("data/reports.json",{cache:"no-store"}); if(r.ok){const p=await r.json(); if((p.reports||[]).length) best={p,src:"harvest"}}}catch(e){}
+  }
+  // 3) a file this viewer loaded earlier
+  const saved=recall("dtmng.upload");
+  if(saved){try{const p=JSON.parse(saved);
+    if(!best || (p.generated_at||"")>(best.p.generated_at||"")) best={p,src:"upload"}}catch(e){}}
+  if(best) useData(best.p,best.src); else useData(sampleData(),"sample");
+}
+
+document.getElementById("fileIn").addEventListener("change",async e=>{
+  const f=e.target.files[0]; if(!f)return; const text=await f.text(); let p;
+  try{
+    if(/\.csv$/i.test(f.name)) p={reports:parseCSV(text),generated_at:new Date().toISOString()};
+    else p=JSON.parse(text.replace(/^[\s\S]*?window\.DTM_DATA\s*=\s*/,"").replace(/;\s*$/,""));
+    if(!(p.reports||p).length) throw new Error("no reports");
+  }catch(err){ return showBanner("That file could not be read. Load reports.json, reports.js or reports.csv produced by the harvester."); }
+  p.generated_at=p.generated_at||new Date().toISOString(); p.file=f.name;
+  store("dtmng.upload",JSON.stringify(p)); useData(p,"upload"); e.target.value="";
+});
+
+function renderStatus(){
+  const s=$("#dataStatus"), gen=DATA.generated_at?new Date(DATA.generated_at):null;
+  const when=gen&&!isNaN(gen)?gen.toLocaleString("en-GB",{day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"}):"";
+  const chk=STATUS?.checked_at?new Date(STATUS.checked_at).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+  const label={harvest:`Updated ${when}${chk?" · checked "+chk:""}`,upload:`Loaded file ${DATA.file||""} ${when?"· "+when:""}`,sample:"Sample data"}[SOURCE];
+  s.innerHTML=`<span class="dot ${SOURCE==="sample"?"off":"live"}"></span>${esc(label)} · ${fmt(REPORTS.length)} reports`;
+  if(SOURCE==="sample") showBanner("<b>Sample data, not real counts.</b> Run the harvester (python server.py, then Harvest now) or load a reports.json / reports.csv file to see actual DTM Nigeria figures.",true);
+  else hideBanner();
+  $("#foot").innerHTML=`Source: <a href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener">dtm.iom.int/nigeria</a>. Classification is keyword-based (config/taxonomy.json); reports matching no rule appear as Other / Unclassified.`+(STORE_OK?"":" Browser storage is unavailable, so loaded files are not remembered.")
+    +(location.protocol.startsWith("http")&&SOURCE==="harvest"?` The dashboard checks for new reports every 5 minutes. <a href="DTM_Nigeria_Dashboard_OFFLINE.html" download>Download offline copy</a>.`:"");
+}
+function showBanner(html){const b=$("#banner");b.innerHTML=html;b.hidden=false}
+function hideBanner(){$("#banner").hidden=true}
+
+/* ------------------------------------------------------------ filtering */
+function passes(r, opt={}){
+  if(!opt.ignoreYear && !F.years.has(r.year)) return false;
+  if(F.months.size<12 && !F.months.has(r.month)) return false;
+  if(!opt.ignoreComp && !F.comps.has(r.component_key)) return false;
+  if(F.regions.size<REGIONS.length && !regionKeysOf(r).some(k=>F.regions.has(k))) return false;
+  if(F.stateFilterOn && !r.states.some(s=>F.states.has(s))) return false;
+  if(F.kw && !(r.title+" "+r.summary).toLowerCase().includes(F.kw)) return false;
+  return true;
+}
+const filtered=()=>REPORTS.filter(r=>passes(r));
+const sortedYears=()=>[...F.years].sort((a,b)=>a-b);
+
+/* ------------------------------------------------------------ filter UI */
+function buildFilters(){
+  // years
+  const chips=$("#yearChips"); chips.innerHTML="";
+  range(YEAR_MIN,YEAR_MAX).forEach(y=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=y;
+    b.onclick=()=>{F.years.has(y)?F.years.delete(y):F.years.add(y);syncYearUI();render()};chips.appendChild(b)});
+  // components
+  const counts={};REPORTS.forEach(r=>{if(F.years.has(r.year))counts[r.component_key]=(counts[r.component_key]||0)+1});
+  $("#compList").innerHTML=COMPONENTS.map(c=>`<label class="check"><input type="checkbox" data-comp="${c.key}" ${F.comps.has(c.key)?"checked":""}>
+    <i class="swatch" style="background:${PALETTE[c.key]||"#999"}"></i><span>${esc(c.label)}</span><span class="n" data-cn="${c.key}">${fmt(counts[c.key]||0)}</span></label>`).join("");
+  $("#compList").onchange=e=>{const k=e.target.dataset.comp;e.target.checked?F.comps.add(k):F.comps.delete(k);render()};
+  // regions
+  $("#regionList").innerHTML=REGIONS.map(r=>`<label class="check"><input type="checkbox" data-region="${r.key}" ${F.regions.has(r.key)?"checked":""}><span>${esc(r.label)}</span></label>`).join("");
+  $("#regionList").onchange=e=>{const k=e.target.dataset.region;e.target.checked?F.regions.add(k):F.regions.delete(k);render()};
+  // states
+  $("#stateList").innerHTML=Object.entries(STATES).map(([z,ss])=>`<div class="subhead">${z}</div>`+
+    ss.map(s=>`<label class="check"><input type="checkbox" data-state="${s}" ${F.states.has(s)?"checked":""}><span>${s}</span><span class="n" data-sn="${s}"></span></label>`).join("")).join("");
+  $("#stateList").onchange=e=>{const s=e.target.dataset.state;e.target.checked?F.states.add(s):F.states.delete(s);F.stateFilterOn=F.states.size<ALL_STATES.length;render()};
+  const mc=$("#monthChips"); mc.innerHTML="";
+  MONTHS.forEach((m,i)=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=m;b.dataset.m=i+1;
+    b.onclick=()=>{F.months.has(i+1)?F.months.delete(i+1):F.months.add(i+1);syncMonthUI();render()};mc.appendChild(b)});
+  syncYearUI(); syncMonthUI();
+}
+function syncMonthUI(){
+  const ms=[...F.months].sort((a,b)=>a-b), lo=ms[0]??1, hi=ms[ms.length-1]??1, contiguous=ms.length===hi-lo+1;
+  $("#mFrom").value=lo; $("#mTo").value=hi;
+  $("#mFromL").textContent=!ms.length?"No months":contiguous?MONTHS[lo-1]:`${ms.length} months picked`;
+  $("#mToL").textContent=ms.length&&contiguous?MONTHS[hi-1]:"";
+  $("#mFill").style.left=((lo-1)/11*100)+"%"; $("#mFill").style.width=((hi-lo)/11*100)+"%";
+  document.querySelectorAll("#monthChips .chip").forEach(c=>c.setAttribute("aria-pressed",F.months.has(+c.dataset.m)));
+}
+function onMonthSlide(){let a=+$("#mFrom").value,b=+$("#mTo").value;if(a>b)[a,b]=[b,a];F.months=new Set(range(a,b));syncMonthUI();render()}
+$("#mFrom").oninput=onMonthSlide;$("#mTo").oninput=onMonthSlide;
+document.querySelectorAll("[data-mo]").forEach(b=>b.onclick=()=>{const q={all:[1,12],q1:[1,3],q2:[4,6],q3:[7,9],q4:[10,12]}[b.dataset.mo];
+  F.months=new Set(range(q[0],q[1]));syncMonthUI();render()});
+function syncFilterInputs(){
+  document.querySelectorAll("[data-comp]").forEach(i=>i.checked=F.comps.has(i.dataset.comp));
+  document.querySelectorAll("[data-region]").forEach(i=>i.checked=F.regions.has(i.dataset.region));
+  document.querySelectorAll("[data-state]").forEach(i=>i.checked=F.states.has(i.dataset.state));
+  $("#kw").value=F.kw; syncYearUI(); syncMonthUI();
+}
+function syncYearUI(){
+  const ys=sortedYears(), lo=ys[0]??YEAR_MIN, hi=ys[ys.length-1]??YEAR_MIN;
+  $("#yFrom").value=lo; $("#yTo").value=hi;
+  const contiguous=ys.length===hi-lo+1;
+  $("#yFromL").textContent=ys.length?(contiguous?lo:`${ys.length} years picked`):"No years";
+  $("#yToL").textContent=ys.length&&contiguous?hi:"";
+  const span=YEAR_MAX-YEAR_MIN; $("#yFill").style.left=((lo-YEAR_MIN)/span*100)+"%"; $("#yFill").style.width=((hi-lo)/span*100)+"%";
+  document.querySelectorAll("#yearChips .chip").forEach(c=>c.setAttribute("aria-pressed",F.years.has(+c.textContent)));
+}
+function onSlide(){let a=+$("#yFrom").value,b=+$("#yTo").value;if(a>b)[a,b]=[b,a];F.years=new Set(range(a,b));syncYearUI();render()}
+$("#yFrom").oninput=onSlide;$("#yTo").oninput=onSlide;
+document.querySelectorAll("[data-yr]").forEach(b=>b.onclick=()=>{
+  if(b.dataset.yr==="all")F.years=new Set(range(YEAR_MIN,YEAR_MAX));
+  else{const ys=REPORTS.map(r=>r.year).filter(y=>y>=YEAR_MIN&&y<=YEAR_MAX);if(ys.length)F.years=new Set(range(Math.min(...ys),Math.max(...ys)))}
+  syncYearUI();render()});
+document.querySelectorAll("[data-all]").forEach(b=>b.onclick=()=>{const t=b.dataset.all;
+  if(t==="comp")F.comps=new Set(COMPONENTS.map(c=>c.key));if(t==="region")F.regions=new Set(REGIONS.map(r=>r.key));
+  if(t==="state"){F.states=new Set(ALL_STATES);F.stateFilterOn=false}syncFilterInputs();render()});
+document.querySelectorAll("[data-none]").forEach(b=>b.onclick=()=>{const t=b.dataset.none;
+  if(t==="comp")F.comps=new Set();if(t==="state"){F.states=new Set();F.stateFilterOn=true}syncFilterInputs();render()});
+let kwT;$("#kw").oninput=e=>{clearTimeout(kwT);kwT=setTimeout(()=>{F.kw=e.target.value.trim().toLowerCase();render()},200)};
+$("#resetBtn").onclick=resetFilters;
+function resetFilters(){F.months=new Set(range(1,12));F.years=new Set(range(YEAR_MIN,YEAR_MAX));F.comps=new Set(COMPONENTS.map(c=>c.key));
+  F.regions=new Set(REGIONS.map(r=>r.key));F.states=new Set(ALL_STATES);F.stateFilterOn=false;F.kw="";drill=null;syncFilterInputs();render()}
+
+/* ------------------------------------------------------------ rendering */
+function render(){
+  const rs=filtered(); page=0;
+  renderLede(rs); renderHeat(); renderBars(rs); renderStates(rs); renderZoneYears(rs); renderMonths(rs); renderList();
+  // live counts beside checkboxes
+  const cc={};REPORTS.forEach(r=>{if(passes(r,{ignoreComp:true}))cc[r.component_key]=(cc[r.component_key]||0)+1});
+  document.querySelectorAll("[data-cn]").forEach(s=>s.textContent=fmt(cc[s.dataset.cn]||0));
+  const sc={};REPORTS.forEach(r=>{if(passes(r))r.states.forEach(s=>sc[s]=(sc[s]||0)+1)});
+  document.querySelectorAll("[data-sn]").forEach(s=>s.textContent=sc[s.dataset.sn]?fmt(sc[s.dataset.sn]):"");
+}
+function describeFilters(){
+  const ys=sortedYears(); const yTxt=!ys.length?"no years":ys.length===1?String(ys[0]):(ys.length===ys[ys.length-1]-ys[0]+1?`${ys[0]}–${ys[ys.length-1]}`:ys.join(", "));
+  const c=F.comps.size===COMPONENTS.length?"all report types":`${F.comps.size} of ${COMPONENTS.length} report types`;
+  const reg=F.regions.size===REGIONS.length?"all regions":REGIONS.filter(r=>F.regions.has(r.key)).map(r=>r.label).join(" and ");
+  const st=F.stateFilterOn?` in ${F.states.size<=4?[...F.states].join(", "):F.states.size+" states"}`:"";
+  const ms=[...F.months].sort((a,b)=>a-b);
+  const mTxt=ms.length===12?"":!ms.length?" (no months)":(ms.length===ms[ms.length-1]-ms[0]+1?` (${MONTHS[ms[0]-1]}–${MONTHS[ms[ms.length-1]-1]} only)`:` (${ms.map(m=>MONTHS[m-1]).join(", ")} only)`);
+  return `${c}, ${yTxt}${mTxt}, ${reg}${st}${F.kw?`, titles containing “${esc(F.kw)}”`:""}`;
+}
+function renderLede(rs){
+  $("#lede").innerHTML=`<strong class="big">${fmt(rs.length)}</strong> reports published across ${describeFilters()}.`;
+  const ne=rs.filter(r=>regionKeysOf(r).includes("NE")).length, nc=rs.filter(r=>regionKeysOf(r).includes("NCNW")).length,
+        none=rs.filter(r=>regionKeysOf(r)[0]==="NONE").length;
+  $("#zones").innerHTML=`<div class="zone ne"><b>${fmt(ne)}</b><span>North East</span></div>
+    <div class="zone nc"><b>${fmt(nc)}</b><span>North Central &amp; North West</span></div>
+    <div class="zone"><b>${fmt(none)}</b><span>Region not stated</span></div>`;
+}
+function heatColor(v,max){ if(!v) return "var(--heat0)"; const t=Math.sqrt(v/max);
+  const dark=matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.dataset.theme!=="light"||document.documentElement.dataset.theme==="dark";
+  const a=dark?[24,35,45]:[232,239,248], b=dark?[110,162,230]:[10,75,156];
+  const c=a.map((x,i)=>Math.round(x+(b[i]-x)*t)); return `rgb(${c})`}
+function matrix(){
+  const ys=sortedYears(), comps=COMPONENTS.filter(c=>F.comps.has(c.key)), m={};
+  REPORTS.forEach(r=>{if(!passes(r))return;(m[r.component_key]??={})[r.year]=(m[r.component_key][r.year]||0)+1});
+  return {ys,comps,m};
+}
+function renderHeat(){
+  const {ys,comps,m}=matrix(); const t=$("#heat");
+  if(!comps.length||!ys.length){t.innerHTML=`<tr><td class="z" style="text-align:left">Pick at least one report type and one year.</td></tr>`;return}
+  let max=1; comps.forEach(c=>ys.forEach(y=>max=Math.max(max,m[c.key]?.[y]||0)));
+  let h=`<thead><tr><th class="row">Report type</th>${ys.map(y=>`<th>${y}</th>`).join("")}<th>Total</th></tr></thead><tbody>`;
+  const colT={};
+  comps.forEach(c=>{let tot=0;h+=`<tr><th class="row"><i class="swatch" style="display:inline-block;margin:0 6px 0 0;background:${PALETTE[c.key]}"></i>${esc(c.label)}</th>`;
+    ys.forEach(y=>{const v=m[c.key]?.[y]||0;tot+=v;colT[y]=(colT[y]||0)+v;
+      const dark=v&&Math.sqrt(v/max)>.55; const sel=drill&&drill.comp===c.key&&drill.year===y;
+      h+=`<td class="${v?"":"z"}${sel?" sel":""}" data-c="${c.key}" data-y="${y}" style="background:${heatColor(v,max)};${dark?"color:#fff;":""}" title="${esc(c.label)}, ${y}: ${v}">${v||"·"}</td>`});
+    h+=`<td class="tot">${fmt(tot)}</td></tr>`});
+  const g=Object.values(colT).reduce((a,b)=>a+b,0);
+  h+=`<tr class="tot"><th class="row">All selected types</th>${ys.map(y=>`<td>${fmt(colT[y]||0)}</td>`).join("")}<td>${fmt(g)}</td></tr></tbody>`;
+  t.innerHTML=h;
+  t.onclick=e=>{const td=e.target.closest("td[data-c]");if(!td||td.classList.contains("z"))return;
+    const c=td.dataset.c,y=+td.dataset.y; drill=(drill&&drill.comp===c&&drill.year===y)?null:{comp:c,year:y};
+    renderHeat();page=0;renderList();if(drill)$("#list").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})};
+}
+function niceMax(v){if(v<=5)return 5;const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;return (n<=2?2:n<=5?5:10)*p}
+const tip=$("#tip");
+function bindTips(el){el.onmousemove=e=>{const t=e.target.closest("[data-tip]");if(!t){tip.style.display="none";return}
+  tip.textContent=t.dataset.tip;tip.style.display="block";tip.style.left=Math.min(e.clientX+12,innerWidth-270)+"px";tip.style.top=(e.clientY+12)+"px"};
+  el.onmouseleave=()=>tip.style.display="none"}
+function renderBars(rs){
+  const ys=sortedYears(), comps=COMPONENTS.filter(c=>F.comps.has(c.key)); const box=$("#bars");
+  if(!ys.length){box.innerHTML="";return}
+  const by={};rs.forEach(r=>{(by[r.year]??={})[r.component_key]=(by[r.year][r.component_key]||0)+1});
+  const tot=y=>Object.values(by[y]||{}).reduce((a,b)=>a+b,0);
+  const W=820,H=300,L=44,R=10,T=14,B=30,max=niceMax(Math.max(1,...ys.map(tot)));
+  const bw=(W-L-R)/ys.length, bar=Math.min(56,bw*.68);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports per year stacked by type">`;
+  for(let i=0;i<=4;i++){const v=max*i/4,y=H-B-(H-T-B)*i/4;s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--muted)">${fmt(v)}</text>`}
+  ys.forEach((y,i)=>{const x=L+i*bw+(bw-bar)/2;let acc=0;
+    comps.forEach(c=>{const v=by[y]?.[c.key]||0;if(!v)return;const h=(H-T-B)*v/max;const yy=H-B-(H-T-B)*acc/max-h;acc+=v;
+      s+=`<rect x="${x}" y="${yy}" width="${bar}" height="${Math.max(h,0.5)}" fill="${PALETTE[c.key]}" data-tip="${esc(c.label)}, ${y}: ${v}"/>`});
+    s+=`<text x="${x+bar/2}" y="${H-B+16}" text-anchor="middle" font-size="12" fill="var(--muted)">${y}</text>`;
+    if(acc)s+=`<text x="${x+bar/2}" y="${H-B-(H-T-B)*acc/max-5}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">${fmt(acc)}</text>`});
+  box.innerHTML=s+"</svg>"; bindTips(box);
+  $("#barsLegend").innerHTML=comps.map(c=>`<span><i class="swatch" style="background:${PALETTE[c.key]}"></i>${esc(c.label)}</span>`).join("");
+}
+function renderStates(rs){
+  const c={};rs.forEach(r=>r.states.forEach(s=>c[s]=(c[s]||0)+1));
+  const rows=Object.entries(STATES).flatMap(([z,ss])=>ss.map(s=>({s,z,v:c[s]||0})));
+  const W=520,rowH=22,L=78,R=40,H=rows.length*rowH+Object.keys(STATES).length*18+6,max=Math.max(1,...rows.map(r=>r.v));
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports by state">`,y=4,lastZ="";
+  rows.forEach(r=>{if(r.z!==lastZ){s+=`<text x="0" y="${y+13}" font-size="11" font-weight="700" fill="var(--muted)">${r.z}</text>`;y+=18;lastZ=r.z}
+    const col=r.z==="North East"?"var(--ne)":"var(--ncnw)";const w=(W-L-R)*r.v/max;
+    const on=!F.stateFilterOn||F.states.has(r.s);
+    s+=`<text x="${L-8}" y="${y+14}" text-anchor="end" font-size="12" fill="var(--ink)" opacity="${on?1:.4}">${r.s}</text>
+       <rect x="${L}" y="${y+4}" width="${Math.max(w,r.v?2:0)}" height="${rowH-8}" fill="${col}" opacity="${on?1:.3}" data-tip="${r.s}: ${r.v} reports"/>
+       <text x="${L+w+5}" y="${y+14}" font-size="11" fill="var(--muted)">${r.v?fmt(r.v):""}</text>`;y+=rowH});
+  $("#states").innerHTML=s+"</svg>"; bindTips($("#states"));
+}
+function renderZoneYears(rs){
+  const ys=sortedYears();const box=$("#zoneYears");if(!ys.length){box.innerHTML="";return}
+  const d=ys.map(y=>({y,ne:rs.filter(r=>r.year===y&&regionKeysOf(r).includes("NE")).length,nc:rs.filter(r=>r.year===y&&regionKeysOf(r).includes("NCNW")).length}));
+  const W=520,H=260,L=40,R=8,T=12,B=28,max=niceMax(Math.max(1,...d.flatMap(x=>[x.ne,x.nc]))),gw=(W-L-R)/ys.length,bw=Math.min(20,gw*.36);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports per year by region">`;
+  for(let i=0;i<=4;i++){const v=max*i/4,y=H-B-(H-T-B)*i/4;s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${L-5}" y="${y+4}" text-anchor="end" font-size="10" fill="var(--muted)">${fmt(v)}</text>`}
+  d.forEach((p,i)=>{const cx=L+i*gw+gw/2;[[p.ne,"var(--ne)","North East",-1],[p.nc,"var(--ncnw)","North Central & North West",1]].forEach(([v,col,lab,side])=>{
+    const h=(H-T-B)*v/max;s+=`<rect x="${side<0?cx-bw-1:cx+1}" y="${H-B-h}" width="${bw}" height="${h}" fill="${col}" data-tip="${lab}, ${p.y}: ${v}"/>`});
+    s+=`<text x="${cx}" y="${H-B+15}" text-anchor="middle" font-size="${ys.length>9?10:11}" fill="var(--muted)">${ys.length>9?"’"+String(p.y).slice(2):p.y}</text>`});
+  box.innerHTML=s+"</svg>";bindTips(box);
+}
+function renderMonths(rs){
+  const comps=COMPONENTS.filter(c=>F.comps.has(c.key)), by={};
+  rs.forEach(r=>{if(r.month)(by[r.month]??={})[r.component_key]=(by[r.month][r.component_key]||0)+1});
+  const tot=m=>Object.values(by[m]||{}).reduce((a,b)=>a+b,0);
+  const W=820,H=240,L=44,R=10,T=14,B=28,max=niceMax(Math.max(1,...range(1,12).map(tot))),bw=(W-L-R)/12,bar=Math.min(46,bw*.66);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports per calendar month">`;
+  for(let i=0;i<=4;i++){const v=max*i/4,y=H-B-(H-T-B)*i/4;s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--muted)">${fmt(v)}</text>`}
+  range(1,12).forEach((m,i)=>{const x=L+i*bw+(bw-bar)/2;let acc=0;const on=F.months.has(m);
+    comps.forEach(c=>{const v=by[m]?.[c.key]||0;if(!v)return;const h=(H-T-B)*v/max,yy=H-B-(H-T-B)*acc/max-h;acc+=v;
+      s+=`<rect x="${x}" y="${yy}" width="${bar}" height="${Math.max(h,.5)}" fill="${PALETTE[c.key]}" data-tip="${esc(c.label)}, ${MONTHS[m-1]}: ${v}"/>`});
+    s+=`<text x="${x+bar/2}" y="${H-B+16}" text-anchor="middle" font-size="12" fill="var(--muted)" opacity="${on?1:.4}">${MONTHS[m-1]}</text>`;
+    if(acc)s+=`<text x="${x+bar/2}" y="${H-B-(H-T-B)*acc/max-5}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">${fmt(acc)}</text>`});
+  const undated=rs.filter(r=>!r.month).length;
+  $("#months").innerHTML=s+"</svg>"+(undated?`<p class="hint" style="margin:6px 0 0">${fmt(undated)} report${undated===1?" has":"s have"} no month in the source and ${undated===1?"is":"are"} left out of this chart.</p>`:"");
+  bindTips($("#months"));
+}
+function listRows(){let rs=filtered();if(drill)rs=rs.filter(r=>r.component_key===drill.comp&&r.year===drill.year);
+  return rs.sort((a,b)=>(b.date||"").localeCompare(a.date||"")||b.id-a.id)}
+function renderList(){
+  const rs=listRows(),pages=Math.max(1,Math.ceil(rs.length/PAGE));page=Math.min(page,pages-1);
+  const d=$("#drill");if(drill){d.style.display="block";d.innerHTML=`Showing ${esc(labelFor(drill.comp))} in ${drill.year}. <button class="btn" id="clearDrill" style="margin-left:8px">Show all selected reports</button>`;
+    $("#clearDrill").onclick=()=>{drill=null;renderHeat();renderList()}}else d.style.display="none";
+  $("#listHint").textContent=`${fmt(rs.length)} reports, newest first.`;
+  $("#list").innerHTML=`<thead><tr><th>Date</th><th>Title</th><th>Report type</th><th>Region</th><th>States</th></tr></thead><tbody>`+
+    rs.slice(page*PAGE,page*PAGE+PAGE).map(r=>`<tr><td style="white-space:nowrap">${esc(r.date||r.year||"")}</td>
+      <td class="t">${NEW_URLS.has(r.url)?'<span class="newtag">New</span>':""}${r.url&&r.url!=="#"?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>`:esc(r.title)}${r.pdf?` <a href="${esc(r.pdf)}" target="_blank" rel="noopener" class="pill">PDF</a>`:""}</td>
+      <td><span class="pill" style="border-left:3px solid ${PALETTE[r.component_key]}">${esc(labelFor(r.component_key))}</span></td>
+      <td>${esc(r.regions.join(", ")||"—")}</td><td>${esc(r.states.join(", ")||"—")}</td></tr>`).join("")+
+    (rs.length?"":`<tr><td colspan="5">No reports match. Widen the years or tick more report types.</td></tr>`)+"</tbody>";
+  $("#pageInfo").textContent=`Page ${page+1} of ${pages}`;$("#prev").disabled=page===0;$("#next").disabled=page>=pages-1;
+}
+$("#prev").onclick=()=>{page--;renderList()};$("#next").onclick=()=>{page++;renderList()};
+
+/* ------------------------------------------------------------ exports */
+function csvCell(v){v=String(v??"");return /[",\n]/.test(v)?`"${v.replace(/"/g,'""')}"`:v}
+async function saveFile(name,text){
+  const dl=window.claude?await window.claude.use("downloads").catch(()=>null):null;
+  if(dl){try{await dl.save({filename:name,data:text});}catch(e){}return}
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+text],{type:"text/csv"}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+}
+$("#exportBtn").onclick=()=>{const rs=listRows();saveFile("dtm_nigeria_reports_filtered.csv",
+  ["id,year,month,date,report_type,regions,states,title,url,pdf",...rs.map(r=>[r.id,r.year,r.month?MONTHS[r.month-1]:"",r.date,labelFor(r.component_key),r.regions.join("; "),r.states.join("; "),r.title,r.url,r.pdf].map(csvCell).join(","))].join("\n"))};
+$("#exportMatrix").onclick=()=>{const {ys,comps,m}=matrix();saveFile("dtm_nigeria_counts_by_type_and_year.csv",
+  [["report_type",...ys,"total"].join(","),...comps.map(c=>{const v=ys.map(y=>m[c.key]?.[y]||0);return [csvCell(c.label),...v,v.reduce((a,b)=>a+b,0)].join(",")})].join("\n"))};
+
+/* ------------------------------------------------------------ query API (shared by assistant engines) */
+function queryFilter(q){
+  return REPORTS.filter(r=>{
+    if(q.components?.length&&!q.components.includes(r.component_key))return false;
+    if(q.years?.length&&!q.years.map(Number).includes(r.year))return false;
+    if(q.months?.length&&!q.months.map(Number).includes(r.month))return false;
+    if(q.year_from&&r.year<q.year_from)return false; if(q.year_to&&r.year>q.year_to)return false;
+    if(q.regions?.length&&!q.regions.some(z=>r.regions.includes(z)))return false;
+    if(q.states?.length&&!q.states.some(s=>r.states.includes(s)))return false;
+    if(q.keyword&&!(r.title+" "+r.summary).toLowerCase().includes(q.keyword.toLowerCase()))return false;
+    return true})}
+function countReports(q){const rs=queryFilter(q),g=q.group_by;if(!g||g==="none")return{total:rs.length};
+  const c={};rs.forEach(r=>{const vals={month:[r.month?MONTHS[r.month-1]:"(no month)"],year:[r.year],component:[labelFor(r.component_key)],region:r.regions.length?r.regions:["(not stated)"],state:r.states.length?r.states:["(not stated)"]}[g]||[];
+    vals.forEach(v=>c[v]=(c[v]||0)+1)});return{total:rs.length,["by_"+g]:c}}
+function listReports(q){return queryFilter(q).sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,Math.min(q.limit||10,40))
+  .map(r=>({title:r.title,date:r.date,type:labelFor(r.component_key),url:r.url}))}
+function applyFilters(q){
+  if(q.components?.length)F.comps=new Set(q.components.filter(k=>COMPONENTS.some(c=>c.key===k)));
+  if(q.years?.length)F.years=new Set(q.years.map(Number).filter(y=>y>=YEAR_MIN&&y<=YEAR_MAX));
+  else if(q.year_from||q.year_to)F.years=new Set(range(Math.max(YEAR_MIN,q.year_from||YEAR_MIN),Math.min(YEAR_MAX,q.year_to||YEAR_MAX)));
+  if(q.regions?.length){F.regions=new Set();if(q.regions.includes("North East"))F.regions.add("NE");if(q.regions.some(z=>z!=="North East"))F.regions.add("NCNW")}
+  if(q.states?.length){F.states=new Set(q.states.filter(s=>ALL_STATES.includes(s)));F.stateFilterOn=true}
+  if(q.months?.length)F.months=new Set(q.months.map(Number).filter(m=>m>=1&&m<=12));
+  if(q.keyword!==undefined)F.kw=(q.keyword||"").toLowerCase();
+  drill=null;syncFilterInputs();render();
+}
+
+/* ------------------------------------------------------------ assistant */
+const chat=$("#chat"),msgs=$("#msgs");let TURNS=[],busy=false,ctl=null;
+$("#chatOpen").onclick=()=>{chat.classList.add("open");chat.setAttribute("aria-hidden","false");$("#chatIn").focus()};
+$("#chatClose").onclick=()=>{chat.classList.remove("open");chat.setAttribute("aria-hidden","true");$("#chatOpen").focus()};
+function addMsg(role,text){const d=document.createElement("div");d.className="msg "+role;d.textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d}
+const SUGGEST=["Flash reports per year in Borno since 2021","ETT reports per month in 2024","Compare ETT reports in 2023 and 2024","How many intention surveys in North East?","Show transhumance and early warning reports for Katsina","Fetch latest reports on flood"];
+$("#suggest").innerHTML=SUGGEST.map(s=>`<button type="button">${esc(s)}</button>`).join("");
+$("#suggest").onclick=e=>{if(e.target.tagName==="BUTTON"){$("#chatIn").value=e.target.textContent;send()}};
+$("#chatForm").onsubmit=e=>{e.preventDefault();send()};
+$("#chatIn").onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send()}};
+function engineName(){return SERVER?.ai?"Claude, via your server (can crawl the website)":SAMPLE?"Claude, in claude.ai (queries loaded data)":"Offline command assistant"}
+function setEngine(){$("#engine").textContent=engineName()}
+
+async function send(){
+  const text=$("#chatIn").value.trim();if(!text||busy)return;$("#chatIn").value="";addMsg("user",text);busy=true;
+  try{
+    if(SERVER?.ai) await askServer(text);
+    else if(SAMPLE) await askSample(text);
+    else addMsg("bot",localAssistant(text));
+  }catch(e){addMsg("bot",localAssistant(text))}
+  busy=false;
+}
+async function askServer(text){
+  TURNS.push({role:"user",content:text});const bubble=addMsg("bot","Thinking…");
+  const r=await fetch("api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:TURNS})});
+  if(!r.ok){bubble.remove();TURNS.pop();throw new Error("server chat unavailable")}
+  const j=await r.json();bubble.textContent=j.reply||"Done.";TURNS.push({role:"assistant",content:j.reply||"Done."});
+  (j.actions||[]).forEach(a=>{if(a.type==="set_filters")applyFilters(a.filters);if(a.type==="harvest_started")watchHarvest()});
+}
+const SAMPLE_RULES=()=>`You are the assistant inside the IOM DTM Nigeria publications tracker dashboard. The page holds ${REPORTS.length} report records ${SOURCE==="sample"?"(SAMPLE data, not real, so say so when giving numbers)":"harvested from dtm.iom.int/nigeria"}.
+Component keys: ${COMPONENTS.map(c=>c.key+" = "+c.label).join("; ")}.
+Regions: North East, North Central, North West ("North Central & North West" means both). States: ${ALL_STATES.join(", ")}. Years ${YEAR_MIN}-${YEAR_MAX}.
+Always use the tools for numbers, never guess. When the user asks to show or filter, call set_dashboard_filters. You cannot browse the web from here: if asked to fetch, crawl or update from the website, explain that the harvester runs on their computer or server (python server.py, then Harvest now, or python scrape.py --keywords "..."), then they load the new reports.json with "Load data file". Answer briefly and plainly.`;
+async function askSample(text){
+  TURNS.push({role:"user",content:text});const bubble=addMsg("bot","Thinking…");ctl=new AbortController();
+  const fs={type:"object",properties:{components:{type:"array",items:{type:"string"}},years:{type:"array",items:{type:"integer"}},year_from:{type:"integer"},year_to:{type:"integer"},months:{type:"array",items:{type:"integer"},description:"calendar months 1-12"},
+    regions:{type:"array",items:{type:"string"}},states:{type:"array",items:{type:"string"}},keyword:{type:"string"}}};
+  const tools=[
+    {name:"count_reports",description:"Count reports matching filters; group_by one of none, year, month, component, region, state.",inputSchema:{...fs,properties:{...fs.properties,group_by:{type:"string"}}},execute:q=>countReports(q)},
+    {name:"list_reports",description:"List matching reports newest first.",inputSchema:{...fs,properties:{...fs.properties,limit:{type:"integer"}}},execute:q=>listReports(q)},
+    {name:"set_dashboard_filters",description:"Change the dashboard filters the user sees.",inputSchema:fs,execute:q=>{applyFilters(q);return{ok:true}}}];
+  try{
+    const {text:out}=await SAMPLE([{role:"user",content:SAMPLE_RULES()},{role:"assistant",content:"Understood."},...TURNS],
+      {tools,cache:false,signal:ctl.signal,onText:({text})=>{bubble.textContent=text}});
+    bubble.textContent=out;TURNS.push({role:"assistant",content:out});
+  }catch(e){
+    TURNS.pop();
+    if(e.code==="not_granted"){SAMPLE=null;setEngine();bubble.textContent=localAssistant(text)}
+    else if(e.code==="rate_limited"){bubble.textContent="Too many questions at once. Wait a moment, then ask again."}
+    else if(e.code==="cancelled"){bubble.textContent=e.text||"Stopped."}
+    else {bubble.textContent=localAssistant(text)}
+  }
+}
+
+/* offline command assistant: keyword/terminology parser */
+const COMP_WORDS=[["ewer",["early warning","ewer","early response","alert"]],["ett",[" ett","emergency tracking"]],["flash",["flash","incident"]],
+  ["flood",["flood"]],["biometric",["biometric","registration"]],["intention",["intention"]],["smi",["stability","mobility index"," smi","solutions index"]],
+  ["ses_fm",["facility mapping","facilities"]],["ses",["socio","economic survey"]],["needs",["needs monitoring","needs"]],
+  ["transhumance",["transhumance","flow monitoring","herder"]],["atlas",["atlas","mobility tracking","baseline","site assessment","displacement report"]],["other",["unclassified"]]];
+function parseQuery(t){
+  const s=" "+t.toLowerCase().replace(/[?!.,]/g," ")+" ",q={};
+  let comps=COMP_WORDS.filter(([k,ws])=>ws.some(w=>s.includes(w))).map(([k])=>k);
+  if(comps.includes("ses_fm"))comps=comps.filter(k=>k!=="ses");
+  if(comps.length)q.components=comps;
+  const st=ALL_STATES.filter(x=>new RegExp("\\b"+x.toLowerCase()+"\\b").test(s));
+  if(st.length)q.states=st;
+  const reg=[];if(/north[\s-]?east|\bne\b/.test(s))reg.push("North East");if(/north[\s-]?central|\bnc\b|ncnw/.test(s))reg.push("North Central");if(/north[\s-]?west|\bnw\b|ncnw/.test(s))reg.push("North West");
+  if(reg.length)q.regions=reg;
+  const rng=s.match(/(20[1-3]\d)\s*(?:-|–|to|through|and|until)\s*(20[1-3]\d)/);
+  const since=s.match(/(?:since|from|after)\s+(20[1-3]\d)/),before=s.match(/(?:before|until|up to)\s+(20[1-3]\d)/);
+  const yrs=[...s.matchAll(/\b(20[1-3]\d)\b/g)].map(m=>+m[1]);
+  if(rng&&!/compare|versus|vs/.test(s)){q.year_from=+rng[1];q.year_to=+rng[2]}
+  else if(since){q.year_from=+since[1];q.year_to=YEAR_MAX}
+  else if(before){q.year_from=YEAR_MIN;q.year_to=+before[1]}
+  else if(yrs.length)q.years=[...new Set(yrs)];
+  const MRX="(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)";
+  const mnum=w=>["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"].indexOf(w.slice(0,3))+1;
+  const mr=s.match(new RegExp("\\b"+MRX+"\\s*(?:-|–|to|through|until)\\s*"+MRX+"\\b"));
+  const qm=s.match(/\bq([1-4])\b/);
+  if(mr){const a=mnum(mr[1]),b=mnum(mr[2]);q.months=a<=b?range(a,b):[...range(a,12),...range(1,b)]}
+  else if(qm){q.months=range(qm[1]*3-2,qm[1]*3)}
+  else{const ms=[...s.matchAll(new RegExp("\\b"+MRX+"\\b","g"))].map(m=>mnum(m[1]));if(ms.length)q.months=[...new Set(ms)]}
+  const kw=t.match(/["“](.+?)["”]/);if(kw)q.keyword=kw[1];
+  if(/per month|by month|each month|monthly/.test(s))q.group_by="month";
+  else if(/per year|by year|each year|yearly|trend|compare|vs|versus/.test(s))q.group_by="year";
+  else if(/by state|per state|each state|which state/.test(s))q.group_by="state";
+  else if(/by type|by component|per type|breakdown/.test(s))q.group_by="component";
+  else if(/by region|by zone|per region/.test(s))q.group_by="region";
+  return q;
+}
+function localAssistant(t){
+  const s=t.toLowerCase();
+  if(/^(reset|clear)/.test(s)){resetFilters();return"Filters reset: all report types, 2019–2030, all regions and states."}
+  if(/fetch|harvest|crawl|scrape|update data|refresh data|latest reports|search the (site|web)/.test(s)){
+    const kws=(t.match(/(?:on|for|about)\s+["“]?([^"”?]+)["”]?/i)||[])[1];
+    if(SERVER){startHarvest(kws?[kws.trim()]:null);return`Started a harvest of dtm.iom.int${kws?` including a site search for “${kws.trim()}”`:""}. Progress shows at the top of the page and the dashboard reloads when it finishes.`}
+    return`This copy of the dashboard can't reach the website by itself. To fetch new reports${kws?` on “${kws.trim()}”`:""}, run on your computer:\n\npython scrape.py${kws?` --keywords "${kws.trim()}"`:""}\n\nthen use “Load data file” to open data/reports.json. Or run python server.py and use the Harvest button.`}
+  if(/^(help|what can you do)/.test(s))return"Ask things like:\n• Flash reports per year in Borno since 2021\n• ETT reports per month in 2024\n• Intention surveys January to June 2024\n• Compare ETT reports in 2023 and 2024\n• Intention surveys by state\n• Show transhumance reports for Katsina (changes the dashboard)\n• List the latest 5 needs monitoring reports\n• Fetch latest reports on “flood”\n• Reset";
+  const q=parseQuery(t);
+  if(!Object.keys(q).length)return"I couldn't find a report type, place or year in that. Try “flash reports in Borno in 2024”, or type help.";
+  const note=SOURCE==="sample"?"\n(Sample data, not real counts.)":"";
+  const labels=(q.components||[]).map(labelFor).join(", ")||"all report types";
+  const where=[...(q.states||[]),...(q.regions&&!q.states?q.regions:[])].join(", ")||"all regions";
+  const when=(q.years?q.years.join(", "):q.year_from?`${q.year_from}–${Math.min(q.year_to,YEAR_MAX)}`:"all years")+(q.months?` (${q.months.map(m=>MONTHS[m-1]).join(", ")})`:"");
+  if(/show|filter|display|open|dashboard/.test(s)){applyFilters(q);{const n=filtered().length;return`Dashboard now shows ${labels} in ${where}, ${when}: ${fmt(n)} report${n===1?"":"s"}.${note}`}}
+  if(/list|latest|recent|which reports|titles/.test(s)){const n=+(s.match(/\b(\d{1,2})\b(?!\d)/)||[])[1]||8;const rs=listReports({...q,limit:n});
+    return rs.length?`Latest ${rs.length} for ${labels}, ${where}, ${when}:\n`+rs.map(r=>`• ${r.date||""} ${r.title}`).join("\n")+note:"No reports match that."}
+  const res=countReports(q);let out=`${fmt(res.total)} report${res.total===1?"":"s"}: ${labels}, ${where}, ${when}.`;
+  if(res.by_year&&q.years)q.years.forEach(y=>res.by_year[y]??=0);
+  const g=Object.keys(res).find(k=>k.startsWith("by_"));
+  if(g){const ent=Object.entries(res[g]);if(g==="by_year")ent.sort((a,b)=>a[0]-b[0]);else if(g==="by_month")ent.sort((a,b)=>MONTHS.indexOf(a[0])-MONTHS.indexOf(b[0]));else ent.sort((a,b)=>b[1]-a[1]);out+="\n"+ent.map(([k,v])=>`• ${k}: ${fmt(v)}`).join("\n")}
+  return out+note+"\n\nSay “show …” to apply this to the dashboard.";
+}
+
+/* ------------------------------------------------------------ server + harvest */
+async function detectServer(){
+  if(!location.protocol.startsWith("http"))return;
+  try{const r=await fetch("api/status",{cache:"no-store"});if(!r.ok)return;SERVER=await r.json();
+    $("#harvestBtn").hidden=false;if(SERVER.job?.running)watchHarvest()}catch(e){}
+  setEngine();
+}
+$("#harvestBtn").onclick=()=>startHarvest(null);
+async function startHarvest(keywords){
+  const r=await fetch("api/harvest",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({keywords})});
+  if(r.status===409)addMsg("sys","A harvest is already running.");watchHarvest();
+}
+let watching=false;
+async function watchHarvest(){
+  if(watching)return;watching=true;$("#harvestBtn").disabled=true;$("#harvestBtn").textContent="Harvesting…";const log=$("#harvestLog");log.style.display="block";
+  while(true){await new Promise(r=>setTimeout(r,2500));
+    try{const s=await (await fetch("api/status",{cache:"no-store"})).json();log.textContent=(s.job.log||[]).slice(-12).join("\n");
+      if(!s.job.running){if(s.job.error)showBanner("Harvest failed: "+esc(s.job.error));
+        else{const p=await (await fetch("data/reports.json",{cache:"no-store"})).json();refreshData(p);checkForUpdates();addMsg("sys",`Harvest finished: ${fmt(p.count)} reports loaded.`)}
+        break}}catch(e){break}}
+  watching=false;$("#harvestBtn").disabled=false;$("#harvestBtn").textContent="Harvest now";setTimeout(()=>log.style.display="none",8000);
+}
+
+/* ------------------------------------------------------------ auto-refresh */
+// Keeps the user's filters, swaps in the new data, and announces what arrived.
+function refreshData(payload){
+  const oldUrls=new Set(REPORTS.map(r=>r.url)), wasSample=SOURCE==="sample";
+  const allComps=F.comps.size===COMPONENTS.length;
+  DATA=normalise(payload); REPORTS=DATA.reports; SOURCE="harvest";
+  NEW_URLS=new Set((payload.latest_additions||[]).map(a=>a.url));
+  const comps=(payload.components&&payload.components.length)?payload.components:DEFAULT_COMPONENTS;
+  COMPONENTS=[...comps].sort((a,b)=>idx(a.key)-idx(b.key));
+  if(allComps||wasSample)F.comps=new Set(COMPONENTS.map(c=>c.key));
+  buildFilters(); render(); renderStatus();
+  if(wasSample) return;
+  const added=REPORTS.filter(r=>!oldUrls.has(r.url));
+  if(added.length) showToast(added);
+}
+function showToast(added){
+  const t=$("#toast");
+  t.innerHTML=`<b>${added.length} new report${added.length===1?"":"s"} added</b><ul>`+
+    added.slice(0,5).map(r=>`<li>${esc(r.title)}</li>`).join("")+`</ul>`+(added.length>5?`<div>and ${added.length-5} more.</div>`:"")+
+    `<button class="btn" type="button" id="toastClose">Dismiss</button>`;
+  t.style.display="block"; $("#toastClose").onclick=()=>t.style.display="none";
+  document.title=`(${added.length} new) DTM Nigeria publications tracker`;
+  setTimeout(()=>{document.title="DTM Nigeria publications tracker"},60000);
+}
+let checking=false;
+async function checkForUpdates(){
+  if(checking||!location.protocol.startsWith("http")||SOURCE==="upload")return;
+  checking=true;
+  try{
+    const r=await fetch("data/status.json?t="+Date.now(),{cache:"no-store"});
+    if(r.ok){
+      STATUS=await r.json(); renderStatus();
+      if(STATUS.last_changed && STATUS.last_changed!==(DATA&&DATA.generated_at)){
+        const d=await fetch("data/reports.json?t="+Date.now(),{cache:"no-store"});
+        if(d.ok){const p=await d.json(); if((p.reports||[]).length) refreshData(p)}
+      }
+    }
+  }catch(e){/* offline: keep showing the cached data */}
+  checking=false;
+}
+setInterval(checkForUpdates,5*60*1000);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")checkForUpdates()});
+addEventListener("online",checkForUpdates);
+
+/* ------------------------------------------------------------ sample data (clearly labelled) */
+function sampleData(){
+  let seed=20260924;const rnd=()=>(seed=(seed*1664525+1013904223)%4294967296)/4294967296;
+  const pick=a=>a[Math.floor(rnd()*a.length)];const reps=[];const NE=STATES["North East"],NC=[...STATES["North Central"],...STATES["North West"]];
+  const add=(k,y,zone,states,label)=>{const m=1+Math.floor(rnd()*(y===2026?8:12));const regions=[...new Set(states.map(s=>STATE_ZONE[s]))];
+    if(!states.length&&zone)regions.push(...zone);
+    reps.push({title:`Nigeria — ${label} (sample ${y})`,date:`${y}-${String(m).padStart(2,"0")}-${String(1+Math.floor(rnd()*27)).padStart(2,"0")}`,year:y,component_key:k,regions,states,url:"#"})};
+  for(let y=2019;y<=2026;y++){const f=y===2026?.72:1;
+    const n=(b)=>Math.round(b*f*(0.8+rnd()*0.4));
+    for(let i=0;i<n(3);i++)add("atlas",y,["North East"],[],"North-east Mobility Tracking IDP and Returnee Atlas");
+    if(y>=2021)for(let i=0;i<n(3);i++)add("atlas",y,["North Central","North West"],[],"North-central & North-west Displacement Report");
+    for(let i=0;i<n(3);i++)add("needs",y,["North East"],[],"North-east Needs Monitoring");
+    for(let i=0;i<n(y<2021?25:60);i++){const s=pick(rnd()<.5?NE:NC);add("flash",y,null,[s],`${s} State Flash Report`)}
+    if(y>=2020)for(let i=0;i<n(50);i++)add("ett",y,null,rnd()<.6?["Adamawa","Borno"]:["Borno"],"Emergency Tracking Tool Report");
+    if(y%2===0||y===2025)NE.forEach(s=>add("intention",y,null,[s],`${s} Intention Survey`));
+    if(y>=2022)for(let i=0;i<n(2);i++)add("ses",y,null,[pick(NE)],"Socio Economic Survey");
+    if(y>=2023)for(let i=0;i<n(2);i++)add("smi",y,["North East"],[],"Solutions Mobility Index");
+    if(y>=2023)for(let i=0;i<n(12);i++)add("transhumance",y,null,rnd()<.5?["Kaduna","Katsina"]:["Katsina","Zamfara"],"Transhumance Flow Monitoring Dashboard");
+    if(y>=2023)for(let i=0;i<n(10);i++)add("ewer",y,null,rnd()<.5?["Adamawa","Taraba"]:["Kaduna","Katsina"],"Transhumance Early Warning Dashboard");
+    if(y===2022||y===2024||y===2020)for(let i=0;i<n(4);i++){const s=pick(["Adamawa","Borno","Kogi","Benue","Yobe"]);add("flood",y,null,[s],`${s} Post-Flood Situation Report`)}
+    if(y<=2022)for(let i=0;i<n(2);i++)add("biometric",y,null,["Borno"],"Biometric Registration Report");
+    if(y>=2024)add("ses_fm",y,null,[pick(NE)],"Socio-Economic Survey & Facility Mapping");
+    for(let i=0;i<n(4);i++)add("other",y,null,[],"Map / dataset / profile");
+  }
+  reps.forEach((r,i)=>r.id=i+1);
+  return {generated_at:"",sample:true,components:DEFAULT_COMPONENTS,reports:reps};
+}
+
+/* ------------------------------------------------------------ boot */
+loadInitial().then(()=>{detectServer();setEngine();checkForUpdates()});
+if(window.claude){window.claude.use("sample").then(s=>{SAMPLE=s;setEngine()}).catch(()=>{})}
+if("serviceWorker" in navigator && location.protocol.startsWith("http") && !window.claude && /localhost|127\.0\.0\.1|github\.io|\.local|:\d+$/.test(location.host)){
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+}
+addMsg("bot","Ask about report counts by type, year, region or state, or tell me what to show. Type help for examples.");
+</script>
+</body>
+</html>
