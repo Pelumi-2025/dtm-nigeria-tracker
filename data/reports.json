@@ -1,21 +1,7 @@
 {
- "generated_at": "2026-09-24T20:45:20Z",
+ "generated_at": "2026-10-02T22:56:42Z",
  "source": "https://dtm.iom.int/nigeria",
- "keywords": [
-  "Nigeria flash report",
-  "Nigeria emergency tracking tool",
-  "Nigeria intention survey",
-  "Nigeria transhumance",
-  "Nigeria early warning dashboard",
-  "Nigeria needs monitoring",
-  "Nigeria biometric registration",
-  "Nigeria stability index",
-  "Nigeria solutions mobility index",
-  "Nigeria socio-economic survey",
-  "Nigeria facility mapping",
-  "Nigeria flood",
-  "Nigeria atlas"
- ],
+ "keywords": [],
  "latest_additions": [],
  "components": [
   {
@@ -85,6 +71,10 @@
   {
    "key": "climate",
    "label": "Climate & Environmental Vulnerability Reports"
+  },
+  {
+   "key": "mt_dash",
+   "label": "Mobility Tracking – Dashboards"
   },
   {
    "key": "needs",
@@ -193,8 +183,8 @@
    "title": "NIGERIA — MULTI-SECTORAL LOCATION ASSESSMENT: ENERGY ACCESS",
    "date": "2026-09-24",
    "year": 2026,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "other",
+   "component": "Other / Unclassified",
    "regions": [
     "North East",
     "North Central",
@@ -204,7 +194,7 @@
    "url": "https://dtm.iom.int/reports/nigeria-multi-sectoral-location-assessment-energy-access",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20MSLA%20R7%20and%20R38%20-%20SUMMARY%20REPORT%20ON%20ENERGY%20ACCESS%20-%20Nigeria%2011_2021.pdf",
    "summary": "This report presents a summary of the analysis of the Round 7 data collection of the Displacement Tracking Matrix (DTM) Multi-Sectoral Location Assessment (MLSA) in the North Central and North West Geopolitical Zones of Nigeria and Round 38 of the DTM MSLA in the North East Geopolitical Zone. For the first time, these assessments specifically included energy-related questions.",
-   "matched_on": "title:location assessment",
+   "matched_on": "",
    "date_basis": "no date on the site (counted on the day it was read)",
    "period_date": null,
    "round": null,
@@ -6132,8 +6122,8 @@
    "title": "Nigeria — Gombe, Taraba and Bauchi State Return Dashboard 1 (March 2025)",
    "date": "2025-03-20",
    "year": 2025,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -6150,7 +6140,7 @@
    "period_date": "2025-03-01",
    "round": null,
    "round_zone": null,
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 259,
@@ -6190,8 +6180,8 @@
    "title": "Nigeria — North-central and North-west Return Dashboard 1 (March 2025)",
    "date": "2025-03-17",
    "year": 2025,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -6215,7 +6205,7 @@
    "period_date": "2025-03-01",
    "round": null,
    "round_zone": null,
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 261,
@@ -13262,8 +13252,8 @@
    "title": "Nigeria — North-East — Displacement Factsheet 46 (December 2023)",
    "date": "2024-01-10",
    "year": 2024,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -13283,7 +13273,7 @@
    "period_date": "2023-12-01",
    "round": 46,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 557,
@@ -18624,8 +18614,8 @@
    "title": "Nigeria — North-East — Displacement Factsheet 41 (14 February - 30 March 2022)",
    "date": "2022-06-22",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -18645,7 +18635,7 @@
    "period_date": "2022-03-30",
    "round": 41,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 793,
@@ -19491,8 +19481,8 @@
    "title": "Nigeria — North-central And North-west Zones Site Assessment Dashboard 9 (March 2022)",
    "date": "2022-04-11",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -19501,20 +19491,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-central-and-north-west-zones-site-assessment-dashboard-9-march-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20-%20NCNW%20Round%209%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
    "round": 9,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 832,
    "title": "Nigeria — North-central And North-west Zones List of Wards Assessed 9 (March 2022)",
    "date": "2022-04-11",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -19526,17 +19516,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 833,
    "title": "Nigeria — North-central And North-west Zones List of Displacement Sites Assessed 9 (March 2022)",
    "date": "2022-04-11",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -19548,17 +19538,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 834,
    "title": "Nigeria — North-central And North-west Zones IDP Population Variation Dashboard 9 (March 2022)",
    "date": "2022-04-11",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -19570,9 +19560,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 835,
@@ -19610,8 +19600,8 @@
    "title": "Nigeria — North-central And North-west Zones Dashboard 9 (March 2022)",
    "date": "2022-04-11",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -19623,9 +19613,9 @@
    "matched_on": "title:zones dashboard",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 837,
@@ -19719,8 +19709,8 @@
    "title": "Nigeria — North-central  & North-west — Displacement Factsheet 9 (16 November - 30 December 2021)",
    "date": "2022-04-06",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -19734,7 +19724,7 @@
    "period_date": "2021-12-30",
    "round": 9,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 842,
@@ -19934,8 +19924,8 @@
    "title": "Nigeria — North-east — Site Assessment Dashboard 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -19943,20 +19933,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-east-site-assessment-dashboard-40-march-2022",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2040%20Dashboard%20of%20Site%20Assessment_0.pdf",
    "summary": "In response to the need for accurate and up-to-date information on human mobility and forced displacement in north-east Nigeria, IOM activated its Displacement Tracking Matrix (DTM) to support the Government and the humanitarian community with multi-layered data on the numbers, trends, status, locations and needs of populations affected by the on-going conflict in north-east Nigeria. Round 40 of assessment was conducted from 16 November and 30 December 2021.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
    "round": 40,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 852,
    "title": "Nigeria — North-east — Returnee Dashboard 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -19967,17 +19957,17 @@
    "matched_on": "title:returnee dashboard",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 40,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 853,
    "title": "Nigeria — North-east — List of Wards Assessed 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -19988,17 +19978,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 40,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 854,
    "title": "Nigeria — North-east — List of Displacement Sites Assessed 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -20009,17 +19999,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 40,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 855,
    "title": "Nigeria — North-east — IDP Population Variation Dashboard 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -20030,9 +20020,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2022-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 40,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 856,
@@ -20067,8 +20057,8 @@
    "title": "Nigeria — North-east — Displacement Dashboard 40 (March 2022)",
    "date": "2022-03-21",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -20081,7 +20071,7 @@
    "period_date": "2022-03-01",
    "round": 40,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 858,
@@ -20171,8 +20161,8 @@
    "title": "Nigeria — North-East — Displacement Factsheet 40 (16 November - 30 December 2021)",
    "date": "2022-03-11",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -20185,7 +20175,7 @@
    "period_date": "2021-12-30",
    "round": 40,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 863,
@@ -20736,8 +20726,8 @@
    "title": "Nigeria — North-central And North-west Zones Site Assessment Dashboard 8 (December 2021)",
    "date": "2022-01-31",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -20746,20 +20736,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-central-and-north-west-zones-site-assessment-dashboard-8-december-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20-%20North-Central%20and%20North-West%20Zones%20Round%208%20Dashboard%20of%20Site%20Assessment%20%282%29.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
    "round": 8,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 887,
    "title": "Nigeria — North-central And North-west Zones List of Wards Assessed 8 (December 2021)",
    "date": "2022-01-31",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -20771,17 +20761,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 888,
    "title": "Nigeria — North-central And North-west Zones List of Displacement Sites Assessed 8 (December 2021)",
    "date": "2022-01-31",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -20793,17 +20783,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 889,
    "title": "Nigeria — North-central And North-west Zones IDP Population Variation Dashboard 8 (December 2021)",
    "date": "2022-01-31",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -20815,9 +20805,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 890,
@@ -20855,8 +20845,8 @@
    "title": "Nigeria — North-central And North-west Zones Dashboard 8 (December 2021)",
    "date": "2022-01-31",
    "year": 2022,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -20868,9 +20858,9 @@
    "matched_on": "title:zones dashboard",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 892,
@@ -21271,8 +21261,8 @@
    "title": "Nigeria — north-east — Returnee Dashboard 39 (December 2021 )",
    "date": "2021-12-29",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21283,9 +21273,9 @@
    "matched_on": "title:returnee dashboard",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 39,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 910,
@@ -21522,8 +21512,8 @@
    "title": "Nigeria — north-east — Site Assessment Dashboard 39 (December 2021)",
    "date": "2021-12-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21531,20 +21521,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-east-site-assessment-dashboard-39-december-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2039%20Dashboard%20of%20Site%20Assessment_0.pdf",
    "summary": "In response to the need for accurate and up-to-date information on human mobility and forced displacement in north-east Nigeria, IOM activated its Displacement Tracking Matrix (DTM) to support the Government and the humanitarian community with multi-layered data on the numbers, trends, status, locations and needs of populations affected by the on-going conflict in north-east Nigeria. Round 39 of assessment was conducted from 30 August to 15 October 2021.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
    "round": 39,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 921,
    "title": "Nigeria — north-east — List of Wards Assessed 39 (December 2021)",
    "date": "2021-12-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21555,17 +21545,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 39,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 922,
    "title": "Nigeria — north-east — List of Displacement Sites Assessed 39 (December 2021)",
    "date": "2021-12-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21576,17 +21566,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 39,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 923,
    "title": "Nigeria — north-east — IDP Population Variation Dashboard 39 (December 2021)",
    "date": "2021-12-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21597,9 +21587,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 39,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 924,
@@ -21634,8 +21624,8 @@
    "title": "Nigeria — north-east — Displacement Dashboard 39 (December 2021)",
    "date": "2021-12-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21648,7 +21638,7 @@
    "period_date": "2021-12-01",
    "round": 39,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 926,
@@ -21679,8 +21669,8 @@
    "title": "Nigeria — North East — Displacement Factsheet 39 (30 August - 15 October 2021)",
    "date": "2021-12-22",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -21693,7 +21683,7 @@
    "period_date": "2021-10-15",
    "round": 39,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 928,
@@ -22204,8 +22194,8 @@
    "title": "Nigeria — North East — Site Assessment Dashboard 38 (June — July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22213,20 +22203,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-north-east-site-assessment-dashboard-38-june-july-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2038%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "In response to the need for accurate and up-to-date information on human mobility and forced displacement in North East Nigeria, IOM activated its Displacement Tracking Matrix (DTM) to support the Government and the humanitarian community with multi-layered data on the numbers, trends, status, locations and needs of populations affected by the on-going conflict in North East Nigeria. Round 38 of assessment was conducted from 21 June to 27 July 2021.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-07-01",
    "round": 38,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 950,
    "title": "Nigeria — North East — Returnee Dashboard 38 (June — July 2021 )",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22237,17 +22227,17 @@
    "matched_on": "title:returnee dashboard",
    "date_basis": "publication date",
    "period_date": "2021-07-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 38,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 951,
    "title": "Nigeria — North East — List of Wards Assessed 38 (June — July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22258,17 +22248,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-07-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 38,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 952,
    "title": "Nigeria — North East — List of Displacement Sites Assessed 38 (June — July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22279,17 +22269,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2021-07-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 38,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 953,
    "title": "Nigeria — North East — IDP Population Variation Dashboard 38 (June — July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22300,9 +22290,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-07-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 38,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 954,
@@ -22337,8 +22327,8 @@
    "title": "Nigeria — North East — Displacement Factsheet 38 (21 June — 27 July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22351,15 +22341,15 @@
    "period_date": "2021-07-27",
    "round": 38,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 956,
    "title": "Nigeria — North East — Displacement Dashboard 38 (June — July 2021)",
    "date": "2021-11-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -22372,7 +22362,7 @@
    "period_date": "2021-07-01",
    "round": 38,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 957,
@@ -22808,8 +22798,8 @@
    "title": "Nigeria — North Central And North West Zones List of Wards Assessed Round 7 (September 2021)",
    "date": "2021-10-07",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -22823,15 +22813,15 @@
    "period_date": "2021-09-01",
    "round": 7,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 976,
    "title": "Nigeria — North Central And North West Zones List of Displacement Sites Assessed Round 7 (September 2021)",
    "date": "2021-10-07",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -22845,15 +22835,15 @@
    "period_date": "2021-09-01",
    "round": 7,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 977,
    "title": "Nigeria — North Central and North West Zones Displacement Dashboard 7 (September 2021)",
    "date": "2021-10-06",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -22867,15 +22857,15 @@
    "period_date": "2021-09-01",
    "round": 7,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 978,
    "title": "Nigeria — North Central And North West Zones Site Assessment Dashboard 7 (September 2021)",
    "date": "2021-10-06",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -22884,20 +22874,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-site-assessment-dashboard-7-september-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20-%20North-Central%20and%20North-West%20Zones%20Round%207%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-09-01",
    "round": 7,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 979,
    "title": "Nigeria — North Central And North West Zones IDP Population Variation Dashboard 7 (September 2021)",
    "date": "2021-10-06",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -22909,9 +22899,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-09-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 7,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 980,
@@ -23043,8 +23033,8 @@
    "title": "Nigeria — North Central And North West Displacement Factsheet Round 7 (September 2021)",
    "date": "2021-09-24",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -23058,7 +23048,7 @@
    "period_date": "2021-09-01",
    "round": 7,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 987,
@@ -23661,29 +23651,27 @@
    "title": "Nigeria — Site Assessment Dashboard 37 (August 2021)",
    "date": "2021-08-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-37-august-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2037%20Dashboard%20of%20Site%20Assessment_0.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-08-01",
    "round": 37,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1017,
    "title": "Nigeria — List of Wards Assessed 37 (August 2021)",
    "date": "2021-08-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-37-august-2021",
@@ -23692,17 +23680,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 37,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1018,
    "title": "Nigeria — List of Displacement Sites Assessed 37 (August 2021)",
    "date": "2021-08-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-37-august-2021",
@@ -23711,17 +23699,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2021-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 37,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1019,
    "title": "Nigeria — IDP Population Variation Dashboard 37 (August 2021)",
    "date": "2021-08-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-37-august-2021",
@@ -23730,9 +23718,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 37,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1020,
@@ -23760,11 +23748,9 @@
    "title": "Nigeria — Displacement Dashboard 37 (August 2021)",
    "date": "2021-08-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-37-august-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2037%20Baseline%20Dashboard.pdf",
@@ -23774,7 +23760,7 @@
    "period_date": "2021-08-01",
    "round": 37,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1022,
@@ -23908,8 +23894,8 @@
    "title": "Nigeria — North East Displacement Factsheet Round 37 (July 2021)",
    "date": "2021-08-02",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -23929,7 +23915,7 @@
    "period_date": "2021-07-01",
    "round": 37,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1029,
@@ -24710,8 +24696,8 @@
    "title": "Nigeria — North Central and North West List of Wards Assessed 6 (May 2021)",
    "date": "2021-06-14",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -24723,17 +24709,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 6,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 1067,
    "title": "Nigeria — North Central and North West List of Displacement Sites Assessed 6 (May 2021)",
    "date": "2021-06-14",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -24745,9 +24731,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 6,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 1068,
@@ -24795,8 +24781,8 @@
    "title": "Nigeria — North Central and North West Zones Displacement Dashboard 6 (May 2021)",
    "date": "2021-06-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -24810,15 +24796,15 @@
    "period_date": "2021-05-01",
    "round": 6,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1071,
    "title": "Nigeria — North Central And North West Zones Site Assessment Dashboard 6 (May 2021)",
    "date": "2021-06-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -24827,20 +24813,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-site-assessment-dashboard-6-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20-%20North-Central%20and%20North-West%20Zones%20Round%206%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
    "round": 6,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1072,
    "title": "Nigeria — North Central And North West Zones IDP Population Variation Dashboard 6 (May 2021)",
    "date": "2021-06-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -24852,9 +24838,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 6,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 1073,
@@ -25194,8 +25180,8 @@
    "title": "Nigeria — North Central And North West Displacement Factsheet Round 6 (May 2021)",
    "date": "2021-05-25",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -25209,7 +25195,7 @@
    "period_date": "2021-05-01",
    "round": 6,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1090,
@@ -25322,29 +25308,27 @@
    "title": "Nigeria — Site Assessment Dashboard 36 (May 2021)",
    "date": "2021-05-19",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-36-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2036%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
    "round": 36,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1096,
    "title": "Nigeria — List of Wards Assessed 36 (May 2021)",
    "date": "2021-05-19",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-36-may-2021",
@@ -25353,17 +25337,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 36,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1097,
    "title": "Nigeria — List Of Displacement Sites Assessed 36 (May 2021)",
    "date": "2021-05-19",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-36-may-2021",
@@ -25372,17 +25356,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 36,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1098,
    "title": "Nigeria — IDP Population Variation Dashboard 36 (May 2021)",
    "date": "2021-05-19",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-36-may-2021",
@@ -25391,9 +25375,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2021-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 36,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1099,
@@ -25421,11 +25405,9 @@
    "title": "Nigeria — Displacement Dashboard 36 (May 2021)",
    "date": "2021-05-19",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-36-may-2021",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2036%20Baseline%20Dashboard.pdf",
@@ -25435,7 +25417,7 @@
    "period_date": "2021-05-01",
    "round": 36,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1101,
@@ -25612,8 +25594,8 @@
    "title": "Nigeria — North East Displacement Factsheet Round 36 (May 2021)",
    "date": "2021-05-10",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -25626,7 +25608,7 @@
    "period_date": "2021-05-01",
    "round": 36,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1110,
@@ -26647,21 +26629,19 @@
    "title": "Nigeria — Site Assessment Dashboard 35 (December 2020)",
    "date": "2021-03-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-35-december-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2035%20Dashboard%20of%20Site%20Assessment_0.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2020-12-01",
    "round": 35,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1160,
@@ -26710,8 +26690,8 @@
    "title": "Nigeria — List of Wards Assessed 35 (December 2020)",
    "date": "2021-03-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-35-december-2020",
@@ -26720,17 +26700,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2020-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 35,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1163,
    "title": "Nigeria — List of Displacement Sites Assessed 35 (December 2020)",
    "date": "2021-03-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-35-december-2020",
@@ -26739,17 +26719,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2020-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 35,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1164,
    "title": "Nigeria — IDP Population Variation Dashboard 35 (December 2020)",
    "date": "2021-03-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-35-december-2020",
@@ -26758,9 +26738,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2020-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 35,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1165,
@@ -26807,11 +26787,9 @@
    "title": "Nigeria — Displacement Dashboard 35 (December 2020)",
    "date": "2021-03-11",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-35-december-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2035%20Baseline%20Dashboard.pdf",
@@ -26821,7 +26799,7 @@
    "period_date": "2020-12-01",
    "round": 35,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1168,
@@ -26847,8 +26825,8 @@
    "title": "Nigeria — North Central and North West List of Wards Assessed 5 (January 2021)",
    "date": "2021-03-08",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -26860,17 +26838,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2021-01-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 5,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 1170,
    "title": "Nigeria — North Central And North West Zones List of Displacement Sites Assessed Round 5 (January 2021)",
    "date": "2021-03-08",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -26884,7 +26862,7 @@
    "period_date": "2021-01-01",
    "round": 5,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1171,
@@ -27016,8 +26994,8 @@
    "title": "Nigeria — North Central and North West Displacement Factsheet Round 5 (January 2021)",
    "date": "2021-03-01",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -27034,7 +27012,7 @@
    "period_date": "2021-01-01",
    "round": 5,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1178,
@@ -27440,29 +27418,27 @@
    "title": "Nigeria — Site Assessment Dashboard 34 (November 2020)",
    "date": "2021-01-28",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-34-november-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2034%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2020-11-01",
    "round": 34,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1199,
    "title": "Nigeria — List of Wards Assessed 34 (November 2020)",
    "date": "2021-01-28",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-34-november-2020",
@@ -27471,17 +27447,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2020-11-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 34,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1200,
    "title": "Nigeria — List of Displacement Sites Assessed 34 (November 2020)",
    "date": "2021-01-28",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-34-november-2020",
@@ -27490,17 +27466,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2020-11-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 34,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1201,
    "title": "Nigeria — IDP Population Variation Dashboard 34 (November 2020)",
    "date": "2021-01-28",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-34-november-2020",
@@ -27509,9 +27485,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2020-11-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 34,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1202,
@@ -27558,8 +27534,8 @@
    "title": "Nigeria — Displacement Dashboard 34 (November 2020)",
    "date": "2021-01-28",
    "year": 2021,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -27572,7 +27548,7 @@
    "period_date": "2020-11-01",
    "round": 34,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1205,
@@ -28578,8 +28554,8 @@
    "title": "Nigeria — North Central And North West Zones Site Assessment Dashboard 4 (August 2020)",
    "date": "2020-10-25",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -28588,20 +28564,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-north-central-and-north-west-zones-site-assessment-dashboard-4-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20-%20North%20Central%20and%20North%20West%20Zones%20Round%204%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
    "round": 4,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1256,
    "title": "Nigeria — North Central And North West Zones IDP Population Variation Dashboard 4 (August 2020)",
    "date": "2020-10-25",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -28613,9 +28589,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 4,
+   "round_zone": "NCNW",
+   "mt_main": false
   },
   {
    "id": 1257,
@@ -28644,8 +28620,8 @@
    "title": "Nigeria — North Central And North West Zones Displacement Dashboard 4 (August 2020)",
    "date": "2020-10-25",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -28659,7 +28635,7 @@
    "period_date": "2020-08-01",
    "round": 4,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1259,
@@ -28944,29 +28920,27 @@
    "title": "Nigeria — Site Assessment Dashboard 33 (August 2020)",
    "date": "2020-09-24",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-33-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2033%20Dashboard%20of%20Site%20Assessment%20%28North%20East%29.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
    "round": 33,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1274,
    "title": "Nigeria — List Of Wards Assessed 33 (August 2020)",
    "date": "2020-09-24",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-33-august-2020",
@@ -28975,17 +28949,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 33,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1275,
    "title": "Nigeria — List Of Displacement Sites Assessed 33 (August 2020)",
    "date": "2020-09-24",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-33-august-2020",
@@ -28994,17 +28968,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 33,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1276,
    "title": "Nigeria — IDP Population Variation Dashboard 33 (August 2020)",
    "date": "2020-09-24",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-33-august-2020",
@@ -29013,9 +28987,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2020-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 33,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1277,
@@ -29062,11 +29036,9 @@
    "title": "Nigeria — Displacement Dashboard 33 (August 2020)",
    "date": "2020-09-24",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-33-august-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2033%20Baseline%20Dashboard%20%28North%20East%29.pdf",
@@ -29076,7 +29048,7 @@
    "period_date": "2020-08-01",
    "round": 33,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1280,
@@ -29948,29 +29920,27 @@
    "title": "Nigeria — Site Assessment Dashboard 32 (June 2020)",
    "date": "2020-07-13",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-32-june-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2032%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2020-06-01",
    "round": 32,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1324,
    "title": "Nigeria — List Of Wards Assessed 32 (June 2020)",
    "date": "2020-07-13",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-32-june-2020",
@@ -29979,17 +29949,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2020-06-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 32,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1325,
    "title": "Nigeria — List Of Displacement Sites Assessed 32 (June 2020)",
    "date": "2020-07-13",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-32-june-2020",
@@ -29998,17 +29968,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2020-06-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 32,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1326,
    "title": "Nigeria — IDP Population Variation Dashboard 32 (June 2020)",
    "date": "2020-07-13",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-32-june-2020",
@@ -30017,9 +29987,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2020-06-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 32,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1327,
@@ -30047,11 +30017,9 @@
    "title": "Nigeria — Displacement Dashboard 32 (June 2020)",
    "date": "2020-07-13",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-32-june-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2032%20Baseline%20Dashboard.pdf",
@@ -30061,7 +30029,7 @@
    "period_date": "2020-06-01",
    "round": 32,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1329,
@@ -30914,29 +30882,27 @@
    "title": "Nigeria — Site Assessment Dashboard 31 (February 2020)",
    "date": "2020-04-30",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-31-february-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2031%20Dashboard%20of%20Site%20Assessment_0.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2020-02-01",
    "round": 31,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1372,
    "title": "Nigeria — List Of Wards Assessed 31 (February 2020)",
    "date": "2020-04-30",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-31-february-2020",
@@ -30945,17 +30911,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2020-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 31,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1373,
    "title": "Nigeria — List Of Displacement Sites Assessed 31 (February 2020)",
    "date": "2020-04-30",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-31-february-2020",
@@ -30964,17 +30930,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2020-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 31,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1374,
    "title": "Nigeria — IDP Population Variation Dashboard 31 (Febraury 2020)",
    "date": "2020-04-30",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-31-febraury-2020",
@@ -30983,9 +30949,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2020-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 31,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1375,
@@ -31013,11 +30979,9 @@
    "title": "Nigeria — Displacement Dashboard 31 (February 2020)",
    "date": "2020-04-30",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-31-february-2020",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20%20Round%2031%20Baseline%20Dashboard.pdf",
@@ -31027,7 +30991,7 @@
    "period_date": "2020-02-01",
    "round": 31,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1377,
@@ -31271,29 +31235,27 @@
    "title": "Nigeria — Site Assessment Dashboard 30 (December 2019)",
    "date": "2020-03-07",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-30-december-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2030%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2019-12-01",
    "round": 30,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1390,
    "title": "Nigeria — List Of Wards Assessed 30 (December 2019)",
    "date": "2020-03-07",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-30-december-2019",
@@ -31302,17 +31264,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2019-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 30,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1391,
    "title": "Nigeria — List Of Displacement Sites Assessed 30 (December 2019)",
    "date": "2020-03-07",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-30-december-2019",
@@ -31321,17 +31283,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2019-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 30,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1392,
    "title": "Nigeria — IDP Population Variation Dashboard 30 (December 2019)",
    "date": "2020-03-07",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-30-december-2019",
@@ -31340,9 +31302,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2019-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 30,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1393,
@@ -31370,8 +31332,8 @@
    "title": "Nigeria — Displacement Dashboard 30 (December 2019)",
    "date": "2020-03-07",
    "year": 2020,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -31391,7 +31353,7 @@
    "period_date": "2019-12-01",
    "round": 30,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1395,
@@ -31764,29 +31726,27 @@
    "title": "Nigeria — Site Assessment Dashboard 29 (November 2019)",
    "date": "2019-12-29",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-29-november-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2029%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2019-11-01",
    "round": 29,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1414,
    "title": "Nigeria — List Of Wards Assessed 29 (November 2019)",
    "date": "2019-12-29",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-29-november-2019",
@@ -31795,17 +31755,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2019-11-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 29,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1415,
    "title": "Nigeria — List Of Displacement Sites Assessed 29 (November 2019)",
    "date": "2019-12-29",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-29-november-2019",
@@ -31814,17 +31774,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2019-11-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 29,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1416,
    "title": "Nigeria — IDP Population Variation Dashboard 29 (November 2019)",
    "date": "2019-12-29",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-29-november-2019",
@@ -31833,20 +31793,18 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2019-11-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 29,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1417,
    "title": "Nigeria — Displacement Dashboard 29 (November 2019)",
    "date": "2019-12-29",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-29-november-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Round%2029%20Dashboard_0.pdf",
@@ -31856,7 +31814,7 @@
    "period_date": "2019-11-01",
    "round": 29,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1418,
@@ -32055,8 +32013,8 @@
    "title": "Nigeria - North Central And North West Zones List Of Wards Assessed Round 2 (October 2019)",
    "date": "2019-11-25",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -32070,15 +32028,15 @@
    "period_date": "2019-10-01",
    "round": 2,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1428,
    "title": "Nigeria - North Central And North West Zones List Of Displacement Sites Assessed Round 2 (October 2019)",
    "date": "2019-11-25",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central",
     "North West"
@@ -32092,7 +32050,7 @@
    "period_date": "2019-10-01",
    "round": 2,
    "round_zone": "NCNW",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1429,
@@ -32569,29 +32527,27 @@
    "title": "Nigeria — Site Assessment Dashboard 28 (August 2019)",
    "date": "2019-09-24",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-28-august-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Site%20Assessment%20Dashboard%2028%20%28August%202019%29.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2019-08-01",
    "round": 28,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1451,
    "title": "Nigeria — List of Wards Assessed 28 (August 2019)",
    "date": "2019-09-24",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-28-august-2019",
@@ -32600,17 +32556,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2019-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 28,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1452,
    "title": "Nigeria — List of Displacement Sites Assessed 28 (August 2019)",
    "date": "2019-09-24",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-28-august-2019",
@@ -32619,17 +32575,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2019-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 28,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1453,
    "title": "Nigeria — IDP Population Variation Dashboard 28 (August 2019)",
    "date": "2019-09-24",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-28-august-2019",
@@ -32638,9 +32594,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2019-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 28,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1454,
@@ -32675,8 +32631,8 @@
    "title": "Nigeria — Displacement Dashboard 28 (August 2019)",
    "date": "2019-09-24",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -32696,7 +32652,7 @@
    "period_date": "2019-08-01",
    "round": 28,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1456,
@@ -33165,29 +33121,27 @@
    "title": "Nigeria — Site Assessment Dashboard 27 (May 2019)",
    "date": "2019-07-09",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-27-may-2019",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Site%20Assessment%20Dashboard%2027%20%28May%202019%29.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2019-05-01",
    "round": 27,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1477,
    "title": "Nigeria — List of Wards Assessed 27 (May 2019)",
    "date": "2019-07-09",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-27-may-2019",
@@ -33196,17 +33150,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2019-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 27,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1478,
    "title": "Nigeria — List of Displacement Sites Assessed 27 (May 2019)",
    "date": "2019-07-09",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-27-may-2019",
@@ -33215,17 +33169,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2019-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 27,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1479,
    "title": "Nigeria — IDP Population Variation Dashboard 27 (May 2019)",
    "date": "2019-07-09",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-27-may-2019",
@@ -33234,9 +33188,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2019-05-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 27,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1480,
@@ -33271,8 +33225,8 @@
    "title": "Nigeria — Displacement Dashboard 27 (May 2019)",
    "date": "2019-07-09",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -33292,7 +33246,7 @@
    "period_date": "2019-05-01",
    "round": 27,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1482,
@@ -33469,8 +33423,8 @@
    "title": "Nigeria — Displacement Report 26 (Addendum)",
    "date": "2019-06-12",
    "year": 2019,
-   "component_key": "needs",
-   "component": "Mobility Tracking – Needs Monitoring",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -33485,12 +33439,12 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-report-26-addendum",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20Displacement%20Report%2026%20%28Addendum%29.pdf",
    "summary": "This is an addendum to IOM’s Round 26 Displacement Tracking Matrix (DTM) Assessment Report to provide explanations and background information to the trends in displacement numbers presented in the report. The Round 26 report covers the period from 20 October 2018 to 20 January 2019 and provides displacement figures in the six states most affected by the current crisis besieging north-eastern Nigeria (Adamawa, Bauchi, Borno, Gombe, Taraba and Yobe).",
-   "matched_on": "title:displacement report",
+   "matched_on": "title:addendum",
    "date_basis": "publication date",
    "period_date": null,
    "round": 26,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1490,
@@ -34022,8 +33976,8 @@
    "title": "Nigeria — List of Wards Assessed 26 (January 2019)",
    "date": "2019-03-15",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-26-january-2019",
@@ -34032,17 +33986,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2019-01-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 26,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1514,
    "title": "Nigeria — List of Displacement Sites Assessed 26 (January 2019)",
    "date": "2019-03-15",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-26-january-2019",
@@ -34051,17 +34005,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2019-01-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 26,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1515,
    "title": "Nigeria — IDP Population Variation Dashboard 26 (January 2019)",
    "date": "2019-03-15",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-26-january-2019",
@@ -34070,17 +34024,17 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2019-01-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 26,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1516,
    "title": "Nigeria — Displacement Dashboard 26 (January 2019)",
    "date": "2019-03-15",
    "year": 2019,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -34100,7 +34054,7 @@
    "period_date": "2019-01-01",
    "round": 26,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1517,
@@ -34676,29 +34630,27 @@
    "title": "Nigeria — Site Assessment Dashboard 25 (October 2018)",
    "date": "2018-11-13",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-25-october-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2025%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2018-10-01",
    "round": 25,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1543,
    "title": "Nigeria — List of Wards Assessed 25 (October 2018)",
    "date": "2018-11-13",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-25-october-2018",
@@ -34707,17 +34659,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2018-10-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 25,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1544,
    "title": "Nigeria — List of Displacement Sites Assessed 25 (October 2018)",
    "date": "2018-11-13",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-25-october-2018",
@@ -34726,17 +34678,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2018-10-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 25,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1545,
    "title": "Nigeria — IDP Population Variation Dashboard 25 (October)",
    "date": "2018-11-13",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-25-october",
@@ -34745,9 +34697,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": null,
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 25,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1546,
@@ -34775,8 +34727,8 @@
    "title": "Nigeria — Displacement Dashboard 25 (October 2018)",
    "date": "2018-11-13",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -34796,7 +34748,7 @@
    "period_date": "2018-10-01",
    "round": 25,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1548,
@@ -35103,29 +35055,27 @@
    "title": "Nigeria — Site Assessment Dashboard 24 (August 2018)",
    "date": "2018-09-05",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-24-august-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20%20DTM%20%20Round%2024%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2018-08-01",
    "round": 24,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1562,
    "title": "Nigeria — List of Wards Assessed 24 (August 2018)",
    "date": "2018-09-05",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-24-august-2018",
@@ -35134,17 +35084,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2018-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 24,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1563,
    "title": "Nigeria — List of Displacement Sites Assessed 24 (August 2018)",
    "date": "2018-09-05",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-24-august-2018",
@@ -35153,17 +35103,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2018-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 24,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1564,
    "title": "Nigeria — IDP Population Variation Dashboard 24 (August 2018)",
    "date": "2018-09-05",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-24-august-2018",
@@ -35172,9 +35122,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2018-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 24,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1565,
@@ -35209,11 +35159,9 @@
    "title": "Nigeria — Displacement Dashboard 24 (August 2018)",
    "date": "2018-09-05",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-24-august-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/Nigeria%20-%20DTM%20Round%2024%20Baseline%20Dashboard.pdf",
@@ -35223,7 +35171,7 @@
    "period_date": "2018-08-01",
    "round": 24,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1567,
@@ -35492,32 +35440,28 @@
    "title": "Nigeria — Site Assessment Dashboard Round 23 (June 2018)",
    "date": "2018-06-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%2023%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2018-06-01",
    "round": 23,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1579,
    "title": "Nigeria — List of Wards Assessed Round 23 (June 2018)",
    "date": "2018-06-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/08%20DTM%20Nigeria%20Round%2023%20List%20of%20Assessed%20Wards.pdf",
@@ -35527,18 +35471,16 @@
    "period_date": "2018-06-01",
    "round": 23,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1580,
    "title": "Nigeria — List of Displacement Sites Assessed Round 23 (June 2018)",
    "date": "2018-06-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/07%20DTM%20Nigeria%20Round%2023%20List%20of%20Assessed%20Sites.pdf",
@@ -35548,18 +35490,16 @@
    "period_date": "2018-06-01",
    "round": 23,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1581,
    "title": "Nigeria — IDP Population Variation Dashboard Round 23 (June 2018)",
    "date": "2018-06-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-idp-population-variation-dashboard-round-23-june-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20DTM%20Nigeria%20Round%2023%20Dashboard%20of%20IDP%20Population%20Variation_0_0.pdf",
@@ -35569,7 +35509,7 @@
    "period_date": "2018-06-01",
    "round": 23,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1582,
@@ -35604,8 +35544,8 @@
    "title": "Nigeria - Baseline Dashboard Round 23 (June 2018)",
    "date": "2018-06-30",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -35625,7 +35565,7 @@
    "period_date": "2018-06-01",
    "round": 23,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1584,
@@ -35947,8 +35887,8 @@
    "title": "Nigeria — Yobe Site Profiles 22 (April 2018)",
    "date": "2018-05-02",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -35961,17 +35901,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1598,
    "title": "Nigeria — Taraba Site Profiles 22 (April 2018)",
    "date": "2018-05-02",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -35984,17 +35924,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1599,
    "title": "Nigeria — Bauchi Site Profiles 22 (April 2018)",
    "date": "2018-05-02",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36007,17 +35947,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1600,
    "title": "Nigeria — Adamawa Site Profiles 22 (April 2018)",
    "date": "2018-05-02",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36030,38 +35970,36 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1601,
    "title": "Nigeria — Site Assessment Dashboard 22 (April 2018)",
    "date": "2018-05-01",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-22-april-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XXII%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "The site assessments conducted during Nigeria's DTM Round XXII found that 82% of the assessed population are women and children (55% are female and 25% are children under 5 years of age). Almost half of the affected population (49%) have been previously displaced. In terms of shelter, 76% of assessed IDPs cited tarpaulin as the most needed shelter material.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
    "round": 22,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1602,
    "title": "Nigeria — List of Wards Assessed 22 (April 2018)",
    "date": "2018-05-01",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-22-april-2018",
@@ -36070,17 +36008,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1603,
    "title": "Nigeria — List of Displacement Sites Assessed 22 (April 2018)",
    "date": "2018-05-01",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-22-april-2018",
@@ -36089,17 +36027,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1604,
    "title": "Nigeria — IDP Population Variation Dashboard 22 (April 2018)",
    "date": "2018-05-01",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36110,17 +36048,17 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2018-04-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 22,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1605,
    "title": "Nigeria — Displacement Dashboard 22 (April 2018)",
    "date": "2018-05-01",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36140,7 +36078,7 @@
    "period_date": "2018-04-01",
    "round": 22,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1606,
@@ -36535,8 +36473,8 @@
    "title": "Nigeria — Yobe Site Profiles 21 (February 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36549,38 +36487,36 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1624,
    "title": "Nigeria — Site Assessment Dashboard 21 (January 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-21-january-2018",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XXI%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "This round of Site Assessments identified 709,156 IDPs in 257 camps and camp-like settings. 55% of IDPs are female and 45% are male. 81% of the IDPs are women and children, 72% of the IDPs in sites cited tarpaulin as the most needed shelter material and 5% of the sites have households living outside shelters. Further, 12% of the IDPs in sites stated not having potable water, while 5% said they did not have access to food. 65% cited blankets as the most needed NFI. 69% of IDPs cited malaria as the most common health problem. 24% reported not having access to regular medicine.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2018-01-01",
    "round": 21,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1625,
    "title": "Nigeria — List of Wards Assessed 21 (February 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-21-february-2018",
@@ -36589,17 +36525,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1626,
    "title": "Nigeria — List of Displacement Sites Assessed 21 (January 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-21-january-2018",
@@ -36608,17 +36544,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2018-01-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1627,
    "title": "Nigeria — IDP Population Variation Dashboard 21 (January 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36629,9 +36565,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2018-01-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1628,
@@ -36659,8 +36595,8 @@
    "title": "Nigeria — Displacement Dashboard 21 (January 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36680,15 +36616,15 @@
    "period_date": "2018-01-01",
    "round": 21,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1630,
    "title": "Nigeria — Borno Site Profiles 21 (February 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36701,17 +36637,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1631,
    "title": "Nigeria — Bauchi Site Profiles 21 (February 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36724,17 +36660,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1632,
    "title": "Nigeria — Adamawa Site Profiles 21 (February 2018)",
    "date": "2018-02-09",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36747,17 +36683,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1633,
    "title": "Nigeria — Taraba Site Profiles 21 (February 2018)",
    "date": "2018-02-08",
    "year": 2018,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36770,9 +36706,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2018-02-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 21,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1634,
@@ -36985,8 +36921,8 @@
    "title": "Nigeria — Yobe Site Profiles 20 (15 November — 8 December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -36999,17 +36935,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-12-08",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1644,
    "title": "Nigeria — Taraba Site Profiles 20 (15 November — 8 December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37022,38 +36958,36 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-12-08",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1645,
    "title": "Nigeria — Site Assessment Dashboard 20 (December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-20-december-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XX%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "This Site Assessment Dashboard identified 665,931 IDPs in 251 camps and camp-like settings. 81% of the IDPs are women and children, 70% of the IDPs in sites cited tarpaulin as the most needed shelter material and 7% of the sites have households living outside shelters. Further, 13% of the IDPs in sites stated not having potable water and 30% cited blankets as the most needed NFI. 69% of IDPs cited malaria as the most common health problem.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2017-12-01",
    "round": 20,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1646,
    "title": "Nigeria — List of Wards Assessed 20 (15 November  — 8 December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-20-15-november-%E2%80%94-8-december-2017",
@@ -37062,17 +36996,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2017-12-08",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1647,
    "title": "Nigeria — List of Displacement Sites Assessed 20 (15 November — 8 December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-20-15-november-%E2%80%94-8-december-2017",
@@ -37081,17 +37015,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2017-12-08",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1648,
    "title": "Nigeria — IDP Population Variation Dashboard 20 (December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37102,9 +37036,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2017-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1649,
@@ -37132,8 +37066,8 @@
    "title": "Nigeria — Displacement Dashboard 20 (December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37153,15 +37087,15 @@
    "period_date": "2017-12-01",
    "round": 20,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1651,
    "title": "Nigeria — Borno Site Profiles 20 (15 November — 8 December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37174,17 +37108,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-12-08",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1652,
    "title": "Nigeria — Adamawa Site Profiles 20 (15 November — 8 December 2017)",
    "date": "2017-12-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37197,9 +37131,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-12-08",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 20,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1653,
@@ -37396,21 +37330,19 @@
    "title": "Nigeria — Site Assessment Dashboard 19 (October 2017)",
    "date": "2017-11-30",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-19-october-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02c%20DTM%20Nigeria%20Round%20XIX%20Dashboard%20of%20Site%20Assessment_0.pdf",
    "summary": "This Site Assessment Dashboard identified 673,638 IDPs in 251 camps and camp-like settings. 81% of the IDPs are women and children, 62% of the IDPs in sites cited tarpaulin as the most needed shelter material and 31% of the households in sites are living outside shelters. Further, 14% of the IDPs in sites stated not having potable water and 39% cited blankets as the most needed NFI.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2017-10-01",
    "round": 19,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1663,
@@ -37532,8 +37464,8 @@
    "title": "Nigeria — Yobe Site Profiles 19 (3—24 September 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37546,17 +37478,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-09-24",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1669,
    "title": "Nigeria — Taraba Site Profiles 19 (3—24 September 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37569,17 +37501,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-09-24",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1670,
    "title": "Nigeria — List of Wards Assessed 19 (3—24 September 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-19-3%E2%80%9424-september-2017",
@@ -37588,17 +37520,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2017-09-24",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1671,
    "title": "Nigeria — List of Displacement Sites Assessed 19 (3—24 September 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-19-3%E2%80%9424-september-2017",
@@ -37607,17 +37539,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2017-09-24",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1672,
    "title": "Nigeria — IDP Population Variation Dashboard 19 (October 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37628,9 +37560,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2017-10-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1673,
@@ -37658,8 +37590,8 @@
    "title": "Nigeria — Displacement Dashboard 19 (October 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37679,15 +37611,15 @@
    "period_date": "2017-10-01",
    "round": 19,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1675,
    "title": "Nigeria — Borno Site Profiles 19 (3—24 September 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37700,9 +37632,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-09-24",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1676,
@@ -37728,8 +37660,8 @@
    "title": "Nigeria — Adamawa Site Profiles 19 (3—24 September 2017)",
    "date": "2017-11-03",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37742,9 +37674,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-09-24",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 19,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1678,
@@ -37957,8 +37889,8 @@
    "title": "Nigeria — IDP Population Variation Dashboard 18 (August 2017)",
    "date": "2017-09-13",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -37969,9 +37901,9 @@
    "matched_on": "title:idp population variation",
    "date_basis": "publication date",
    "period_date": "2017-08-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1688,
@@ -38001,8 +37933,8 @@
    "title": "Nigeria — Yobe Site Profiles 18 (25 July — 15 August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38015,17 +37947,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-08-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1690,
    "title": "Nigeria — Taraba Site Profiles 18 (25 July — 15 August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38038,38 +37970,36 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-08-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1691,
    "title": "Nigeria — Site Assessment Dashboard 18 (August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-18-august-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/DTM%20Nigeria%20Round%2018%20Site%20Assessment%20Dashboard.pdf",
    "summary": "This Site Assessment Dashboard identified 242 camps and camp-like settings (formal and informal camps) housing and 658,841 IDPs. 61% cited tarpaulin as the most needed shelter material while 13% complained of not having portable water. Moreover, 29% of the households surveyed are living outside shelters.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2017-08-01",
    "round": 18,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1692,
    "title": "Nigeria — List of Wards Assessed 18 (25 July — 15 August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-18-25-july-%E2%80%94-15-august-2017",
@@ -38078,17 +38008,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2017-08-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1693,
    "title": "Nigeria — List of Displacement Sites Assessed 18 (25 July — 15 August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-18-25-july-%E2%80%94-15-august-2017",
@@ -38097,9 +38027,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2017-08-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1694,
@@ -38134,8 +38064,8 @@
    "title": "Nigeria — Displacement Dashboard 18 (August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38155,15 +38085,15 @@
    "period_date": "2017-08-01",
    "round": 18,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1696,
    "title": "Nigeria — Borno Site Profiles 18 (25 July — 15 August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38176,17 +38106,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-08-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1697,
    "title": "Nigeria — Adamawa Site Profiles 18 (25 July — 15 August 2017)",
    "date": "2017-09-11",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38199,9 +38129,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-08-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 18,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1698,
@@ -38692,8 +38622,8 @@
    "title": "Nigeria — Yobe Site Profiles 16 (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38706,17 +38636,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1723,
    "title": "Nigeria — Taraba Site Profiles 16  (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38729,17 +38659,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1724,
    "title": "Nigeria — Returnee Dashboard 16 (1—30 April 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38752,17 +38682,17 @@
    "matched_on": "title:returnee dashboard",
    "date_basis": "publication date",
    "period_date": "2017-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1725,
    "title": "Nigeria — List of Wards Assessed 16 (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-16-5-april%E2%80%9415-may-2017",
@@ -38771,17 +38701,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1726,
    "title": "Nigeria — List of Displacement Sites Assessed 16 (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-16-5-april%E2%80%9415-may-2017",
@@ -38790,9 +38720,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1727,
@@ -38824,8 +38754,8 @@
    "title": "Nigeria — Borno Site Profiles 16 2/2 (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38838,17 +38768,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1729,
    "title": "Nigeria — Borno Site Profiles 16 1/2 (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38861,17 +38791,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1730,
    "title": "Nigeria — Adamawa Site Profiles 16 (5 April—15 May 2017)",
    "date": "2017-06-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -38884,9 +38814,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-05-15",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 16,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1731,
@@ -39031,11 +38961,9 @@
    "title": "Nigeria — Displacement Dashboard Round 16 (May 2017)",
    "date": "2017-05-01",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-round-16-may-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20DTM%20Nigeria%20Round%20XVI%20Dashboard%20of%20Baseline%20Assessment.pdf",
@@ -39045,7 +38973,7 @@
    "period_date": "2017-05-01",
    "round": 16,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1739,
@@ -39151,8 +39079,8 @@
    "title": "Nigeria — Yobe Site Profiles 15 (15 February — 31 March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39165,17 +39093,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-03-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1745,
    "title": "Nigeria — Taraba Site Profiles 15 (15—31 March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39188,17 +39116,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-03-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1746,
    "title": "Nigeria — Site Assessment Dashboard 15 (March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39208,20 +39136,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-15-march-2017",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20DTM%20Nigeria%20Round%20XV%20Dashboard%20of%20Displacement%20Sites.pdf",
    "summary": "During the reporting period DTM identified 206 camps and camp-like settings (formal and informal camps) housing 567, 795 individuals (108,399 households). Most camps were found in Borno state with 238,751 informal as well as 299,722 formal camps. This dashboard provides map indicating site location as well as a sectoral needs analysis (Shelter and NFI, WaSH, Food & Nutrition, Health, Education, Communication, Livelihood, Protection).",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2017-03-01",
    "round": 15,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1747,
    "title": "Nigeria — Returnee Dashboard 15 (15 February — 31 March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-returnee-dashboard-15-15-february-%E2%80%94-31-march-2017",
@@ -39230,17 +39158,17 @@
    "matched_on": "title:returnee dashboard",
    "date_basis": "publication date",
    "period_date": "2017-03-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1748,
    "title": "Nigeria — List of Wards Assessed 15 (15 February — 31 March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-15-15-february-%E2%80%94-31-march-2017",
@@ -39249,17 +39177,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2017-03-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1749,
    "title": "Nigeria — List of Displacement Sites Assessed 15 (15 February — 31 March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-15-15-february-%E2%80%94-31-march-2017",
@@ -39268,9 +39196,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2017-03-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1750,
@@ -39305,8 +39233,8 @@
    "title": "Nigeria — Displacement Dashboard 15 (March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39326,15 +39254,15 @@
    "period_date": "2017-03-01",
    "round": 15,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1752,
    "title": "Nigeria — Borno Site Profiles 15 (March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39347,17 +39275,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-03-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1753,
    "title": "Nigeria — Adamawa Site Profiles 15 (15 February — 31 March 2017)",
    "date": "2017-03-31",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39370,9 +39298,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-03-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 15,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1754,
@@ -39518,8 +39446,8 @@
    "title": "Nigeria — Taraba Site Profiles 14 (19 December 2016—25 January 2017)",
    "date": "2017-02-14",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39532,17 +39460,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1762,
    "title": "Nigeria — Displacement Dashboard 14 (January 2017)",
    "date": "2017-02-14",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39562,15 +39490,15 @@
    "period_date": "2017-01-01",
    "round": 14,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1763,
    "title": "Nigeria — Adamawa Site Profiles 14 (19 December 2016—25 January 2017)",
    "date": "2017-02-14",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39583,9 +39511,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1764,
@@ -39615,8 +39543,8 @@
    "title": "Nigeria — Yobe Site Profiles 14 (19 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39629,17 +39557,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1766,
    "title": "Nigeria — Taraba State Site Profiles 14 (20 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39652,17 +39580,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1767,
    "title": "Nigeria — Site Assessment Dashboard 14 (19 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39674,20 +39602,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-14-19-december-2016%E2%80%9425-january-2017-0",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/public/reports/02b%20DTM%20Nigeria%20Round%20XIV%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "The dashboard is a map indicating the number of returnees per LGA. 1,099,509 returnees returned to Adamawa, Borno and Yobe States. 64,151 (5.8%) are Nigerian refugees from Chad and Cameroon. The map indicates return areas, inaccessible areas, water boundaries and state boundaries.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "date in title (page shows no publication date)",
    "period_date": "2017-01-25",
    "round": 14,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1768,
    "title": "Nigeria — Returnee Dashboard 14 (19 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39702,17 +39630,17 @@
    "matched_on": "title:returnee dashboard",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1769,
    "title": "Nigeria — List of Wards Assessed 14 (19 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-14-19-december-2016%E2%80%9425-january-2017",
@@ -39721,17 +39649,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1770,
    "title": "Nigeria — List of Displacement Sites Assessed 14 (19 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-14-19-december-2016%E2%80%9425-january-2017",
@@ -39740,9 +39668,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1771,
@@ -39770,8 +39698,8 @@
    "title": "Nigeria — Borno Site Profiles 14 (19 December 2016—25 January 2017)",
    "date": "2017-01-25",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39784,17 +39712,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2017-01-25",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 14,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1773,
    "title": "Nigeria — Location Based Assessment Report 13 (1 July 2014—31 December 2016)",
    "date": "2017-01-16",
    "year": 2017,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39812,9 +39740,9 @@
    "matched_on": "title:location based assessment",
    "date_basis": "publication date",
    "period_date": "2016-12-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 13,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1774,
@@ -39890,8 +39818,8 @@
    "title": "Nigeria — Displacement Dashboard 13 (1 July 2014—31 December 2016)",
    "date": "2016-12-31",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -39911,7 +39839,7 @@
    "period_date": "2016-12-31",
    "round": 13,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1778,
@@ -39946,21 +39874,19 @@
    "title": "Nigeria — Site Assessment Dashboard 7 (October 2016)",
    "date": "2016-11-10",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-7-october-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20DTM%20Nigeria%20Round%20XII%20Dashboard%20of%20Site%20Assessment.pdf",
    "summary": "This Site Assessment Dashboard identified 161 camps and camp-like settings (formal and informal camps) housing 398,749 IDPs. 55% (or 130,131) of the IDP Children population are female and 56% of the IDP population are females. 5.4% (or 21,539) of the IDP population are above 60 years old.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2016-10-01",
    "round": 7,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1780,
@@ -40048,8 +39974,8 @@
    "title": "Nigeria — Yobe Site Profiles 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40062,17 +39988,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1784,
    "title": "Nigeria — Taraba Site Profiles 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40085,38 +40011,36 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1785,
    "title": "Nigeria — Site Assessment Dashboard 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-9-1-march-%E2%80%94-30-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b_IOM%20DTM%20Nigeria_Sites_Dashboard_Round%20IX%20Report_20150430.pdf",
    "summary": "200,085 IDPs in 33,441 households were identified in 97 displacement sites. 53% of the IDP population are children. The dashboard includes a map showing the location and population of sites by Local Government Area (LGA) assessed.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
    "round": 9,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1786,
    "title": "Nigeria — Plateau Site Profiles 9 (1 March 2016—30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40129,17 +40053,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1787,
    "title": "Nigeria — Nasarawa Site Profiles 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40152,17 +40076,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1788,
    "title": "Nigeria — List of Wards Assessed 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-9-1-march-%E2%80%94-30-april-2016",
@@ -40171,17 +40095,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1789,
    "title": "Nigeria — List of Displacement Sites Assessed 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-9-1-march-%E2%80%94-30-april-2016",
@@ -40190,17 +40114,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1790,
    "title": "Nigeria — Kano Site Profiles 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North West"
    ],
@@ -40213,17 +40137,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1791,
    "title": "Nigeria — Kaduna Site Profiles 9 (1 March 2016—30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North West"
    ],
@@ -40236,17 +40160,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1792,
    "title": "Nigeria — Federal Capital Territory Site Profiles 9 (1 March 2016—30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40259,9 +40183,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1793,
@@ -40296,11 +40220,9 @@
    "title": "Nigeria — Displacement Dashboard 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-9-1-march-%E2%80%94-30-april-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a_IOM%20DTM%20Nigeria_Baseline_Dashboard_Round%20IX%20Report_20160430.pdf",
@@ -40310,15 +40232,15 @@
    "period_date": "2016-04-30",
    "round": 9,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1795,
    "title": "Nigeria — Borno Site Profiles 9 (1 March 2016—30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40331,17 +40253,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1796,
    "title": "Nigeria — Benue Site Profiles 9 (1 March 2016—30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40354,17 +40276,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1797,
    "title": "Nigeria — Adamawa Site Profiles 9 (1 March — 30 April 2016)",
    "date": "2016-04-30",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40377,17 +40299,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 9,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1798,
    "title": "Nigeria — Yobe Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40400,17 +40322,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1799,
    "title": "Nigeria — Taraba Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40423,38 +40345,36 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1800,
    "title": "Nigeria — Site Assessment Dashboard 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-8-1-january-%E2%80%94-28-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b_IOM%20DTM%20Nigeria_Sites_Dashboard_Round%20VIII%20Report_20150229.pdf",
    "summary": "186,268 IDPs in 34,240 households were identified in 84 displacement sites. 54% of the IDP population are children. The dashboard includes a map showing the location and population of sites by Local Government Area (LGA) assessed.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
    "round": 8,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1801,
    "title": "Nigeria — Plateau State Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40467,17 +40387,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1802,
    "title": "Nigeria — Nasarawa Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40490,17 +40410,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1803,
    "title": "Nigeria — List of Wards Assessed 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-8-1-january-%E2%80%94-28-february-2016",
@@ -40509,17 +40429,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1804,
    "title": "Nigeria — List of Displacement Sites Assessed 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-8-1-january-%E2%80%94-28-february-2016",
@@ -40528,17 +40448,17 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1805,
    "title": "Nigeria — Kano Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North West"
    ],
@@ -40551,17 +40471,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1806,
    "title": "Nigeria — Kaduna Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North West"
    ],
@@ -40574,17 +40494,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1807,
    "title": "Nigeria — Federal Capital Territory Site Profiles 8 (1 January — 2 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40597,9 +40517,9 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-02",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1808,
@@ -40634,11 +40554,9 @@
    "title": "Nigeria — Displacement Dashboard 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-8-1-january-%E2%80%94-28-february-2016",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a_IOM%20DTM%20Nigeria_Baseline_Dashboard_Round%20VIII%20Report_20160229.pdf",
@@ -40648,15 +40566,15 @@
    "period_date": "2016-02-28",
    "round": 8,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1810,
    "title": "Nigeria — Borno Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40669,17 +40587,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1811,
    "title": "Nigeria — Benue Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North Central"
    ],
@@ -40692,17 +40610,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1812,
    "title": "Nigeria — Adamawa Site Profiles 8 (1 January — 28 February 2016)",
    "date": "2016-02-28",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40715,17 +40633,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2016-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 8,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1813,
    "title": "Nigeria — List of Wards Assessed 7 (November — Decemver 2015)",
    "date": "2016-01-03",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-7-november-%E2%80%94-decemver-2015",
@@ -40734,20 +40652,18 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2015-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 7,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1814,
    "title": "Nigeria — Displacement Dashboard 7 ( November — December 2015)",
    "date": "2016-01-01",
    "year": 2016,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-7-november-%E2%80%94-december-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20VII%20Dashboard%20of%20Baseline%20Assessment%20Nigeria.pdf",
@@ -40757,7 +40673,7 @@
    "period_date": "2015-12-01",
    "round": 7,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1815,
@@ -40792,8 +40708,8 @@
    "title": "Nigeria — List of Wards Assessed 6 (1 Septembre — 31 Octobre 2015)",
    "date": "2015-11-02",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-6-1-septembre-%E2%80%94-31-octobre-2015",
@@ -40802,20 +40718,18 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2015-10-31",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 6,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1817,
    "title": "Nigeria — Displacement Dashboard 6 (September — October 2015)",
    "date": "2015-11-01",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-6-september-%E2%80%94-october-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20VI%20Dashboard%20of%20Baseline%20Assessment%20Nigeria.pdf",
@@ -40825,7 +40739,7 @@
    "period_date": "2015-10-01",
    "round": 6,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1818,
@@ -40860,8 +40774,8 @@
    "title": "Nigeria — Site Assessment Dashboard 6 (October 2015)",
    "date": "2015-10-15",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40872,48 +40786,48 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-6-october-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20VI%20Dashboard%20of%20Baseline%20Assessment%20Nigeria_0.pdf",
    "summary": "This Site Assessment Dashboard identified 189,011 IDPs (28,983 households) in 76 camps and camp-like settings. 52% of the IDPs identified are children and overall, most IDPs are women between 18 and 59 years old. Most (99,648) IDPs were identified in Borno, followed by Adamawa where 6,813​ IDPs were identified.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2015-10-01",
    "round": 6,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1820,
    "title": "Nigeria — Site Assessment Dashboard 5 (August 2015)",
    "date": "2015-09-10",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
-    "North East"
+    "North East",
+    "North Central"
    ],
    "states": [
     "Adamawa",
     "Borno",
-    "Yobe"
+    "Yobe",
+    "FCT"
    ],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-5-august-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20Round%20V%20Dashboard%20of%20Displacement%20Sites_0.pdf",
    "summary": "As of August 2015, this Site Assessment Dashboard identified 2,150,451 IDPs (300,992 households), of which 170,368 IDPs were staying in 59 camps and camp-like settings. Most IDPs were identified in Borno, Adamawa, Abuja and Yobe.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2015-08-01",
    "round": 5,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1821,
    "title": "Nigeria — Displacement Dashboard 5 (July — August 2015)",
    "date": "2015-09-01",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-5-july-%E2%80%94-august-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20V%20Dashboard%20of%20Baseline%20Assessment%20Nigeria.pdf",
@@ -40923,7 +40837,7 @@
    "period_date": "2015-08-01",
    "round": 5,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1822,
@@ -40958,8 +40872,8 @@
    "title": "Nigeria — List of Wards Assessed 5 (1 July — 30 August 2015)",
    "date": "2015-08-05",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-5-1-july-%E2%80%94-30-august-2015",
@@ -40968,17 +40882,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2015-08-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 5,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1824,
    "title": "Nigeria — Site Assessment Dashboard 4 (June 2015)",
    "date": "2015-07-10",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -40989,20 +40903,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-4-june-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20Round%20IV%20Dashboard%20of%20Displacement%20Sites.pdf",
    "summary": "This Site Assessment Dashboard identified 1,385,298 IDPs (188,547 households), of which 111,141 IDPs are living in 42 sites. Most (99,648) IDPs were identified in Borno, followed by Adamawa where 6,813​ IDPs were identified.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2015-06-01",
    "round": 4,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1825,
    "title": "Nigeria — Displacement Dashboard 4 (May — June 2015)",
    "date": "2015-07-05",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -41010,20 +40924,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-4-may-%E2%80%94-june-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20IV%20Dashboard%20of%20Baseline%20Assessment%20nigeria.pdf",
    "summary": "As of June 2015, 1,385,298 IDPs in 188,547 households were identified in the fourth round of assessments. Of these, 111,141 IDPs were identified in 42 sites. The dashboard includes a map of displacement severity by Local Government Area (LGA) and ward.",
-   "matched_on": "title:displacement dashboard",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring; the round has no full report, so its dashboard is the round's report",
    "date_basis": "publication date",
    "period_date": "2015-06-01",
    "round": 4,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": true
   },
   {
    "id": 1826,
    "title": "Nigeria — List of Wards Assessed 4 (1 May — 30 June 2015)",
    "date": "2015-07-02",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-4-1-may-%E2%80%94-30-june-2015",
@@ -41032,20 +40946,18 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2015-06-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 4,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1827,
    "title": "Nigeria — Displacement Dashboard 3 (1 March — 29 April 2015)",
    "date": "2015-05-10",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-3-1-march-%E2%80%94-29-april-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02a%20Round%20III%20Dashboard%20of%20Baseline%20Assessment%20NIgeria.pdf",
@@ -41055,36 +40967,34 @@
    "period_date": "2015-04-29",
    "round": 3,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1828,
    "title": "Nigeria — Site Assessment Dashboard 3 (29 April 2015)",
    "date": "2015-05-01",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-3-29-april-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02b%20Round%20III%20Dashboard%20of%20Displacement%20Sites_0.pdf",
    "summary": "Round 3 of the DTM site assessments in northeastern Nigeria identified 1,491,706 IDPs (or 194,145 households). These include 147,285 IDP in 42 camps.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2015-04-29",
    "round": 3,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1829,
    "title": "Nigeria — List of Wards Assessed 3 (1 March — 30 April 2015)",
    "date": "2015-04-30",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-3-1-march-%E2%80%94-30-april-2015",
@@ -41093,17 +41003,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2015-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 3,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1830,
    "title": "Nigeria — List of Displacement Sites Assessed 3 (1 March — 30 April 2015)",
    "date": "2015-04-30",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-3-1-march-%E2%80%94-30-april-2015",
@@ -41112,9 +41022,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2015-04-30",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 3,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1831,
@@ -41149,8 +41059,8 @@
    "title": "Nigeria — Site Assessment Dashboard 2 (1 January — 28 February 2015)",
    "date": "2015-02-28",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -41162,20 +41072,20 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-site-assessment-dashboard-2-1-january-%E2%80%94-28-february-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02_IOM_DTM_Nigeria_Dashboard_Displacement_Sites_R2.pdf",
    "summary": "1,188,018 IDPs in 149,357 households were identified in 43 displacement sites in Adamawa, Borno and Taraba states. 27,612 IDPs are displaced in 18 sites in Adamawa state. 120,872 IDPs are displaced in 15 sites in Borno state. 5,524 IDPs are displaced in 10 sites in Taraba state. The dashboard includes a map showing the location and population of sites by Local Government Area (LGA) assessed.",
-   "matched_on": "title:site assessment",
+   "matched_on": "title:site assessment dashboard",
    "date_basis": "publication date",
    "period_date": "2015-02-28",
    "round": 2,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1833,
    "title": "Nigeria — List of Wards Assessed 2 (1 January — 28 February 2015)",
    "date": "2015-02-28",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-2-1-january-%E2%80%94-28-february-2015",
@@ -41184,17 +41094,17 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2015-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 2,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1834,
    "title": "Nigeria — List of Displacement Sites Assessed 2 (1 January — 28 February 2015)",
    "date": "2015-02-28",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-displacement-sites-assessed-2-1-january-%E2%80%94-28-february-2015",
@@ -41203,9 +41113,9 @@
    "matched_on": "title:list of displacement sites",
    "date_basis": "publication date",
    "period_date": "2015-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 2,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1835,
@@ -41240,11 +41150,9 @@
    "title": "Nigeria — Displacement Dashboard 2 (1 January — 28 February 2015)",
    "date": "2015-02-28",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
-   "regions": [
-    "North East"
-   ],
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
+   "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-2-1-january-%E2%80%94-28-february-2015",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/01_IOM_DTM_Nigeria_Dashboard_Baseline_Assessment_R2.pdf",
@@ -41254,15 +41162,15 @@
    "period_date": "2015-02-28",
    "round": 2,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": false
   },
   {
    "id": 1837,
    "title": "Nigeria — Borno Site Profiles 2 (1 January — 28 February 2015)",
    "date": "2015-02-28",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -41275,17 +41183,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2015-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 2,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1838,
    "title": "Nigeria — Adamawa Site Profiles 2 (1 January — 28 February 2015)",
    "date": "2015-02-28",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [
     "North East"
    ],
@@ -41298,17 +41206,17 @@
    "matched_on": "title:site profile",
    "date_basis": "publication date",
    "period_date": "2015-02-28",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 2,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1839,
    "title": "Nigeria — List of Wards Assessed 1 (October — December 2014)",
    "date": "2015-01-10",
    "year": 2015,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "mt_dash",
+   "component": "Mobility Tracking – Dashboards",
    "regions": [],
    "states": [],
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-list-wards-assessed-1-october-%E2%80%94-december-2014",
@@ -41317,9 +41225,9 @@
    "matched_on": "title:list of wards assessed",
    "date_basis": "publication date",
    "period_date": "2014-12-01",
-   "round": null,
-   "round_zone": null,
-   "mt_main": null
+   "round": 1,
+   "round_zone": "NE",
+   "mt_main": false
   },
   {
    "id": 1840,
@@ -41353,8 +41261,8 @@
    "title": "Nigeria — Displacement Dashboard 1 (December 2014)",
    "date": "2014-12-20",
    "year": 2014,
-   "component_key": "atlas",
-   "component": "Mobility Tracking – IDP & Returnee Atlas",
+   "component_key": "needs",
+   "component": "Mobility Tracking – Needs Monitoring",
    "regions": [
     "North East"
    ],
@@ -41365,12 +41273,12 @@
    "url": "https://dtm.iom.int/reports/nigeria-%E2%80%94-displacement-dashboard-1-december-2014",
    "pdf": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/reports/02%20Round%20I%20Dashboard%20of%20Baseline%20AssessmenNigeria%20t.pdf",
    "summary": "As of 14 December 2014, 389,281 IDPs in 60,232 households were identified in the first round of assessments. Of these IDPs, most (142,796) migrated from Adamawa, followed by 78,938 IDPs from Borno.  The dashboard includes a map of displacement severity by Local Government Area (LGA) and ward.",
-   "matched_on": "title:displacement dashboard",
+   "matched_on": "DTM Nigeria rule: North-East rounds 1–40 are Needs Monitoring; the round has no full report, so its dashboard is the round's report",
    "date_basis": "publication date",
    "period_date": "2014-12-01",
    "round": 1,
    "round_zone": "NE",
-   "mt_main": null
+   "mt_main": true
   }
  ]
 }
