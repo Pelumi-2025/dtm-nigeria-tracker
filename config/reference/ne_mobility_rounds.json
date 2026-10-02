@@ -1,0 +1,3353 @@
+{
+ "source": "DTM Nigeria North-East Mobility Tracking dataset, Rounds 1-52 (ne_mobility_r1_r52.xlsx)",
+ "rounds": {
+  "1": {
+   "round": 1,
+   "date": "2014-12-14",
+   "idp_ind": 389281,
+   "idp_hh": 60232,
+   "ret_ind": null,
+   "ret_hh": null,
+   "wards": 445,
+   "lgas": 66,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 31244,
+     "hh": 3693
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 358037,
+     "hh": 56539
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 123601,
+     "idp_hh": 13025,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Bauchi": {
+     "idp_ind": 46416,
+     "idp_hh": 7978,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 11483,
+     "idp_hh": 1495,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 81790,
+     "idp_hh": 15180,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 125991,
+     "idp_hh": 22554,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "2": {
+   "round": 2,
+   "date": "2015-02-15",
+   "idp_ind": 1188018,
+   "idp_hh": 149357,
+   "ret_ind": null,
+   "ret_hh": null,
+   "wards": 573,
+   "lgas": 79,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 154008,
+     "hh": 19348
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1034010,
+     "hh": 130009
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 220159,
+     "idp_hh": 25807,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Bauchi": {
+     "idp_ind": 60555,
+     "idp_hh": 9881,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 672714,
+     "idp_hh": 76842,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 24655,
+     "idp_hh": 3335,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 74125,
+     "idp_hh": 11599,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 135810,
+     "idp_hh": 21893,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "3": {
+   "round": 3,
+   "date": "2015-04-15",
+   "idp_ind": 1491706,
+   "idp_hh": 194145,
+   "ret_ind": null,
+   "ret_hh": null,
+   "wards": 687,
+   "lgas": 86,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 148423,
+     "hh": 16690
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1343283,
+     "hh": 177455
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 222882,
+     "idp_hh": 28622,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Bauchi": {
+     "idp_ind": 84667,
+     "idp_hh": 14184,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 939290,
+     "idp_hh": 110738,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 42587,
+     "idp_hh": 4876,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 62689,
+     "idp_hh": 10777,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 139591,
+     "idp_hh": 24948,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "4": {
+   "round": 4,
+   "date": "2015-06-15",
+   "idp_ind": 1385298,
+   "idp_hh": 188547,
+   "ret_ind": null,
+   "ret_hh": null,
+   "wards": 657,
+   "lgas": 86,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 111141,
+     "hh": 18227
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1274157,
+     "hh": 170320
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 113437,
+     "idp_hh": 15117,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Bauchi": {
+     "idp_ind": 76504,
+     "idp_hh": 11278,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1002688,
+     "idp_hh": 126483,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 16984,
+     "idp_hh": 2490,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 50201,
+     "idp_hh": 9969,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 125484,
+     "idp_hh": 23210,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "5": {
+   "round": 5,
+   "date": "2015-08-15",
+   "idp_ind": 2150451,
+   "idp_hh": 300992,
+   "ret_ind": 262324,
+   "ret_hh": 37073,
+   "wards": 749,
+   "lgas": 102,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 170368,
+     "hh": 23577
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1980083,
+     "hh": 277415
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 117729,
+     "idp_hh": 16063,
+     "ret_ind": 262324,
+     "ret_hh": 37073
+    },
+    "Bauchi": {
+     "idp_ind": 72398,
+     "idp_hh": 11245,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1650799,
+     "idp_hh": 221810,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Fct": {
+     "idp_ind": 10233,
+     "idp_hh": 1754,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 18209,
+     "idp_hh": 2797,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 41129,
+     "idp_hh": 7529,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 44036,
+     "idp_hh": 8477,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 195918,
+     "idp_hh": 31317,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "6": {
+   "round": 6,
+   "date": "2015-10-15",
+   "idp_ind": 2233506,
+   "idp_hh": 318937,
+   "ret_ind": 320365,
+   "ret_hh": 45540,
+   "wards": 987,
+   "lgas": 142,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 188809,
+     "hh": 28983
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 2044697,
+     "hh": 289954
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 135605,
+     "idp_hh": 18225,
+     "ret_ind": 320365,
+     "ret_hh": 45540
+    },
+    "Bauchi": {
+     "idp_ind": 77276,
+     "idp_hh": 11744,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1606406,
+     "idp_hh": 218671,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Fct": {
+     "idp_ind": 12628,
+     "idp_hh": 1914,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 27025,
+     "idp_hh": 6220,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 42247,
+     "idp_hh": 5644,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 44901,
+     "idp_hh": 7798,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 91511,
+     "idp_hh": 15639,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 51605,
+     "idp_hh": 9569,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 144302,
+     "idp_hh": 23513,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": [
+    "this is the figure in Round 6's own report (2,233,506 IDPs, 318,937 households); later reports list Round 6 as 2,239,749, a revision by DTM"
+   ]
+  },
+  "7": {
+   "round": 7,
+   "date": "2015-12-15",
+   "idp_ind": 2151979,
+   "idp_hh": 313575,
+   "ret_ind": 332333,
+   "ret_hh": 47437,
+   "wards": 1265,
+   "lgas": 207,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 171843,
+     "hh": 29039
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1980136,
+     "hh": 284536
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 136010,
+     "idp_hh": 18701,
+     "ret_ind": 332333,
+     "ret_hh": 47437
+    },
+    "Bauchi": {
+     "idp_ind": 70078,
+     "idp_hh": 10804,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Benue": {
+     "idp_ind": 85393,
+     "idp_hh": 11197,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1434149,
+     "idp_hh": 195656,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Fct": {
+     "idp_ind": 13481,
+     "idp_hh": 2288,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 25332,
+     "idp_hh": 4666,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 36976,
+     "idp_hh": 4870,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 9331,
+     "idp_hh": 1946,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 37553,
+     "idp_hh": 6755,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 77317,
+     "idp_hh": 13422,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 50227,
+     "idp_hh": 9291,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 131203,
+     "idp_hh": 25570,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 44929,
+     "idp_hh": 8409,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "8": {
+   "round": 8,
+   "date": "2016-02-16",
+   "idp_ind": 2241484,
+   "idp_hh": 334608,
+   "ret_ind": 389224,
+   "ret_hh": 56399,
+   "wards": 1350,
+   "lgas": 218,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 189815,
+     "hh": 34835
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 2051669,
+     "hh": 299773
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 132626,
+     "idp_hh": 19636,
+     "ret_ind": 389224,
+     "ret_hh": 56399
+    },
+    "Bauchi": {
+     "idp_ind": 65365,
+     "idp_hh": 10442,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Benue": {
+     "idp_ind": 85850,
+     "idp_hh": 11150,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1525404,
+     "idp_hh": 210293,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Fct": {
+     "idp_ind": 15154,
+     "idp_hh": 2510,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 26233,
+     "idp_hh": 4752,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 40688,
+     "idp_hh": 5687,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 11853,
+     "idp_hh": 2315,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 37953,
+     "idp_hh": 6701,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 68365,
+     "idp_hh": 12226,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 45587,
+     "idp_hh": 8310,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 139550,
+     "idp_hh": 31908,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 46856,
+     "idp_hh": 8678,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "9": {
+   "round": 9,
+   "date": "2016-04-16",
+   "idp_ind": 2155618,
+   "idp_hh": 352840,
+   "ret_ind": 599164,
+   "ret_hh": 94035,
+   "wards": 1331,
+   "lgas": 218,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 200085,
+     "hh": 33441
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1955533,
+     "hh": 319399
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 150718,
+     "idp_hh": 32860,
+     "ret_ind": 465637,
+     "ret_hh": 69320
+    },
+    "Bauchi": {
+     "idp_ind": 63731,
+     "idp_hh": 10236,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Benue": {
+     "idp_ind": 106074,
+     "idp_hh": 13343,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1427999,
+     "idp_hh": 223604,
+     "ret_ind": 133527,
+     "ret_hh": 24715
+    },
+    "Fct": {
+     "idp_ind": 16635,
+     "idp_hh": 2547,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 26634,
+     "idp_hh": 5015,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 31178,
+     "idp_hh": 4166,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 10834,
+     "idp_hh": 2026,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 38720,
+     "idp_hh": 6713,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 54316,
+     "idp_hh": 10058,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 46824,
+     "idp_hh": 8312,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 134415,
+     "idp_hh": 25108,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 47540,
+     "idp_hh": 8852,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "10": {
+   "round": 10,
+   "date": "2016-06-16",
+   "idp_ind": 2066783,
+   "idp_hh": 344564,
+   "ret_ind": 663485,
+   "ret_hh": 106086,
+   "wards": 1342,
+   "lgas": 221,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 279782,
+     "hh": 46913
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1787001,
+     "hh": 297651
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 159445,
+     "idp_hh": 38498,
+     "ret_ind": 520509,
+     "ret_hh": 77625
+    },
+    "Bauchi": {
+     "idp_ind": 63149,
+     "idp_hh": 10260,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Benue": {
+     "idp_ind": 69206,
+     "idp_hh": 9982,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1404483,
+     "idp_hh": 224516,
+     "ret_ind": 142976,
+     "ret_hh": 28461
+    },
+    "Fct": {
+     "idp_ind": 18445,
+     "idp_hh": 2620,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 27376,
+     "idp_hh": 4909,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 28477,
+     "idp_hh": 3796,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 10366,
+     "idp_hh": 1946,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 26493,
+     "idp_hh": 4031,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 51771,
+     "idp_hh": 9658,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 46942,
+     "idp_hh": 8193,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 112671,
+     "idp_hh": 17093,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 47959,
+     "idp_hh": 9062,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "11": {
+   "round": 11,
+   "date": "2016-08-16",
+   "idp_ind": 2093030,
+   "idp_hh": 370389,
+   "ret_ind": 910955,
+   "ret_hh": 146767,
+   "wards": 1339,
+   "lgas": 224,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 391149,
+     "hh": 75033
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1701881,
+     "hh": 295356
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 163559,
+     "idp_hh": 36189,
+     "ret_ind": 551835,
+     "ret_hh": 83411
+    },
+    "Bauchi": {
+     "idp_ind": 61717,
+     "idp_hh": 10136,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Benue": {
+     "idp_ind": 30584,
+     "idp_hh": 5497,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1446829,
+     "idp_hh": 253951,
+     "ret_ind": 272586,
+     "ret_hh": 49838
+    },
+    "Fct": {
+     "idp_ind": 20924,
+     "idp_hh": 3160,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 28972,
+     "idp_hh": 5111,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 28927,
+     "idp_hh": 3842,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 9910,
+     "idp_hh": 1841,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 24795,
+     "idp_hh": 3664,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 45746,
+     "idp_hh": 8692,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 47195,
+     "idp_hh": 8230,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 135442,
+     "idp_hh": 20901,
+     "ret_ind": 86534,
+     "ret_hh": 13518
+    },
+    "Zamfara": {
+     "idp_ind": 48430,
+     "idp_hh": 9175,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "12": {
+   "round": 12,
+   "date": "2016-10-16",
+   "idp_ind": 1822541,
+   "idp_hh": 321514,
+   "ret_ind": 958549,
+   "ret_hh": 155097,
+   "wards": 763,
+   "lgas": 106,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 398749,
+     "hh": 74915
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1423792,
+     "hh": 246599
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 170070,
+     "idp_hh": 32794,
+     "ret_ind": 577808,
+     "ret_hh": 87904
+    },
+    "Bauchi": {
+     "idp_ind": 58955,
+     "idp_hh": 9998,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1392927,
+     "idp_hh": 245630,
+     "ret_ind": 353463,
+     "ret_hh": 63207
+    },
+    "Gombe": {
+     "idp_ind": 28296,
+     "idp_hh": 5020,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 47587,
+     "idp_hh": 8485,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 124706,
+     "idp_hh": 19587,
+     "ret_ind": 27278,
+     "ret_hh": 3986
+    }
+   },
+   "notes": []
+  },
+  "13": {
+   "round": 13,
+   "date": "2016-12-16",
+   "idp_ind": 1770444,
+   "idp_hh": 313923,
+   "ret_ind": 1039267,
+   "ret_hh": 169168,
+   "wards": 751,
+   "lgas": 106,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 430932,
+     "hh": 79280
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1339512,
+     "hh": 234643
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 152618,
+     "idp_hh": 30095,
+     "ret_ind": 630004,
+     "ret_hh": 96643
+    },
+    "Bauchi": {
+     "idp_ind": 57114,
+     "idp_hh": 9795,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1370880,
+     "idp_hh": 242596,
+     "ret_ind": 374739,
+     "ret_hh": 67485
+    },
+    "Gombe": {
+     "idp_ind": 28980,
+     "idp_hh": 5162,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 48583,
+     "idp_hh": 8720,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 112269,
+     "idp_hh": 17555,
+     "ret_ind": 34524,
+     "ret_hh": 5040
+    }
+   },
+   "notes": []
+  },
+  "14": {
+   "round": 14,
+   "date": "2017-01-17",
+   "idp_ind": 1899830,
+   "idp_hh": 337353,
+   "ret_ind": 1099509,
+   "ret_hh": 168915,
+   "wards": 762,
+   "lgas": 108,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 592067,
+     "hh": 109157
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1307763,
+     "hh": 228196
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 147528,
+     "idp_hh": 29111,
+     "ret_ind": 650899,
+     "ret_hh": 100561
+    },
+    "Bauchi": {
+     "idp_ind": 56829,
+     "idp_hh": 9552,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1506170,
+     "idp_hh": 267601,
+     "ret_ind": 412549,
+     "ret_hh": 63089
+    },
+    "Gombe": {
+     "idp_ind": 28583,
+     "idp_hh": 5108,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 47706,
+     "idp_hh": 8593,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 113014,
+     "idp_hh": 17388,
+     "ret_ind": 36061,
+     "ret_hh": 5265
+    }
+   },
+   "notes": []
+  },
+  "15": {
+   "round": 15,
+   "date": "2017-03-17",
+   "idp_ind": 1832743,
+   "idp_hh": 326010,
+   "ret_ind": 1151427,
+   "ret_hh": 181001,
+   "wards": 763,
+   "lgas": 109,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 579238,
+     "hh": 108931
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1253505,
+     "hh": 217079
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 146605,
+     "idp_hh": 29048,
+     "ret_ind": 655122,
+     "ret_hh": 101521
+    },
+    "Bauchi": {
+     "idp_ind": 56607,
+     "idp_hh": 9807,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1428947,
+     "idp_hh": 253911,
+     "ret_ind": 451972,
+     "ret_hh": 72961
+    },
+    "Gombe": {
+     "idp_ind": 26063,
+     "idp_hh": 4660,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 57902,
+     "idp_hh": 10477,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 116619,
+     "idp_hh": 18107,
+     "ret_ind": 44333,
+     "ret_hh": 6519
+    }
+   },
+   "notes": []
+  },
+  "16": {
+   "round": 16,
+   "date": "2017-05-17",
+   "idp_ind": 1884331,
+   "idp_hh": 339362,
+   "ret_ind": 1234894,
+   "ret_hh": 193123,
+   "wards": 767,
+   "lgas": 109,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 651028,
+     "hh": 124120
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1233303,
+     "hh": 215242
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 143209,
+     "idp_hh": 28291,
+     "ret_ind": 664633,
+     "ret_hh": 102702
+    },
+    "Bauchi": {
+     "idp_ind": 56916,
+     "idp_hh": 9846,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1496995,
+     "idp_hh": 270078,
+     "ret_ind": 483558,
+     "ret_hh": 77506
+    },
+    "Gombe": {
+     "idp_ind": 28183,
+     "idp_hh": 5019,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 50259,
+     "idp_hh": 9250,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 108769,
+     "idp_hh": 16878,
+     "ret_ind": 86703,
+     "ret_hh": 12915
+    }
+   },
+   "notes": []
+  },
+  "17": {
+   "round": 17,
+   "date": "2017-06-18",
+   "idp_ind": 1825321,
+   "idp_hh": 330680,
+   "ret_ind": 1257911,
+   "ret_hh": 204443,
+   "wards": 772,
+   "lgas": 109,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 667372,
+     "hh": 127640
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1157949,
+     "hh": 203040
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 140875,
+     "idp_hh": 28011,
+     "ret_ind": 666077,
+     "ret_hh": 102973
+    },
+    "Bauchi": {
+     "idp_ind": 56359,
+     "idp_hh": 9625,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1439940,
+     "idp_hh": 261909,
+     "ret_ind": 504016,
+     "ret_hh": 88225
+    },
+    "Gombe": {
+     "idp_ind": 27985,
+     "idp_hh": 4897,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 52961,
+     "idp_hh": 9651,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 107201,
+     "idp_hh": 16587,
+     "ret_ind": 87818,
+     "ret_hh": 13245
+    }
+   },
+   "notes": []
+  },
+  "18": {
+   "round": 18,
+   "date": "2017-08-19",
+   "idp_ind": 1757288,
+   "idp_hh": 322931,
+   "ret_ind": 1268140,
+   "ret_hh": 200786,
+   "wards": 776,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 658841,
+     "hh": 127725
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1098447,
+     "hh": 195206
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 139362,
+     "idp_hh": 27679,
+     "ret_ind": 666802,
+     "ret_hh": 103103
+    },
+    "Bauchi": {
+     "idp_ind": 55611,
+     "idp_hh": 9625,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1373564,
+     "idp_hh": 253998,
+     "ret_ind": 511591,
+     "ret_hh": 84178
+    },
+    "Gombe": {
+     "idp_ind": 27339,
+     "idp_hh": 4788,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 54676,
+     "idp_hh": 10037,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 106736,
+     "idp_hh": 16804,
+     "ret_ind": 89747,
+     "ret_hh": 13505
+    }
+   },
+   "notes": []
+  },
+  "19": {
+   "round": 19,
+   "date": "2017-10-20",
+   "idp_ind": 1713771,
+   "idp_hh": 316331,
+   "ret_ind": 1307847,
+   "ret_hh": 207284,
+   "wards": 779,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 673638,
+     "hh": 131253
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1040133,
+     "hh": 185078
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 140356,
+     "idp_hh": 28107,
+     "ret_ind": 670382,
+     "ret_hh": 103240
+    },
+    "Bauchi": {
+     "idp_ind": 52659,
+     "idp_hh": 9284,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1326445,
+     "idp_hh": 246109,
+     "ret_ind": 544640,
+     "ret_hh": 90112
+    },
+    "Gombe": {
+     "idp_ind": 27626,
+     "idp_hh": 4775,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 61763,
+     "idp_hh": 11465,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 104922,
+     "idp_hh": 16591,
+     "ret_ind": 92825,
+     "ret_hh": 13932
+    }
+   },
+   "notes": []
+  },
+  "20": {
+   "round": 20,
+   "date": "2017-12-21",
+   "idp_ind": 1702680,
+   "idp_hh": 321580,
+   "ret_ind": 1329428,
+   "ret_hh": 213081,
+   "wards": 787,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 665931,
+     "hh": 133323
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1036749,
+     "hh": 188257
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 142175,
+     "idp_hh": 28038,
+     "ret_ind": 685507,
+     "ret_hh": 107322
+    },
+    "Bauchi": {
+     "idp_ind": 53357,
+     "idp_hh": 9415,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1314509,
+     "idp_hh": 252003,
+     "ret_ind": 547766,
+     "ret_hh": 91327
+    },
+    "Gombe": {
+     "idp_ind": 28606,
+     "idp_hh": 4840,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 59019,
+     "idp_hh": 10982,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 105014,
+     "idp_hh": 16302,
+     "ret_ind": 96155,
+     "ret_hh": 14432
+    }
+   },
+   "notes": []
+  },
+  "21": {
+   "round": 21,
+   "date": "2018-02-22",
+   "idp_ind": 1782490,
+   "idp_hh": 339037,
+   "ret_ind": 1386229,
+   "ret_hh": 230366,
+   "wards": 794,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 709156,
+     "hh": 142609
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1073334,
+     "hh": 196428
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 164150,
+     "idp_hh": 31454,
+     "ret_ind": 702857,
+     "ret_hh": 109533
+    },
+    "Bauchi": {
+     "idp_ind": 53309,
+     "idp_hh": 9420,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1364539,
+     "idp_hh": 264520,
+     "ret_ind": 585315,
+     "ret_hh": 106124
+    },
+    "Gombe": {
+     "idp_ind": 31909,
+     "idp_hh": 5513,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 63272,
+     "idp_hh": 11768,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 105311,
+     "idp_hh": 16362,
+     "ret_ind": 98057,
+     "ret_hh": 14709
+    }
+   },
+   "notes": []
+  },
+  "22": {
+   "round": 22,
+   "date": "2018-04-23",
+   "idp_ind": 1881198,
+   "idp_hh": 357016,
+   "ret_ind": 1441099,
+   "ret_hh": 240764,
+   "wards": 797,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 727966,
+     "hh": 146409
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1153232,
+     "hh": 210607
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 173152,
+     "idp_hh": 32570,
+     "ret_ind": 716078,
+     "ret_hh": 111524
+    },
+    "Bauchi": {
+     "idp_ind": 61055,
+     "idp_hh": 10133,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1421600,
+     "idp_hh": 276570,
+     "ret_ind": 608664,
+     "ret_hh": 112014
+    },
+    "Gombe": {
+     "idp_ind": 35274,
+     "idp_hh": 5963,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 65208,
+     "idp_hh": 12191,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 124909,
+     "idp_hh": 19589,
+     "ret_ind": 116357,
+     "ret_hh": 17226
+    }
+   },
+   "notes": []
+  },
+  "23": {
+   "round": 23,
+   "date": "2018-06-24",
+   "idp_ind": 1918508,
+   "idp_hh": 364323,
+   "ret_ind": 1549630,
+   "ret_hh": 256716,
+   "wards": 797,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 753761,
+     "hh": 153049
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1164747,
+     "hh": 211274
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 178977,
+     "idp_hh": 33098,
+     "ret_ind": 752663,
+     "ret_hh": 115979
+    },
+    "Bauchi": {
+     "idp_ind": 61265,
+     "idp_hh": 10156,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1439953,
+     "idp_hh": 281376,
+     "ret_ind": 635005,
+     "ret_hh": 116795
+    },
+    "Gombe": {
+     "idp_ind": 34540,
+     "idp_hh": 5765,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 67111,
+     "idp_hh": 12724,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 136662,
+     "idp_hh": 21204,
+     "ret_ind": 161962,
+     "ret_hh": 23942
+    }
+   },
+   "notes": []
+  },
+  "24": {
+   "round": 24,
+   "date": "2018-08-25",
+   "idp_ind": 1926748,
+   "idp_hh": 364635,
+   "ret_ind": 1580093,
+   "ret_hh": 262513,
+   "wards": 804,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 767507,
+     "hh": 154026
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1159241,
+     "hh": 210609
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 183570,
+     "idp_hh": 33386,
+     "ret_ind": 758594,
+     "ret_hh": 116993
+    },
+    "Bauchi": {
+     "idp_ind": 62687,
+     "idp_hh": 10360,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1441635,
+     "idp_hh": 281075,
+     "ret_ind": 655728,
+     "ret_hh": 121126
+    },
+    "Gombe": {
+     "idp_ind": 34057,
+     "idp_hh": 5659,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 67211,
+     "idp_hh": 13022,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 137588,
+     "idp_hh": 21133,
+     "ret_ind": 165771,
+     "ret_hh": 24394
+    }
+   },
+   "notes": []
+  },
+  "25": {
+   "round": 25,
+   "date": "2018-10-26",
+   "idp_ind": 2026602,
+   "idp_hh": 388767,
+   "ret_ind": 1642696,
+   "ret_hh": 273970,
+   "wards": 807,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 808927,
+     "hh": 168841
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1217675,
+     "hh": 219926
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 197713,
+     "idp_hh": 35084,
+     "ret_ind": 780571,
+     "ret_hh": 119491
+    },
+    "Bauchi": {
+     "idp_ind": 67168,
+     "idp_hh": 11021,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1475605,
+     "idp_hh": 297562,
+     "ret_ind": 684798,
+     "ret_hh": 128771
+    },
+    "Gombe": {
+     "idp_ind": 37284,
+     "idp_hh": 5713,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 112197,
+     "idp_hh": 18545,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 136635,
+     "idp_hh": 20842,
+     "ret_ind": 177327,
+     "ret_hh": 25708
+    }
+   },
+   "notes": []
+  },
+  "26": {
+   "round": 26,
+   "date": "2019-01-27",
+   "idp_ind": 1948349,
+   "idp_hh": 382296,
+   "ret_ind": 1558058,
+   "ret_hh": 254829,
+   "wards": 794,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 785928,
+     "hh": 171414
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1162421,
+     "hh": 210882
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 194603,
+     "idp_hh": 34707,
+     "ret_ind": 783244,
+     "ret_hh": 119955
+    },
+    "Bauchi": {
+     "idp_ind": 66716,
+     "idp_hh": 10985,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1435817,
+     "idp_hh": 297290,
+     "ret_ind": 641216,
+     "ret_hh": 115481
+    },
+    "Gombe": {
+     "idp_ind": 36882,
+     "idp_hh": 5679,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 86474,
+     "idp_hh": 14129,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 127857,
+     "idp_hh": 19506,
+     "ret_ind": 133598,
+     "ret_hh": 19393
+    }
+   },
+   "notes": []
+  },
+  "27": {
+   "round": 27,
+   "date": "2019-05-28",
+   "idp_ind": 1980036,
+   "idp_hh": 392019,
+   "ret_ind": 1622908,
+   "ret_hh": 265649,
+   "wards": 795,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 818907,
+     "hh": 180156
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1161129,
+     "hh": 211863
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 192534,
+     "idp_hh": 34405,
+     "ret_ind": 802225,
+     "ret_hh": 122794
+    },
+    "Bauchi": {
+     "idp_ind": 64387,
+     "idp_hh": 10827,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1467908,
+     "idp_hh": 305980,
+     "ret_ind": 658869,
+     "ret_hh": 119272
+    },
+    "Gombe": {
+     "idp_ind": 36872,
+     "idp_hh": 5696,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 85332,
+     "idp_hh": 14632,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 133003,
+     "idp_hh": 20479,
+     "ret_ind": 161814,
+     "ret_hh": 23583
+    }
+   },
+   "notes": []
+  },
+  "28": {
+   "round": 28,
+   "date": "2019-07-19",
+   "idp_ind": 2018513,
+   "idp_hh": 398236,
+   "ret_ind": 1642539,
+   "ret_hh": 269298,
+   "wards": 794,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 860046,
+     "hh": 186934
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1158467,
+     "hh": 211302
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 200011,
+     "idp_hh": 35469,
+     "ret_ind": 808584,
+     "ret_hh": 123941
+    },
+    "Bauchi": {
+     "idp_ind": 64303,
+     "idp_hh": 10803,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1483566,
+     "idp_hh": 308025,
+     "ret_ind": 668800,
+     "ret_hh": 121311
+    },
+    "Gombe": {
+     "idp_ind": 36871,
+     "idp_hh": 5749,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 102165,
+     "idp_hh": 17926,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 131597,
+     "idp_hh": 20264,
+     "ret_ind": 165155,
+     "ret_hh": 24046
+    }
+   },
+   "notes": []
+  },
+  "29": {
+   "round": 29,
+   "date": "2019-09-20",
+   "idp_ind": 2035232,
+   "idp_hh": 406841,
+   "ret_ind": 1619010,
+   "ret_hh": 264857,
+   "wards": 794,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 874698,
+     "hh": 194014
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1160534,
+     "hh": 212827
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 196888,
+     "idp_hh": 35042,
+     "ret_ind": 805026,
+     "ret_hh": 123200
+    },
+    "Bauchi": {
+     "idp_ind": 64859,
+     "idp_hh": 10919,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1496871,
+     "idp_hh": 315912,
+     "ret_ind": 643600,
+     "ret_hh": 116877
+    },
+    "Gombe": {
+     "idp_ind": 36969,
+     "idp_hh": 5719,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 97975,
+     "idp_hh": 17216,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 141670,
+     "idp_hh": 22033,
+     "ret_ind": 170384,
+     "ret_hh": 24780
+    }
+   },
+   "notes": []
+  },
+  "30": {
+   "round": 30,
+   "date": "2019-11-21",
+   "idp_ind": 2039092,
+   "idp_hh": 420994,
+   "ret_ind": 1611676,
+   "ret_hh": 260607,
+   "wards": 790,
+   "lgas": 106,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 856480,
+     "hh": 200297
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1182612,
+     "hh": 220697
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 204699,
+     "idp_hh": 36284,
+     "ret_ind": 803753,
+     "ret_hh": 123386
+    },
+    "Bauchi": {
+     "idp_ind": 64791,
+     "idp_hh": 10904,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1496871,
+     "idp_hh": 329260,
+     "ret_ind": 631722,
+     "ret_hh": 111589
+    },
+    "Gombe": {
+     "idp_ind": 37039,
+     "idp_hh": 5686,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 101181,
+     "idp_hh": 18017,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 134511,
+     "idp_hh": 20843,
+     "ret_ind": 176201,
+     "ret_hh": 25632
+    }
+   },
+   "notes": []
+  },
+  "31": {
+   "round": 31,
+   "date": "2019-12-21",
+   "idp_ind": 2046604,
+   "idp_hh": 420072,
+   "ret_ind": 1673862,
+   "ret_hh": 267666,
+   "wards": 790,
+   "lgas": 106,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 863160,
+     "hh": 198808
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1183444,
+     "hh": 221264
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 206422,
+     "idp_hh": 36845,
+     "ret_ind": 811290,
+     "ret_hh": 124252
+    },
+    "Bauchi": {
+     "idp_ind": 64436,
+     "idp_hh": 10853,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1506537,
+     "idp_hh": 328485,
+     "ret_ind": 685630,
+     "ret_hh": 117665
+    },
+    "Gombe": {
+     "idp_ind": 37028,
+     "idp_hh": 5667,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 98998,
+     "idp_hh": 17575,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 133183,
+     "idp_hh": 20647,
+     "ret_ind": 176942,
+     "ret_hh": 25749
+    }
+   },
+   "notes": []
+  },
+  "32": {
+   "round": 32,
+   "date": "2020-03-20",
+   "idp_ind": 2088124,
+   "idp_hh": 429442,
+   "ret_ind": 1705567,
+   "ret_hh": 274818,
+   "wards": 792,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 888441,
+     "hh": 205934
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1199683,
+     "hh": 223508
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 206969,
+     "idp_hh": 36785,
+     "ret_ind": 812348,
+     "ret_hh": 124241
+    },
+    "Bauchi": {
+     "idp_ind": 64777,
+     "idp_hh": 10910,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1547013,
+     "idp_hh": 338007,
+     "ret_ind": 709500,
+     "ret_hh": 123930
+    },
+    "Gombe": {
+     "idp_ind": 38793,
+     "idp_hh": 5948,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 91179,
+     "idp_hh": 16234,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 139393,
+     "idp_hh": 21558,
+     "ret_ind": 183719,
+     "ret_hh": 26647
+    }
+   },
+   "notes": []
+  },
+  "33": {
+   "round": 33,
+   "date": "2020-08-01",
+   "idp_ind": 2118550,
+   "idp_hh": 436058,
+   "ret_ind": 1714682,
+   "ret_hh": 276479,
+   "wards": 791,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 908550,
+     "hh": 210893
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1210000,
+     "hh": 225165
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 213467,
+     "idp_hh": 37918,
+     "ret_ind": 819148,
+     "ret_hh": 125287
+    },
+    "Bauchi": {
+     "idp_ind": 64632,
+     "idp_hh": 10884,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1566011,
+     "idp_hh": 342725,
+     "ret_ind": 708527,
+     "ret_hh": 124096
+    },
+    "Gombe": {
+     "idp_ind": 39205,
+     "idp_hh": 5921,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 92810,
+     "idp_hh": 16566,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 142425,
+     "idp_hh": 22044,
+     "ret_ind": 187007,
+     "ret_hh": 27096
+    }
+   },
+   "notes": []
+  },
+  "34": {
+   "round": 34,
+   "date": "2020-09-02",
+   "idp_ind": 2144135,
+   "idp_hh": 441361,
+   "ret_ind": 1736849,
+   "ret_hh": 280980,
+   "wards": 791,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 921839,
+     "hh": 213941
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1222296,
+     "hh": 227420
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 209125,
+     "idp_hh": 37175,
+     "ret_ind": 819269,
+     "ret_hh": 125840
+    },
+    "Bauchi": {
+     "idp_ind": 64985,
+     "idp_hh": 10921,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1595817,
+     "idp_hh": 348759,
+     "ret_ind": 726454,
+     "ret_hh": 127453
+    },
+    "Gombe": {
+     "idp_ind": 39266,
+     "idp_hh": 5988,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 91525,
+     "idp_hh": 16316,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 143417,
+     "idp_hh": 22202,
+     "ret_ind": 191126,
+     "ret_hh": 27687
+    }
+   },
+   "notes": []
+  },
+  "35": {
+   "round": 35,
+   "date": "2020-11-03",
+   "idp_ind": 2150243,
+   "idp_hh": 442297,
+   "ret_ind": 1742907,
+   "ret_hh": 281517,
+   "wards": 791,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 926609,
+     "hh": 214227
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1223634,
+     "hh": 228070
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 209252,
+     "idp_hh": 37118,
+     "ret_ind": 820734,
+     "ret_hh": 126062
+    },
+    "Bauchi": {
+     "idp_ind": 66062,
+     "idp_hh": 11237,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1603044,
+     "idp_hh": 349936,
+     "ret_ind": 724263,
+     "ret_hh": 126896
+    },
+    "Gombe": {
+     "idp_ind": 39532,
+     "idp_hh": 5993,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 88594,
+     "idp_hh": 15735,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 143759,
+     "idp_hh": 22278,
+     "ret_ind": 197910,
+     "ret_hh": 28559
+    }
+   },
+   "notes": []
+  },
+  "36": {
+   "round": 36,
+   "date": "2021-02-08",
+   "idp_ind": 2184254,
+   "idp_hh": 447628,
+   "ret_ind": 1763377,
+   "ret_hh": 285441,
+   "wards": 791,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 939004,
+     "hh": 216416
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1242703,
+     "hh": 230822
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 208334,
+     "idp_hh": 36737,
+     "ret_ind": 828841,
+     "ret_hh": 127761
+    },
+    "Bauchi": {
+     "idp_ind": 65595,
+     "idp_hh": 11006,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1627737,
+     "idp_hh": 354629,
+     "ret_ind": 736344,
+     "ret_hh": 129092
+    },
+    "Gombe": {
+     "idp_ind": 40943,
+     "idp_hh": 6198,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 82661,
+     "idp_hh": 14362,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 156437,
+     "idp_hh": 24306,
+     "ret_ind": 198192,
+     "ret_hh": 28588
+    }
+   },
+   "notes": [
+    "DTM published two versions: the report gives 2,184,254 IDPs in 447,628 households; its ward list gives 2,181,707 in 447,238"
+   ]
+  },
+  "37": {
+   "round": 37,
+   "date": "2021-05-01",
+   "idp_ind": 2191193,
+   "idp_hh": 445852,
+   "ret_ind": 1753484,
+   "ret_hh": 284389,
+   "wards": 789,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 899690,
+     "hh": 202348
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1291503,
+     "hh": 243504
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 209322,
+     "idp_hh": 36945,
+     "ret_ind": 829594,
+     "ret_hh": 127976
+    },
+    "Bauchi": {
+     "idp_ind": 65994,
+     "idp_hh": 11054,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1633829,
+     "idp_hh": 353037,
+     "ret_ind": 740595,
+     "ret_hh": 130056
+    },
+    "Gombe": {
+     "idp_ind": 44879,
+     "idp_hh": 6742,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 74775,
+     "idp_hh": 12982,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 162394,
+     "idp_hh": 25092,
+     "ret_ind": 183295,
+     "ret_hh": 26357
+    }
+   },
+   "notes": []
+  },
+  "38": {
+   "round": 38,
+   "date": "2021-08-01",
+   "idp_ind": 2182613,
+   "idp_hh": 444781,
+   "ret_ind": 1918063,
+   "ret_hh": 309732,
+   "wards": 790,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 896160,
+     "hh": 205490
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1303213,
+     "hh": 246076
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 212486,
+     "idp_hh": 37849,
+     "ret_ind": 832633,
+     "ret_hh": 128594
+    },
+    "Bauchi": {
+     "idp_ind": 66225,
+     "idp_hh": 11109,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1645998,
+     "idp_hh": 358883,
+     "ret_ind": 743851,
+     "ret_hh": 130500
+    },
+    "Gombe": {
+     "idp_ind": 45046,
+     "idp_hh": 6634,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 78079,
+     "idp_hh": 13525,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 151539,
+     "idp_hh": 23566,
+     "ret_ind": 341579,
+     "ret_hh": 50638
+    }
+   },
+   "notes": [
+    "Round 38 published 2,182,613 IDPs in 444,781 households, while the ward rows hold 16,760 more people, all in Borno camp rows (published: 879,400 IDPs in camps, 1,303,213 in host communities)"
+   ]
+  },
+  "39": {
+   "round": 39,
+   "date": "2021-11-01",
+   "idp_ind": 2200357,
+   "idp_hh": 452363,
+   "ret_ind": 1943445,
+   "ret_hh": 313834,
+   "wards": 791,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 890237,
+     "hh": 204514
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1310120,
+     "hh": 247849
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 221253,
+     "idp_hh": 39248,
+     "ret_ind": 837054,
+     "ret_hh": 129674
+    },
+    "Bauchi": {
+     "idp_ind": 66103,
+     "idp_hh": 11058,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1639028,
+     "idp_hh": 358418,
+     "ret_ind": 758787,
+     "ret_hh": 133641
+    },
+    "Gombe": {
+     "idp_ind": 45168,
+     "idp_hh": 6641,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 76931,
+     "idp_hh": 13371,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 151874,
+     "idp_hh": 23627,
+     "ret_ind": 347604,
+     "ret_hh": 51519
+    }
+   },
+   "notes": [
+    "returnee households: DTM published 313,834 (report) and 314,732 (dashboard); the ward rows give 314,834"
+   ]
+  },
+  "40": {
+   "round": 40,
+   "date": "2022-01-01",
+   "idp_ind": 2171652,
+   "idp_hh": 446740,
+   "ret_ind": 1960558,
+   "ret_hh": 317885,
+   "wards": 790,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 861113,
+     "hh": 196915
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1310539,
+     "hh": 249825
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 221752,
+     "idp_hh": 39521,
+     "ret_ind": 839101,
+     "ret_hh": 130091
+    },
+    "Bauchi": {
+     "idp_ind": 66020,
+     "idp_hh": 11032,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1613019,
+     "idp_hh": 353244,
+     "ret_ind": 773288,
+     "ret_hh": 136196
+    },
+    "Gombe": {
+     "idp_ind": 45246,
+     "idp_hh": 6640,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 74205,
+     "idp_hh": 12829,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 151410,
+     "idp_hh": 23474,
+     "ret_ind": 348169,
+     "ret_hh": 51598
+    }
+   },
+   "notes": []
+  },
+  "41": {
+   "round": 41,
+   "date": "2022-03-01",
+   "idp_ind": 2197824,
+   "idp_hh": 452219,
+   "ret_ind": 1983130,
+   "ret_hh": 323277,
+   "wards": 791,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 863916,
+     "hh": 198232
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1333908,
+     "hh": 253987
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 220886,
+     "idp_hh": 39401,
+     "ret_ind": 843493,
+     "ret_hh": 131769
+    },
+    "Bauchi": {
+     "idp_ind": 66291,
+     "idp_hh": 11060,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1640408,
+     "idp_hh": 358857,
+     "ret_ind": 788807,
+     "ret_hh": 139503
+    },
+    "Gombe": {
+     "idp_ind": 47204,
+     "idp_hh": 7080,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 71669,
+     "idp_hh": 12338,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 151366,
+     "idp_hh": 23483,
+     "ret_ind": 350830,
+     "ret_hh": 52005
+    }
+   },
+   "notes": []
+  },
+  "42": {
+   "round": 42,
+   "date": "2022-07-01",
+   "idp_ind": 2455190,
+   "idp_hh": 501758,
+   "ret_ind": 1983130,
+   "ret_hh": 323277,
+   "wards": 829,
+   "lgas": 111,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 999740,
+     "hh": 224171
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1455450,
+     "hh": 277587
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 232996,
+     "idp_hh": 41372,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Bauchi": {
+     "idp_ind": 67230,
+     "idp_hh": 11153,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1865715,
+     "idp_hh": 402753,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Gombe": {
+     "idp_ind": 48524,
+     "idp_hh": 7301,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 77450,
+     "idp_hh": 13488,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 163275,
+     "idp_hh": 25691,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": [
+    "returns were not reassessed in Round 42: DTM published the Round 41 figure of 1,983,130 'as of March 2022'"
+   ]
+  },
+  "43": {
+   "round": 43,
+   "date": "2023-02-01",
+   "idp_ind": 2375846,
+   "idp_hh": 483507,
+   "ret_ind": 2100180,
+   "ret_hh": 347419,
+   "wards": 805,
+   "lgas": 110,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 966288,
+     "hh": 216927
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1409373,
+     "hh": 266540
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 223910,
+     "idp_hh": 40119,
+     "ret_ind": 849217,
+     "ret_hh": 132160
+    },
+    "Bauchi": {
+     "idp_ind": 64727,
+     "idp_hh": 10797,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1820179,
+     "idp_hh": 389429,
+     "ret_ind": 898942,
+     "ret_hh": 163072
+    },
+    "Gombe": {
+     "idp_ind": 47977,
+     "idp_hh": 7286,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 52123,
+     "idp_hh": 9570,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 166745,
+     "idp_hh": 26266,
+     "ret_ind": 352021,
+     "ret_hh": 52187
+    }
+   },
+   "notes": [
+    "the Round 43 report gives 2,375,846 IDPs (483,507 households) on one page and 2,375,661 (483,467) on another"
+   ]
+  },
+  "44": {
+   "round": 44,
+   "date": "2023-04-01",
+   "idp_ind": 2388703,
+   "idp_hh": 487978,
+   "ret_ind": 2110039,
+   "ret_hh": 346166,
+   "wards": 817,
+   "lgas": 111,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 834836,
+     "hh": 185600
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1553867,
+     "hh": 302378
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 223436,
+     "idp_hh": 40017,
+     "ret_ind": 850535,
+     "ret_hh": 132490
+    },
+    "Bauchi": {
+     "idp_ind": 68424,
+     "idp_hh": 11278,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1804850,
+     "idp_hh": 388703,
+     "ret_ind": 904185,
+     "ret_hh": 161043
+    },
+    "Gombe": {
+     "idp_ind": 51752,
+     "idp_hh": 8248,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 67848,
+     "idp_hh": 12330,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 172393,
+     "idp_hh": 27402,
+     "ret_ind": 355319,
+     "ret_hh": 52633
+    }
+   },
+   "notes": []
+  },
+  "45": {
+   "round": 45,
+   "date": "2023-06-01",
+   "idp_ind": 2295534,
+   "idp_hh": 471346,
+   "ret_ind": 2075257,
+   "ret_hh": 341895,
+   "wards": 794,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 918115,
+     "hh": 213462
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1374333,
+     "hh": 257241
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 218555,
+     "idp_hh": 39139,
+     "ret_ind": 857378,
+     "ret_hh": 133932
+    },
+    "Bauchi": {
+     "idp_ind": 66310,
+     "idp_hh": 10960,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1694351,
+     "idp_hh": 369803,
+     "ret_ind": 861756,
+     "ret_hh": 155184
+    },
+    "Gombe": {
+     "idp_ind": 52243,
+     "idp_hh": 8262,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 104232,
+     "idp_hh": 18089,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 156757,
+     "idp_hh": 24450,
+     "ret_ind": 356123,
+     "ret_hh": 52779
+    }
+   },
+   "notes": [
+    "published 2,295,534 IDPs in 471,346 households; the ward rows are 3,086 people short in Borno. Returnees corrected to the published 2,075,257"
+   ]
+  },
+  "46": {
+   "round": 46,
+   "date": "2023-12-01",
+   "idp_ind": 2305335,
+   "idp_hh": 472239,
+   "ret_ind": 2083835,
+   "ret_hh": 343653,
+   "wards": 790,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 929453,
+     "hh": 216548
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1375882,
+     "hh": 255691
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 218118,
+     "idp_hh": 39111,
+     "ret_ind": 858420,
+     "ret_hh": 134011
+    },
+    "Bauchi": {
+     "idp_ind": 66489,
+     "idp_hh": 11028,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1711481,
+     "idp_hh": 372139,
+     "ret_ind": 871017,
+     "ret_hh": 157130
+    },
+    "Gombe": {
+     "idp_ind": 52383,
+     "idp_hh": 8271,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 101834,
+     "idp_hh": 17629,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 155030,
+     "idp_hh": 24061,
+     "ret_ind": 354398,
+     "ret_hh": 52512
+    }
+   },
+   "notes": []
+  },
+  "47": {
+   "round": 47,
+   "date": "2024-06-01",
+   "idp_ind": 2271987,
+   "idp_hh": 468013,
+   "ret_ind": 2093604,
+   "ret_hh": 345338,
+   "wards": 786,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 939179,
+     "hh": 219169
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1332808,
+     "hh": 248844
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 213239,
+     "idp_hh": 38367,
+     "ret_ind": 862874,
+     "ret_hh": 134802
+    },
+    "Bauchi": {
+     "idp_ind": 67101,
+     "idp_hh": 11195,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1715341,
+     "idp_hh": 373872,
+     "ret_ind": 875280,
+     "ret_hh": 157852
+    },
+    "Gombe": {
+     "idp_ind": 51974,
+     "idp_hh": 8170,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 68849,
+     "idp_hh": 12325,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 155483,
+     "idp_hh": 24084,
+     "ret_ind": 355450,
+     "ret_hh": 52684
+    }
+   },
+   "notes": []
+  },
+  "48": {
+   "round": 48,
+   "date": "2024-11-01",
+   "idp_ind": 2255595,
+   "idp_hh": 465669,
+   "ret_ind": 2110477,
+   "ret_hh": 348341,
+   "wards": 782,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 941153,
+     "hh": 220769
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1314442,
+     "hh": 244900
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 196189,
+     "idp_hh": 35396,
+     "ret_ind": 868448,
+     "ret_hh": 136408
+    },
+    "Bauchi": {
+     "idp_ind": 65358,
+     "idp_hh": 10829,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1722263,
+     "idp_hh": 375554,
+     "ret_ind": 886275,
+     "ret_hh": 159214
+    },
+    "Gombe": {
+     "idp_ind": 51028,
+     "idp_hh": 7989,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 65589,
+     "idp_hh": 11806,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 155168,
+     "idp_hh": 24095,
+     "ret_ind": 355754,
+     "ret_hh": 52719
+    }
+   },
+   "notes": []
+  },
+  "49": {
+   "round": 49,
+   "date": "2025-03-01",
+   "idp_ind": 2252348,
+   "idp_hh": 465935,
+   "ret_ind": 2129325,
+   "ret_hh": 352501,
+   "wards": 776,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 926716,
+     "hh": 218330
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1325632,
+     "hh": 247605
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 200211,
+     "idp_hh": 35999,
+     "ret_ind": 882021,
+     "ret_hh": 139046
+    },
+    "Bauchi": {
+     "idp_ind": 65876,
+     "idp_hh": 10948,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Borno": {
+     "idp_ind": 1704175,
+     "idp_hh": 373159,
+     "ret_ind": 890960,
+     "ret_hh": 160649
+    },
+    "Gombe": {
+     "idp_ind": 52202,
+     "idp_hh": 8139,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Taraba": {
+     "idp_ind": 62564,
+     "idp_hh": 11390,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Yobe": {
+     "idp_ind": 167320,
+     "idp_hh": 26300,
+     "ret_ind": 356344,
+     "ret_hh": 52806
+    }
+   },
+   "notes": []
+  },
+  "50": {
+   "round": 50,
+   "date": "2025-07-01",
+   "idp_ind": 2292477,
+   "idp_hh": 475234,
+   "ret_ind": 2189318,
+   "ret_hh": 361953,
+   "wards": 779,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 955135,
+     "hh": 227348
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1234898,
+     "hh": 231592
+    },
+    "IDPs in Integrated Sites": {
+     "ind": 61557,
+     "hh": 10568
+    },
+    "IDPs in Relocated/Resettled Sites": {
+     "ind": 40887,
+     "hh": 5726
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 204557,
+     "idp_hh": 36098,
+     "ret_ind": 898475,
+     "ret_hh": 140916
+    },
+    "Bauchi": {
+     "idp_ind": 64787,
+     "idp_hh": 10721,
+     "ret_ind": 11662,
+     "ret_hh": 1976
+    },
+    "Borno": {
+     "idp_ind": 1749662,
+     "idp_hh": 384957,
+     "ret_ind": 897714,
+     "ret_hh": 162016
+    },
+    "Gombe": {
+     "idp_ind": 52980,
+     "idp_hh": 8114,
+     "ret_ind": 6299,
+     "ret_hh": 1034
+    },
+    "Taraba": {
+     "idp_ind": 52972,
+     "idp_hh": 9207,
+     "ret_ind": 16395,
+     "ret_hh": 2799
+    },
+    "Yobe": {
+     "idp_ind": 167519,
+     "idp_hh": 26137,
+     "ret_ind": 358773,
+     "ret_hh": 53212
+    }
+   },
+   "notes": []
+  },
+  "51": {
+   "round": 51,
+   "date": "2025-10-01",
+   "idp_ind": 2333190,
+   "idp_hh": 478229,
+   "ret_ind": 2253304,
+   "ret_hh": 374320,
+   "wards": 781,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 912881,
+     "hh": 218090
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1300127,
+     "hh": 240513
+    },
+    "IDPs in Integrated Sites": {
+     "ind": 76972,
+     "hh": 13287
+    },
+    "IDPs in Relocated/Resettled Sites": {
+     "ind": 43210,
+     "hh": 6343
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 219016,
+     "idp_hh": 38421,
+     "ret_ind": 932458,
+     "ret_hh": 145797
+    },
+    "Bauchi": {
+     "idp_ind": 141816,
+     "idp_hh": 23058,
+     "ret_ind": 10268,
+     "ret_hh": 1687
+    },
+    "Borno": {
+     "idp_ind": 1711693,
+     "idp_hh": 375352,
+     "ret_ind": 902110,
+     "ret_hh": 164449
+    },
+    "Gombe": {
+     "idp_ind": 48184,
+     "idp_hh": 6921,
+     "ret_ind": 4731,
+     "ret_hh": 654
+    },
+    "Taraba": {
+     "idp_ind": 49833,
+     "idp_hh": 8798,
+     "ret_ind": 20591,
+     "ret_hh": 3979
+    },
+    "Yobe": {
+     "idp_ind": 162648,
+     "idp_hh": 25683,
+     "ret_ind": 383146,
+     "ret_hh": 57754
+    }
+   },
+   "notes": [
+    "IDP households: the report states 478,229; the ward rows give 478,233"
+   ]
+  },
+  "52": {
+   "round": 52,
+   "date": "2026-03-01",
+   "idp_ind": 2368731,
+   "idp_hh": 485418,
+   "ret_ind": 2277331,
+   "ret_hh": 377480,
+   "wards": 782,
+   "lgas": 107,
+   "by_location": {
+    "IDPs dispersed in Camps": {
+     "ind": 901499,
+     "hh": 215811
+    },
+    "IDPs dispersed in Host Communities": {
+     "ind": 1349544,
+     "hh": 250321
+    },
+    "IDPs in Integrated Sites": {
+     "ind": 72643,
+     "hh": 12637
+    },
+    "IDPs in Relocated/Resettled Sites": {
+     "ind": 45045,
+     "hh": 6649
+    }
+   },
+   "by_state": {
+    "Adamawa": {
+     "idp_ind": 233295,
+     "idp_hh": 40820,
+     "ret_ind": 957803,
+     "ret_hh": 149206
+    },
+    "Bauchi": {
+     "idp_ind": 142094,
+     "idp_hh": 23131,
+     "ret_ind": 10877,
+     "ret_hh": 1783
+    },
+    "Borno": {
+     "idp_ind": 1715860,
+     "idp_hh": 376536,
+     "ret_ind": 902007,
+     "ret_hh": 164110
+    },
+    "Gombe": {
+     "idp_ind": 50500,
+     "idp_hh": 7259,
+     "ret_ind": 4882,
+     "ret_hh": 700
+    },
+    "Taraba": {
+     "idp_ind": 50762,
+     "idp_hh": 9101,
+     "ret_ind": 20426,
+     "ret_hh": 3953
+    },
+    "Yobe": {
+     "idp_ind": 176220,
+     "idp_hh": 28571,
+     "ret_ind": 381336,
+     "ret_hh": 57728
+    }
+   },
+   "notes": []
+  }
+ }
+}

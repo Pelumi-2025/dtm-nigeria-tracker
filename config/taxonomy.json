@@ -203,6 +203,41 @@
    "exclude": []
   },
   {
+   "key": "mt_dash",
+   "label": "Mobility Tracking – Dashboards",
+   "include": [
+    "displacement dashboard",
+    "site assessment dashboard",
+    "idp population variation",
+    "returnee dashboard",
+    "return dashboard",
+    "list of wards assessed",
+    "list of displacement sites",
+    "list of sites assessed",
+    "list of wards",
+    "displacement factsheet",
+    "displacement fact sheet",
+    "site profile",
+    "location profile",
+    "ward profile",
+    "lga profile",
+    "master list",
+    "zones dashboard",
+    "idp dashboard",
+    "dashboard round",
+    "addendum",
+    "location based assessment",
+    "location-based assessment"
+   ],
+   "exclude": [
+    "transhumance",
+    "early warning",
+    "point of entry",
+    "flood",
+    "biometric"
+   ]
+  },
+  {
    "key": "needs",
    "label": "Mobility Tracking – Needs Monitoring",
    "include": [
@@ -242,38 +277,13 @@
    "label": "Mobility Tracking – IDP & Returnee Atlas",
    "include": [
     "atlas",
-    "mobility tracking",
-    "baseline assessment",
-    "site assessment",
-    "location assessment",
-    "master list",
+    "mobility tracking round",
     "idp and returnee",
     "idps and returnees",
-    "site profile",
-    "site profiles",
-    "displacement dashboard",
-    "idp population variation",
-    "returnee dashboard",
-    "return dashboard",
-    "displacement factsheet",
-    "displacement fact sheet",
-    "list of wards assessed",
-    "list of displacement sites",
-    "zones dashboard",
+    "baseline assessment",
     "round report",
-    "dtm round",
-    "round xx",
-    "round x",
-    "location profile",
-    "ward profile",
-    "lga profile",
-    "master list",
-    "dashboard round",
-    "idp dashboard",
-    "location based assessment",
-    "location assessment report",
     "round xxii report",
-    "round report"
+    "dtm round"
    ],
    "exclude": []
   }
@@ -409,5 +419,6 @@
    1,
    9
   ]
- }
+ },
+ "_mt_readme": "Mobility Tracking: exactly one round report per round (NE and NC/NW). Other files a round publishes (dashboards, lists of wards and sites assessed, factsheets, site profiles, addenda) are 'Mobility Tracking – Dashboards'."
 }

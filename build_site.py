@@ -28,6 +28,10 @@ def main():
     payload = json.loads((DATA / "reports.json").read_text("utf-8")) if (DATA / "reports.json").exists() else None
     inline = ("<script>window.DTM_DATA = " + json.dumps(payload, ensure_ascii=False).replace("</", "<\\/") + ";</script>"
               if payload else "")
+    ref = ROOT / "config" / "reference" / "ne_mobility_rounds.json"
+    if ref.exists():
+        shutil.copy(ref, SITE / "data" / "reference.json")
+        inline += "<script>window.DTM_REF = " + ref.read_text("utf-8").replace("</", "<\\/") + ";</script>"
     fx = DATA / "facts.json"
     if fx.exists():
         inline += "<script>window.DTM_FACTS = " + fx.read_text("utf-8").replace("</", "<\\/") + ";</script>"

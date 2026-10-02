@@ -142,8 +142,12 @@ class Classifier:
         """Round number of a Mobility Tracking product ('Round 44', 'Displacement Report 43', 'Round XXII')."""
         if re.search(r"index|flash|intention|emergency tracking|transhumance|early warning|point of entry", title, re.I):
             return None
+        if re.search(r"\breturn dashboard\b", title, re.I):
+            return None  # "Return Dashboard 1 (2025)" is a separate series, not Mobility Tracking round 1
         m = re.search(r"\bround\s*#?\s*(\d{1,2})\b", title, re.I) or \
-            re.search(r"(?:displacement report|displacement dashboard|site assessment dashboard|displacement factsheet)\s*#?\s*(\d{1,2})\b", title, re.I)
+            re.search(r"(?:displacement report|displacement dashboard|site assessment dashboard|displacement fact ?sheet|"
+                      r"list of (?:wards|displacement sites|sites) assessed|idp population variation dashboard|"
+                      r"returnee dashboard|zones dashboard|site profiles?|location profiles?|location based assessment report)\s*#?\s*(\d{1,2})\b", title, re.I)
         if m:
             return int(m.group(1))
         m = re.search(r"\b[Rr]ound\s+([IVXL]{1,7})\b", title)

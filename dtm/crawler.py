@@ -477,33 +477,27 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
     if dupes:
         log(f"Counted {dupes} duplicate report pages once each (same title published twice).")
 
-    # Mobility Tracking: decide Needs Monitoring vs Atlas for each round's main report, using (in order)
-    # the attached file names, the text inside the PDF, the page text, and finally the title.
-    needs_label = next(x["label"] for x in clf.components if x["key"] == "needs")
-    atlas_label = next(x["label"] for x in clf.components if x["key"] == "atlas")
-    extra = []
-    for rr, c in pages:
-        rnd = Classifier.mt_round(c["title"])
-        if c["component_key"] in ("needs", "atlas") and rnd:
-            c["round"], c["round_zone"] = rnd, Classifier.mt_zone(c["title"])
-            # a round report belongs to the operation that produced it
-            zones = ["North East"] if c["round_zone"] == "NE" else ["North Central", "North West"]
-            c["regions"] = zones
-            c["states"] = [st for st in c["states"] if clf.state_region.get(st) in zones]
-        if not Classifier.is_mt_main(c["title"]) or c["component_key"] not in ("needs", "atlas"):
-            continue
-        c["mt_main"] = True
+    # Mobility Tracking: exactly ONE round report per round (NE R1-R52, NC/NW R1-R19 so far).
+    # Needs Monitoring vs Atlas is decided, in order, by the round rule, the attached PDF file names,
+    # the text inside the PDF, the page text, and finally the title. Every other file a round publishes
+    # (dashboards, lists of wards and sites assessed, factsheets, site profiles, addenda) is
+    # "Mobility Tracking - Dashboards".
+    label = {x["key"]: x["label"] for x in clf.components}
+    MT = ("needs", "atlas", "mt_dash")
+
+    def as_dash(c, why):
+        c["component_key"], c["component"], c["mt_main"] = "mt_dash", label["mt_dash"], False
+        c["matched_on"] = why
+
+    def decide(rr, c):
         pdfs = [f for f in rr.get("files") or [] if f.lower().endswith(".pdf")]
         nm_f = [f for f in pdfs if NM_FILE_RX.search(" " + file_name(f))]
         at_f = [f for f in pdfs if ATLAS_FILE_RX.search(file_name(f))]
         chk = rr.get("pdf_check") or {}
-        zone, rnd = Classifier.mt_zone(c["title"]), Classifier.mt_round(c["title"])
+        zone, rnd = c["round_zone"], c["round"]
         if nm_rule(clf.tax, zone, rnd):
             rng = clf.tax["needs_monitoring_rounds"][zone]
             kind, why = "needs", f"DTM Nigeria rule: {'North-East' if zone == 'NE' else 'NC/NW'} rounds {rng[0]}\u2013{rng[1]} are Needs Monitoring"
-        elif nm_f and at_f:
-            kind, why = "atlas", "file name: " + file_name(at_f[0])[:70]
-            extra.append((rr, c, nm_f[0]))
         elif nm_f:
             kind, why = "needs", "file name: " + file_name(nm_f[0])[:70]
         elif at_f:
@@ -513,32 +507,65 @@ def export(records: Iterable[dict], clf: Classifier, keywords=None, seconds=None
         elif NM_TEXT_RX.search(rr.get("body") or ""):
             kind, why = "needs", "report page says it contains needs monitoring findings"
         else:
-            kind = c["component_key"]
+            kind = "needs" if c["component_key"] == "needs" else "atlas"
             why = c.get("matched_on", "") + " (title only; PDF not yet checked)"
-        c["component_key"], c["component"], c["matched_on"] = kind, (needs_label if kind == "needs" else atlas_label), why
+        c["component_key"], c["component"], c["matched_on"], c["mt_main"] = kind, label[kind], why, True
         if pdfs and not c.get("pdf"):
             c["pdf"] = (nm_f or at_f or pdfs)[0]
-    # A round's main report published twice (different page titles) counts once, earliest date.
-    seen_main, keep = set(), []
-    for c in sorted(classified, key=lambda c: c.get("date") or "9999"):
-        k = (c.get("round_zone"), c.get("round"), c["component_key"]) if c.get("mt_main") and c.get("round") else None
-        if k and k in seen_main:
-            log(f"Round report counted once: {c['title'][:90]}")
-            continue
-        if k:
-            seen_main.add(k)
-        keep.append(c)
-    classified = keep
 
-    # A page carrying both an Atlas and a Needs Monitoring PDF holds two reports.
-    have = {(c.get("round_zone"), c.get("round")) for c in classified if c["component_key"] == "needs" and c.get("round")}
-    for rr, c, f in extra:
-        if (c.get("round_zone"), c.get("round")) in have:
+    raw = {}
+    for rr, c in pages:
+        if c["component_key"] not in MT:
             continue
-        n = dict(c)
-        n.update(url=c["url"] + "#needs-monitoring", component_key="needs", component=needs_label, pdf=f,
-                 title=f"{c['title']} \u2014 Needs Monitoring report", matched_on="file name: " + file_name(f)[:70])
-        classified.append(n)
+        raw[c["url"]] = rr
+        rnd = Classifier.mt_round(c["title"])
+        if rnd:
+            c["round"], c["round_zone"] = rnd, Classifier.mt_zone(c["title"])
+        if c["component_key"] == "mt_dash":
+            c["mt_main"] = False
+        elif not rnd or not Classifier.is_mt_main(c["title"]):
+            as_dash(c, c.get("matched_on", "") + " (Mobility Tracking file, not a round report)")
+        else:
+            decide(rr, c)
+
+    # one round report per round: the earliest; a second page of the SAME kind is a duplicate
+    # (counted once), a different kind is filed with the round's dashboards
+    by_round = {}
+    for c in sorted(classified, key=lambda c: c.get("date") or "9999"):
+        if c.get("mt_main"):
+            by_round.setdefault((c["round_zone"], c["round"]), []).append(c)
+    drop = set()
+    for key, cs in by_round.items():
+        for extra_c in cs[1:]:
+            if extra_c["component_key"] == cs[0]["component_key"]:
+                drop.add(id(extra_c))
+                log(f"Round report counted once: {extra_c['title'][:90]}")
+            else:
+                as_dash(extra_c, "second report for the same round, filed with the round's other files")
+    classified = [c for c in classified if id(c) not in drop]
+
+    # rounds with no full report (e.g. NE R1, R4): the round's Displacement Dashboard is its report
+    expected = {k: v for k, v in clf.tax.get("mobility_tracking_rounds", {}).items() if not k.startswith("_")}
+    have = {(c["round_zone"], c["round"]) for c in classified if c.get("mt_main")}
+    for zone, n in expected.items():
+        for rnd in range(1, int(n) + 1):
+            if (zone, rnd) in have:
+                continue
+            cands = sorted([c for c in classified if c.get("round_zone") == zone and c.get("round") == rnd],
+                           key=lambda c: (not re.search(r"displacement dashboard", c["title"], re.I), c.get("date") or "9999"))
+            if not cands:
+                log(f"Mobility Tracking {zone} round {rnd}: nothing found on dtm.iom.int")
+                continue
+            c = cands[0]
+            decide(raw.get(c["url"], {}), c)
+            c["matched_on"] += "; the round has no full report, so its dashboard is the round's report"
+
+    # a round report belongs to the operation that produced it
+    for c in classified:
+        if c.get("mt_main"):
+            zones = ["North East"] if c["round_zone"] == "NE" else ["North Central", "North West"]
+            c["regions"] = zones
+            c["states"] = [st for st in c["states"] if clf.state_region.get(st) in zones]
 
     classified.sort(key=lambda r: (r.get("date") or "", r["title"]), reverse=True)
     for i, r in enumerate(classified):

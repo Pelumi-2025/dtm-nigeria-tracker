@@ -364,7 +364,7 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       <h3 class="hh">Good to know</h3>
       <div class="notes">
         <div class="note"><b>How reports are dated</b><p>Each report counts in the month it was published on dtm.iom.int. You can switch to the period named in each report title. Reports published twice count once; a report with no date on the site is flagged in the list.</p></div>
-        <div class="note"><b>Needs Monitoring and Atlas</b><p>North-East rounds 1–40 and North-Central/North-West rounds 1–9 count as Needs Monitoring. Later rounds are classified from the report's PDF file name or, if needed, the text inside the PDF.</p></div>
+        <div class="note"><b>Mobility Tracking: one report per round</b><p>Each round counts as exactly one round report: 71 so far (North East R1–R52, North Central &amp; North West R1–R19). North-East rounds 1–40 and NC/NW rounds 1–9 are Needs Monitoring; later rounds are classified from the PDF's file name or the text inside it. All other round files count as <em>Mobility Tracking – Dashboards</em>.</p></div>
         <div class="note"><b>Regions and states</b><p>A state named in a report's title decides its region. Mobility Tracking round reports belong to the operation that produced them: North East, or North Central &amp; North West.</p></div>
         <div class="note"><b>Always up to date</b><p>New reports on dtm.iom.int are collected every hour, with a full check every night. An open dashboard refreshes itself within 5 minutes; the offline copy works without internet.</p></div>
       </div>
@@ -410,6 +410,13 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       <p class="hint">Select a cell to list those reports below.</p>
       <div class="scroll"><table class="heat" id="heat"></table></div>
       <div class="scalelegend">Fewer reports <span class="bar"></span> More reports</div>
+    </section>
+
+    <section class="panel chart" id="refPanel" hidden>
+      <h2>North-East IDPs and returnees, Rounds 1–52</h2>
+      <p class="hint">From the DTM North-East Mobility Tracking dataset. These figures do not change with the filters. Hover a point for its round.</p>
+      <div id="refChart"></div>
+      <div class="chartlegend"><span><i style="background:#0033A0"></i>IDPs (individuals)</span><span><i style="background:#1A8C7E"></i>Returnees (individuals)</span></div>
     </section>
 
     <section class="panel chart" id="sec-charts">
@@ -467,7 +474,7 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
 /* ---------------------------------------------------------------- config */
 const YEAR_MIN = 2015, YEAR_MAX = 2030;
 const DEFAULT_COMPONENTS = [
-  ["atlas","Mobility Tracking – IDP & Returnee Atlas"],["needs","Mobility Tracking – Needs Monitoring"],
+  ["atlas","Mobility Tracking – IDP & Returnee Atlas"],["needs","Mobility Tracking – Needs Monitoring"],["mt_dash","Mobility Tracking – Dashboards"],
   ["flash","Incident / Flash Report"],["ett","Emergency Tracking Tool (ETT)"],
   ["intention","Intention Surveys (general / regional)"],["intention_state","State-wide Intention Surveys"],
   ["return_intention","Return Intention & Camp Closure Reports"],["ses","Socio Economic Survey"],
@@ -477,13 +484,14 @@ const DEFAULT_COMPONENTS = [
   ["biometric","Biometric Registration Report"],["poe","Point of Entry (POE) Reports"],
   ["covid_sa","COVID-19 Situational Analysis Reports"],["climate","Climate & Environmental Vulnerability Reports"],["compendium","Compendium Reports"],
   ["fmp","Flow Monitoring (migrants) – extra category"],["other","Other / Unclassified"]].map(([key,label])=>({key,label}));
-const DISPLAY_ORDER = ["atlas","needs","flash","ett","intention","intention_state","return_intention","ses","ses_fm","smi","si","transhumance","ewer","flood","joint_flood","biometric","poe","covid_sa","climate","compendium","fmp","other"];
-const PALETTE = {atlas:"#0033A0",needs:"#418FDE",flash:"#D22630",ett:"#FFB81C",intention:"#6E3C8C",intention_state:"#A77BCA",
+const DISPLAY_ORDER = ["atlas","needs","mt_dash","flash","ett","intention","intention_state","return_intention","ses","ses_fm","smi","si","transhumance","ewer","flood","joint_flood","biometric","poe","covid_sa","climate","compendium","fmp","other"];
+const PALETTE = {atlas:"#0033A0",needs:"#418FDE",mt_dash:"#8FB0E3",flash:"#D22630",ett:"#FFB81C",intention:"#6E3C8C",intention_state:"#A77BCA",
   return_intention:"#C1447E",ses:"#1A8C7E",ses_fm:"#7AB648",smi:"#5CB8B2",si:"#2A6F97",transhumance:"#A05A2C",ewer:"#E56A54",
   flood:"#00A3E0",joint_flood:"#005E85",biometric:"#53565A",poe:"#F28C28",covid_sa:"#4B5DAA",climate:"#2E7D32",compendium:"#8C1D40",fmp:"#9B7EBD",other:"#B1B3B3"};
 const BRIEF={
-  atlas:"Mobility Tracking round products counting internally displaced persons (IDPs) and returnees by state, local government area and ward, from baseline and site assessments. Includes the round atlases and reports, dashboards, site and location profiles, and master lists.",
-  needs:"Mobility Tracking round reports on the living conditions and needs of displaced people in camps and host communities (shelter, food, water and sanitation, health, education, protection). DTM Nigeria usually publishes them as the round's Displacement Report.",
+  atlas:"Mobility Tracking round reports that present the IDP and Returnee Atlas or baseline assessment for a round: numbers and locations of IDPs and returnees by state, LGA and ward. One report per round; with Needs Monitoring, the two make up the 71 round reports so far (North East R1–R52, North Central & North West R1–R19).",
+  needs:"Mobility Tracking round reports on the living conditions and needs of displaced people in camps and host communities (shelter, food, water and sanitation, health, education, protection). Usually published as the round's Displacement Report; North-East rounds 1–40 and North-Central/North-West rounds 1–9 count as Needs Monitoring.",
+  mt_dash:"Every other file a Mobility Tracking round publishes besides its round report: displacement and site assessment dashboards, IDP population variation and returnee dashboards, lists of wards and of displacement sites assessed, factsheets, site profiles and addenda.",
   flash:"Rapid reports issued within about 72 hours of a sudden event such as an armed attack, fire or flood, giving how many people were displaced, where they went, and their most urgent needs.",
   ett:"Emergency Tracking Tool: short, frequent (usually weekly) reports on sudden population movements, recording new arrivals and departures at monitored locations.",
   intention:"Region-wide surveys of IDPs' preferred durable solutions (returning home, integrating locally or relocating) and their plans for the coming year.",
@@ -504,7 +512,7 @@ const BRIEF={
   compendium:"Annual compendiums bringing together DTM Nigeria's key figures and products for the year.",
   fmp:"Migrant flow monitoring dashboards (2017–2022): people passing flow monitoring points, their profiles and routes. Separate from transhumance monitoring.",
   other:"Reports that match none of the rules above, such as some maps and one-off studies."};
-const LIGHT=new Set(["ett","smi","ses_fm","other","poe","intention_state"]);
+const LIGHT=new Set(["mt_dash","ett","smi","ses_fm","other","poe","intention_state"]);
 const STATES = {"North East":["Adamawa","Bauchi","Borno","Gombe","Taraba","Yobe"],
   "North Central":["Benue","FCT","Kogi","Kwara","Nasarawa","Niger","Plateau"],"North West":["Jigawa","Kaduna","Kano","Katsina","Kebbi","Sokoto","Zamfara"],
   "South East":["Abia","Anambra","Ebonyi","Enugu","Imo"],"South South":["Akwa Ibom","Bayelsa","Cross River","Delta","Edo","Rivers"],
@@ -674,9 +682,9 @@ function buildFilters(){
     tools:[["all","All",()=>F.months=new Set(range(1,12))],["none","None",()=>F.months=new Set()],["q1","Q1",()=>F.months=new Set(range(1,3))],["q2","Q2",()=>F.months=new Set(range(4,6))],["q3","Q3",()=>F.months=new Set(range(7,9))],["q4","Q4",()=>F.months=new Set(range(10,12))]]});
   // report types dropdown
   makeDD($("#ddTypes"),{noun:"report types",items:COMPONENTS.map(c=>({key:c.key,label:c.label,color:PALETTE[c.key]||"#999"})),
-    sel:()=>F.comps,onChange:()=>{drill=null;render()},
+    sel:()=>F.comps,onChange:()=>{drill=null;syncFilterInputs();render()},
     tools:[["all","All",()=>F.comps=new Set(COMPONENTS.map(c=>c.key))],["none","None",()=>F.comps=new Set()],
-           ["mt","Mobility Tracking only",()=>F.comps=new Set(["atlas","needs"])]]});
+           ["mt","MT round reports",()=>F.comps=new Set(["atlas","needs"])],["mtall","All Mobility Tracking",()=>F.comps=new Set(["atlas","needs","mt_dash"])]]});
   // region dropdown (kept in step with the region buttons at the top)
   makeDD($("#ddRegions"),{noun:"regions",items:REGIONS.map(r=>({key:r.key,label:r.label,color:REGION_COL[r.key]})),
     sel:()=>F.regions,onChange:()=>{drill=null;syncFilterInputs();render()},
@@ -795,7 +803,7 @@ function renderKPIs(rs){
     K("Reports",fmt(rs.length),ch)+
     K("Per month",(rs.length/effLen).toFixed(1),`average over ${fmt(effLen)} month${effLen===1?"":"s"} to date`,"#418FDE")+
     K("Busiest month",best?fmt(best[1]):"–",best?`${MONTHS[best[0]%12]} ${Math.floor(best[0]/12)}`:"no reports","#1A8C7E")+
-    K("Needs Monitoring",fmt(nm),`Flash / incident reports: ${fmt(fl)}`,"#418FDE")+
+    K("Needs Monitoring",fmt(nm),`of ${fmt(rs.filter(r=>r.mt_main).length)} Mobility Tracking round reports`,"#418FDE")+
     K("Report types",fmt(types),`${fmt(states)} of 16 states named`,"#E0A100")+
     K("Latest report",latest?new Date(latest+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"–",latest?"most recent publication in selection":"no reports","#D22630");
 }
@@ -895,6 +903,21 @@ function renderCalendar(){
 }
 /* ---- timeline: every report as a dot at its publication date */
 let ANIMATE=true;
+/* ---- reference chart: NE IDPs and returnees by round */
+function renderRef(){
+  if(!REF||!REF.rounds){$("#refPanel").hidden=true;return}
+  const R=Object.values(REF.rounds).sort((a,b)=>a.round-b.round);$("#refPanel").hidden=false;
+  const W=900,H=320,L=64,Rm=14,T=18,B=34,max=Math.ceil(Math.max(...R.map(r=>Math.max(r.idp_ind,r.ret_ind||0)))/5e5)*5e5,steps=max/5e5;
+  const X=i=>L+(W-L-Rm)*i/(R.length-1),Y=v=>H-B-(H-T-B)*v/max;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="North-East IDPs and returnees by round">`;
+  for(let i=0;i<=steps;i++){const v=5e5*i;s+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${(v/1e6).toFixed(1)}M</text>`}
+  [["idp_ind","#0033A0","IDPs"],["ret_ind","#1A8C7E","returnees"]].forEach(([k,c,lab])=>{
+    const pts=R.map((r,i)=>r[k]?[X(i),Y(r[k]),r]:null).filter(Boolean);
+    s+=`<path d="${pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join("")}" fill="none" stroke="${c}" stroke-width="2.4"/>`;
+    pts.forEach(([x,y,r])=>s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" fill="#fff" stroke="${c}" stroke-width="1.8" data-tip="Round ${r.round} (${r.date.slice(0,7)}): ${fmt(r[k])} ${lab}${r.notes.length?" · data note":""}"/>`)});
+  R.forEach((r,i)=>{if(r.round===1||r.round%5===0||r.round===R.length)s+=`<text x="${X(i)}" y="${H-B+16}" text-anchor="middle" font-size="11" fill="var(--muted)">R${r.round}</text>`});
+  $("#refChart").innerHTML=s+"</svg>";bindTips($("#refChart"));
+}
 /* ---- bar charts */
 function stackedBars(el,keys,labelOf,rows,{W=920,H=300}={}){
   const comps=COMPONENTS.filter(c=>F.comps.has(c.key)), by={};
@@ -1064,7 +1087,7 @@ const COMP_WORDS=[["compendium",["compendium"]],["ewer",["early warning","ewer",
   ["biometric",["biometric","registration"]],["intention_state",["state-wide intention","statewide intention","state intention"]],["intention",["intention"]],
   ["smi",["solutions mobility","solution mobility","mobility index"," smi"]],["si",["stability index","stability"]],["ses_fm",["facility mapping"]],["ses",["socio","economic survey"]],
   ["covid_sa",["situational analysis","covid situational","covid-19 situational"]],["poe",["point of entry","poe"]],["climate",["climate","environmental"]],["needs",["needs monitoring","needs","displacement report"]],
-  ["transhumance",["transhumance","herder"]],["fmp",["migrant flow","flow monitoring"]],["atlas",["atlas","mobility tracking","baseline","site assessment"]],["other",["unclassified"]]];
+  ["transhumance",["transhumance","herder"]],["fmp",["migrant flow","flow monitoring"]],["mt_dash",["mt dashboard","mobility tracking dashboard","list of wards","list of sites","site profile","factsheet","population variation"]],["atlas",["atlas","baseline"]],["other",["unclassified"]]];
 function parseQuery(t){
   const s=" "+t.toLowerCase().replace(/[?!.,]/g," ")+" ",q={};
   let comps=COMP_WORDS.filter(([k,ws])=>ws.some(w=>s.includes(w))).map(([k])=>k);
@@ -1100,6 +1123,24 @@ function parseQuery(t){
   return q;
 }
 /* ======== figures from inside the reports (households, individuals, camps, ...) ======== */
+let REF=window.DTM_REF||null, refLoading=null;
+function loadRef(){
+  if(REF)return Promise.resolve(REF);
+  if(!refLoading)refLoading=(location.protocol.startsWith("http")?fetch("data/reference.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null):Promise.resolve(null)).then(f=>REF=f);
+  return refLoading;
+}
+function refBlock(n,s){
+  const x=REF&&REF.rounds&&REF.rounds[n];if(!x)return "";
+  const st=Object.keys(x.by_state).find(k=>new RegExp("\\b"+k.toLowerCase()+"\\b").test(s));
+  const L=(v,lab)=>v==null?"":`<div><span class="fig">${fmt(v)}</span> ${lab}</div>`;
+  let h=`<span class="rt">North-East Mobility Tracking, Round ${n} (assessed ${new Date(x.date+"T00:00:00Z").toLocaleDateString("en-GB",{month:"long",year:"numeric",timeZone:"UTC"})}): DTM reference dataset</span>`;
+  if(st){const y=x.by_state[st];h+=`<div class="ev">${esc(st)} State</div>`+L(y.idp_ind,"IDPs")+L(y.idp_hh,"IDP households")+L(y.ret_ind,"returnees")+L(y.ret_hh,"returnee households")}
+  else{h+=L(x.idp_ind,"IDPs")+L(x.idp_hh,"IDP households")+L(x.ret_ind,"returnees")+L(x.ret_hh,"returnee households");
+    Object.entries(x.by_location).forEach(([k,v])=>{h+=`<div><span class="fig">${fmt(v.ind)}</span> ${esc(k.replace("IDPs dispersed in ","IDPs in ").replace("IDPs in ","IDPs in "))} (${fmt(v.hh)} households)</div>`});
+    h+=`<div class="ev">${fmt(x.wards)} wards in ${fmt(x.lgas)} LGAs assessed for IDPs.</div>`}
+  if(x.notes&&x.notes.length)h+=`<div class="ev">Data note: ${esc(x.notes.join("; "))}.</div>`;
+  return h;
+}
 let FACTS=window.DTM_FACTS||null, factsLoading=null;
 function loadFacts(){
   if(FACTS)return Promise.resolve(FACTS);
@@ -1149,13 +1190,23 @@ function figuresAnswer(t){
   // free-text search across every sentence
   const sm=t.match(/^\s*(?:search|find|look up|where)\b[^"“]*["“]?([^"”?]+)["”]?/i);
   if(sm&&!metricsIn(s).length){const w=sm[1].trim().toLowerCase().replace(/^for\s+/,"");if(w.length<2)return "What should I search for?";
-    const hits=[];for(const r of REPORTS){const fx=factsOf(r);if(!fx)continue;fx.s.forEach(x=>{if(x.toLowerCase().includes(w))hits.push([r,x])})}
+    const wrx=new RegExp("(^|[^a-z0-9])"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"([^a-z0-9]|$)","i");
+    const hits=[];for(const r of REPORTS){const fx=factsOf(r);if(!fx)continue;fx.s.forEach(x=>{if(wrx.test(x))hits.push([r,x])})}
     if(!hits.length)return `No sentence mentioning “${w}” was found in the report texts collected so far.`;
     hits.sort((a,b)=>(b[0].pub_date||"").localeCompare(a[0].pub_date||""));
     return {__html:`<b>${fmt(hits.length)}</b> sentence${hits.length===1?"":"s"} mention “${esc(w)}”. Most recent first:`+hits.slice(0,8).map(([r,x])=>reportLine(r)+`<span class="ev">${esc(x)}</span>`).join("")+(hits.length>8?`…and ${fmt(hits.length-8)} more.`:"")};
   }
   const metrics=metricsIn(s), subj=subjectIn(s);
+  const rq=s.match(/\bround\s*#?\s*(\d{1,2})\b|\br(\d{1,2})\b(?!\s*%)/);
+  const isNCNW=/north[\s-]*central|north[\s-]*west|ncnw|nwnc|\bnc\b|\bnw\b/.test(s);
+  const ref=rq&&!isNCNW?refBlock(+(rq[1]||rq[2]),s):"";
   const {list,specific}=findReports(t,s);
+  const out0=figuresAnswerReports(t,s,metrics,subj,list,specific);
+  if(!ref)return out0;
+  const tail=typeof out0==="string"?`<div class="ev">${esc(out0)}</div>`:out0.__html;
+  return {__html:ref+`<span class="rt" style="margin-top:12px">From the published report</span>`+tail};
+}
+function figuresAnswerReports(t,s,metrics,subj,list,specific){
   if(!list.length)return "I couldn't find a report matching that. Try a round number (“Round 49”), a report number (“Flash Report 299”), a type, a state or a year.";
   const aggregate=!specific||/\b(total|sum|altogether|in all|combined|overall|across)\b/.test(s);
   if(!aggregate||list.length===1){
@@ -1163,7 +1214,7 @@ function figuresAnswer(t){
     return {__html:shown.map(r=>{const fx=factsOf(r);
       if(!fx||!fx.f.length)return reportLine(r)+`<span class="ev">No figures have been collected from this report yet. PDFs are read a few at a time, newest first; the report itself is linked above.</span>`;
       const want=metrics.length?metrics:[...new Set(fx.f.map(f=>f[0]))].slice(0,8);
-      const lines=want.map(m=>{const f=pickFig(fx,m,subj);return f?`<div><span class="fig">${fmt(f[1])}</span> ${esc(f[0])}${f[3]?` (${esc(f[3])})`:""}<span class="ev">“${esc(fx.s[f[2]])}”${f[4]==="pdf"?" (from the PDF)":""}</span></div>`:`<div>${esc(m)}: not stated in the text collected for this report.</div>`}).join("");
+      const lines=want.map(m=>{const f=pickFig(fx,m,subj);return f?`<div><span class="fig">${fmt(f[1])}</span> ${esc(f[0])}${f[3]&&f[3]!==f[0]?` (${esc(f[3])})`:""}<span class="ev">“${esc(fx.s[f[2]])}”${f[4]==="pdf"?" (from the PDF)":""}</span></div>`:`<div>${esc(m)}: not stated in the text collected for this report.</div>`}).join("");
       return reportLine(r)+lines}).join("")+(list.length>3?`<div class="ev">${fmt(list.length-3)} more reports match; add a number, state or date to narrow it down.</div>`:"")};
   }
   // aggregate across many reports: one total per figure asked for
@@ -1181,10 +1232,10 @@ function figuresAnswer(t){
   return {__html:blocks.join("")+`<div class="ev">Each report contributes its headline figure, quoted below. Reports can overlap (the same people counted in consecutive rounds or reports), so treat totals across rounds with care.</div>`+
     ex.map(([r,f])=>reportLine(r)+`<div><span class="fig">${fmt(f[1])}</span><span class="ev">“${esc(factsOf(r).s[f[2]])}”</span></div>`).join("")};
 }
-const FIG_INTENT=/household|individual|\bpeople\b|persons|population|\bidps?\b|returnee|\bcamps?\b|arrival|departure|herder|livestock|cattle|animals|alerts|fatalit|killed|injur|shelter|figures|numbers|statistics|how many (were|was)?\s*displaced|displaced people|^\s*(search|find|look up)\b/;
+const FIG_INTENT=/wards? assessed|lgas? assessed|host communit|household|individual|\bpeople\b|persons|population|\bidps?\b|returnee|\bcamps?\b|arrival|departure|herder|livestock|cattle|animals|alerts|fatalit|killed|injur|shelter|figures|numbers|statistics|how many (were|was)?\s*displaced|displaced people|^\s*(search|find|look up)\b/;
 async function localAssistantAsync(t){
   const s=t.toLowerCase();
-  if(FIG_INTENT.test(s)&&!/how many (reports|report)\b|number of reports|reports? (per|by)\b/.test(s)){await loadFacts();return figuresAnswer(t)}
+  if(FIG_INTENT.test(s)&&!/how many (reports|report)\b|number of reports|reports? (per|by)\b/.test(s)){await Promise.all([loadFacts(),loadRef()]);return figuresAnswer(t)}
   return localAssistant(t);
 }
 function localAssistant(t){
@@ -1310,7 +1361,7 @@ function sampleData(){
 
 /* ------------------------------------------------------------ boot */
 document.body.dataset.view=/^#(sec-|dashboard)/.test(location.hash)?"dash":"home";
-loadInitial().then(()=>{detectServer();setEngine();checkForUpdates()});
+loadInitial().then(()=>{detectServer();setEngine();checkForUpdates();loadRef().then(renderRef)});
 if(window.claude){window.claude.use("sample").then(s=>{SAMPLE=s;setEngine()}).catch(()=>{})}
 if("serviceWorker" in navigator && location.protocol.startsWith("http") && !window.claude && /localhost|127\.0\.0\.1|github\.io|\.local|:\d+$/.test(location.host)){
   navigator.serviceWorker.register("sw.js").catch(()=>{});
