@@ -285,58 +285,175 @@ body:not([data-view="home"]) #home{display:none}
 .brief.dark .bn{color:#1B2233}
 .brief p{margin:0;font-size:.84rem;line-height:1.5;color:var(--muted)}
 footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
+
+/* ================= Data Hub (Power BI-style) theme ================= */
+:root{--iom:#0E4D6E;--teal:#0E4D6E;--teal-2:#1F6F8B;--sky:#45ACE0;--sky-2:#5BA3C7;--pbbg:#E6F3FA;--pbline:#B9DDF0;--panel:#FFFFFF;--ink:#16213A;--muted:#4A5570;--line:#D9DEE8;--soft:#EEF5FA;--paper:#E6F3FA;--surface:#FFFFFF}
+:root[data-theme="dark"]{--iom:#7CC4EC;--teal:#7CC4EC;--teal-2:#9fd3f0;--sky:#123a52;--pbbg:#0f1a26;--pbline:#25425a;--panel:#16222f;--ink:#E8ECF5;--muted:#B3BCD0;--line:#2b3b4c;--soft:#1b2a39;--paper:#0f1a26;--surface:#16222f;color-scheme:dark}
+[hidden]{display:none!important}
+body{background:var(--pbbg);color:var(--ink)}
+/* masthead */
+.pbi-head{display:grid;grid-template-columns:220px 1fr auto;align-items:center;gap:14px;padding:8px 22px;min-height:78px;
+  background:linear-gradient(90deg,#0A3A57 0%,#0E5A80 55%,#0A3A57 100%);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18);position:relative;z-index:30}
+.pbi-head h1{margin:0;text-align:center;font-size:clamp(1.3rem,2.4vw,2rem);font-weight:800;letter-spacing:-.01em;color:#fff}
+.dtmbadge{width:58px;height:58px;border-radius:50%;background:#fff;color:#0E4D6E;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;text-decoration:none;border:3px solid #9fd3f0;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.headright{text-align:right;font-size:.8rem;color:#CFE6F5}
+.headright .upd b{color:#fff}
+.headright .upd span{display:block}
+.htools{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+.hbtn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);border-radius:6px;padding:6px 12px;font-size:.84rem;font-weight:600;cursor:pointer;text-decoration:none}
+.hbtn:hover{background:rgba(255,255,255,.14)}
+@media (max-width:760px){.pbi-head{grid-template-columns:auto 1fr;}.headright{grid-column:1/-1;text-align:left}.htools{justify-content:flex-start}}
+/* sidebar */
+.layout{grid-template-columns:230px minmax(0,1fr)}
+aside.rail{background:var(--sky)!important;color:#0B3550;padding:22px 16px 24px;display:flex;flex-direction:column;gap:14px;min-height:calc(100vh - 78px);position:sticky;top:0;align-self:start}
+.railnav{flex-direction:column;gap:12px;border:0;padding:0;margin:0}
+.railnav button{background:rgba(255,255,255,.2);color:#0B3550;border:1.5px solid rgba(255,255,255,.75);border-radius:14px;padding:13px 10px;font-weight:700;font-size:.92rem;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.08);text-align:center}
+.railnav button:hover{background:rgba(255,255,255,.35)}
+.railnav button[aria-current="page"]{background:#CBE9F8;color:#0A3A57;border-color:#fff;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+:root[data-theme="dark"] .railnav button{color:#e8f2fa;border-color:rgba(255,255,255,.35)}
+:root[data-theme="dark"] .railnav button[aria-current="page"]{background:#1d4f6e;color:#fff}
+.srcbadges{display:flex;justify-content:center;margin-top:10px}
+.sb{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.72rem;text-decoration:none;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.sb.dtm{background:#C62828;color:#fff}
+.side-foot{margin-top:auto;font-size:.74rem;text-align:center;color:#0B3550}
+:root[data-theme="dark"] .side-foot{color:#cfe6f5}
+@media (max-width:900px){aside.rail{position:static;min-height:0}.railnav{flex-direction:row;flex-wrap:wrap;gap:8px}.railnav button{padding:8px 12px}.side-foot,.srcbadges{display:none}}
+main{padding:14px 16px 60px}
+/* slicer bar */
+.slicerbar{background:var(--panel);border:1.5px solid var(--pbline);border-radius:8px;padding:12px 14px 8px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;position:sticky;top:0;z-index:25;box-shadow:0 2px 6px rgba(14,77,110,.06)}
+.slicerbar .sl{display:flex;flex-direction:column;gap:4px;min-width:118px}
+.slicerbar .sl.wide{min-width:220px}
+.slicerbar label{font-weight:700;font-size:.8rem;color:var(--ink)}
+.slicerbar select,.slicerbar .search{background:#0E4D6E;color:#fff;border:0;border-radius:4px;padding:6px 8px;font-weight:700;font-size:.82rem;min-height:30px}
+.slicerbar .search{background:var(--panel);color:var(--ink);border:1px solid var(--pbline);font-weight:500}
+.slicerbar .two{display:flex;gap:4px}.slicerbar .two select{min-width:64px}
+.slicerbar .ddbtn{background:#0E4D6E;color:#fff;border-radius:4px;padding:6px 8px;font-size:.82rem;min-height:30px}
+.slicerbar .ddbtn .ddn{background:#fff;color:#0E4D6E}
+.sltools{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.tbtn{background:#E1F0F8;border:1px solid #8CC4E2;color:#0A3A57;border-radius:4px;padding:6px 10px;font-weight:700;font-size:.8rem;cursor:pointer}
+.tbtn:hover{background:#CBE9F8}
+:root[data-theme="dark"] .tbtn{background:#1d4f6e;color:#fff;border-color:#2f6a8e}
+.slicerbar .lede{flex-basis:100%;margin:2px 0 0;padding-top:8px;border-top:1px solid var(--soft);font-size:.86rem;color:var(--muted)}
+.ddpanel{background:var(--panel);color:var(--ink)}
+@media (max-width:900px){.slicerbar{position:static}}
+@media (max-width:600px){.slicerbar .sl,.slicerbar .sl.wide{min-width:0;flex:1 1 calc(50% - 8px)}.slicerbar .two select{min-width:0;flex:1}
+  .slicerbar .sl.wide{flex-basis:100%}.sltools{margin-left:0}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{min-width:0}
+  main{padding:10px 10px 60px}.layout{grid-template-columns:1fr}}
+/* cards, panels, KPIs */
+section.panel,.panel{background:var(--panel);border:1.5px solid var(--pbline);border-radius:8px}
+.panel h2{text-align:center;font-size:1.05rem;color:var(--ink)}
+.panel .hint{text-align:center}
+.panel .tools{float:none;justify-content:flex-end;margin-bottom:-28px}
+.kpis{gap:10px}
+.kpi{background:var(--panel);border:1.5px solid var(--pbline);border-radius:8px;text-align:center;padding:14px 16px 12px 22px;--k:#0E4D6E!important}
+.kpi::before{left:8px;right:auto;top:10px;bottom:10px;width:6px;height:auto;border-radius:3px;background:#0E4D6E}
+.kpi .kv{color:var(--teal)!important;font-size:1.9rem}
+.kpi .kl{order:2;text-transform:none;letter-spacing:0;font-size:.95rem;font-weight:800;color:var(--ink)}
+.kpi{display:flex;flex-direction:column}
+.kpi .kv{order:1}.kpi .ks{order:3}
+.deck{background:var(--panel);border:1.5px solid var(--pbline);border-top:1.5px solid var(--pbline);border-radius:8px}
+.decklabel{color:var(--teal)}
+.tile{background:var(--panel)}
+.tile b{color:var(--ink)}
+.tile[aria-pressed="true"]{background:var(--soft);border-color:var(--teal);box-shadow:inset 0 0 0 1px var(--teal)}
+.chatbtn{background:#0E4D6E!important;border-color:#0E4D6E!important;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.chatbtn:hover{background:#0A3A57!important}
+.list td,.list th{border-color:var(--line)}
+.cal td.tot,.cal tr.tot td,.heat td.tot,.heat tr.tot td{background:var(--soft)}
+.cal td.off{background:repeating-linear-gradient(45deg,var(--panel),var(--panel) 4px,var(--soft) 4px,var(--soft) 8px)}
+.scalelegend .bar{background:linear-gradient(90deg,#E6F3FA,#0E4D6E)}
+footer{padding-left:246px}
+@media (max-width:900px){footer{padding-left:16px}}
+/* home page */
+.home{max-width:none}
+.hero{background:var(--panel)!important;color:var(--ink)!important;border:1.5px solid var(--pbline);border-radius:8px;padding:18px 20px}
+.hero::after{display:none}
+.eyebrow{color:var(--sky-2)}
+.hero h2{color:var(--teal)!important;font-size:1.6rem}
+.hero p{color:var(--muted)!important}
+.herostats{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.herostats div{background:var(--panel)!important;border:1.5px solid var(--pbline)!important;border-radius:8px;text-align:center;position:relative;padding:14px 14px 12px 22px}
+.herostats div::before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:6px;border-radius:3px;background:#0E4D6E}
+.herostats b{color:var(--teal)!important;font-size:1.7rem}
+.herostats span{color:var(--muted)!important;font-weight:600}
+.cta{background:#0E4D6E!important;color:#fff!important;border-radius:8px}
+.cta:hover{background:#0A3A57!important}
+.hh{color:var(--teal)!important}
+.step{background:var(--panel);border:1.5px solid var(--pbline);border-radius:8px}
+.step i{background:none;color:var(--sky-2);font-style:italic;font-size:1.4rem;width:auto;height:auto;margin:0 6px 0 0;display:inline}
+.step b{display:inline;font-size:1rem}
+.step p{margin-top:6px;color:var(--muted)}
+.brief{background:var(--panel);border:1.5px solid var(--pbline);border-left:1.5px solid var(--pbline)}
+.brief .bn{background:none!important;color:var(--teal)!important;padding:0;font-size:.95rem}
+.brief .bt{color:var(--ink)}
+.note{background:var(--panel);border:1.5px solid var(--pbline);border-left:1.5px solid var(--pbline);border-radius:8px}
+.note b{color:var(--ink)}
+.kpi .kv{font-size:clamp(1.4rem,2.2vw,1.9rem)}
+.herostats span small{display:block;font-weight:400;font-size:.78rem;margin-top:2px}
+:root[data-theme="dark"] .pb{background:var(--panel)}
+:root[data-theme="dark"] .list a,:root[data-theme="dark"] a{color:#9fd3f0}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="brand">
-    <h1>DTM Nigeria Publications Tracker</h1>
-    <p>Every report IOM DTM Nigeria publishes on dtm.iom.int, counted by report type, region, state, month and year.</p>
-  </div>
-  <div class="status">
-    <span id="dataStatus"><span class="dot"></span>Loading data</span>
-    <button class="btn" id="harvestBtn" hidden>Harvest now</button>
-    <label class="btn" for="fileIn">Load data file</label>
-    <input type="file" id="fileIn" accept=".json,.js,.csv" class="sr">
-    <button class="btn" id="exportBtn">Export CSV</button>
+<header class="pbi-head">
+  <a class="dtmbadge" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="DTM Nigeria on dtm.iom.int">DTM</a>
+  <h1>DTM Nigeria Publications Tracker</h1>
+  <div class="headright">
+    <div class="upd" id="dataStatus">Loading data…</div>
+    <div class="htools">
+      <button class="hbtn" id="themeBtn" type="button">Theme</button>
+      <a class="hbtn" id="offlineBtn" href="DTM_Nigeria_Dashboard_OFFLINE.html" download>Save offline</a>
+    </div>
   </div>
 </header>
 <p class="banner" id="banner" hidden></p>
 <div class="log" id="harvestLog" style="margin:0 24px"></div>
 
 <div class="layout">
-  <aside class="rail" aria-label="Filters and sections">
-    <nav class="railnav" aria-label="Sections">
-      <a href="#home" data-view="home">Home &amp; guide</a>
-      <a href="#sec-overview">Overview</a><a href="#sec-types">Report types</a><a href="#sec-calendar">Calendar</a><a href="#sec-charts">Charts</a><a href="#sec-list">Report list</a>
+  <aside class="rail" aria-label="Pages">
+    <nav class="railnav" aria-label="Pages">
+      <button type="button" data-nav="home">Home &amp; guide</button>
+      <button type="button" data-nav="overview">Overview</button>
+      <button type="button" data-nav="types">Report types</button>
+      <button type="button" data-nav="calendar">Publication calendar</button>
+      <button type="button" data-nav="charts">Charts</button>
+      <button type="button" data-nav="list">Report list</button>
     </nav>
-    <div class="slicer">
-      <div class="slabel">Period</div>
-      <div class="period">
-        <span class="plabel">From</span><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select>
-        <span class="plabel">To</span><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select>
-      </div>
-      <div class="presets"><button type="button" data-preset="all">2015–2030</button><button type="button" data-preset="data">With data</button><button type="button" data-preset="12">Last 12 months</button><button type="button" data-preset="ytd">This year</button><button type="button" data-preset="last">Last year</button></div>
+    <div class="srcbadges">
+      <a class="sb dtm" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="DTM Nigeria on dtm.iom.int">DTM</a>
     </div>
-    <div class="slicer"><div class="slabel">Months</div><div class="dd" id="ddMonths"></div></div>
-    <div class="slicer"><div class="slabel">Report types</div><div class="dd" id="ddTypes"></div></div>
-    <div class="slicer"><div class="slabel">Region</div><div class="dd" id="ddRegions"></div></div>
-    <div class="slicer"><div class="slabel">States</div><div class="dd" id="ddStates"></div></div>
-    <div class="slicer">
-      <div class="slabel">Count reports by</div>
-      <label class="rcheck"><input type="radio" name="basis" value="pub" checked><span>Publication date on dtm.iom.int</span></label>
-      <label class="rcheck"><input type="radio" name="basis" value="period"><span>Period in the report title</span></label>
-    </div>
-    <div class="slicer"><div class="slabel">Title contains</div><input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama, flood"></div>
-    <button class="railbtn" id="resetBtn" type="button">Reset all filters</button>
+    <div class="side-foot">IOM · Displacement Tracking Matrix · Nigeria</div>
   </aside>
 
   <main>
+    <section class="slicerbar" aria-label="Filters">
+      <div class="sl"><label>From</label><div class="two"><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select></div></div>
+      <div class="sl"><label>To</label><div class="two"><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select></div></div>
+      <div class="sl"><label for="presetSel">Quick period</label><select id="presetSel"><option value="">Choose…</option><option value="all">2014–2030</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select></div>
+      <div class="sl"><label>Months</label><div class="dd" id="ddMonths"></div></div>
+      <div class="sl wide"><label>Report types</label><div class="dd" id="ddTypes"></div></div>
+      <div class="sl"><label>Region</label><div class="dd" id="ddRegions"></div></div>
+      <div class="sl"><label>State</label><div class="dd" id="ddStates"></div></div>
+      <div class="sl"><label for="basisSel">Count by</label><select id="basisSel"><option value="pub">Publication date</option><option value="period">Period in title</option></select></div>
+      <div class="sl"><label for="kw">Title contains</label><input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama"></div>
+      <div class="sltools">
+        <button class="tbtn" id="harvestBtn" type="button" hidden>Harvest now</button>
+        <label class="tbtn" for="fileIn">Load data file</label><input type="file" id="fileIn" accept=".json,.js,.csv" class="sr">
+        <button class="tbtn" id="exportBtn" type="button">Export CSV</button>
+        <button class="tbtn" id="resetBtn" type="button">Reset</button>
+      </div>
+      <p class="lede" id="lede"></p>
+      <div hidden>
+        <button type="button" data-preset="all"></button><button type="button" data-preset="data"></button><button type="button" data-preset="12"></button><button type="button" data-preset="ytd"></button><button type="button" data-preset="last"></button>
+        <input type="radio" name="basis" value="pub" checked><input type="radio" name="basis" value="period">
+      </div>
+    </section>
+
     <section id="home" class="home" aria-labelledby="homeTitle">
       <div class="hero">
         <div class="eyebrow">IOM · Displacement Tracking Matrix · Nigeria</div>
         <h2 id="homeTitle">DTM Nigeria Publications Tracker</h2>
-        <p>A live count of every report DTM Nigeria publishes on dtm.iom.int, from 2015 onwards. Choose any period, report type, region or state, and every number, chart and list updates together.</p>
+        <p>A live count of every report DTM Nigeria publishes on dtm.iom.int, from 2014 onwards. Choose any period, report type, region or state, and every number, chart and list updates together.</p>
         <div class="herostats">
           <div><b id="hTotal">–</b><span>reports tracked</span></div>
           <div><b id="hTypes">–</b><span>report types</span></div>
@@ -348,13 +465,13 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
 
       <h3 class="hh">How to use the dashboard</h3>
       <div class="steps">
-        <div class="step"><i>1</i><b>Pick a period</b><p>In the blue panel on the left, set <em>From</em> and <em>To</em> to any month and year, or use a shortcut such as <em>Last 12 months</em> or <em>Last year</em>.</p></div>
+        <div class="step"><i>1</i><b>Pick a period</b><p>In the slicer bar at the top, set <em>From</em> and <em>To</em> to any month and year, or use <em>Quick period</em> (for example <em>Last 12 months</em>).</p></div>
         <div class="step"><i>2</i><b>Narrow by month</b><p>Open <em>Months</em> to keep only some months, for example Q2 (April–June) across every year in your period.</p></div>
-        <div class="step"><i>3</i><b>Choose report types</b><p>Use the bold <em>Report types</em> buttons at the top or the dropdown on the left. Each shows how many reports match your other choices. Tip: click a card in <em>What each report type covers</em> below to jump straight to that type.</p></div>
-        <div class="step"><i>4</i><b>Choose regions and states</b><p>Use the <em>Region</em> and <em>States</em> dropdowns on the left (all 36 states and the FCT, with counts) or the bold buttons at the top. Click a state to focus on it, click more to add them, click again to remove.</p></div>
-        <div class="step"><i>5</i><b>Read the headline numbers</b><p>The cards at the top give the total, the monthly average, the busiest month and the latest report, and compare with the previous period of the same length.</p></div>
+        <div class="step"><i>3</i><b>Choose report types</b><p>Open <em>Report types</em> in the slicer bar, or use the buttons on the <em>Report types</em> page. Each shows how many reports match your other choices. Tip: click a card in <em>What each report type covers</em> below to jump straight to that type.</p></div>
+        <div class="step"><i>4</i><b>Choose regions and states</b><p>Use the <em>Region</em> and <em>State</em> slicers (all 36 states and the FCT, with counts) or the buttons on the <em>Report types</em> page. Click a state to focus on it, click more to add them, click again to remove.</p></div>
+        <div class="step"><i>5</i><b>Read the headline numbers</b><p>The cards on the <em>Overview</em> page give the total, the monthly average, the busiest month and the latest report, and compare with the previous period of the same length.</p></div>
         <div class="step"><i>6</i><b>Explore the charts</b><p>Hover over any bar, point or cell to see its number. Click a bar in <em>report type</em>, <em>state</em> or <em>region</em> to filter by it; click a calendar or table cell to list those reports.</p></div>
-        <div class="step"><i>7</i><b>Open or export reports</b><p>The report list at the bottom links to each report on dtm.iom.int and its PDF. <em>Export CSV</em> and <em>Download counts</em> save what you are looking at.</p></div>
+        <div class="step"><i>7</i><b>Open or export reports</b><p>The <em>Report list</em> page links to each report on dtm.iom.int and its PDF. <em>Export CSV</em> and <em>Download counts</em> save what you are looking at.</p></div>
         <div class="step"><i>8</i><b>Ask the data</b><p>Use the <em>Ask the data</em> button (bottom right) to type questions such as “flash reports per month in Borno in 2025”.</p></div>
       </div>
 
@@ -370,15 +487,14 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       </div>
     </section>
 
-    <section class="deck" aria-label="Choose reports">
+    <section class="deck" aria-label="Quick buttons" data-page="types">
       <div class="deckrow"><div class="decklabel">Report types<span class="quick"><button type="button" data-all="comp">All</button><button type="button" data-none="comp">None</button></span></div><div class="pills" id="typeBar"></div></div>
       <div class="deckrow"><div class="decklabel">Regions<span class="quick"><button type="button" data-all="region">All</button></span></div><div class="pills" id="regionBar"></div></div>
       <div class="deckrow"><div class="decklabel">States<span class="quick"><button type="button" data-all="state">All</button><button type="button" data-none="state">None</button></span></div><div class="pills" id="stateBar"></div></div>
     </section>
-    <section class="kpis" id="sec-overview" aria-label="Key numbers"></section>
-    <p class="lede" id="lede"></p>
+    <section class="kpis" id="sec-overview" aria-label="Key numbers" data-page="overview"></section>
 
-    <div class="trendrow">
+    <div class="trendrow" data-page="overview">
       <section class="panel chart">
         <h2>Monthly publication trend</h2>
         <p class="hint">Reports published each month across the selected period. Hover a point for its number.</p>
@@ -391,20 +507,20 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       </section>
     </div>
 
-    <section class="panel" id="sec-types">
+    <section class="panel" id="sec-types" data-page="types">
       <h2>Report types</h2>
       <p class="hint">Numbers for the selected years, months and places. Click a type to focus on it; Ctrl+click to combine several.</p>
       <div class="tiles" id="tiles"></div>
     </section>
 
-    <section class="panel" id="sec-calendar">
+    <section class="panel" id="sec-calendar" data-page="calendar">
       <h2>Publication calendar</h2>
       <p class="hint">Reports published each month, by each report's publication date on dtm.iom.int. Every number is recounted for your selection. Select a cell to list those reports.</p>
       <div class="scroll"><table class="cal" id="cal"></table></div>
       <div class="scalelegend">Fewer reports <span class="bar"></span> More reports <span style="margin-left:14px">Striped cells are outside your selection.</span></div>
     </section>
 
-    <section class="panel">
+    <section class="panel" data-page="types">
       <div class="tools"><button class="btn" id="exportMatrix">Download counts</button></div>
       <h2>Reports per year, by report type</h2>
       <p class="hint">Select a cell to list those reports below.</p>
@@ -412,28 +528,28 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
       <div class="scalelegend">Fewer reports <span class="bar"></span> More reports</div>
     </section>
 
-    <section class="panel chart" id="refPanel" hidden>
+    <section class="panel chart" id="refPanel" data-page="overview" hidden>
       <h2>North-East IDPs and returnees, Rounds 1–52</h2>
       <p class="hint">From the DTM North-East Mobility Tracking dataset. These figures do not change with the filters. Hover a point for its round.</p>
       <div id="refChart"></div>
-      <div class="chartlegend"><span><i style="background:#0033A0"></i>IDPs (individuals)</span><span><i style="background:#1A8C7E"></i>Returnees (individuals)</span></div>
+      <div class="chartlegend"><span><i style="background:#0E4D6E"></i>IDPs (individuals)</span><span><i style="background:#5BA3C7"></i>Returnees (individuals)</span></div>
     </section>
 
-    <section class="panel chart" id="sec-charts">
+    <section class="panel chart" id="sec-charts" data-page="charts">
       <h2>Reports per year</h2>
       <p class="hint">Stacked by report type for the current selection. Hover a segment for its number.</p>
       <div id="barYear"></div>
       <div class="chartlegend" id="legYear"></div>
     </section>
 
-    <section class="panel chart">
+    <section class="panel chart" data-page="charts">
       <h2>Reports per month</h2>
       <p class="hint">All selected years combined. For month-by-year numbers, see the publication calendar above.</p>
       <div id="barMonth"></div>
       <div class="chartlegend" id="legMonth"></div>
     </section>
 
-      <section class="panel chart">
+      <section class="panel chart" data-page="charts">
       <h2>Reports per region</h2>
       <p class="hint">North Central and North West also shown separately; a report covering both counts in each of those two bars. Click a bar to filter.</p>
       <div id="barRegion"></div>
@@ -441,14 +557,14 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
     </section>
 
 
-    <section class="panel chart">
+    <section class="panel chart" data-page="charts">
       <h2>Reports per state</h2>
       <p class="hint">All 36 states and the FCT, grouped by geopolitical zone. A report covering several states counts once in each. Click a bar to filter by that state.</p>
       <div class="stategrid" id="barState"></div>
       <div class="chartlegend"><span><i style="background:#0033A0"></i>North East</span><span><i style="background:#1A8C7E"></i>North Central</span><span><i style="background:#E0A100"></i>North West</span><span><i style="background:#C1447E"></i>South East</span><span><i style="background:#2E7D32"></i>South South</span><span><i style="background:#F28C28"></i>South West</span></div>
     </section>
 
-    <section class="panel" id="sec-list">
+    <section class="panel" id="sec-list" data-page="list types calendar">
       <h2>Reports</h2>
       <p class="hint" id="listHint"></p>
       <div class="drill" id="drill"></div>
@@ -472,7 +588,7 @@ footer{color:var(--muted);font-size:.8rem;padding:0 24px 30px}
 <!--DTM_DATA--><script src="data/reports.js" onerror="void 0"></script><!--/DTM_DATA-->
 <script>
 /* ---------------------------------------------------------------- config */
-const YEAR_MIN = 2015, YEAR_MAX = 2030;
+const YEAR_MIN = 2014, YEAR_MAX = 2030;
 const DEFAULT_COMPONENTS = [
   ["atlas","Mobility Tracking – IDP & Returnee Atlas"],["needs","Mobility Tracking – Needs Monitoring"],["mt_dash","Mobility Tracking – Dashboards"],
   ["flash","Incident / Flash Report"],["ett","Emergency Tracking Tool (ETT)"],
@@ -616,7 +732,9 @@ function renderStatus(){
   const when=gen&&!isNaN(gen)?gen.toLocaleString("en-GB",{day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"}):"";
   const chk=STATUS?.checked_at?new Date(STATUS.checked_at).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
   const label={harvest:`Updated ${when}${chk?" · checked "+chk:""}`,upload:`Loaded file ${DATA.file||""} ${when?"· "+when:""}`,sample:"Sample data"}[SOURCE];
-  s.innerHTML=`<span class="dot ${SOURCE==="sample"?"off":"live"}"></span>${esc(label)} · ${fmt(REPORTS.length)} reports`;
+  const shortWhen=gen&&!isNaN(gen)?gen.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}):"";
+  s.innerHTML=SOURCE==="sample"?`<b>Sample data</b><span>not real counts</span>`:SOURCE==="upload"?`Loaded <b>${esc(DATA.file||"file")}</b><span>${fmt(REPORTS.length)} reports</span>`
+    :`Updated <b>${esc(shortWhen)}</b><span>live data · ${fmt(REPORTS.length)} reports${chk?" · checked "+esc(chk):""}</span>`;
   if(SOURCE==="sample") showBanner("<b>Sample data, not real counts.</b> Run the harvester (python server.py, then Harvest now) or load a reports.json / reports.csv file to see actual DTM Nigeria figures.",true);
   else hideBanner();
   $("#foot").innerHTML=`Source: <a href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener">dtm.iom.int/nigeria</a>. Classification is keyword-based (config/taxonomy.json); reports matching no rule appear as Other / Unclassified.`+(STORE_OK?"":" Browser storage is unavailable, so loaded files are not remembered.")
@@ -730,29 +848,45 @@ document.querySelectorAll("[data-all]").forEach(b=>b.onclick=()=>{const t=b.data
   if(t==="state"){F.states=new Set(ALL_STATES);F.stateFilterOn=false}syncFilterInputs();render()});
 document.querySelectorAll("[data-none]").forEach(b=>b.onclick=()=>{const t=b.dataset.none;
   if(t==="state"){F.states=new Set();F.stateFilterOn=true}syncFilterInputs();render()});
-function setView(v){document.body.dataset.view=v;document.querySelectorAll(".railnav a").forEach(x=>x.classList.toggle("on",v==="home"&&x.dataset.view==="home"));window.scrollTo(0,0)}
-document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{setView("dash");const t=document.getElementById(b.dataset.go);if(t)t.scrollIntoView({block:"start"})});
+const PAGES=["overview","types","calendar","charts","list"];
+let CURPAGE="overview";
+function setView(v){document.body.dataset.view=v;markNav();window.scrollTo(0,0)}
+function setPage(p){
+  CURPAGE=PAGES.includes(p)?p:"overview";
+  document.querySelectorAll("main [data-page]").forEach(el=>{el.hidden=!el.dataset.page.split(" ").includes(CURPAGE)});
+  if(CURPAGE==="overview")$("#refPanel").hidden=!(REF&&REF.rounds);
+  setView("dash");
+  try{history.replaceState(null,"","#"+CURPAGE)}catch(e){}
+}
+function markNav(){const v=document.body.dataset.view;
+  document.querySelectorAll(".railnav [data-nav]").forEach(x=>x.setAttribute("aria-current",(v==="home"?x.dataset.nav==="home":x.dataset.nav===CURPAGE)?"page":"false"))}
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setPage("overview"));
+document.querySelectorAll(".railnav [data-nav]").forEach(b=>b.onclick=()=>{
+  if(b.dataset.nav==="home"){setView("home");try{history.replaceState(null,"","#home")}catch(e){};return}
+  setPage(b.dataset.nav)});
 function renderHome(){
   if(!REPORTS.length)return;
   const tc={};REPORTS.forEach(r=>tc[r.component_key]=(tc[r.component_key]||0)+1);
   $("#briefs").innerHTML=COMPONENTS.map(c=>`<button type="button" class="brief${LIGHT.has(c.key)?" dark":""}" data-k="${c.key}" style="--c:${PALETTE[c.key]||"#999"}"><div class="bt"><span>${esc(c.label)}</span><span class="bn">${fmt(tc[c.key]||0)}</span></div><p>${esc(BRIEF[c.key]||"")}</p></button>`).join("");
-  $("#briefs").onclick=e=>{const b=e.target.closest(".brief");if(!b)return;F.comps=new Set([b.dataset.k]);drill=null;setView("dash");syncFilterInputs();render();$("#sec-overview").scrollIntoView({block:"start"})};
+  $("#briefs").onclick=e=>{const b=e.target.closest(".brief");if(!b)return;F.comps=new Set([b.dataset.k]);drill=null;syncFilterInputs();render();setPage("overview")};
   const dated=REPORTS.filter(r=>r.pub_date&&!/no date on the site/.test(r.date_basis));
   const last=dated.reduce((a,r)=>!a||r.pub_date>a.pub_date?r:a,null);
   $("#hTotal").textContent=fmt(REPORTS.length);$("#hTypes").textContent=fmt(new Set(REPORTS.map(r=>r.component_key)).size);
   if(last){$("#hLatest").textContent=new Date(last.pub_date+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
-    $("#hLatestT").textContent="latest: "+last.title.replace(/^Nigeria\s*[—–-]\s*/,"").slice(0,70)}
+    $("#hLatestT").innerHTML="latest publication<small>"+esc(last.title.replace(/^Nigeria\s*[—–-]\s*/,"").slice(0,80))+"</small>"}
   const chk=STATUS?.checked_at||DATA?.generated_at;
   $("#hChecked").textContent=SOURCE==="sample"?"sample data":chk?new Date(chk).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}):"–";
 }
-document.querySelectorAll(".railnav a").forEach(a=>a.onclick=e=>{e.preventDefault();
-  if(a.dataset.view==="home"){setView("home");return}
-  setView("dash");const t=document.querySelector(a.getAttribute("href"));
-  if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
-  document.querySelectorAll(".railnav a").forEach(x=>x.classList.toggle("on",x===a))});
+$("#presetSel").onchange=e=>{const v=e.target.value;if(!v)return;const b=document.querySelector(`[data-preset="${v}"]`);if(b)b.click();e.target.value=""};
+$("#basisSel").onchange=e=>{const r=document.querySelector(`input[name="basis"][value="${e.target.value}"]`);r.checked=true;r.dispatchEvent(new Event("change"))};
+/* theme: light / dark, remembered in this browser */
+function applyTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem("dtmng.theme",t)}catch(e){}}
+$("#themeBtn").onclick=()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+try{const t=localStorage.getItem("dtmng.theme");if(t)document.documentElement.dataset.theme=t}catch(e){}
+if(!location.protocol.startsWith("http")||window.claude)$("#offlineBtn").hidden=true;
 let kwT;$("#kw").oninput=e=>{clearTimeout(kwT);kwT=setTimeout(()=>{F.kw=e.target.value.trim().toLowerCase();render()},200)};
 $("#resetBtn").onclick=resetFilters;
-function resetFilters(){F.months=new Set(range(1,12));setPeriod(ym(YEAR_MIN,1),ym(YEAR_MAX,12));F.comps=new Set(COMPONENTS.map(c=>c.key));
+function resetFilters(){$("#basisSel").value="pub";F.months=new Set(range(1,12));setPeriod(ym(YEAR_MIN,1),ym(YEAR_MAX,12));F.comps=new Set(COMPONENTS.map(c=>c.key));
   F.regions=new Set(REGIONS.map(r=>r.key));F.states=new Set(ALL_STATES);F.stateFilterOn=false;F.kw="";drill=null;syncFilterInputs();render()}
 
 /* ------------------------------------------------------------ rendering */
@@ -782,7 +916,7 @@ function describeFilters(){
   return `${c}, ${yTxt}${mTxt}, ${reg}${st}${F.kw?`, titles containing “${esc(F.kw)}”`:""}`;
 }
 function renderLede(rs){
-  $("#lede").innerHTML=`Showing ${describeFilters()}${F.basis==="period"?", dated by the period named in each report title":", dated by publication date on dtm.iom.int"}.`;
+  $("#lede").innerHTML=`Reports published: <b>${fmt(filtered().length)}</b> reports · ${describeFilters()}${F.basis==="period"?", dated by the period named in each report title":", dated by publication date on dtm.iom.int"}.`;
 }
 /* ---- KPI strip */
 function renderKPIs(rs){
@@ -816,17 +950,17 @@ function renderTrend(rs){
   const c={};vs.forEach(v=>c[v]=(c[v]||0)+1);const pts=range(a,b).map(v=>({v,n:F.months.has(v%12+1)?(c[v]||0):null}));
   const W=820,H=360,L=40,R=12,T=22,B=30,max=niceMax(Math.max(1,...pts.map(p=>p.n||0)));
   const X=i=>L+(pts.length<2?(W-L-R)/2:(W-L-R)*i/(pts.length-1)),Y=n=>H-B-(H-T-B)*n/max;
-  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports per month over time"><defs><linearGradient id="tg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0033A0" stop-opacity=".28"/><stop offset="1" stop-color="#0033A0" stop-opacity="0"/></linearGradient></defs>`;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports per month over time"><defs><linearGradient id="tg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0E4D6E" stop-opacity=".28"/><stop offset="1" stop-color="#0E4D6E" stop-opacity="0"/></linearGradient></defs>`;
   for(let i=0;i<=4;i++){const v=max*i/4;s+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${fmt(v)}</text>`}
   const seg=[];let cur=[];pts.forEach((p,i)=>{if(p.n===null){if(cur.length)seg.push(cur);cur=[]}else cur.push([X(i),Y(p.n)])});if(cur.length)seg.push(cur);
   seg.forEach(g=>{const d=g.map((q,i)=>(i?"L":"M")+q[0].toFixed(1)+","+q[1].toFixed(1)).join("");
-    s+=`<path d="${d}L${g[g.length-1][0].toFixed(1)},${H-B}L${g[0][0].toFixed(1)},${H-B}Z" fill="url(#tg)"/><path d="${d}" fill="none" stroke="#0033A0" stroke-width="2.2" stroke-linejoin="round"/>`});
+    s+=`<path d="${d}L${g[g.length-1][0].toFixed(1)},${H-B}L${g[0][0].toFixed(1)},${H-B}Z" fill="url(#tg)"/><path d="${d}" fill="none" stroke="#0E4D6E" stroke-width="2.2" stroke-linejoin="round"/>`});
   const step=pts.length>60?12:pts.length>24?6:pts.length>12?3:1;
   pts.forEach((p,i)=>{const mm=p.v%12,yy=Math.floor(p.v/12);
     if(mm===0||i===0||(step<12&&mm%step===0))s+=`<text x="${X(i)}" y="${H-B+16}" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-weight="${mm===0?700:400}">${step>=12||mm===0?(mm===0?yy:MONTHS[mm]+" "+String(yy).slice(2)):MONTHS[mm]}</text>`;
-    if(p.n!==null)s+=`<circle cx="${X(i).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${pts.length>60?2.2:3.6}" fill="#fff" stroke="#0033A0" stroke-width="1.8" data-tip="${MONTHS[mm]} ${yy}: ${p.n} report${p.n===1?"":"s"}"/>`});
+    if(p.n!==null)s+=`<circle cx="${X(i).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${pts.length>60?2.2:3.6}" fill="#fff" stroke="#0E4D6E" stroke-width="1.8" data-tip="${MONTHS[mm]} ${yy}: ${p.n} report${p.n===1?"":"s"}"/>`});
   const top=pts.filter(p=>p.n!==null).sort((x,y)=>y.n-x.n)[0];
-  if(top&&top.n){const i=pts.indexOf(top);s+=`<text x="${X(i)}" y="${Y(top.n)-9}" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0033A0">${top.n} · ${MONTHS[top.v%12]} ${Math.floor(top.v/12)}</text>`}
+  if(top&&top.n){const i=pts.indexOf(top);s+=`<text x="${X(i)}" y="${Y(top.n)-9}" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0E4D6E">${top.n} · ${MONTHS[top.v%12]} ${Math.floor(top.v/12)}</text>`}
   box.innerHTML=s+"</svg>";bindTips(box);
 }
 /* ---- bar chart: reports by report type */
@@ -834,10 +968,10 @@ function renderDonut(rs){
   const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
   const items=Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({key:k,label:labelFor(k).replace("Mobility Tracking – ","MT – "),v,c:PALETTE[k]||"#999"}));
   if(!items.length){$("#donut").innerHTML='<p class="hint">No reports in this selection.</p>';return}
-  hBars($("#donut"),items,k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);drill=null;render()},200,420);
+  hBars($("#donut"),items,k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);drill=null;syncFilterInputs();render()},300,600);
 }
 function heatColor(v,max){ if(!v) return "var(--heat0)"; const t=Math.sqrt(v/max);
-  const a=[234,240,250], b=[0,51,160]; return `rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t))})`}
+  const a=[230,243,250], b=[14,77,110]; return `rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t))})`}
 function matrix(){
   const ys=sortedYears(), comps=COMPONENTS.filter(c=>F.comps.has(c.key)), m={};
   REPORTS.forEach(r=>{if(!passes(r))return;(m[r.component_key]??={})[r.year]=(m[r.component_key][r.year]||0)+1});
@@ -859,7 +993,7 @@ function renderHeat(){
   t.innerHTML=h;
   t.onclick=e=>{const td=e.target.closest("td[data-c]");if(!td||td.classList.contains("z"))return;
     const c=td.dataset.c,y=+td.dataset.y; drill=(drill&&drill.comp===c&&drill.year===y&&!drill.month)?null:{comp:c,year:y};
-    renderHeat();renderCalendar();page=0;renderList();if(drill)$("#list").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})};
+    renderHeat();renderCalendar();page=0;renderList();if(drill&&!$("#sec-list").hidden)$("#sec-list").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})};
 }
 function niceMax(v){if(v<=5)return 5;const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;return (n<=2?2:n<=5?5:10)*p}
 const tip=$("#tip");
@@ -899,19 +1033,19 @@ function renderCalendar(){
   t.innerHTML=h;
   t.onclick=e=>{const td=e.target.closest("td[data-m]");if(!td)return;const y=+td.dataset.y,mo=+td.dataset.m;
     drill=(drill&&drill.year===y&&drill.month===mo)?null:{year:y,month:mo};renderCalendar();renderHeat();page=0;renderList();
-    if(drill)$("#list").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})};
+    if(drill&&!$("#sec-list").hidden)$("#sec-list").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})};
 }
 /* ---- timeline: every report as a dot at its publication date */
 let ANIMATE=true;
 /* ---- reference chart: NE IDPs and returnees by round */
 function renderRef(){
   if(!REF||!REF.rounds){$("#refPanel").hidden=true;return}
-  const R=Object.values(REF.rounds).sort((a,b)=>a.round-b.round);$("#refPanel").hidden=false;
+  const R=Object.values(REF.rounds).sort((a,b)=>a.round-b.round);$("#refPanel").hidden=CURPAGE!=="overview";
   const W=900,H=320,L=64,Rm=14,T=18,B=34,max=Math.ceil(Math.max(...R.map(r=>Math.max(r.idp_ind,r.ret_ind||0)))/5e5)*5e5,steps=max/5e5;
   const X=i=>L+(W-L-Rm)*i/(R.length-1),Y=v=>H-B-(H-T-B)*v/max;
   let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="North-East IDPs and returnees by round">`;
   for(let i=0;i<=steps;i++){const v=5e5*i;s+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${(v/1e6).toFixed(1)}M</text>`}
-  [["idp_ind","#0033A0","IDPs"],["ret_ind","#1A8C7E","returnees"]].forEach(([k,c,lab])=>{
+  [["idp_ind","#0E4D6E","IDPs"],["ret_ind","#5BA3C7","returnees"]].forEach(([k,c,lab])=>{
     const pts=R.map((r,i)=>r[k]?[X(i),Y(r[k]),r]:null).filter(Boolean);
     s+=`<path d="${pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join("")}" fill="none" stroke="${c}" stroke-width="2.4"/>`;
     pts.forEach(([x,y,r])=>s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" fill="#fff" stroke="${c}" stroke-width="1.8" data-tip="Round ${r.round} (${r.date.slice(0,7)}): ${fmt(r[k])} ${lab}${r.notes.length?" · data note":""}"/>`)});
@@ -1360,7 +1494,8 @@ function sampleData(){
 }
 
 /* ------------------------------------------------------------ boot */
-document.body.dataset.view=/^#(sec-|dashboard)/.test(location.hash)?"dash":"home";
+{const h=(location.hash||"").slice(1).replace(/^sec-/,"");
+ if(PAGES.includes(h))setPage(h);else{document.querySelectorAll("main [data-page]").forEach(el=>{el.hidden=!el.dataset.page.split(" ").includes("overview")});document.body.dataset.view="home";markNav()}}
 loadInitial().then(()=>{detectServer();setEngine();checkForUpdates();loadRef().then(renderRef)});
 if(window.claude){window.claude.use("sample").then(s=>{SAMPLE=s;setEngine()}).catch(()=>{})}
 if("serviceWorker" in navigator && location.protocol.startsWith("http") && !window.claude && /localhost|127\.0\.0\.1|github\.io|\.local|:\d+$/.test(location.host)){
