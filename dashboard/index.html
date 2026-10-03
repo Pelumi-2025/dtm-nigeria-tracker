@@ -392,11 +392,60 @@ footer{padding-left:246px}
 .herostats span small{display:block;font-weight:400;font-size:.78rem;margin-top:2px}
 :root[data-theme="dark"] .pb{background:var(--panel)}
 :root[data-theme="dark"] .list a,:root[data-theme="dark"] a{color:#9fd3f0}
+
+/* official logo */
+.pbi-head{grid-template-columns:auto 1fr auto}
+.brandlogo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brandlogo svg{height:40px;width:auto}
+.brandlogo span{font-weight:800;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;border-left:1px solid rgba(255,255,255,.6);padding-left:10px}
+@media (max-width:760px){.brandlogo svg{height:30px}.pbi-head h1{grid-column:1/-1;text-align:left}}
+/* sidebar extras */
+.railfilter{display:flex;flex-direction:column;gap:4px;margin-top:4px}
+.railfilter label{font-weight:800;font-size:.82rem;color:#0B3550}
+.railfilter select{background:#0E4D6E;color:#fff;border:0;border-radius:6px;padding:8px;font-weight:700}
+:root[data-theme="dark"] .railfilter label{color:#e8f2fa}
+.hublink{display:block;text-align:center;background:#0E4D6E;color:#fff;border-radius:14px;padding:12px 10px;font-weight:800;text-decoration:none;box-shadow:0 3px 8px rgba(0,0,0,.18);border:1.5px solid #fff}
+.hublink small{display:block;font-weight:500;font-size:.72rem;color:#CFE6F5;margin-top:2px}
+.hublink:hover{background:#0A3A57}
+/* region buttons + trend */
+.regbtns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 8px}
+.regbtns button{border:1.5px solid #8CC4E2;background:#E1F0F8;color:#0A3A57;border-radius:20px;padding:8px 16px;font-weight:800;cursor:pointer}
+.regbtns button[aria-pressed="true"]{background:#0E4D6E;color:#fff;border-color:#0E4D6E;box-shadow:0 2px 6px rgba(14,77,110,.3)}
+.unitsw{display:flex;justify-content:center;gap:0;margin-bottom:4px}
+.unitsw button{border:1px solid var(--pbline);background:var(--panel);color:var(--ink);padding:4px 12px;font-weight:700;font-size:.8rem;cursor:pointer}
+.unitsw button:first-child{border-radius:6px 0 0 6px}.unitsw button:last-child{border-radius:0 6px 6px 0}
+.unitsw button[aria-pressed="true"]{background:#E1F0F8;color:#0A3A57;border-color:#0E4D6E}
+.rtsum{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+.rtsum div{border:1.5px solid var(--pbline);border-radius:8px;padding:10px 12px;font-size:.86rem;color:var(--muted)}
+.rtsum b{display:block;color:var(--ink);font-size:.95rem}
+.rtsum .up{color:#B8322A;font-weight:800}.rtsum .down{color:#16807F;font-weight:800}
+/* map */
+.mapctl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;justify-content:center;margin:8px 0 12px}
+.mapctl label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.8rem}
+.mapctl select{background:#0E4D6E;color:#fff;border:0;border-radius:4px;padding:6px 8px;font-weight:700;min-height:30px}
+.mapwrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
+@media (max-width:900px){.mapwrap{grid-template-columns:1fr}}
+#mapSvg svg{width:100%;height:auto;display:block}
+#mapSvg path{stroke:#fff;stroke-width:1;cursor:pointer;transition:opacity .15s}
+#mapSvg path:hover{stroke:#0A3A57;stroke-width:2}
+#mapSvg path.sel{stroke:#F0B845;stroke-width:3}
+#mapSvg text{font-size:10px;fill:#16213A;pointer-events:none;paint-order:stroke;stroke:#fff;stroke-width:2.5px;font-weight:700}
+:root[data-theme="dark"] #mapSvg path{stroke:#0f1a26}
+.mapinfo{border:1.5px solid var(--pbline);border-radius:8px;padding:12px 14px;font-size:.86rem;min-height:200px}
+.mapinfo h3{margin:0 0 6px;color:var(--teal);font-size:1.15rem}
+.mapinfo table{width:100%;border-collapse:collapse}
+.mapinfo td{padding:4px 2px;border-bottom:1px solid var(--soft)}
+.mapinfo td:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.mapinfo .sub{font-size:.75rem;color:var(--muted)}
+.maplegend{display:flex;align-items:center;gap:8px;justify-content:center;font-size:.8rem;color:var(--muted);margin-top:8px}
+.maplegend .bar{width:220px;height:10px;border-radius:5px;background:linear-gradient(90deg,#E6F3FA,#0E4D6E)}
+.maplegend .nod{width:14px;height:10px;background:repeating-linear-gradient(45deg,#E9EDF2,#E9EDF2 3px,#fff 3px,#fff 6px);border:1px solid #ccd}
 </style>
 </head>
 <body>
 <header class="pbi-head">
-  <a class="dtmbadge" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="DTM Nigeria on dtm.iom.int">DTM</a>
+  <a class="brandlogo" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="IOM DTM Nigeria on dtm.iom.int"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IOM UN Migration – Displacement Tracking Matrix" viewBox="0 0 270.988 42.276">
+<defs><style>.cls-1{fill:#ffffff;}</style></defs><rect class="cls-1" x="122.75" y=".27" width="1.46" height="41.39"/><rect class="cls-1" x="41.92" y=".36" width="3.89" height="27.09"/><path class="cls-1" d="m80.26,13.87c0-7.27-5.6-13.87-14.62-13.87s-14.5,6.8-14.5,13.98c0,7.55,5.8,13.83,14.3,13.83s14.82-6.16,14.82-13.95h0Zm-14.58,10.33c-5.68,0-10.53-4.05-10.53-10.21,0-4.53,3.06-10.33,10.64-10.33,7.07,0,10.49,5.68,10.49,10.17,0,2.34-.99,5.28-2.7,7.15-1.86,2.03-5,3.21-7.9,3.21h0Z"/><polygon class="cls-1" points="98.5 16.85 106.84 6.36 106.84 27.45 110.73 27.45 110.73 .36 107.12 .36 98.14 11.48 89.13 .36 85.47 .36 85.47 27.45 89.36 27.45 89.36 6.36 97.79 16.85 98.5 16.85"/><path class="cls-1" d="m6.89,37.73c0,.88-.08,1.36-.25,1.68-.24.44-.89,1.19-2.38,1.19-1.07,0-1.67-.36-2.07-.76-.48-.47-.58-.92-.58-2.12v-5.13H.28v5.13c0,.61,0,1.65.51,2.45.73,1.14,2.17,1.57,3.46,1.57,1.05,0,2.08-.26,2.9-.98,1.04-.91,1.04-2.18,1.04-3.04v-5.13h-1.31s0,5.13,0,5.13Z"/><polygon class="cls-1" points="18.98 39.6 12.76 32.6 11.69 32.6 11.69 41.63 12.94 41.63 12.94 34.68 19.1 41.63 20.23 41.63 20.23 32.6 18.98 32.6 18.98 39.6"/><polygon class="cls-1" points="32.95 36.31 29.88 32.6 28.64 32.6 28.64 41.63 29.96 41.63 29.96 34.6 32.82 38.1 33.07 38.1 35.9 34.6 35.9 41.63 37.23 41.63 37.23 32.6 36 32.6 32.95 36.31"/><rect class="cls-1" x="40.9" y="32.6" width="1.32" height="9.03"/><path class="cls-1" d="m50.41,38.33h1.77v1.88c-.87.28-1.34.4-2.01.4-2.23,0-3.7-1.5-3.7-3.5,0-2.13,1.74-3.49,3.58-3.49.51,0,1.76.08,3.27.94v-1.32c-.99-.41-1.94-.77-3.24-.77-3.16,0-4.98,2.33-4.98,4.71,0,2.05,1.48,4.55,5.04,4.55,1.54,0,2.67-.44,3.38-.74v-3.82h-3.09v1.14h-.02Z"/><path class="cls-1" d="m60.83,37.34c1-.39,1.54-1.18,1.54-2.22,0-.91-.46-1.82-1.45-2.22-.58-.25-1.15-.29-1.58-.29h-2.31v9.03h1.31v-3.93h.35c.63,0,1.08,0,1.98,1.14.3.39,1.58,2.36,1.89,2.8h1.56c-.63-.87-.86-1.18-1.25-1.8-.7-1.11-1.21-1.94-2.05-2.49h0Zm-.69-.93c-.37.14-1.08.14-1.28.14h-.51v-2.85h.41c.8,0,1.23.05,1.56.21.44.19.7.69.7,1.2s-.25,1.06-.87,1.3h0Z"/><path class="cls-1" d="m69.53,32.55l-3.96,9.08h1.35l1.17-2.66h3.91l1.23,2.66h1.35l-4.12-9.08s-.93,0-.93,0Zm-.93,5.25l1.38-3.27,1.49,3.27h-2.86Z"/><polygon class="cls-1" points="75.19 33.74 78.36 33.74 78.36 41.63 79.68 41.63 79.68 33.74 82.89 33.74 82.89 32.6 75.19 32.6 75.19 33.74"/><rect class="cls-1" x="85.8" y="32.6" width="1.32" height="9.03"/><path class="cls-1" d="m94.8,32.48c-3.15,0-4.93,2.26-4.93,4.66s1.97,4.6,4.87,4.6,5.04-2.05,5.04-4.64c0-2.42-1.9-4.62-4.97-4.62Zm2.7,6.99c-.63.68-1.7,1.07-2.69,1.07-1.93,0-3.58-1.35-3.58-3.4,0-1.51,1.04-3.44,3.62-3.44,2.41,0,3.56,1.89,3.56,3.39,0,.78-.34,1.76-.92,2.38h0Z"/><polygon class="cls-1" points="109.59 39.6 103.37 32.6 102.31 32.6 102.31 41.63 103.55 41.63 103.55 34.68 109.72 41.63 110.84 41.63 110.84 32.6 109.59 32.6 109.59 39.6"/><path class="cls-1" d="m14.22,11.35c.3,0,.55-.24.55-.55s-.24-.55-.55-.55-.55.24-.55.55.24.55.55.55Z"/><path class="cls-1" d="m12.26,14.69c.1,0,.18-.06.21-.15l.98-2.32.07,2.25-.37,2.86c0,.11.05.22.16.26.03,0,.06.02.09.02.12,0,.22-.09.23-.2l.35-2.72h.48l.35,2.72c.02.12.12.2.23.2.03,0,.06,0,.09-.02.11-.04.17-.16.16-.26l-.37-2.86.07-2.25.98,2.32h0s0,.03.02.04h0s0,.03.02.03h0l.03.03h0s.02.02.04.02h0s.02,0,.03,0h.24l-.32,1.61c-.02.12,0,.23.08.32.05.06.11.1.17.12v.68c0,.11.09.19.19.19s.19-.09.19-.19v-.66h.3v.66c0,.11.09.19.19.19s.19-.09.19-.19v-.68c.07-.02.13-.07.17-.12.08-.09.11-.2.08-.32l-.32-1.6h.24s.02,0,.03,0h0s.03-.02.04-.02h0s.02-.02.03-.03h0s0-.02.02-.03h0s0-.03.02-.05h0l1.02-2.4.2.98c.03.16.03.33-.02.49l-.93,4.01h2.89l-.93-4.01c-.04-.16-.05-.32,0-.49l.2-.98.79,1.93c.04.09.13.15.22.15.03,0,.06,0,.09-.02.12-.05.17-.18.13-.31l-.88-2.17c-.04-.09-.13-.15-.22-.15h-1.65c-.1,0-.18.06-.21.15l-1.06,2.49h-1.04l-1.06-2.49c-.04-.09-.13-.15-.21-.15h-1.69c-.1,0-.18.06-.21.15l-1.12,2.62c-.05.11,0,.24.09.3.04.03.09.04.13.04h.08Z"/><path class="cls-1" d="m19.48,11.35c.3,0,.55-.24.55-.55s-.24-.55-.55-.55-.55.24-.55.55.24.55.55.55Z"/><path class="cls-1" d="m16.86,14.1c.22,0,.42-.18.42-.42s-.18-.42-.42-.42-.42.18-.42.42.18.42.42.42Z"/><path class="cls-1" d="m33.44,13.11c0-4.3-1.97-9.12-5.19-12.7h-2.86c.75.69,1.79,1.89,1.79,1.89,2.76,3.09,4.37,7.23,4.37,10.92v.14h-4.58C26.27,6.13,20.51.41,13.52.41,6.05.41,0,6.84,0,14.76c0,4.3,1.97,9.12,5.19,12.7h2.86c-.75-.69-1.8-1.89-1.8-1.89-2.76-3.09-4.37-7.23-4.37-10.92v-.14h4.58c.7,7.23,6.46,12.95,13.45,12.95,7.47,0,13.52-6.43,13.52-14.35h0Zm-13.23,12.46v-3.39c1.92.09,3.66.86,4.93,2.08-1.49.8-3.17,1.26-4.93,1.31Zm0-4.1v-2.11h6.34c-.91,1.21-2.13,2.18-3.41,2.75-.9-.38-1.89-.6-2.93-.64Zm5.58,2.41c-.52-.51-1.12-.96-1.77-1.33,1.31-.71,2.52-1.83,3.43-3.19h2.55c-1.01,1.86-2.47,3.43-4.21,4.52Zm5.72-9.67c-.12,1.53-.5,2.99-1.09,4.32h-2.47c.64-1.2,1.03-2.56,1.03-3.96v-.36h2.52Zm-6.44-.84h-2.35v-.06c0-1.4-.39-2.75-1.03-3.96h2.32c.55,1.24.92,2.59,1.06,4.02Zm-1.48-4.87h-2.41c-.9-1.35-2.12-2.47-3.43-3.19.63-.35,1.2-.78,1.71-1.27,1.71,1.09,3.13,2.62,4.12,4.46h0ZM14.08,2.3c1.71.09,3.32.56,4.76,1.35-1.24,1.16-2.91,1.9-4.76,2.02,0,0,0-3.37,0-3.37Zm0,4.08c.99-.06,1.94-.28,2.82-.64,1.28.56,2.5,1.53,3.41,2.75h-6.22v-2.12h0Zm-.84-4.08v3.39c-1.92-.09-3.66-.86-4.93-2.08,1.49-.8,3.17-1.26,4.93-1.31Zm0,4.1v2.11h-6.34c.92-1.21,2.13-2.18,3.41-2.75.9.38,1.89.6,2.93.64Zm-5.58-2.41c.52.51,1.12.96,1.77,1.33-1.31.71-2.52,1.83-3.43,3.19h-2.55c1.01-1.86,2.47-3.43,4.21-4.52ZM1.93,13.65c.12-1.53.5-2.99,1.09-4.32h2.47c-.64,1.2-1.03,2.56-1.03,3.96v.36H1.93Zm3.27,0v-.36c0-1.41.43-2.77,1.14-3.96h14.54c.7,1.18,1.14,2.54,1.14,3.96v.06h0v.84h6.26v.36c0,1.41-.43,2.77-1.14,3.96h-14.54c-.7-1.18-1.13-2.54-1.13-3.96v-.06h0v-.84h-6.27Zm3.17.84h2.34v.06c0,1.4.39,2.75,1.03,3.96h-2.31c-.55-1.24-.92-2.59-1.06-4.02Zm1.48,4.86h2.41c.9,1.35,2.12,2.47,3.43,3.19-.63.35-1.2.78-1.71,1.27-1.71-1.09-3.13-2.62-4.12-4.46h0Zm9.53,6.2c-1.71-.09-3.32-.56-4.76-1.35,1.24-1.16,2.91-1.9,4.76-2.02,0,0,0,3.37,0,3.37Zm0-4.08c-.99.06-1.94.28-2.82.64-1.28-.56-2.49-1.53-3.41-2.75h6.22v2.12h0Z"/><path class="cls-1" d="m140.25,13.39h-3.77v9.93h3.79c3.15,0,5.34-2.01,5.34-5.08,0-2.8-2.04-4.86-5.36-4.86h0Zm-.06,8.65h-2.28v-7.38h2.09c2.82,0,4.15,1.49,4.15,3.63,0,2.36-1.44,3.76-3.94,3.76h0Z"/><rect class="cls-1" x="147.45" y="13.39" width="1.43" height="9.93"/><path class="cls-1" d="m152.88,18.61c1.96,1.15,2.16,1.6,2.16,2.27,0,.77-.63,1.31-1.46,1.31-1.03,0-1.98-.53-2.68-1.46v1.81c.79.58,1.7.91,2.68.91,1.73,0,2.88-1.14,2.88-2.59,0-1.35-.45-2.05-2.54-3.26-1.51-.87-1.63-1.36-1.63-1.9,0-.69.55-1.16,1.46-1.16s1.66.38,2.33,1.04v-1.62c-.69-.45-1.48-.7-2.28-.7-1.7,0-2.92,1.06-2.92,2.48,0,1.22.55,2.01,2.02,2.87h0Z"/><path class="cls-1" d="m158.3,13.39v9.93h1.43v-4.31h1.37c2.15,0,3.47-.86,3.47-2.82,0-1.75-1.21-2.81-3.23-2.81h-3.03Zm4.79,2.79c0,.94-.39,1.58-2.05,1.58h-1.31v-3.12h1.31c1.58,0,2.05.6,2.05,1.53Z"/><polygon class="cls-1" points="171.86 22.02 167.39 22.02 167.39 13.39 165.94 13.39 165.94 23.33 171.86 23.33 171.86 22.02"/><path class="cls-1" d="m179.5,20.39l1.32,2.92h1.46l-4.44-9.99h-1l-4.27,9.99h1.46l1.25-2.92h4.22Zm-2.17-5.13l1.62,3.85h-3.14s1.51-3.85,1.51-3.85Z"/><path class="cls-1" d="m182.44,18.37c0,2.33,1.69,5.08,5.34,5.08,1.25,0,2.45-.24,3.61-.87v-1.56c-1.08.72-2.26,1.11-3.55,1.11-2.48,0-3.91-1.8-3.91-3.75s1.5-3.81,3.93-3.81c1.21,0,2.37.4,3.44.99v-1.5c-1.19-.54-2.38-.82-3.48-.82-2.95,0-5.38,2.19-5.38,5.11v.02Z"/><polygon class="cls-1" points="198.92 14.65 198.92 13.39 193.29 13.39 193.29 23.33 199.06 23.33 199.06 22.04 194.72 22.04 194.72 18.96 198.78 18.96 198.78 17.68 194.72 17.68 194.72 14.65 198.92 14.65"/><polygon class="cls-1" points="205.53 17.47 202.22 13.39 200.88 13.39 200.88 23.33 202.31 23.33 202.31 15.59 205.4 19.43 205.66 19.43 208.72 15.59 208.72 23.33 210.15 23.33 210.15 13.39 208.83 13.39 205.53 17.47"/><polygon class="cls-1" points="218.27 22.04 213.92 22.04 213.92 18.96 217.98 18.96 217.98 17.68 213.92 17.68 213.92 14.65 218.13 14.65 218.13 13.39 212.5 13.39 212.5 23.33 218.27 23.33 218.27 22.04"/><polygon class="cls-1" points="227.93 21.09 221.27 13.39 220.09 13.39 220.09 23.33 221.46 23.33 221.46 15.67 228.05 23.33 229.3 23.33 229.3 13.39 227.93 13.39 227.93 21.09"/><polygon class="cls-1" points="234.02 23.33 235.44 23.33 235.44 14.64 238.91 14.64 238.91 13.39 230.61 13.39 230.61 14.64 234.02 14.64 234.02 23.33"/><polygon class="cls-1" points="135.62 30.18 139.03 30.18 139.03 38.86 140.46 38.86 140.46 30.18 143.93 30.18 143.93 28.93 135.62 28.93 135.62 30.18"/><path class="cls-1" d="m149.33,34.14c1.09-.44,1.66-1.29,1.66-2.45,0-1.46-1.03-2.77-3.01-2.77h-2.74v9.93h1.43v-4.33h.64c.7,0,1.32.31,2.33,1.88l1.57,2.45h1.69l-1.75-2.65c-.96-1.46-1.23-1.69-1.83-2.07h0Zm-1.75-.86h-.92v-3.1h1.21c1.08,0,1.66.55,1.66,1.51,0,1.33-.91,1.58-1.95,1.58h0Z"/><path class="cls-1" d="m157.8,28.87l-4.27,9.99h1.46l1.25-2.92h4.22l1.33,2.92h1.46l-4.44-9.99h-1.01Zm-1.02,5.79l1.51-3.85,1.62,3.85h-3.14Z"/><path class="cls-1" d="m164.9,33.92c0-1.95,1.5-3.81,3.93-3.81,1.2,0,2.37.4,3.44.99v-1.5c-1.19-.54-2.37-.82-3.48-.82-2.95,0-5.38,2.19-5.38,5.11,0,2.33,1.69,5.08,5.34,5.08,1.25,0,2.45-.24,3.61-.87v-1.56c-1.08.72-2.25,1.11-3.55,1.11-2.48,0-3.91-1.8-3.91-3.75v.02Z"/><polygon class="cls-1" points="181.66 28.93 179.89 28.93 175.7 33.47 175.7 28.93 174.26 28.93 174.26 38.86 175.7 38.86 175.7 33.95 180.77 38.86 182.72 38.86 177.35 33.63 181.66 28.93"/><rect class="cls-1" x="183.91" y="28.93" width="1.43" height="9.93"/><polygon class="cls-1" points="195.48 36.63 188.83 28.93 187.65 28.93 187.65 38.86 189.02 38.86 189.02 31.21 195.62 38.86 196.85 38.86 196.85 28.93 195.48 28.93 195.48 36.63"/><path class="cls-1" d="m204.43,35.23h1.9v2.07c-1.09.35-1.49.44-2.24.44-2.28,0-3.91-1.64-3.91-3.85s1.72-3.83,3.86-3.83c1.13,0,2.39.37,3.53,1.03v-1.46c-1.47-.64-2.36-.84-3.5-.84-3.24,0-5.38,2.4-5.38,5.19,0,2.34,1.66,5.01,5.43,5.01,1.24,0,2.41-.24,3.64-.82v-4.2h-3.33v1.25h0Z"/><polygon class="cls-1" points="218.54 33.01 215.23 28.93 213.89 28.93 213.89 38.86 215.31 38.86 215.31 31.12 218.4 34.97 218.66 34.97 221.72 31.12 221.72 38.86 223.15 38.86 223.15 28.93 221.82 28.93 218.54 33.01"/><path class="cls-1" d="m228.61,28.87l-4.26,9.99h1.46l1.25-2.92h4.22l1.33,2.92h1.46l-4.45-9.99h-1.01Zm-1.02,5.79l1.51-3.85,1.61,3.85h-3.13Z"/><polygon class="cls-1" points="233.09 30.18 236.5 30.18 236.5 38.86 237.93 38.86 237.93 30.18 241.4 30.18 241.4 28.93 233.09 28.93 233.09 30.18"/><path class="cls-1" d="m246.8,34.14c1.09-.44,1.66-1.29,1.66-2.45,0-1.46-1.04-2.77-3.01-2.77h-2.74v9.93h1.43v-4.33h.64c.7,0,1.33.31,2.33,1.88l1.57,2.45h1.69l-1.75-2.65c-.96-1.46-1.24-1.69-1.83-2.07h0Zm-1.75-.86h-.92v-3.1h1.21c1.08,0,1.66.55,1.66,1.51,0,1.33-.92,1.58-1.95,1.58h0Z"/><rect class="cls-1" x="251.54" y="28.93" width="1.43" height="9.93"/><path class="cls-1" d="m260.16,33.72l3.96-4.79h-1.72l-3.1,3.79-3.12-3.79h-1.74l3.97,4.79-4.28,5.14h1.73c1.51-1.81,2.65-3.18,3.43-4.11l3.38,4.11h1.72l-4.24-5.14h0Z"/><path class="cls-1" d="m138.87,7.85c.66,0,1.28-.14,1.94-.44v-2.23h-1.78v.67h1.02v1.11c-.58.18-.8.23-1.19.23-1.22,0-2.09-.87-2.09-2.05s.91-2.04,2.06-2.04c.6,0,1.27.19,1.88.55v-.78c-.79-.34-1.26-.45-1.86-.45-1.73,0-2.86,1.28-2.86,2.77,0,1.25.88,2.67,2.89,2.67v-.02Z"/><polygon class="cls-1" points="145.28 7.09 142.9 7.09 142.9 2.49 142.13 2.49 142.13 7.78 145.28 7.78 145.28 7.09"/><path class="cls-1" d="m148.41,7.85c1.85,0,2.89-1.31,2.89-2.73,0-1.51-1.18-2.71-2.86-2.71-1.85,0-2.84,1.35-2.84,2.73,0,1.46,1.12,2.7,2.8,2.7h0Zm.06-4.71c1.36,0,2.05,1.09,2.05,1.99,0,1.35-.97,2.02-2.1,2.02s-2.03-.82-2.03-1.99.76-2.02,2.07-2.02h0Z"/><path class="cls-1" d="m156.06,6.33c0-.66-.49-1.21-1.26-1.36.52-.21.81-.59.81-1.12,0-.8-.56-1.38-1.64-1.38h-1.53v5.29h1.69c.94,0,1.93-.39,1.93-1.45h0Zm-2.87-3.18h.65c.69,0,.98.23.98.77,0,.44-.29.84-1.1.84h-.53v-1.61h0Zm0,3.96v-1.69h.77c.96,0,1.32.33,1.32.84,0,.58-.41.84-1.29.84h-.8,0Z"/><path class="cls-1" d="m157.84,6.22h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78l.67-1.56h0Zm1.1-2.73l.86,2.05h-1.67l.81-2.05Z"/><polygon class="cls-1" points="165.5 7.09 163.12 7.09 163.12 2.49 162.35 2.49 162.35 7.78 165.5 7.78 165.5 7.09"/><path class="cls-1" d="m170.33,2.49h-2.01v5.29h2.02c1.68,0,2.85-1.07,2.85-2.71,0-1.5-1.09-2.58-2.86-2.58h0Zm-.03,4.61h-1.22v-3.93h1.11c1.5,0,2.21.8,2.21,1.93,0,1.26-.77,2-2.11,2h0Z"/><path class="cls-1" d="m174.92,6.22h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78l.67-1.56h0Zm1.1-2.73l.86,2.05h-1.67l.81-2.05Z"/><polygon class="cls-1" points="180.14 7.78 180.9 7.78 180.9 3.16 182.75 3.16 182.75 2.49 178.32 2.49 178.32 3.16 180.14 3.16 180.14 7.78"/><path class="cls-1" d="m183.19,7.78l.67-1.56h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78,0Zm1.76-4.29l.86,2.05h-1.67l.81-2.05Z"/><rect class="cls-1" x="190.34" y="2.49" width=".76" height="5.29"/><polygon class="cls-1" points="193.2 3.7 196.72 7.78 197.38 7.78 197.38 2.49 196.65 2.49 196.65 6.59 193.09 2.49 192.46 2.49 192.46 7.78 193.2 7.78 193.2 3.7"/><path class="cls-1" d="m199.65,5.26c1.05.61,1.15.85,1.15,1.21,0,.41-.33.7-.78.7-.55,0-1.06-.29-1.43-.78v.96c.42.31.91.49,1.43.49.92,0,1.53-.6,1.53-1.38,0-.72-.24-1.1-1.36-1.74-.81-.47-.87-.72-.87-1.02,0-.37.29-.61.78-.61s.88.2,1.24.55v-.86c-.37-.24-.79-.37-1.21-.37-.91,0-1.56.56-1.56,1.32,0,.65.29,1.07,1.08,1.53h0Z"/><polygon class="cls-1" points="203.98 7.78 204.74 7.78 204.74 3.16 206.59 3.16 206.59 2.49 202.16 2.49 202.16 3.16 203.98 3.16 203.98 7.78"/><rect class="cls-1" x="207.43" y="2.49" width=".76" height="5.29"/><polygon class="cls-1" points="213.44 2.49 209.01 2.49 209.01 3.16 210.83 3.16 210.83 7.78 211.59 7.78 211.59 3.16 213.44 3.16 213.44 2.49"/><path class="cls-1" d="m216.53,7.85c1.53,0,2.26-.86,2.26-2.31v-3.06h-.76v3.06c0,1.16-.5,1.63-1.51,1.63s-1.52-.45-1.52-1.62v-3.07h-.76v3.07c0,1.56.82,2.3,2.28,2.3Z"/><polygon class="cls-1" points="221.41 7.78 222.17 7.78 222.17 3.16 224.02 3.16 224.02 2.49 219.6 2.49 219.6 3.16 221.41 3.16 221.41 7.78"/><polygon class="cls-1" points="227.94 7.1 225.62 7.1 225.62 5.45 227.78 5.45 227.78 4.78 225.62 4.78 225.62 3.16 227.86 3.16 227.86 2.49 224.86 2.49 224.86 7.78 227.94 7.78 227.94 7.1"/></svg><span>Nigeria</span></a>
   <h1>DTM Nigeria Publications Tracker</h1>
   <div class="headright">
     <div class="upd" id="dataStatus">Loading data…</div>
@@ -414,11 +463,15 @@ footer{padding-left:246px}
     <nav class="railnav" aria-label="Pages">
       <button type="button" data-nav="home">Home &amp; guide</button>
       <button type="button" data-nav="overview">Overview</button>
+      <button type="button" data-nav="map">Map</button>
       <button type="button" data-nav="types">Report types</button>
       <button type="button" data-nav="calendar">Publication calendar</button>
       <button type="button" data-nav="charts">Charts</button>
       <button type="button" data-nav="list">Report list</button>
     </nav>
+    <div class="railfilter"><label for="presetSel">Quick period</label>
+      <select id="presetSel"><option value="">Choose…</option><option value="all">2014–2030</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select></div>
+    <a class="hublink" href="https://dtm-nigeria-data-hub.netlify.app/#home" target="_blank" rel="noopener">DTM Nigeria Data Hub <span aria-hidden="true">↗</span><small>Figures by round, state and LGA</small></a>
     <div class="srcbadges">
       <a class="sb dtm" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="DTM Nigeria on dtm.iom.int">DTM</a>
     </div>
@@ -429,7 +482,6 @@ footer{padding-left:246px}
     <section class="slicerbar" aria-label="Filters">
       <div class="sl"><label>From</label><div class="two"><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select></div></div>
       <div class="sl"><label>To</label><div class="two"><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select></div></div>
-      <div class="sl"><label for="presetSel">Quick period</label><select id="presetSel"><option value="">Choose…</option><option value="all">2014–2030</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select></div>
       <div class="sl"><label>Months</label><div class="dd" id="ddMonths"></div></div>
       <div class="sl wide"><label>Report types</label><div class="dd" id="ddTypes"></div></div>
       <div class="sl"><label>Region</label><div class="dd" id="ddRegions"></div></div>
@@ -487,12 +539,39 @@ footer{padding-left:246px}
       </div>
     </section>
 
+    <section class="panel" id="sec-map" data-page="map">
+      <h2>Map – numbers by state</h2>
+      <p class="hint">Mobility Tracking figures come from the latest rounds you choose (North East states from the North East round, all other states from the North Central &amp; North West round). Incident / flash figures add up what each flash report states, for the period, region and states selected in the slicer bar. Hover or click a state to see all its numbers.</p>
+      <div class="mapctl">
+        <label>Show<select id="mapMeasure"><option value="idp">IDPs</option><option value="ret">Returnees</option><option value="aff">Affected by incidents (flash reports)</option><option value="dis">Displaced by incidents (flash reports)</option></select></label>
+        <label>Count<select id="mapUnit"><option value="ind">Individuals</option><option value="hh">Households</option></select></label>
+        <label>North East round<select id="mapNE"></select></label>
+        <label>NC &amp; NW round<select id="mapNW"></select></label>
+        <button class="tbtn" id="mapCsv" type="button">Download CSV</button>
+      </div>
+      <div class="mapwrap"><div id="mapSvg"></div><aside class="mapinfo" id="mapInfo"><b>Hover or click a state</b><p>Its IDPs, returnees and incident figures appear here.</p></aside></div>
+      <div class="maplegend" id="mapLegend"></div>
+      <p class="hint" id="mapNote"></p>
+      <div class="tablewrap"><table class="list" id="mapTable"></table></div>
+    </section>
+
     <section class="deck" aria-label="Quick buttons" data-page="types">
       <div class="deckrow"><div class="decklabel">Report types<span class="quick"><button type="button" data-all="comp">All</button><button type="button" data-none="comp">None</button></span></div><div class="pills" id="typeBar"></div></div>
       <div class="deckrow"><div class="decklabel">Regions<span class="quick"><button type="button" data-all="region">All</button></span></div><div class="pills" id="regionBar"></div></div>
       <div class="deckrow"><div class="decklabel">States<span class="quick"><button type="button" data-all="state">All</button><button type="button" data-none="state">None</button></span></div><div class="pills" id="stateBar"></div></div>
     </section>
     <section class="kpis" id="sec-overview" aria-label="Key numbers" data-page="overview"></section>
+    <section class="panel chart" id="refPanel" data-page="overview">
+      <h2 id="rtTitle">Displacement trend by round</h2>
+      <div class="regbtns" id="regBtns" role="group" aria-label="Region">
+        <button type="button" data-reg="ALL">All regions</button><button type="button" data-reg="NE">North East</button><button type="button" data-reg="NCNW">North Central &amp; North West</button><button type="button" data-reg="SOUTH">Southern states</button>
+      </div>
+      <div class="unitsw" id="rtUnit" role="group" aria-label="Unit"><button type="button" data-unit="ind" aria-pressed="true">Individuals</button><button type="button" data-unit="hh" aria-pressed="false">Households</button></div>
+      <p class="hint" id="rtHint"></p>
+      <div id="refChart"></div>
+      <div class="chartlegend" id="rtLegend"></div>
+      <div class="rtsum" id="rtSum"></div>
+    </section>
 
     <div class="trendrow" data-page="overview">
       <section class="panel chart">
@@ -528,12 +607,7 @@ footer{padding-left:246px}
       <div class="scalelegend">Fewer reports <span class="bar"></span> More reports</div>
     </section>
 
-    <section class="panel chart" id="refPanel" data-page="overview" hidden>
-      <h2>North-East IDPs and returnees, Rounds 1–52</h2>
-      <p class="hint">From the DTM North-East Mobility Tracking dataset. These figures do not change with the filters. Hover a point for its round.</p>
-      <div id="refChart"></div>
-      <div class="chartlegend"><span><i style="background:#0E4D6E"></i>IDPs (individuals)</span><span><i style="background:#5BA3C7"></i>Returnees (individuals)</span></div>
-    </section>
+
 
     <section class="panel chart" id="sec-charts" data-page="charts">
       <h2>Reports per year</h2>
@@ -848,19 +922,22 @@ document.querySelectorAll("[data-all]").forEach(b=>b.onclick=()=>{const t=b.data
   if(t==="state"){F.states=new Set(ALL_STATES);F.stateFilterOn=false}syncFilterInputs();render()});
 document.querySelectorAll("[data-none]").forEach(b=>b.onclick=()=>{const t=b.dataset.none;
   if(t==="state"){F.states=new Set();F.stateFilterOn=true}syncFilterInputs();render()});
-const PAGES=["overview","types","calendar","charts","list"];
+const PAGES=["overview","map","types","calendar","charts","list"];
 let CURPAGE="overview";
 function setView(v){document.body.dataset.view=v;markNav();window.scrollTo(0,0)}
 function setPage(p){
   CURPAGE=PAGES.includes(p)?p:"overview";
   document.querySelectorAll("main [data-page]").forEach(el=>{el.hidden=!el.dataset.page.split(" ").includes(CURPAGE)});
-  if(CURPAGE==="overview")$("#refPanel").hidden=!(REF&&REF.rounds);
+  if(CURPAGE==="overview")loadRef().then(renderRef);
+  if(CURPAGE==="map")Promise.all([loadRef(),loadGeo(),loadFacts()]).then(renderMap);
   setView("dash");
   try{history.replaceState(null,"","#"+CURPAGE)}catch(e){}
 }
 function markNav(){const v=document.body.dataset.view;
   document.querySelectorAll(".railnav [data-nav]").forEach(x=>x.setAttribute("aria-current",(v==="home"?x.dataset.nav==="home":x.dataset.nav===CURPAGE)?"page":"false"))}
 document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setPage("overview"));
+window.addEventListener("hashchange",()=>{const h=(location.hash||"").slice(1).replace(/^sec-/,"");
+  if(h==="home"){setView("home");return}if(PAGES.includes(h)&&(h!==CURPAGE||document.body.dataset.view!=="dash"))setPage(h)});
 document.querySelectorAll(".railnav [data-nav]").forEach(b=>b.onclick=()=>{
   if(b.dataset.nav==="home"){setView("home");try{history.replaceState(null,"","#home")}catch(e){};return}
   setPage(b.dataset.nav)});
@@ -1037,21 +1114,127 @@ function renderCalendar(){
 }
 /* ---- timeline: every report as a dot at its publication date */
 let ANIMATE=true;
-/* ---- reference chart: NE IDPs and returnees by round */
+/* ---- displacement trend by round, per region (Overview) */
+const RT={unit:"ind"};
+function regFromFilters(){if(F.regions.size===REGIONS.length)return"ALL";const k=[...F.regions];return k.length===1&&["NE","NCNW","SOUTH"].includes(k[0])?k[0]:"ALL"}
+const tOf=d=>{const[y,m]=String(d).split("-").map(Number);return y*12+(m||1)-1};
+const monTxt=d=>new Date(String(d).slice(0,7)+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"short",year:"numeric",timeZone:"UTC"});
 function renderRef(){
-  if(!REF||!REF.rounds){$("#refPanel").hidden=true;return}
-  const R=Object.values(REF.rounds).sort((a,b)=>a.round-b.round);$("#refPanel").hidden=CURPAGE!=="overview";
-  const W=900,H=320,L=64,Rm=14,T=18,B=34,max=Math.ceil(Math.max(...R.map(r=>Math.max(r.idp_ind,r.ret_ind||0)))/5e5)*5e5,steps=max/5e5;
-  const X=i=>L+(W-L-Rm)*i/(R.length-1),Y=v=>H-B-(H-T-B)*v/max;
-  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="North-East IDPs and returnees by round">`;
-  for(let i=0;i<=steps;i++){const v=5e5*i;s+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${(v/1e6).toFixed(1)}M</text>`}
-  [["idp_ind","#0E4D6E","IDPs"],["ret_ind","#5BA3C7","returnees"]].forEach(([k,c,lab])=>{
-    const pts=R.map((r,i)=>r[k]?[X(i),Y(r[k]),r]:null).filter(Boolean);
-    s+=`<path d="${pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join("")}" fill="none" stroke="${c}" stroke-width="2.4"/>`;
-    pts.forEach(([x,y,r])=>s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" fill="#fff" stroke="${c}" stroke-width="1.8" data-tip="Round ${r.round} (${r.date.slice(0,7)}): ${fmt(r[k])} ${lab}${r.notes.length?" · data note":""}"/>`)});
-  R.forEach((r,i)=>{if(r.round===1||r.round%5===0||r.round===R.length)s+=`<text x="${X(i)}" y="${H-B+16}" text-anchor="middle" font-size="11" fill="var(--muted)">R${r.round}</text>`});
-  $("#refChart").innerHTML=s+"</svg>";bindTips($("#refChart"));
+  const R1=REF&&REF.rounds?Object.values(REF.rounds).sort((a,b)=>a.round-b.round):[];
+  const R2=REF2&&REF2.rounds?Object.values(REF2.rounds).sort((a,b)=>a.round-b.round):[];
+  if(!R1.length&&!R2.length){$("#refPanel").hidden=true;return}
+  $("#refPanel").hidden=CURPAGE!=="overview";
+  const reg=regFromFilters(), hh=RT.unit==="hh", ki=hh?"idp_hh":"idp_ind", kr=hh?"ret_hh":"ret_ind", U=hh?"households":"individuals";
+  document.querySelectorAll("#regBtns [data-reg]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.reg===reg));
+  document.querySelectorAll("#rtUnit [data-unit]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.unit===RT.unit));
+  const title={ALL:"Displacement trend by round – all regions",NE:"Displacement trend – North East, Round 1 to Round "+R1.length,NCNW:"Displacement trend – North Central & North West, Round 1 to Round "+R2.length,SOUTH:"Southern states"}[reg];
+  $("#rtTitle").textContent=title;
+  if(reg==="SOUTH"){$("#refChart").innerHTML=`<p class="empty">DTM does not run Mobility Tracking rounds in the southern states. Reports there are flood assessments; pick <em>Joint Flood Reports</em> or <em>Post-Flood Situation Report</em> in Report types to see them.</p>`;
+    $("#rtLegend").innerHTML="";$("#rtSum").innerHTML="";$("#rtHint").textContent="";return}
+  const S=[];
+  if(reg!=="NCNW"){S.push({n:"North East IDPs",c:"#0E4D6E",reg:"NE",k:ki,lab:"IDPs",pts:R1.filter(r=>r[ki])});S.push({n:"North East returnees",c:"#5BA3C7",reg:"NE",k:kr,lab:"returnees",pts:R1.filter(r=>r[kr])})}
+  if(reg!=="NE"){S.push({n:"NC & NW IDPs",c:"#C98A0B",reg:"NCNW",k:ki,lab:"IDPs",pts:R2.filter(r=>r[ki])});S.push({n:"NC & NW returnees",c:"#E9B949",dash:1,reg:"NCNW",k:kr,lab:"returnees",pts:R2.filter(r=>r[kr])})}
+  const byTime=reg==="ALL";
+  const xs=S.flatMap(x=>x.pts.map(r=>byTime?tOf(r.date):r.round));
+  const x0=Math.min(...xs),x1=Math.max(...xs),max=Math.ceil(Math.max(...S.flatMap(x=>x.pts.map(r=>r[x.k])))/(hh?1e5:5e5))*(hh?1e5:5e5);
+  const W=900,H=330,L=64,Rm=16,T=16,B=36,X=v=>L+(W-L-Rm)*(v-x0)/Math.max(1,x1-x0),Y=v=>H-B-(H-T-B)*v/max,step=hh?1e5:5e5;
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">`;
+  for(let v=0;v<=max;v+=step)g+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${hh?(v/1e3).toFixed(0)+"k":(v/1e6).toFixed(1)+"M"}</text>`;
+  if(byTime){for(let y=Math.ceil(x0/12);y*12<=x1;y++)g+=`<text x="${X(y*12)}" y="${H-B+16}" text-anchor="middle" font-size="11" fill="var(--muted)">${y}</text>`}
+  else{const n=x1;for(let r=1;r<=n;r++)if(r===1||r===n||r%(n>30?5:2)===0)g+=`<text x="${X(r)}" y="${H-B+16}" text-anchor="middle" font-size="11" fill="var(--muted)">R${r}</text>`}
+  S.forEach(sr=>{if(!sr.pts.length)return;const P=sr.pts.map(r=>[X(byTime?tOf(r.date):r.round),Y(r[sr.k]),r]);
+    g+=`<path d="${P.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join("")}" fill="none" stroke="${sr.c}" stroke-width="2.6"${sr.dash?' stroke-dasharray="6 4"':""}/>`;
+    P.forEach(([x,y,r],i)=>{const prev=i?sr.pts[i-1][sr.k]:null,ch=prev?((r[sr.k]-prev)/prev*100):null;
+      g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" fill="#fff" stroke="${sr.c}" stroke-width="1.8" data-tip="${esc((sr.reg==="NE"?"North East":"NC & NW")+" Round "+r.round+" ("+monTxt(r.date)+"): "+fmt(r[sr.k])+" "+sr.lab+" "+U+(ch!=null?" · "+(ch>=0?"+":"")+ch.toFixed(1)+"% vs previous round":""))}"/>`})});
+  $("#refChart").innerHTML=g+"</svg>";bindTips($("#refChart"));
+  $("#rtLegend").innerHTML=S.filter(x=>x.pts.length).map(x=>`<span><i style="background:${x.c}${x.dash?";opacity:.7":""}"></i>${esc(x.n)} (${U})</span>`).join("");
+  $("#rtHint").textContent=(byTime?"Each point is a round, placed at its assessment month. ":"Each point is a round, from the first to the latest. ")+"Hover a point for its figure and the change from the previous round.";
+  const card=(name,R)=>{if(!R.length)return"";const f=R[0],l=R[R.length-1],peak=R.reduce((a,r)=>r[ki]>a[ki]?r:a,R[0]);const ch=(l[ki]-f[ki])/f[ki]*100;const pr=R[R.length-2];const ch2=pr?(l[ki]-pr[ki])/pr[ki]*100:null;
+    return `<div><b>${name}: ${fmt(l[ki])} IDP ${U}</b>Round ${l.round} (${monTxt(l.date)}). Round 1 (${monTxt(f.date)}): ${fmt(f[ki])}, <span class="${ch>=0?"up":"down"}">${ch>=0?"+":""}${ch.toFixed(0)}%</span> since. ${ch2!=null?`Change from Round ${pr.round}: <span class="${ch2>=0?"up":"down"}">${ch2>=0?"+":""}${ch2.toFixed(1)}%</span>. `:""}Peak: Round ${peak.round} (${fmt(peak[ki])}).${l[kr]?` Returnees: ${fmt(l[kr])} ${U}.`:""}</div>`};
+  $("#rtSum").innerHTML=(reg!=="NCNW"?card("North East",R1):"")+(reg!=="NE"?card("North Central & North West",R2):"")+`<div><b>Source</b>Headline figures published in each round's report (North East R1–R${R1.length}, NC &amp; NW R1–R${R2.length}). See the report list for each round's report.</div>`;
 }
+$("#regBtns").onclick=e=>{const b=e.target.closest("[data-reg]");if(!b)return;const k=b.dataset.reg;
+  F.regions=k==="ALL"?new Set(REGIONS.map(r=>r.key)):new Set([k]);drill=null;syncFilterInputs();render();renderRef()};
+$("#rtUnit").onclick=e=>{const b=e.target.closest("[data-unit]");if(!b)return;RT.unit=b.dataset.unit;renderRef()};
+
+/* ---- map: numbers by state */
+const NE6=new Set(["Adamawa","Bauchi","Borno","Gombe","Taraba","Yobe"]);
+let MAPSEL=null,MAPHOVER=null;
+function figOf(fx,label,subj){if(!fx)return 0;const c=fx.f.filter(f=>f[0]===label&&f[3]===subj).sort((a,b)=>(a[4]==="pdf")-(b[4]==="pdf")||a[2]-b[2]);return c[0]?+c[0][1]:0}
+function mapSelects(){
+  const fill=(sel,R)=>{if(sel.options.length||!R)return;const rs=Object.values(R.rounds).sort((a,b)=>b.round-a.round);sel.innerHTML=rs.map(r=>`<option value="${r.round}">Round ${r.round} (${monTxt(r.date)})</option>`).join("")};
+  fill($("#mapNE"),REF);fill($("#mapNW"),REF2)}
+function mtOf(st){
+  if(NE6.has(st)){const r=REF&&REF.rounds[$("#mapNE").value];const v=r&&r.by_state[st];return v?{...v,src:`North East Round ${r.round} (${monTxt(r.date)})`}:null}
+  const r=REF2&&REF2.rounds[$("#mapNW").value];const v=r&&r.by_state[st];return v?{...v,src:`NC & NW Round ${r.round} (${monTxt(r.date)})`}:null}
+function flashByState(){
+  const out={},multi=[];let nofig=0;
+  REPORTS.forEach(r=>{if(r.component_key!=="flash"||!passes(r,{ignoreComp:true}))return;const fx=factsOf(r);
+    const v={aff_ind:figOf(fx,"individuals","affected"),aff_hh:figOf(fx,"households","affected"),dis_ind:figOf(fx,"individuals","displaced"),dis_hh:figOf(fx,"households","displaced")};
+    const blank=()=>({n:0,nfig:0,aff_ind:0,aff_hh:0,dis_ind:0,dis_hh:0});
+    if(r.states.length===1){const o=out[r.states[0]]||(out[r.states[0]]=blank());o.n++;
+      if(v.aff_ind||v.aff_hh||v.dis_ind||v.dis_hh)o.nfig++;else nofig++;for(const k in v)o[k]+=v[k];return}
+    // a report covering several states (e.g. the weekly NC & NW flash reports): give each figure to the
+    // one state named in the same sentence; sentences naming several states are skipped, repeats counted once
+    multi.push(r);if(!fx)return;
+    const seen=new Set(),got=new Set();
+    fx.f.forEach(([lab,val,si,subj])=>{
+      if(!(lab==="individuals"||lab==="households")||!(subj==="affected"||subj==="displaced"))return;
+      const sent=(fx.s[si]||"").replace(/nigeria/gi,"");
+      const named=new Set(r.states.filter(st=>new RegExp("\\b"+st.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b"+(st==="Niger"?"(?!\\s*(republic|delta))":""),"i").test(sent)));
+      // an LGA named as "… <name> LGA" also places the figure, when that LGA lies in one of the report's states
+      for(const m of sent.matchAll(/([A-Z][A-Za-z'\/-]*(?:[ -][A-Z][A-Za-z'\/-]*){0,2})\s+(?:LGA|Local Government)/g)){
+        const words=m[1].split(/\s+/);for(let k=0;k<words.length;k++){const nm=words.slice(k).join(" ");
+          const sts=(GEO.lgas||{})[nm]||(GEO.lgas||{})[Object.keys(GEO.lgas||{}).find(x=>x.toLowerCase()===nm.toLowerCase())];
+          if(sts){sts.filter(x=>r.states.includes(x)).forEach(x=>named.add(x));break}}}
+      const inS=[...named];
+      if(inS.length!==1)return;const key=inS[0]+lab+subj+val;if(seen.has(key))return;seen.add(key);
+      const o=out[inS[0]]||(out[inS[0]]=blank());o[(subj==="affected"?"aff_":"dis_")+(lab==="individuals"?"ind":"hh")]+=+val;
+      if(!got.has(inS[0])){got.add(inS[0]);o.n++;o.nfig++}});
+    if(got.size)multi.split=(multi.split||0)+1});
+  return{out,multi,nofig}}
+function mapRows(){
+  const fl=flashByState();
+  const rows=Object.keys(GEO.states).sort().map(st=>{const m=mtOf(st),f=fl.out[st]||{n:0,nfig:0,aff_ind:0,aff_hh:0,dis_ind:0,dis_hh:0};
+    return{st,zone:STATE_ZONE[st]||"",idp_hh:m?.idp_hh||0,idp_ind:m?.idp_ind||0,ret_hh:m?.ret_hh||0,ret_ind:m?.ret_ind||0,src:m?.src||"",...f}});
+  return{rows,fl}}
+function mapInfo(st,rows){
+  const r=rows.find(x=>x.st===st);if(!r){$("#mapInfo").innerHTML=`<b>Hover or click a state</b><p>Its IDPs, returnees and incident figures appear here.</p>`;return}
+  const c=v=>v?fmt(v):"–";
+  $("#mapInfo").innerHTML=`<h3>${esc(st)}</h3><div class="sub">${esc(r.zone)}${r.src?" · "+esc(r.src):" · no Mobility Tracking figures"}</div>
+   <table><tr><td></td><td class="sub">Households</td><td class="sub">Individuals</td></tr>
+   <tr><td>IDPs</td><td>${c(r.idp_hh)}</td><td>${c(r.idp_ind)}</td></tr>
+   <tr><td>Returnees</td><td>${c(r.ret_hh)}</td><td>${c(r.ret_ind)}</td></tr>
+   <tr><td>Affected by incidents</td><td>${c(r.aff_hh)}</td><td>${c(r.aff_ind)}</td></tr>
+   <tr><td>Displaced by incidents</td><td>${c(r.dis_hh)}</td><td>${c(r.dis_ind)}</td></tr></table>
+   <p class="sub">Incidents: ${fmt(r.n)} flash report${r.n===1?"":"s"} naming only ${esc(st)} in the selected period${r.n?`, ${fmt(r.nfig)} with figures in the text collected`:""}.</p>`}
+function renderMap(){
+  if(!GEO||!GEO.states){$("#mapSvg").innerHTML=`<p class="empty">The state boundaries could not be loaded.</p>`;return}
+  mapSelects();
+  const meas=$("#mapMeasure").value,unit=$("#mapUnit").value,key=meas+"_"+unit;
+  const {rows,fl}=mapRows(),max=Math.max(1,...rows.map(r=>r[key]));
+  const col=v=>{const t=Math.sqrt(v/max),a=[230,243,250],b=[14,77,110];return`rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t)).join(",")})`};
+  const lab={idp:"IDPs",ret:"returnees",aff:"affected by incidents",dis:"displaced by incidents"}[meas],U=unit==="hh"?"households":"individuals";
+  let g=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="img" aria-label="Map of Nigeria: ${lab} by state"><defs><pattern id="nod" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F3F5F8"/><rect width="3" height="6" fill="#E3E8EF"/></pattern></defs>`;
+  rows.forEach(r=>{const v=r[key];g+=`<path d="${GEO.states[r.st].d}" data-st="${esc(r.st)}" fill="${v?col(v):"url(#nod)"}" class="${MAPSEL===r.st?"sel":""}" data-tip="${esc(r.st+": "+(v?fmt(v)+" "+lab+" ("+U+")":"no figure")+(r.src&&(meas==="idp"||meas==="ret")?" · "+r.src:""))}"/>`});
+  rows.forEach(r=>{const c=GEO.states[r.st].c;if(c)g+=`<text x="${c[0]}" y="${c[1]}" text-anchor="middle">${esc(r.st)}</text>`});
+  $("#mapSvg").innerHTML=g+"</svg>";bindTips($("#mapSvg"));
+  const svg=$("#mapSvg svg");
+  svg.onmouseover=e=>{const p=e.target.closest("[data-st]");if(p&&!MAPSEL)mapInfo(p.dataset.st,rows)};
+  svg.onclick=e=>{const p=e.target.closest("[data-st]");MAPSEL=p&&MAPSEL!==p.dataset.st?p.dataset.st:null;renderMap()};
+  mapInfo(MAPSEL,rows);
+  $("#mapLegend").innerHTML=`<span>0</span><span class="bar"></span><span>${fmt(max)} ${esc(lab)} (${U})</span><span class="nod"></span><span>no figure</span>`;
+  const inc=meas==="aff"||meas==="dis";
+  $("#mapNote").innerHTML=inc?`${fmt(rows.reduce((a,r)=>a+r.n,0))} flash reports in the selected period name a single state and are counted on the map${fl.nofig?` (${fmt(fl.nofig)} of them state no figure in the text collected)`:""}. ${fmt(fl.multi.length)} flash reports cover several states (such as the weekly North Central &amp; North West flash reports); for ${fmt(fl.multi.split||0)} of them, each figure is placed in the one state named in the same sentence, and sentences naming several states are left out. Households and individuals are each added up from the reports that state them, so the two can cover different reports. Figures are those stated in each report.`
+    :`North East states: ${esc(REF?"Round "+$("#mapNE").value:"")}; other states: ${esc(REF2?"NC & NW Round "+$("#mapNW").value:"")}. State totals add up to the round's published total.`;
+  const hdr=["State","Zone","IDP households","IDPs","Returnee households","Returnees","Affected households (incidents)","Affected individuals (incidents)","Displaced households (incidents)","Displaced individuals (incidents)","Flash reports"];
+  const ks=["idp_hh","idp_ind","ret_hh","ret_ind","aff_hh","aff_ind","dis_hh","dis_ind","n"];
+  const sorted=[...rows].sort((a,b)=>b[key]-a[key]||a.st.localeCompare(b.st));
+  $("#mapTable").innerHTML=`<thead><tr>${hdr.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>`+sorted.map(r=>`<tr><td><b>${esc(r.st)}</b></td><td>${esc(r.zone)}</td>${ks.map(k=>`<td class="num">${r[k]?fmt(r[k]):"–"}</td>`).join("")}</tr>`).join("")+"</tbody>";
+  $("#mapCsv").onclick=()=>saveFile("dtm_nigeria_map_by_state.csv",[hdr.join(","),...sorted.map(r=>[r.st,r.zone,...ks.map(k=>r[k]||"")].map(v=>/[",]/.test(String(v))?`"${String(v).replace(/"/g,'""')}"`:v).join(","))].join("\n"));
+}
+["#mapMeasure","#mapUnit","#mapNE","#mapNW"].forEach(id=>$(id).onchange=renderMap);
+
 /* ---- bar charts */
 function stackedBars(el,keys,labelOf,rows,{W=920,H=300}={}){
   const comps=COMPONENTS.filter(c=>F.comps.has(c.key)), by={};
@@ -1257,12 +1440,14 @@ function parseQuery(t){
   return q;
 }
 /* ======== figures from inside the reports (households, individuals, camps, ...) ======== */
-let REF=window.DTM_REF||null, refLoading=null;
+let REF=window.DTM_REF||null, REF2=window.DTM_REF2||null, GEO=window.DTM_GEO||null, refLoading=null, geoLoading=null;
+const getJSON=u=>location.protocol.startsWith("http")?fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null):Promise.resolve(null);
 function loadRef(){
-  if(REF)return Promise.resolve(REF);
-  if(!refLoading)refLoading=(location.protocol.startsWith("http")?fetch("data/reference.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null):Promise.resolve(null)).then(f=>REF=f);
+  if(REF&&REF2)return Promise.resolve(REF);
+  if(!refLoading)refLoading=Promise.all([REF?REF:getJSON("data/reference.json"),REF2?REF2:getJSON("data/reference_ncnw.json")]).then(([a,b])=>{REF=a;REF2=b;return REF});
   return refLoading;
 }
+function loadGeo(){if(GEO)return Promise.resolve(GEO);if(!geoLoading)geoLoading=getJSON("data/states.json").then(g=>GEO=g);return geoLoading}
 function refBlock(n,s){
   const x=REF&&REF.rounds&&REF.rounds[n];if(!x)return "";
   const st=Object.keys(x.by_state).find(k=>new RegExp("\\b"+k.toLowerCase()+"\\b").test(s));
@@ -1497,6 +1682,7 @@ function sampleData(){
 {const h=(location.hash||"").slice(1).replace(/^sec-/,"");
  if(PAGES.includes(h))setPage(h);else{document.querySelectorAll("main [data-page]").forEach(el=>{el.hidden=!el.dataset.page.split(" ").includes("overview")});document.body.dataset.view="home";markNav()}}
 loadInitial().then(()=>{detectServer();setEngine();checkForUpdates();loadRef().then(renderRef)});
+{const _r=render;render=function(){_r.apply(this,arguments);try{if(CURPAGE==="overview"&&(REF||REF2))renderRef();if(CURPAGE==="map"&&GEO&&FACTS)renderMap()}catch(e){console.error(e)}}}
 if(window.claude){window.claude.use("sample").then(s=>{SAMPLE=s;setEngine()}).catch(()=>{})}
 if("serviceWorker" in navigator && location.protocol.startsWith("http") && !window.claude && /localhost|127\.0\.0\.1|github\.io|\.local|:\d+$/.test(location.host)){
   navigator.serviceWorker.register("sw.js").catch(()=>{});

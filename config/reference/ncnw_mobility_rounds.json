@@ -1,0 +1,1198 @@
+{
+ "source": "DTM Nigeria North Central & North West Mobility Tracking, Rounds 1-19 (DTM Nigeria Data Hub baseline)",
+ "rounds": {
+  "1": {
+   "round": 1,
+   "date": "2019-08",
+   "idp_ind": 309755,
+   "idp_hh": 54939,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 81132,
+     "idp_hh": 12677,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 13486,
+     "idp_hh": 2471,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 12933,
+     "idp_hh": 2508,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 59621,
+     "idp_hh": 7310,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 19748,
+     "idp_hh": 4926,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 14521,
+     "idp_hh": 2885,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 36153,
+     "idp_hh": 6331,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 72161,
+     "idp_hh": 15831,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "2": {
+   "round": 2,
+   "date": "2019-10",
+   "idp_ind": 540049,
+   "idp_hh": 88631,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 160547,
+     "idp_hh": 26594,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 62721,
+     "idp_hh": 11534,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 21526,
+     "idp_hh": 3987,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 68966,
+     "idp_hh": 8261,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 20320,
+     "idp_hh": 4065,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 96460,
+     "idp_hh": 14775,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 43976,
+     "idp_hh": 8073,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 65533,
+     "idp_hh": 11342,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "3": {
+   "round": 3,
+   "date": "2019-12",
+   "idp_ind": 578119,
+   "idp_hh": 94893,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 180258,
+     "idp_hh": 29426,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 71226,
+     "idp_hh": 12743,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 26592,
+     "idp_hh": 4715,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 61418,
+     "idp_hh": 7641,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 20475,
+     "idp_hh": 4097,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 103111,
+     "idp_hh": 16395,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 45876,
+     "idp_hh": 9122,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 69163,
+     "idp_hh": 10754,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "4": {
+   "round": 4,
+   "date": "2020-08",
+   "idp_ind": 575319,
+   "idp_hh": 93267,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 197511,
+     "idp_hh": 32895,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 67192,
+     "idp_hh": 12381,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 25233,
+     "idp_hh": 4378,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 80115,
+     "idp_hh": 10894,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 17593,
+     "idp_hh": 3656,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 80970,
+     "idp_hh": 11620,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 36595,
+     "idp_hh": 7192,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 70110,
+     "idp_hh": 10251,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "5": {
+   "round": 5,
+   "date": "2021-01",
+   "idp_ind": 728688,
+   "idp_hh": 119179,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 204193,
+     "idp_hh": 33916,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 89629,
+     "idp_hh": 17200,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 50676,
+     "idp_hh": 9251,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 121434,
+     "idp_hh": 16781,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 20059,
+     "idp_hh": 4093,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 84979,
+     "idp_hh": 12496,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 45402,
+     "idp_hh": 8983,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 112316,
+     "idp_hh": 16459,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "6": {
+   "round": 6,
+   "date": "2021-05",
+   "idp_ind": 695914,
+   "idp_hh": 111913,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 218021,
+     "idp_hh": 36025,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 76711,
+     "idp_hh": 14310,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 26718,
+     "idp_hh": 4723,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 108968,
+     "idp_hh": 14218,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 19800,
+     "idp_hh": 4070,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 78777,
+     "idp_hh": 11663,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 42241,
+     "idp_hh": 8216,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 124678,
+     "idp_hh": 18688,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "7": {
+   "round": 7,
+   "date": "2021-09",
+   "idp_ind": 833006,
+   "idp_hh": 134980,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 282950,
+     "idp_hh": 47613,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 77472,
+     "idp_hh": 14365,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 25668,
+     "idp_hh": 4523,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 150785,
+     "idp_hh": 19942,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 21527,
+     "idp_hh": 4354,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 75331,
+     "idp_hh": 11240,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 56593,
+     "idp_hh": 11233,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 142680,
+     "idp_hh": 21710,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "8": {
+   "round": 8,
+   "date": "2021-12",
+   "idp_ind": 983701,
+   "idp_hh": 159666,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 357473,
+     "idp_hh": 60567,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 85599,
+     "idp_hh": 15722,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 26082,
+     "idp_hh": 4594,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 175510,
+     "idp_hh": 23064,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 21059,
+     "idp_hh": 4260,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 73891,
+     "idp_hh": 11187,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 71289,
+     "idp_hh": 13846,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 172798,
+     "idp_hh": 26426,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "9": {
+   "round": 9,
+   "date": "2022-03",
+   "idp_ind": 969757,
+   "idp_hh": 157519,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 404622,
+     "idp_hh": 67715,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 81080,
+     "idp_hh": 14862,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 24600,
+     "idp_hh": 4507,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 173856,
+     "idp_hh": 22757,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 20786,
+     "idp_hh": 4183,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 69605,
+     "idp_hh": 10590,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 72106,
+     "idp_hh": 14085,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 123102,
+     "idp_hh": 18820,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "10": {
+   "round": 10,
+   "date": "2022-10",
+   "idp_ind": 1087875,
+   "idp_hh": 180307,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 443314,
+     "idp_hh": 78946,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 92852,
+     "idp_hh": 16653,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 18219,
+     "idp_hh": 3244,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 223473,
+     "idp_hh": 29015,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 19944,
+     "idp_hh": 4022,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 58158,
+     "idp_hh": 9275,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 52850,
+     "idp_hh": 10790,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 179065,
+     "idp_hh": 28362,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "11": {
+   "round": 11,
+   "date": "2023-03",
+   "idp_ind": 1190293,
+   "idp_hh": 191688,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 489245,
+     "idp_hh": 82470,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 108370,
+     "idp_hh": 19068,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 27058,
+     "idp_hh": 5122,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 252268,
+     "idp_hh": 33304,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 33644,
+     "idp_hh": 5944,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 57899,
+     "idp_hh": 9025,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 65393,
+     "idp_hh": 11941,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 156416,
+     "idp_hh": 24814,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "12": {
+   "round": 12,
+   "date": "2023-12",
+   "idp_ind": 1075893,
+   "idp_hh": 179990,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 394567,
+     "idp_hh": 70597,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 117880,
+     "idp_hh": 20484,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 15549,
+     "idp_hh": 2742,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 244380,
+     "idp_hh": 34029,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 20580,
+     "idp_hh": 3984,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 55045,
+     "idp_hh": 9326,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 67936,
+     "idp_hh": 13123,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 159956,
+     "idp_hh": 25705,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "13": {
+   "round": 13,
+   "date": "2024-03",
+   "idp_ind": 1092196,
+   "idp_hh": 183437,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 394567,
+     "idp_hh": 70597,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 119787,
+     "idp_hh": 20766,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 15608,
+     "idp_hh": 2714,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 231937,
+     "idp_hh": 32735,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 20613,
+     "idp_hh": 3989,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 54457,
+     "idp_hh": 9272,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 94729,
+     "idp_hh": 17733,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 160498,
+     "idp_hh": 25631,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "14": {
+   "round": 14,
+   "date": "2024-06",
+   "idp_ind": 1302443,
+   "idp_hh": 219445,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 500182,
+     "idp_hh": 87136,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 117541,
+     "idp_hh": 20388,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 13603,
+     "idp_hh": 2334,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 244839,
+     "idp_hh": 34409,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kogi": {
+     "idp_ind": 10389,
+     "idp_hh": 1944,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 23104,
+     "idp_hh": 4566,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Niger": {
+     "idp_ind": 21393,
+     "idp_hh": 3447,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 62357,
+     "idp_hh": 10885,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 117568,
+     "idp_hh": 24273,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 191467,
+     "idp_hh": 30063,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "15": {
+   "round": 15,
+   "date": "2024-12",
+   "idp_ind": 1192416,
+   "idp_hh": 200974,
+   "ret_ind": null,
+   "ret_hh": null,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 401403,
+     "idp_hh": 73621,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kaduna": {
+     "idp_ind": 113089,
+     "idp_hh": 19637,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kano": {
+     "idp_ind": 12532,
+     "idp_hh": 2213,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Katsina": {
+     "idp_ind": 227203,
+     "idp_hh": 30311,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Kogi": {
+     "idp_ind": 24576,
+     "idp_hh": 3384,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Nasarawa": {
+     "idp_ind": 27150,
+     "idp_hh": 5354,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Niger": {
+     "idp_ind": 42486,
+     "idp_hh": 6644,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Plateau": {
+     "idp_ind": 56690,
+     "idp_hh": 9839,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Sokoto": {
+     "idp_ind": 96232,
+     "idp_hh": 19217,
+     "ret_ind": null,
+     "ret_hh": null
+    },
+    "Zamfara": {
+     "idp_ind": 191055,
+     "idp_hh": 30754,
+     "ret_ind": null,
+     "ret_hh": null
+    }
+   },
+   "notes": []
+  },
+  "16": {
+   "round": 16,
+   "date": "2025-02",
+   "idp_ind": 1322766,
+   "idp_hh": 225458,
+   "ret_ind": 503010,
+   "ret_hh": 87626,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 457666,
+     "idp_hh": 85470,
+     "ret_ind": 138501,
+     "ret_hh": 23411
+    },
+    "Kaduna": {
+     "idp_ind": 117989,
+     "idp_hh": 20504,
+     "ret_ind": 65288,
+     "ret_hh": 11102
+    },
+    "Kano": {
+     "idp_ind": 12555,
+     "idp_hh": 2278,
+     "ret_ind": 12406,
+     "ret_hh": 2222
+    },
+    "Katsina": {
+     "idp_ind": 270968,
+     "idp_hh": 36288,
+     "ret_ind": 39411,
+     "ret_hh": 5084
+    },
+    "Kogi": {
+     "idp_ind": 20793,
+     "idp_hh": 3184,
+     "ret_ind": 106298,
+     "ret_hh": 18506
+    },
+    "Nasarawa": {
+     "idp_ind": 23913,
+     "idp_hh": 4698,
+     "ret_ind": 87538,
+     "ret_hh": 17591
+    },
+    "Niger": {
+     "idp_ind": 47215,
+     "idp_hh": 7576,
+     "ret_ind": 13106,
+     "ret_hh": 2216
+    },
+    "Plateau": {
+     "idp_ind": 55053,
+     "idp_hh": 9669,
+     "ret_ind": 18875,
+     "ret_hh": 3400
+    },
+    "Sokoto": {
+     "idp_ind": 99729,
+     "idp_hh": 19000,
+     "ret_ind": 11912,
+     "ret_hh": 2398
+    },
+    "Zamfara": {
+     "idp_ind": 216885,
+     "idp_hh": 36791,
+     "ret_ind": 9675,
+     "ret_hh": 1696
+    }
+   },
+   "notes": []
+  },
+  "17": {
+   "round": 17,
+   "date": "2025-06",
+   "idp_ind": 1252042,
+   "idp_hh": 216288,
+   "ret_ind": 418726,
+   "ret_hh": 70270,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 480086,
+     "idp_hh": 90340,
+     "ret_ind": 124608,
+     "ret_hh": 20937
+    },
+    "Kaduna": {
+     "idp_ind": 110813,
+     "idp_hh": 19049,
+     "ret_ind": 59051,
+     "ret_hh": 10113
+    },
+    "Kano": {
+     "idp_ind": 10496,
+     "idp_hh": 1770,
+     "ret_ind": 11793,
+     "ret_hh": 2043
+    },
+    "Katsina": {
+     "idp_ind": 235898,
+     "idp_hh": 32556,
+     "ret_ind": 49085,
+     "ret_hh": 6689
+    },
+    "Kogi": {
+     "idp_ind": 5033,
+     "idp_hh": 935,
+     "ret_ind": 107685,
+     "ret_hh": 18558
+    },
+    "Nasarawa": {
+     "idp_ind": 26678,
+     "idp_hh": 5176,
+     "ret_ind": 11221,
+     "ret_hh": 2171
+    },
+    "Niger": {
+     "idp_ind": 41126,
+     "idp_hh": 6480,
+     "ret_ind": 13699,
+     "ret_hh": 2347
+    },
+    "Plateau": {
+     "idp_ind": 48774,
+     "idp_hh": 8454,
+     "ret_ind": 19057,
+     "ret_hh": 3298
+    },
+    "Sokoto": {
+     "idp_ind": 88562,
+     "idp_hh": 16853,
+     "ret_ind": 13076,
+     "ret_hh": 2471
+    },
+    "Zamfara": {
+     "idp_ind": 204576,
+     "idp_hh": 34675,
+     "ret_ind": 9451,
+     "ret_hh": 1643
+    }
+   },
+   "notes": []
+  },
+  "18": {
+   "round": 18,
+   "date": "2025-10",
+   "idp_ind": 1378124,
+   "idp_hh": 244566,
+   "ret_ind": 428969,
+   "ret_hh": 72310,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 464543,
+     "idp_hh": 92816,
+     "ret_ind": 143887,
+     "ret_hh": 24281
+    },
+    "Kaduna": {
+     "idp_ind": 115466,
+     "idp_hh": 19778,
+     "ret_ind": 59485,
+     "ret_hh": 10147
+    },
+    "Kano": {
+     "idp_ind": 11247,
+     "idp_hh": 1927,
+     "ret_ind": 11185,
+     "ret_hh": 1997
+    },
+    "Katsina": {
+     "idp_ind": 206071,
+     "idp_hh": 28915,
+     "ret_ind": 53212,
+     "ret_hh": 7742
+    },
+    "Kogi": {
+     "idp_ind": 2511,
+     "idp_hh": 413,
+     "ret_ind": 108443,
+     "ret_hh": 18665
+    },
+    "Nasarawa": {
+     "idp_ind": 26760,
+     "idp_hh": 5246,
+     "ret_ind": 11206,
+     "ret_hh": 2180
+    },
+    "Niger": {
+     "idp_ind": 45564,
+     "idp_hh": 7391,
+     "ret_ind": 11027,
+     "ret_hh": 1915
+    },
+    "Plateau": {
+     "idp_ind": 45212,
+     "idp_hh": 8130,
+     "ret_ind": 19161,
+     "ret_hh": 3306
+    },
+    "Sokoto": {
+     "idp_ind": 181526,
+     "idp_hh": 32950,
+     "ret_ind": 5677,
+     "ret_hh": 1037
+    },
+    "Zamfara": {
+     "idp_ind": 279224,
+     "idp_hh": 47000,
+     "ret_ind": 5686,
+     "ret_hh": 1040
+    }
+   },
+   "notes": []
+  },
+  "19": {
+   "round": 19,
+   "date": "2026-03",
+   "idp_ind": 1311026,
+   "idp_hh": 233258,
+   "ret_ind": 448822,
+   "ret_hh": 76140,
+   "by_state": {
+    "Benue": {
+     "idp_ind": 452175,
+     "idp_hh": 89443,
+     "ret_ind": 149466,
+     "ret_hh": 25420
+    },
+    "Kaduna": {
+     "idp_ind": 107580,
+     "idp_hh": 18354,
+     "ret_ind": 61157,
+     "ret_hh": 10384
+    },
+    "Kano": {
+     "idp_ind": 10461,
+     "idp_hh": 1824,
+     "ret_ind": 12711,
+     "ret_hh": 2212
+    },
+    "Katsina": {
+     "idp_ind": 180938,
+     "idp_hh": 25902,
+     "ret_ind": 37166,
+     "ret_hh": 5429
+    },
+    "Kogi": {
+     "idp_ind": 3077,
+     "idp_hh": 494,
+     "ret_ind": 108237,
+     "ret_hh": 18604
+    },
+    "Nasarawa": {
+     "idp_ind": 27143,
+     "idp_hh": 5228,
+     "ret_ind": 11415,
+     "ret_hh": 2219
+    },
+    "Niger": {
+     "idp_ind": 47168,
+     "idp_hh": 7624,
+     "ret_ind": 13200,
+     "ret_hh": 2291
+    },
+    "Plateau": {
+     "idp_ind": 44390,
+     "idp_hh": 7964,
+     "ret_ind": 19598,
+     "ret_hh": 3371
+    },
+    "Sokoto": {
+     "idp_ind": 176099,
+     "idp_hh": 32459,
+     "ret_ind": 26637,
+     "ret_hh": 4602
+    },
+    "Zamfara": {
+     "idp_ind": 261995,
+     "idp_hh": 43966,
+     "ret_ind": 9235,
+     "ret_hh": 1608
+    }
+   },
+   "notes": []
+  }
+ }
+}

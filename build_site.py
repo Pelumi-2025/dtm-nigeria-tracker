@@ -28,6 +28,11 @@ def main():
     payload = json.loads((DATA / "reports.json").read_text("utf-8")) if (DATA / "reports.json").exists() else None
     inline = ("<script>window.DTM_DATA = " + json.dumps(payload, ensure_ascii=False).replace("</", "<\\/") + ";</script>"
               if payload else "")
+    for src, dst, var in (("ncnw_mobility_rounds.json", "reference_ncnw.json", "DTM_REF2"), ("nigeria_states_svg.json", "states.json", "DTM_GEO")):
+        f = ROOT / "config" / "reference" / src
+        if f.exists():
+            shutil.copy(f, SITE / "data" / dst)
+            inline += f"<script>window.{var} = " + f.read_text("utf-8").replace("</", "<\\/") + ";</script>"
     ref = ROOT / "config" / "reference" / "ne_mobility_rounds.json"
     if ref.exists():
         shutil.copy(ref, SITE / "data" / "reference.json")
