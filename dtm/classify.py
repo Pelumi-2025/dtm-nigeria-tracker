@@ -64,7 +64,25 @@ class Classifier:
                         return rule["key"], rule["label"], f"{where}:{term.strip()}"
         return self.tax.get("unclassified_key", "other"), self.tax["unclassified_label"], ""
 
+    @property
+    def lga_state(self):
+        if not hasattr(self, "_lga"):
+            f = ROOT / "config" / "reference" / "nigeria_states_svg.json"
+            try:
+                self._lga = json.loads(f.read_text("utf-8")).get("lgas", {}) if f.exists() else {}
+            except Exception:
+                self._lga = {}
+        return self._lga
+
     # ---- geography -------------------------------------------------------
+    def default_region(self, key, date, states):
+        if states or not date:
+            return None
+        for rule in self.tax.get("component_default_region", {}).get(key, []):
+            if isinstance(rule, dict) and date < rule["before"]:
+                return [rule["region"]]
+        return None
+
     def states(self, text: str) -> list[str]:
         return [st for st, rx in self.state_rx.items() if rx.search(text or "")]
 
@@ -167,7 +185,27 @@ class Classifier:
     def classify(self, rec: dict) -> dict:
         title, summary = rec.get("title", ""), rec.get("summary", "")
         key, label, why = self.component(title, summary)
-        states = self.states(title) or self.states(summary)
+        # a report counts for a state only when it was published for it: the state is named in the title
+        states = self.states(title) or (self.states(summary) if self.tax.get("states_from_summary", False) else [])
+        if not states and key in self.tax.get("subject_state_from_summary", []):
+            # e.g. ETT titles never name the state; the opening sentence says which state the report is
+            # for ("... new arrivals were recorded in locations across Borno State")
+            opening = re.split(r"(?<=[.!?])\s", summary or "", maxsplit=1)[0]
+            states = [st for st in self.states(" ".join(re.findall(r"([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)\s+States?\b", opening)))]
+            if not states:  # the PDF cover: "SUMMARY OF MOVEMENTS IN ADAMAWA AND BORNO STATES"
+                cover = ((rec.get("pdf_text") or {}).get("text") or "")[:1500]
+                cover = re.sub(r"(?<=[A-Z]{3}) (?=[A-Z]\b)", "", cover)  # letter-spaced text: "ADAMAW A" -> "ADAMAWA"
+                m = re.search(r"\bIN\s+((?:[A-Z][A-Z]+[ ,]*(?:AND\s+)?){1,6}?)\s*STATES?\b", cover) or \
+                    re.search(r"\b(?:in|across)\s+((?:[A-Z][a-z]+,?\s+(?:and\s+)?){1,4}?)States?\b", cover)
+                if m:
+                    states = self.states(m.group(1).title())
+            if not states and self.lga_state:  # LGAs named in the opening sentence (Bama, Gwoza -> Borno)
+                found = {st for lga, sts in self.lga_state.items() if len(sts) == 1
+                         and re.search(r"\b" + re.escape(lga) + r"\b", opening) for st in sts}
+                states = sorted(found)
+        allowed = self.tax.get("component_states", {}).get(key)
+        if allowed:  # e.g. ETT runs only in Adamawa, Borno, Yobe and Benue
+            states = [st for st in states if st in allowed]
         date = self.parse_date(rec.get("date_raw", "")) or rec.get("date")
         tdate = self.title_date(title)
         basis = "publication date"
@@ -195,7 +233,7 @@ class Classifier:
             "component": label,
             "matched_on": why,
             "states": states,
-            "regions": self.regions(title, summary, states),
+            "regions": self.default_region(key, date, states) or self.regions(title, summary, states),
             "date": date,
             "date_basis": basis,
             "period_date": tdate,

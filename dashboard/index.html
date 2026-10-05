@@ -248,7 +248,7 @@ aside.rail{background:linear-gradient(180deg,#0033A0 0%,#002A85 100%);color:#fff
 .chartlegend i{width:12px;height:12px;border-radius:3px;flex:none}
 .scalelegend{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);margin-top:10px}
 .scalelegend .bar{width:160px;height:10px;border-radius:5px;background:linear-gradient(90deg,#EAF0FA,#0033A0)}
-body[data-view="home"] main > :not(#home){display:none!important}
+body[data-view="home"] main > :not(#home):not(.crumbs):not(.pagenav):not(.slicerbar){display:none!important}
 body[data-view="home"] .rail .slicer,body[data-view="home"] .railbtn{display:none}
 body:not([data-view="home"]) #home{display:none}
 .home{max-width:1180px}
@@ -440,6 +440,91 @@ footer{padding-left:246px}
 .maplegend{display:flex;align-items:center;gap:8px;justify-content:center;font-size:.8rem;color:var(--muted);margin-top:8px}
 .maplegend .bar{width:220px;height:10px;border-radius:5px;background:linear-gradient(90deg,#E6F3FA,#0E4D6E)}
 .maplegend .nod{width:14px;height:10px;background:repeating-linear-gradient(45deg,#E9EDF2,#E9EDF2 3px,#fff 3px,#fff 6px);border:1px solid #ccd}
+
+/* ===== navigation redesign: icon sidebar + filter panel ===== */
+.layout{grid-template-columns:auto minmax(0,1fr)!important}
+aside.rail{background:#fff!important;padding:0!important;flex-direction:row!important;gap:0!important;border-right:1px solid #D5E3EE;box-shadow:2px 0 8px rgba(14,77,110,.06);min-height:calc(100vh - 78px)}
+.iconrail{width:96px;display:flex;flex-direction:column;align-items:center;padding:8px 4px 16px;gap:2px!important;border-right:1px solid #E3ECF3}
+.ngroup{font-size:.72rem;font-weight:800;color:#5B7DB1;margin:10px 0 3px;text-align:center}
+.railnav button.nitem,.railnav a.nitem{display:flex;flex-direction:column;align-items:center;gap:3px;background:none!important;border:0!important;box-shadow:none!important;padding:2px!important;border-radius:0!important;width:88px;color:#4A6FA5!important;font-size:.7rem;font-weight:700;text-decoration:none;cursor:pointer}
+.nitem .ic{position:relative;width:54px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.nitem svg{width:30px;height:30px;stroke:#4A6FA5;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.nitem:hover .ic{background:#EAF1F9}
+.railnav .nitem[aria-current="page"] .ic{background:#4A6FA5;box-shadow:0 3px 8px rgba(74,111,165,.35)}
+.railnav .nitem[aria-current="page"] svg{stroke:#fff}
+.railnav .nitem[aria-current="page"] .nl{color:#0A3A57}
+.stepn{position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:50%;background:#F0B845;color:#0A3A57;font-style:normal;font-size:.68rem;font-weight:900;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
+.nsep{width:60%;border:0;border-top:1.5px solid #D5E3EE;margin:10px 0 4px}
+.railnav .nitem.tool .ic{width:46px;height:42px}
+.railnav #filterToggle[aria-expanded="true"] .ic{background:#EAF1F9}
+.filterpanel{width:250px;padding:16px 14px;display:flex;flex-direction:column;gap:12px;background:#F6FAFD}
+.fp-title{font-weight:900;color:#0A3A57;font-size:1.05rem}
+.fp-hint{margin:0;font-size:.8rem;color:var(--muted)}
+.filterpanel .sl{display:flex;flex-direction:column;gap:4px}
+.filterpanel label{font-weight:800;font-size:.82rem;color:#0A3A57}
+.filterpanel .ddbtn{background:#0E4D6E;color:#fff;border-radius:6px;width:100%}
+.filterpanel .ddpanel{min-width:240px}
+.fp-active{font-size:.8rem;color:var(--muted);background:#fff;border:1px dashed #B9DDF0;border-radius:6px;padding:8px}
+.fp-active b{display:block;color:#0A3A57}
+.resetbig{background:#F0B845;color:#0A3A57;border:0;border-radius:8px;padding:10px;font-weight:900;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.resetbig:hover{background:#E6A92A}
+.filterpanel .side-foot{margin-top:auto;color:var(--muted)!important}
+:root[data-theme="dark"] aside.rail,:root[data-theme="dark"] .filterpanel{background:#16222f!important}
+:root[data-theme="dark"] .fp-title,:root[data-theme="dark"] .filterpanel label{color:#e8f2fa}
+@media (max-width:900px){aside.rail{position:static!important;flex-direction:column!important;min-height:0}.iconrail{width:auto;flex-direction:row;flex-wrap:wrap;justify-content:center;border-right:0}.ngroup,.nsep{display:none}.filterpanel{width:auto}}
+/* year / month tiles */
+.tiles{display:grid;gap:3px}
+.ytiles{grid-template-columns:repeat(7,minmax(46px,1fr))}
+.mtiles{grid-template-columns:repeat(6,minmax(40px,1fr))}
+.tiles button{background:#0E4D6E;color:#fff;border:1px solid #0A3A57;border-radius:3px;padding:5px 6px;font-weight:700;font-size:.8rem;cursor:pointer}
+.tiles button.on{background:#F0B845;color:#0A3A57;border-color:#C98A0B;box-shadow:inset 0 0 0 1px #fff}
+.tiles button:disabled{background:#E9EDF2;color:#9AA5B6;border-color:#D5DCE5;cursor:default}
+.tiles button:not(:disabled):hover{filter:brightness(1.15)}
+.slicerbar label small{font-weight:500;color:var(--muted)}
+/* you-are-here trail and previous / next */
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--pbline);border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:.86rem;color:var(--muted)}
+.crumbs .here{background:#0E4D6E;color:#fff;border-radius:12px;padding:2px 10px;font-weight:800;font-size:.75rem}
+.crumbs button{background:none;border:0;color:#0B4FC4;font-weight:700;cursor:pointer;padding:0;text-decoration:underline}
+.crumbs strong{color:var(--ink)}
+.crumbs b{color:#9AA5B6}
+.stepof{margin-left:auto;font-weight:700}
+.crumbs .nextmini{background:#F0B845;color:#0A3A57;text-decoration:none;border-radius:14px;padding:4px 12px;font-weight:800}
+.pagenav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin:22px 0 8px}
+.pn{border:1.5px solid var(--pbline);background:#fff;border-radius:10px;padding:10px 16px;font-weight:800;color:#0A3A57;cursor:pointer;font-size:.95rem}
+.pn small{display:block;font-size:.72rem;color:var(--muted);font-weight:700}
+.pn.prev{text-align:left}.pn.next{text-align:right;background:#0E4D6E;color:#fff;border-color:#0E4D6E}.pn.next small{color:#CFE6F5}
+.pnmid{display:flex;flex-direction:column;gap:6px}.pn.small{padding:6px 12px;font-size:.82rem}.pn.reset{background:#F0B845;border-color:#F0B845}
+:root[data-theme="dark"] .crumbs,:root[data-theme="dark"] .pn{background:var(--panel);color:var(--ink)}
+/* quick period on Overview */
+.qpbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1.5px solid var(--pbline);border-radius:8px;padding:10px 14px;margin-bottom:12px}
+.qpbar label{font-weight:900;color:#0A3A57}
+.qpbar select{background:#0E4D6E;color:#fff;border:0;border-radius:6px;padding:8px 10px;font-weight:700;min-width:220px}
+.qphint{font-size:.8rem;color:var(--muted)}
+:root[data-theme="dark"] .qpbar{background:var(--panel)}
+
+/* KPI cards: gradient tiles */
+.kpis .kpi.g{background:linear-gradient(135deg,var(--g1),var(--g2))!important;border:0!important;color:#fff;text-align:left;padding:14px 16px!important;border-radius:10px;box-shadow:0 4px 12px rgba(20,40,120,.18)}
+.kpis .kpi.g::before{display:none!important}
+.kpis .kpi.g .kl{order:0!important;color:#fff!important;font-size:.85rem!important;font-weight:700!important;opacity:.95}
+.kpis .kpi.g .kv{order:1!important;color:#fff!important;font-size:clamp(1.5rem,2.3vw,2rem)!important;margin:4px 0}
+.kpis .kpi.g .ks{order:2!important;color:rgba(255,255,255,.88)!important;font-size:.78rem}
+.kpis .kpi.g .ks span{color:#fff!important;font-weight:800}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important}
+/* per-month chart: report type picker */
+.typepick{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:6px 0 12px}
+.typepick button{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--pbline);background:var(--panel);color:var(--ink);border-radius:16px;padding:5px 10px;font-size:.78rem;font-weight:700;cursor:pointer}
+.typepick button i{width:10px;height:10px;border-radius:50%}
+.typepick button b{background:var(--soft);border-radius:8px;padding:0 6px;font-size:.72rem}
+.typepick button[aria-pressed="true"]{background:#0E4D6E;color:#fff;border-color:#0E4D6E}
+.typepick button[aria-pressed="true"] b{background:#fff;color:#0E4D6E}
+.pmsum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:10px}
+.pmsum div{border:1.5px solid var(--pbline);border-radius:8px;padding:8px 10px;font-size:.8rem;color:var(--muted)}
+.pmsum b{display:block;color:var(--teal);font-size:1.2rem}
+/* map: reports for a state */
+.mrep{margin-top:10px;border-top:1px solid var(--soft);padding-top:8px;display:flex;flex-direction:column;gap:4px}
+.mrep a{font-size:.8rem;font-weight:600}
+.mapgo{margin-top:6px}
+.trendrow{grid-template-columns:1fr!important}
 </style>
 </head>
 <body>
@@ -459,33 +544,34 @@ footer{padding-left:246px}
 <div class="log" id="harvestLog" style="margin:0 24px"></div>
 
 <div class="layout">
-  <aside class="rail" aria-label="Pages">
-    <nav class="railnav" aria-label="Pages">
-      <button type="button" data-nav="home">Home &amp; guide</button>
-      <button type="button" data-nav="overview">Overview</button>
-      <button type="button" data-nav="map">Map</button>
-      <button type="button" data-nav="types">Report types</button>
-      <button type="button" data-nav="calendar">Publication calendar</button>
-      <button type="button" data-nav="charts">Charts</button>
-      <button type="button" data-nav="list">Report list</button>
+  <aside class="rail" aria-label="Pages and filters">
+    <nav class="iconrail railnav" aria-label="Pages">
+      <div class="ngroup">Start</div><button type="button" class="nitem" data-nav="home" title="Step 1: Home"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><i class="stepn">1</i></span><span class="nl">Home</span></button>
+      <div class="ngroup">Summary</div><button type="button" class="nitem" data-nav="overview" title="Step 2: Overview"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-9M2 20h20"/></svg><i class="stepn">2</i></span><span class="nl">Overview</span></button>
+      <div class="ngroup">Geography</div><button type="button" class="nitem" data-nav="map" title="Step 3: Map"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg><i class="stepn">3</i></span><span class="nl">Map</span></button>
+      <div class="ngroup">Details</div><button type="button" class="nitem" data-nav="types" title="Step 4: Report types"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.6"/></svg><i class="stepn">4</i></span><span class="nl">Report types</span></button><button type="button" class="nitem" data-nav="calendar" title="Step 5: Calendar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><i class="stepn">5</i></span><span class="nl">Calendar</span></button><button type="button" class="nitem" data-nav="charts" title="Step 6: Charts"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><rect x="5" y="11" width="3.2" height="9"/><rect x="10.4" y="5" width="3.2" height="15"/><rect x="15.8" y="13" width="3.2" height="7"/></svg><i class="stepn">6</i></span><span class="nl">Charts</span></button><button type="button" class="nitem" data-nav="list" title="Step 7: Report list"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg><i class="stepn">7</i></span><span class="nl">Report list</span></button>
+      <hr class="nsep">
+      <button type="button" class="nitem tool" id="filterToggle" aria-expanded="true" title="Show or hide the Region and State filters"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></span><span class="nl">Filters</span></button>
+      <a class="nitem tool" href="https://dtm-nigeria-data-hub.netlify.app/#home" target="_blank" rel="noopener" title="Open the DTM Nigeria Data Hub in a new tab"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v6H4V5h6"/></svg></span><span class="nl">Data Hub ↗</span></a>
+      <button type="button" class="nitem tool" id="infoBtn" title="How to use this platform"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.6"/></svg></span><span class="nl">Guide</span></button>
     </nav>
-    <div class="railfilter"><label for="presetSel">Quick period</label>
-      <select id="presetSel"><option value="">Choose…</option><option value="all">2014–2030</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select></div>
-    <a class="hublink" href="https://dtm-nigeria-data-hub.netlify.app/#home" target="_blank" rel="noopener">DTM Nigeria Data Hub <span aria-hidden="true">↗</span><small>Figures by round, state and LGA</small></a>
-    <div class="srcbadges">
-      <a class="sb dtm" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="DTM Nigeria on dtm.iom.int">DTM</a>
+    <div class="filterpanel" id="filterPanel">
+      <div class="fp-title">Filters</div>
+      <p class="fp-hint">Narrow every page to a region or state.</p>
+      <div class="sl"><label>Region</label><div class="dd" id="ddRegions"></div></div>
+      <div class="sl"><label>State</label><div class="dd" id="ddStates"></div></div>
+      <div class="fp-active" id="fpActive"></div>
+      <button class="resetbig" id="resetBtn2" type="button">↺ Reset all filters</button>
+      <div class="side-foot">IOM · Displacement Tracking Matrix · Nigeria</div>
     </div>
-    <div class="side-foot">IOM · Displacement Tracking Matrix · Nigeria</div>
   </aside>
 
   <main>
     <section class="slicerbar" aria-label="Filters">
-      <div class="sl"><label>From</label><div class="two"><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select></div></div>
-      <div class="sl"><label>To</label><div class="two"><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select></div></div>
-      <div class="sl"><label>Months</label><div class="dd" id="ddMonths"></div></div>
+      <div class="sl"><label>Year <small>(click one; click another for a range)</small></label><div class="tiles ytiles" id="yearTiles"></div></div>
+      <div class="sl"><label>Month <small>(click to pick months)</small></label><div class="tiles mtiles" id="monthTiles"></div></div>
+      <div hidden><select id="fromM"></select><select id="fromY"></select><select id="toM"></select><select id="toY"></select><div class="dd" id="ddMonths"></div></div>
       <div class="sl wide"><label>Report types</label><div class="dd" id="ddTypes"></div></div>
-      <div class="sl"><label>Region</label><div class="dd" id="ddRegions"></div></div>
-      <div class="sl"><label>State</label><div class="dd" id="ddStates"></div></div>
       <div class="sl"><label for="basisSel">Count by</label><select id="basisSel"><option value="pub">Publication date</option><option value="period">Period in title</option></select></div>
       <div class="sl"><label for="kw">Title contains</label><input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama"></div>
       <div class="sltools">
@@ -500,6 +586,8 @@ footer{padding-left:246px}
         <input type="radio" name="basis" value="pub" checked><input type="radio" name="basis" value="period">
       </div>
     </section>
+
+    <nav class="crumbs" id="crumbs" aria-label="You are here"></nav>
 
     <section id="home" class="home" aria-labelledby="homeTitle">
       <div class="hero">
@@ -517,10 +605,10 @@ footer{padding-left:246px}
 
       <h3 class="hh">How to use the dashboard</h3>
       <div class="steps">
-        <div class="step"><i>1</i><b>Pick a period</b><p>In the slicer bar at the top, set <em>From</em> and <em>To</em> to any month and year, or use <em>Quick period</em> (for example <em>Last 12 months</em>).</p></div>
+        <div class="step"><i>1</i><b>Pick a period</b><p>Click a <em>Year</em> tile at the top (click a second year for a range) and any <em>Month</em> tiles, or use <em>Quick period</em> on the Overview page.</p></div>
         <div class="step"><i>2</i><b>Narrow by month</b><p>Open <em>Months</em> to keep only some months, for example Q2 (April–June) across every year in your period.</p></div>
         <div class="step"><i>3</i><b>Choose report types</b><p>Open <em>Report types</em> in the slicer bar, or use the buttons on the <em>Report types</em> page. Each shows how many reports match your other choices. Tip: click a card in <em>What each report type covers</em> below to jump straight to that type.</p></div>
-        <div class="step"><i>4</i><b>Choose regions and states</b><p>Use the <em>Region</em> and <em>State</em> slicers (all 36 states and the FCT, with counts) or the buttons on the <em>Report types</em> page. Click a state to focus on it, click more to add them, click again to remove.</p></div>
+        <div class="step"><i>4</i><b>Choose regions and states</b><p>Use <em>Region</em> and <em>State</em> in the <em>Filters</em> panel on the left (all 36 states and the FCT, with counts), or click a state on the <em>Map</em>. Click a state to focus on it, click more to add them, click again to remove.</p></div>
         <div class="step"><i>5</i><b>Read the headline numbers</b><p>The cards on the <em>Overview</em> page give the total, the monthly average, the busiest month and the latest report, and compare with the previous period of the same length.</p></div>
         <div class="step"><i>6</i><b>Explore the charts</b><p>Hover over any bar, point or cell to see its number. Click a bar in <em>report type</em>, <em>state</em> or <em>region</em> to filter by it; click a calendar or table cell to list those reports.</p></div>
         <div class="step"><i>7</i><b>Open or export reports</b><p>The <em>Report list</em> page links to each report on dtm.iom.int and its PDF. <em>Export CSV</em> and <em>Download counts</em> save what you are looking at.</p></div>
@@ -534,16 +622,16 @@ footer{padding-left:246px}
       <div class="notes">
         <div class="note"><b>How reports are dated</b><p>Each report counts in the month it was published on dtm.iom.int. You can switch to the period named in each report title. Reports published twice count once; a report with no date on the site is flagged in the list.</p></div>
         <div class="note"><b>Mobility Tracking: one report per round</b><p>Each round counts as exactly one round report: 71 so far (North East R1–R52, North Central &amp; North West R1–R19). North-East rounds 1–40 and NC/NW rounds 1–9 are Needs Monitoring; later rounds are classified from the PDF's file name or the text inside it. All other round files count as <em>Mobility Tracking – Dashboards</em>.</p></div>
-        <div class="note"><b>Regions and states</b><p>A state named in a report's title decides its region. Mobility Tracking round reports belong to the operation that produced them: North East, or North Central &amp; North West.</p></div>
+        <div class="note"><b>Regions and states</b><p>A report counts for a state only when it was published for that state: the state is named in its title (for ETT reports, on the report itself). States merely mentioned inside a report do not count, and the Republic of Niger is never counted as Niger State. DTM Nigeria runs the Emergency Tracking Tool in Adamawa, Borno, Yobe and Benue; ETT reports from before July 2024 that do not name a state count for the North East.</p></div>
         <div class="note"><b>Always up to date</b><p>New reports on dtm.iom.int are collected every hour, with a full check every night. An open dashboard refreshes itself within 5 minutes; the offline copy works without internet.</p></div>
       </div>
     </section>
 
     <section class="panel" id="sec-map" data-page="map">
       <h2>Map – numbers by state</h2>
-      <p class="hint">Mobility Tracking figures come from the latest rounds you choose (North East states from the North East round, all other states from the North Central &amp; North West round). Incident / flash figures add up what each flash report states, for the period, region and states selected in the slicer bar. Hover or click a state to see all its numbers.</p>
+      <p class="hint"><b>Reports published</b> shades each state by the number of DTM reports published for it on dtm.iom.int, for the period and report types you selected. Mobility Tracking figures come from the latest rounds you choose (North East states from the North East round, all other states from the North Central &amp; North West round). Incident / flash figures add up what each flash report states, for the period, region and states selected in the slicer bar. Hover or click a state to see all its numbers.</p>
       <div class="mapctl">
-        <label>Show<select id="mapMeasure"><option value="idp">IDPs</option><option value="ret">Returnees</option><option value="aff">Affected by incidents (flash reports)</option><option value="dis">Displaced by incidents (flash reports)</option></select></label>
+        <label>Show<select id="mapMeasure"><option value="rep">Reports published for the state</option><option value="idp">IDPs</option><option value="ret">Returnees</option><option value="aff">Affected by incidents (flash reports)</option><option value="dis">Displaced by incidents (flash reports)</option></select></label>
         <label>Count<select id="mapUnit"><option value="ind">Individuals</option><option value="hh">Households</option></select></label>
         <label>North East round<select id="mapNE"></select></label>
         <label>NC &amp; NW round<select id="mapNW"></select></label>
@@ -555,10 +643,15 @@ footer{padding-left:246px}
       <div class="tablewrap"><table class="list" id="mapTable"></table></div>
     </section>
 
-    <section class="deck" aria-label="Quick buttons" data-page="types">
+    <section class="deck" aria-label="Quick buttons" data-page="none" hidden>
       <div class="deckrow"><div class="decklabel">Report types<span class="quick"><button type="button" data-all="comp">All</button><button type="button" data-none="comp">None</button></span></div><div class="pills" id="typeBar"></div></div>
       <div class="deckrow"><div class="decklabel">Regions<span class="quick"><button type="button" data-all="region">All</button></span></div><div class="pills" id="regionBar"></div></div>
       <div class="deckrow"><div class="decklabel">States<span class="quick"><button type="button" data-all="state">All</button><button type="button" data-none="state">None</button></span></div><div class="pills" id="stateBar"></div></div>
+    </section>
+    <section class="qpbar" data-page="overview" aria-label="Quick period">
+      <label for="presetSel">Quick period</label>
+      <select id="presetSel"><option value="">Choose a period…</option><option value="all">All years (2014–2030)</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select>
+      <span class="qphint">or click years and months in the bar above</span>
     </section>
     <section class="kpis" id="sec-overview" aria-label="Key numbers" data-page="overview"></section>
     <section class="panel chart" id="refPanel" data-page="overview">
@@ -610,17 +703,11 @@ footer{padding-left:246px}
 
 
     <section class="panel chart" id="sec-charts" data-page="charts">
-      <h2>Reports per year</h2>
-      <p class="hint">Stacked by report type for the current selection. Hover a segment for its number.</p>
-      <div id="barYear"></div>
-      <div class="chartlegend" id="legYear"></div>
-    </section>
-
-    <section class="panel chart" data-page="charts">
-      <h2>Reports per month</h2>
-      <p class="hint">All selected years combined. For month-by-year numbers, see the publication calendar above.</p>
-      <div id="barMonth"></div>
-      <div class="chartlegend" id="legMonth"></div>
+      <h2 id="pmTitle">Reports published per month</h2>
+      <p class="hint">Click a report type to see how many of its reports were published each month in the selected period. Hover a bar for its number.</p>
+      <div class="typepick" id="typePick" role="group" aria-label="Report type"></div>
+      <div id="barPerMonth"></div>
+      <div class="pmsum" id="pmSum"></div>
     </section>
 
       <section class="panel chart" data-page="charts">
@@ -645,6 +732,7 @@ footer{padding-left:246px}
       <div class="scroll"><table class="list" id="list"></table></div>
       <div class="pager"><button class="btn" id="prev">Previous</button><span id="pageInfo"></span><button class="btn" id="next">Next</button></div>
     </section>
+    <nav class="pagenav" id="pagenav" aria-label="Previous and next page"></nav>
   </main>
 </div>
 <footer id="foot"></footer>
@@ -910,7 +998,7 @@ function syncFilterInputs(){
 function applyBasis(){REPORTS.forEach(r=>{const d=F.basis==="period"&&r.period_date?r.period_date:r.pub_date;
   r.date=d;r.year=d?+d.slice(0,4):r.year;r.month=d&&/^\d{4}-\d{2}/.test(d)?+d.slice(5,7):null})}
 document.querySelectorAll('input[name="basis"]').forEach(i=>i.onchange=()=>{F.basis=i.value;applyBasis();drill=null;render()});
-document.querySelectorAll("[data-preset]").forEach(b=>b.onclick=()=>{const p=b.dataset.preset,now=new Date(),cy=now.getFullYear(),cm=now.getMonth()+1;
+document.querySelectorAll("[data-preset]").forEach(b=>b.onclick=()=>{const p=b.dataset.preset,now=new Date(),cy=now.getFullYear(),cm=now.getMonth()+1;F.months=new Set(range(1,12));
   if(p==="all")setPeriod(ym(YEAR_MIN,1),ym(YEAR_MAX,12));
   if(p==="data"){const v=REPORTS.filter(r=>r.year&&r.month).map(r=>ym(r.year,r.month));if(v.length)setPeriod(Math.min(...v),Math.max(...v))}
   if(p==="12")setPeriod(ym(cy,cm)-11,ym(cy,cm));
@@ -933,7 +1021,7 @@ function setPage(p){
   setView("dash");
   try{history.replaceState(null,"","#"+CURPAGE)}catch(e){}
 }
-function markNav(){const v=document.body.dataset.view;
+function markNav(){const v=document.body.dataset.view;try{updateNavSigns()}catch(e){}
   document.querySelectorAll(".railnav [data-nav]").forEach(x=>x.setAttribute("aria-current",(v==="home"?x.dataset.nav==="home":x.dataset.nav===CURPAGE)?"page":"false"))}
 document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setPage("overview"));
 window.addEventListener("hashchange",()=>{const h=(location.hash||"").slice(1).replace(/^sec-/,"");
@@ -961,6 +1049,51 @@ function applyTheme(t){document.documentElement.dataset.theme=t;try{localStorage
 $("#themeBtn").onclick=()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
 try{const t=localStorage.getItem("dtmng.theme");if(t)document.documentElement.dataset.theme=t}catch(e){}
 if(!location.protocol.startsWith("http")||window.claude)$("#offlineBtn").hidden=true;
+
+/* ---- directional signs: "you are here", step numbers, previous / next */
+const PAGE_ORDER=["home","overview","map","types","calendar","charts","list"];
+const PAGE_NAME={home:"Home & guide",overview:"Overview",map:"Map",types:"Report types",calendar:"Publication calendar",charts:"Charts",list:"Report list"};
+const PAGE_GROUP={home:"Start",overview:"Summary",map:"Geography",types:"Details",calendar:"Details",charts:"Details",list:"Details"};
+const curPageKey=()=>document.body.dataset.view==="home"?"home":CURPAGE;
+function goPage(k){if(k==="home"){setView("home");try{history.replaceState(null,"","#home")}catch(e){}}else setPage(k)}
+function updateNavSigns(){
+  const k=curPageKey(),i=PAGE_ORDER.indexOf(k),prev=PAGE_ORDER[i-1],next=PAGE_ORDER[i+1];
+  $("#crumbs").innerHTML=`<span class="here">You are here</span><button type="button" data-go2="home">Home</button><b aria-hidden="true">›</b>${k==="home"?"<strong>Guide</strong>":`<span>${PAGE_GROUP[k]}</span><b aria-hidden="true">›</b><strong>${PAGE_NAME[k]}</strong>`}<span class="stepof">Step ${i+1} of ${PAGE_ORDER.length}</span>${next?`<button type="button" class="nextmini" data-go2="${next}">Next: ${PAGE_NAME[next]} →</button>`:""}`;
+  $("#pagenav").innerHTML=(prev?`<button type="button" class="pn prev" data-go2="${prev}"><small>← Previous</small>${PAGE_NAME[prev]}</button>`:"<span></span>")
+    +`<div class="pnmid"><button type="button" class="pn small" data-top="1">↑ Back to top</button><button type="button" class="pn small reset" data-reset="1">↺ Reset all filters</button></div>`
+    +(next?`<button type="button" class="pn next" data-go2="${next}"><small>Next →</small>${PAGE_NAME[next]}</button>`:"<span></span>");
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-go2]");if(b){goPage(b.dataset.go2);return}
+  if(e.target.closest("[data-top]"))window.scrollTo({top:0,behavior:"smooth"});
+  if(e.target.closest("[data-reset]"))$("#resetBtn").click()});
+$("#filterToggle").onclick=()=>{const fp=$("#filterPanel"),open=fp.hidden;fp.hidden=!open;$("#filterToggle").setAttribute("aria-expanded",String(open))};
+if(window.innerWidth<900){$("#filterPanel").hidden=true;$("#filterToggle").setAttribute("aria-expanded","false")}
+$("#infoBtn").onclick=()=>{goPage("home");setTimeout(()=>{const g=document.querySelector(".step")||$("#home");g.scrollIntoView({behavior:"smooth",block:"start"})},60)};
+$("#resetBtn2").onclick=()=>$("#resetBtn").click();
+function updateFilterSummary(){
+  const regs=F.regions.size===REGIONS.length?"all regions":[...F.regions].map(k=>(REGIONS.find(r=>r.key===k)||{}).label||k).join(", ");
+  const sts=!F.stateFilterOn?"all states":[...F.states].sort().join(", ");
+  $("#fpActive").innerHTML=`<b>Now showing</b>${esc(regs)} · ${esc(sts.length>80?F.states.size+" states":sts)}`}
+
+/* ---- year and month tiles (period) */
+function renderPeriodTiles(){
+  const cnt={};REPORTS.forEach(r=>{if(r.year)cnt[r.year]=(cnt[r.year]||0)+1});
+  const maxY=Math.max(YEAR_MIN,...Object.keys(cnt).map(Number)),yrs=range(YEAR_MIN,Math.min(YEAR_MAX,maxY+1));
+  const fy=Math.floor(F.from/12),ty=Math.floor(F.to/12),allY=F.from<=ym(YEAR_MIN,1)&&F.to>=ym(Math.min(YEAR_MAX,maxY),12);
+  $("#yearTiles").innerHTML=yrs.map(y=>`<button type="button" data-yt="${y}" class="${!allY&&y>=fy&&y<=ty?"on":""}" ${cnt[y]?"":"disabled"} title="${cnt[y]?fmt(cnt[y])+" reports":"no reports yet"}">${y}</button>`).join("");
+  const mc={};REPORTS.forEach(r=>{if(r.month&&r.year>=fy&&r.year<=ty&&passes(r,{ignoreMonth:true}))mc[r.month]=(mc[r.month]||0)+1});
+  const allM=F.months.size===12;
+  $("#monthTiles").innerHTML=MONTHS.map((m,i)=>`<button type="button" data-mt="${i+1}" class="${!allM&&F.months.has(i+1)?"on":""}" ${mc[i+1]?"":"disabled"} title="${fmt(mc[i+1]||0)} reports">${m}</button>`).join("");
+}
+$("#yearTiles").onclick=e=>{const b=e.target.closest("[data-yt]");if(!b||b.disabled)return;const y=+b.dataset.yt,fy=Math.floor(F.from/12),ty=Math.floor(F.to/12);
+  const single=fy===ty&&F.from%12===0&&F.to%12===11;
+  if(single&&fy===y)setPeriod(ym(YEAR_MIN,1),ym(YEAR_MAX,12));
+  else if(single)setPeriod(ym(Math.min(fy,y),1),ym(Math.max(fy,y),12));
+  else setPeriod(ym(y,1),ym(y,12));
+  drill=null;syncPeriodUI();render()};
+$("#monthTiles").onclick=e=>{const b=e.target.closest("[data-mt]");if(!b||b.disabled)return;const m=+b.dataset.mt;
+  if(F.months.size===12)F.months=new Set([m]);else{F.months.has(m)?F.months.delete(m):F.months.add(m);if(!F.months.size)F.months=new Set(range(1,12))}
+  drill=null;render()};
 let kwT;$("#kw").oninput=e=>{clearTimeout(kwT);kwT=setTimeout(()=>{F.kw=e.target.value.trim().toLowerCase();render()},200)};
 $("#resetBtn").onclick=resetFilters;
 function resetFilters(){$("#basisSel").value="pub";F.months=new Set(range(1,12));setPeriod(ym(YEAR_MIN,1),ym(YEAR_MAX,12));F.comps=new Set(COMPONENTS.map(c=>c.key));
@@ -974,7 +1107,7 @@ function render(){
   const mcc={};REPORTS.forEach(r=>{if(r.month&&passes(r,{ignoreMonth:true}))mcc[r.month]=(mcc[r.month]||0)+1});syncDD($("#ddMonths"),mcc);
   const rcc={};REPORTS.forEach(r=>{if(passes(r,{ignoreRegion:true}))regionKeysOf(r).forEach(k=>rcc[k]=(rcc[k]||0)+1)});syncDD($("#ddRegions"),rcc,rs.length);
   const scc={};REPORTS.forEach(r=>{if(passes(r,{ignoreState:true}))r.states.forEach(st=>scc[st]=(scc[st]||0)+1)});syncDD($("#ddStates"),scc);
-  renderHome();
+  renderHome();renderPeriodTiles();updateFilterSummary();
   // live counts beside checkboxes
   const cc={};REPORTS.forEach(r=>{if(passes(r,{ignoreComp:true}))cc[r.component_key]=(cc[r.component_key]||0)+1});
   document.querySelectorAll("[data-cn]").forEach(s=>s.textContent=fmt(cc[s.dataset.cn]||0));
@@ -1009,14 +1142,19 @@ function renderKPIs(rs){
   const comparable=prevFrom>=ym(YEAR_MIN,1)&&prev>0;
   const delta=comparable?Math.round(100*(rs.length-prev)/prev):null;
   const ch=delta===null?`<span>${prevFrom<ym(YEAR_MIN,1)?"across "+periodText():"no reports in the previous "+len+" months"}</span>`:`<span class="${delta>=0?"up":"down"}">${delta>=0?"▲":"▼"} ${Math.abs(delta)}%</span> vs previous ${len} months (${fmt(prev)})`;
-  const K=(l,v,sub,c)=>`<div class="kpi" style="--k:${c||"#0033A0"}"><div class="kl">${l}</div><div class="kv">${v}</div><div class="ks">${sub}</div></div>`;
+  const G=[["#4C6FFF","#2A3FD6"],["#2D57D8","#173A9E"],["#1BA7E0","#1374C4"],["#18B39A","#12866F"],["#F0567A","#C9375B"],["#8E5BE8","#6435C9"],["#3E8BD8","#2C62AE"]];
+  const K=(i,l,v,sub)=>`<div class="kpi g" style="--g1:${G[i][0]};--g2:${G[i][1]}"><div class="kl">${l}</div><div class="kv">${v}</div><div class="ks">${sub}</div></div>`;
+  const d30=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
+  const new30=REPORTS.filter(r=>r.pub_date&&r.pub_date>=d30&&passes(r,{ignoreYear:true,ignoreMonth:true})).length;
+  const allStates=new Set(rs.flatMap(r=>r.states)).size;
   $("#sec-overview").innerHTML=
-    K("Reports",fmt(rs.length),ch)+
-    K("Per month",(rs.length/effLen).toFixed(1),`average over ${fmt(effLen)} month${effLen===1?"":"s"} to date`,"#418FDE")+
-    K("Busiest month",best?fmt(best[1]):"–",best?`${MONTHS[best[0]%12]} ${Math.floor(best[0]/12)}`:"no reports","#1A8C7E")+
-    K("Needs Monitoring",fmt(nm),`of ${fmt(rs.filter(r=>r.mt_main).length)} Mobility Tracking round reports`,"#418FDE")+
-    K("Report types",fmt(types),`${fmt(states)} of 16 states named`,"#E0A100")+
-    K("Latest report",latest?new Date(latest+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"–",latest?"most recent publication in selection":"no reports","#D22630");
+    K(0,"Reports published",fmt(rs.length),ch)+
+    K(1,"New in the last 30 days",fmt(new30),"published on dtm.iom.int, same report types, regions and states")+
+    K(2,"Per month",(rs.length/effLen).toFixed(1),`average over ${fmt(effLen)} month${effLen===1?"":"s"} to date`)+
+    K(3,"Busiest month",best?fmt(best[1]):"–",best?`${MONTHS[best[0]%12]} ${Math.floor(best[0]/12)}`:"no reports")+
+    K(4,"Needs Monitoring",fmt(nm),`of ${fmt(rs.filter(r=>r.mt_main).length)} Mobility Tracking round reports`)+
+    K(5,"States with reports",fmt(allStates),`of 36 states and the FCT · ${fmt(types)} report types`)+
+    K(6,"Latest report",latest?new Date(latest+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"–",latest?"most recent publication in the selection":"no reports");
 }
 /* ---- monthly trend line */
 function renderTrend(rs){
@@ -1045,7 +1183,7 @@ function renderDonut(rs){
   const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
   const items=Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({key:k,label:labelFor(k).replace("Mobility Tracking – ","MT – "),v,c:PALETTE[k]||"#999"}));
   if(!items.length){$("#donut").innerHTML='<p class="hint">No reports in this selection.</p>';return}
-  hBars($("#donut"),items,k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);drill=null;syncFilterInputs();render()},300,600);
+  hBars($("#donut"),items,k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);PM.type=F.comps.size===1?k:null;drill=null;syncFilterInputs();render()},300,600);
 }
 function heatColor(v,max){ if(!v) return "var(--heat0)"; const t=Math.sqrt(v/max);
   const a=[230,243,250], b=[14,77,110]; return `rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t))})`}
@@ -1114,6 +1252,37 @@ function renderCalendar(){
 }
 /* ---- timeline: every report as a dot at its publication date */
 let ANIMATE=true;
+
+/* ---- reports published per month, for the report type clicked (plain bars, never stacked) */
+const PM={type:null};
+function renderPerMonth(rs){
+  const cnt={};rs.forEach(r=>{cnt[r.component_key]=(cnt[r.component_key]||0)+1});
+  if(PM.type&&!cnt[PM.type])PM.type=null;
+  const items=COMPONENTS.filter(c=>cnt[c.key]).sort((a,b)=>cnt[b.key]-cnt[a.key]);
+  $("#typePick").innerHTML=`<button type="button" data-pt="" aria-pressed="${!PM.type}"><i style="background:#0E4D6E"></i>All report types <b>${fmt(rs.length)}</b></button>`+
+    items.map(c=>`<button type="button" data-pt="${c.key}" aria-pressed="${PM.type===c.key}"><i style="background:${PALETTE[c.key]||"#888"}"></i>${esc(c.label)} <b>${fmt(cnt[c.key])}</b></button>`).join("");
+  const sel=PM.type?rs.filter(r=>r.component_key===PM.type):rs, col=PM.type?(PALETTE[PM.type]||"#0E4D6E"):"#0E4D6E", name=PM.type?COMPONENTS.find(c=>c.key===PM.type).label:"All report types";
+  $("#pmTitle").textContent=`Reports published per month – ${name}`;
+  const now=new Date(),nowv=now.getFullYear()*12+now.getMonth(),dataMax=Math.max(F.from,...REPORTS.filter(r=>r.year&&r.month).map(r=>r.year*12+r.month-1));
+  const a=F.from,b=Math.min(F.to,Math.max(nowv,dataMax));
+  const by={};sel.forEach(r=>{if(r.year&&r.month){const k=r.year*12+r.month-1;by[k]=(by[k]||0)+1}});
+  const ks=range(a,b).filter(k=>F.months.has(k%12+1));
+  if(!ks.length){$("#barPerMonth").innerHTML=`<p class="empty">No months in the selected period.</p>`;$("#pmSum").innerHTML="";return}
+  const max=Math.max(1,...ks.map(k=>by[k]||0)),W=940,H=300,L=44,R=10,T=18,B=40,bw=(W-L-R)/ks.length,Y=v=>H-B-(H-T-B)*v/niceMax(max),nm=niceMax(max);
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(name)}: reports published per month">`;
+  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${Number.isInteger(v)?v:v.toFixed(1)}</text>`}
+  ks.forEach((k,i)=>{const v=by[k]||0,x=L+i*bw,lab=`${MONTHS[k%12]} ${Math.floor(k/12)}`;
+    if(v)g+=`<rect x="${(x+bw*.12).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${Math.max(1,bw*.76).toFixed(1)}" height="${(H-B-Y(v)).toFixed(1)}" fill="${col}" rx="${bw>8?2:0}" data-tip="${esc(lab+": "+fmt(v)+" "+(PM.type?name:"reports"))}"/>`;
+    if(v&&ks.length<=36)g+=`<text x="${(x+bw/2).toFixed(1)}" y="${(Y(v)-4).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="800" fill="var(--ink)">${v}</text>`;
+    if(k%12===0||i===0)g+=`<text x="${(x+(ks.length<=36?bw/2:2)).toFixed(1)}" y="${H-B+16}" text-anchor="${ks.length<=36?"middle":"start"}" font-size="11" fill="var(--muted)">${ks.length<=36?MONTHS[k%12]+" "+String(Math.floor(k/12)).slice(2):Math.floor(k/12)}</text>`;
+    else if(ks.length<=36)g+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-B+16}" text-anchor="middle" font-size="10" fill="var(--muted)">${MONTHS[k%12]}</text>`});
+  $("#barPerMonth").innerHTML=g+"</svg>";bindTips($("#barPerMonth"));
+  const tot=ks.reduce((t,k)=>t+(by[k]||0),0),best=ks.reduce((m,k)=>(by[k]||0)>(by[m]||0)?k:m,ks[0]),zero=ks.filter(k=>!by[k]).length,last=[...ks].reverse().find(k=>by[k]);
+  $("#pmSum").innerHTML=`<div><b>${fmt(tot)}</b>reports in ${fmt(ks.length)} months</div><div><b>${(tot/ks.length).toFixed(1)}</b>per month on average</div>`+
+    `<div><b>${by[best]?fmt(by[best]):"–"}</b>busiest: ${by[best]?MONTHS[best%12]+" "+Math.floor(best/12):"none"}</div><div><b>${fmt(zero)}</b>months with none</div>`+
+    `<div><b>${last!=null?MONTHS[last%12]+" "+Math.floor(last/12):"–"}</b>latest month with a report</div>`;
+}
+$("#typePick").onclick=e=>{const b=e.target.closest("[data-pt]");if(!b)return;PM.type=b.dataset.pt||null;renderPerMonth(filtered())};
 /* ---- displacement trend by round, per region (Overview) */
 const RT={unit:"ind"};
 function regFromFilters(){if(F.regions.size===REGIONS.length)return"ALL";const k=[...F.regions];return k.length===1&&["NE","NCNW","SOUTH"].includes(k[0])?k[0]:"ALL"}
@@ -1196,7 +1365,8 @@ function flashByState(){
 function mapRows(){
   const fl=flashByState();
   const rows=Object.keys(GEO.states).sort().map(st=>{const m=mtOf(st),f=fl.out[st]||{n:0,nfig:0,aff_ind:0,aff_hh:0,dis_ind:0,dis_hh:0};
-    return{st,zone:STATE_ZONE[st]||"",idp_hh:m?.idp_hh||0,idp_ind:m?.idp_ind||0,ret_hh:m?.ret_hh||0,ret_ind:m?.ret_ind||0,src:m?.src||"",...f}});
+    const reps=filtered().filter(x=>x.states.includes(st));
+    return{st,zone:STATE_ZONE[st]||"",reps,rep_ind:reps.length,rep_hh:reps.length,idp_hh:m?.idp_hh||0,idp_ind:m?.idp_ind||0,ret_hh:m?.ret_hh||0,ret_ind:m?.ret_ind||0,src:m?.src||"",...f}});
   return{rows,fl}}
 function mapInfo(st,rows){
   const r=rows.find(x=>x.st===st);if(!r){$("#mapInfo").innerHTML=`<b>Hover or click a state</b><p>Its IDPs, returnees and incident figures appear here.</p>`;return}
@@ -1207,33 +1377,40 @@ function mapInfo(st,rows){
    <tr><td>Returnees</td><td>${c(r.ret_hh)}</td><td>${c(r.ret_ind)}</td></tr>
    <tr><td>Affected by incidents</td><td>${c(r.aff_hh)}</td><td>${c(r.aff_ind)}</td></tr>
    <tr><td>Displaced by incidents</td><td>${c(r.dis_hh)}</td><td>${c(r.dis_ind)}</td></tr></table>
-   <p class="sub">Incidents: ${fmt(r.n)} flash report${r.n===1?"":"s"} naming only ${esc(st)} in the selected period${r.n?`, ${fmt(r.nfig)} with figures in the text collected`:""}.</p>`}
+   <p class="sub">Incidents: ${fmt(r.n)} flash report${r.n===1?"":"s"} for ${esc(st)} in the selected period${r.n?`, ${fmt(r.nfig)} with figures in the text collected`:""}.</p>
+   <div class="mrep"><b>${fmt(r.reps.length)} report${r.reps.length===1?"":"s"} published for ${esc(st)}</b>${(()=>{const c={};r.reps.forEach(x=>c[x.component]=(c[x.component]||0)+1);return Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([k,v])=>`<div class="sub">${esc(k)}: <b>${fmt(v)}</b></div>`).join("")})()}
+   ${[...r.reps].sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,5).map(x=>`<a href="${esc(x.url.split("#")[0])}" target="_blank" rel="noopener">${esc(x.title.replace(/^Nigeria\s*[—–-]\s*/,"").slice(0,70))}</a>`).join("")}
+   ${r.reps.length?`<button type="button" class="tbtn mapgo" data-st="${esc(st)}">Show all ${fmt(r.reps.length)} in the report list →</button>`:""}</div>`}
 function renderMap(){
   if(!GEO||!GEO.states){$("#mapSvg").innerHTML=`<p class="empty">The state boundaries could not be loaded.</p>`;return}
   mapSelects();
   const meas=$("#mapMeasure").value,unit=$("#mapUnit").value,key=meas+"_"+unit;
   const {rows,fl}=mapRows(),max=Math.max(1,...rows.map(r=>r[key]));
   const col=v=>{const t=Math.sqrt(v/max),a=[230,243,250],b=[14,77,110];return`rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t)).join(",")})`};
-  const lab={idp:"IDPs",ret:"returnees",aff:"affected by incidents",dis:"displaced by incidents"}[meas],U=unit==="hh"?"households":"individuals";
+  const lab={rep:"reports published",idp:"IDPs",ret:"returnees",aff:"affected by incidents",dis:"displaced by incidents"}[meas],U=meas==="rep"?"reports":unit==="hh"?"households":"individuals";
+  $("#mapUnit").closest("label").hidden=meas==="rep";$("#mapNE").closest("label").hidden=$("#mapNW").closest("label").hidden=!(meas==="idp"||meas==="ret");
   let g=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="img" aria-label="Map of Nigeria: ${lab} by state"><defs><pattern id="nod" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F3F5F8"/><rect width="3" height="6" fill="#E3E8EF"/></pattern></defs>`;
-  rows.forEach(r=>{const v=r[key];g+=`<path d="${GEO.states[r.st].d}" data-st="${esc(r.st)}" fill="${v?col(v):"url(#nod)"}" class="${MAPSEL===r.st?"sel":""}" data-tip="${esc(r.st+": "+(v?fmt(v)+" "+lab+" ("+U+")":"no figure")+(r.src&&(meas==="idp"||meas==="ret")?" · "+r.src:""))}"/>`});
+  rows.forEach(r=>{const v=r[key];g+=`<path d="${GEO.states[r.st].d}" data-st="${esc(r.st)}" fill="${v?col(v):"url(#nod)"}" class="${MAPSEL===r.st?"sel":""}" data-tip="${esc(r.st+": "+(v?fmt(v)+" "+lab+(meas==="rep"?"":" ("+U+")"):(meas==="rep"?"no reports published for this state":"no figure"))+(r.src&&(meas==="idp"||meas==="ret")?" · "+r.src:""))}"/>`});
   rows.forEach(r=>{const c=GEO.states[r.st].c;if(c)g+=`<text x="${c[0]}" y="${c[1]}" text-anchor="middle">${esc(r.st)}</text>`});
   $("#mapSvg").innerHTML=g+"</svg>";bindTips($("#mapSvg"));
   const svg=$("#mapSvg svg");
   svg.onmouseover=e=>{const p=e.target.closest("[data-st]");if(p&&!MAPSEL)mapInfo(p.dataset.st,rows)};
   svg.onclick=e=>{const p=e.target.closest("[data-st]");MAPSEL=p&&MAPSEL!==p.dataset.st?p.dataset.st:null;renderMap()};
   mapInfo(MAPSEL,rows);
-  $("#mapLegend").innerHTML=`<span>0</span><span class="bar"></span><span>${fmt(max)} ${esc(lab)} (${U})</span><span class="nod"></span><span>no figure</span>`;
+  $("#mapLegend").innerHTML=`<span>0</span><span class="bar"></span><span>${fmt(max)} ${esc(lab)}${meas==="rep"?"":" ("+U+")"}</span><span class="nod"></span><span>no figure</span>`;
   const inc=meas==="aff"||meas==="dis";
-  $("#mapNote").innerHTML=inc?`${fmt(rows.reduce((a,r)=>a+r.n,0))} flash reports in the selected period name a single state and are counted on the map${fl.nofig?` (${fmt(fl.nofig)} of them state no figure in the text collected)`:""}. ${fmt(fl.multi.length)} flash reports cover several states (such as the weekly North Central &amp; North West flash reports); for ${fmt(fl.multi.split||0)} of them, each figure is placed in the one state named in the same sentence, and sentences naming several states are left out. Households and individuals are each added up from the reports that state them, so the two can cover different reports. Figures are those stated in each report.`
+  const noState=filtered().filter(x=>!x.states.length).length;
+  $("#mapNote").innerHTML=meas==="rep"?`Each report counts for the state it was published for: the state named in its title (for ETT, the state named on the report itself). Mentions of a state inside a report do not count, and the Republic of Niger is never counted as Niger State. ${fmt(noState)} reports in the selection cover a whole region or several areas without naming a state, so they are not on the map.`
+    :inc?`${fmt(rows.reduce((a,r)=>a+r.n,0))} flash reports in the selected period name a single state and are counted on the map${fl.nofig?` (${fmt(fl.nofig)} of them state no figure in the text collected)`:""}. ${fmt(fl.multi.length)} flash reports cover several states (such as the weekly North Central &amp; North West flash reports); for ${fmt(fl.multi.split||0)} of them, each figure is placed in the one state named in the same sentence, and sentences naming several states are left out. Households and individuals are each added up from the reports that state them, so the two can cover different reports. Figures are those stated in each report.`
     :`North East states: ${esc(REF?"Round "+$("#mapNE").value:"")}; other states: ${esc(REF2?"NC & NW Round "+$("#mapNW").value:"")}. State totals add up to the round's published total.`;
-  const hdr=["State","Zone","IDP households","IDPs","Returnee households","Returnees","Affected households (incidents)","Affected individuals (incidents)","Displaced households (incidents)","Displaced individuals (incidents)","Flash reports"];
-  const ks=["idp_hh","idp_ind","ret_hh","ret_ind","aff_hh","aff_ind","dis_hh","dis_ind","n"];
+  const hdr=["State","Zone","Reports published","IDP households","IDPs","Returnee households","Returnees","Affected households (incidents)","Affected individuals (incidents)","Displaced households (incidents)","Displaced individuals (incidents)","Flash reports"];
+  const ks=["rep_ind","idp_hh","idp_ind","ret_hh","ret_ind","aff_hh","aff_ind","dis_hh","dis_ind","n"];
   const sorted=[...rows].sort((a,b)=>b[key]-a[key]||a.st.localeCompare(b.st));
   $("#mapTable").innerHTML=`<thead><tr>${hdr.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>`+sorted.map(r=>`<tr><td><b>${esc(r.st)}</b></td><td>${esc(r.zone)}</td>${ks.map(k=>`<td class="num">${r[k]?fmt(r[k]):"–"}</td>`).join("")}</tr>`).join("")+"</tbody>";
   $("#mapCsv").onclick=()=>saveFile("dtm_nigeria_map_by_state.csv",[hdr.join(","),...sorted.map(r=>[r.st,r.zone,...ks.map(k=>r[k]||"")].map(v=>/[",]/.test(String(v))?`"${String(v).replace(/"/g,'""')}"`:v).join(","))].join("\n"));
 }
 ["#mapMeasure","#mapUnit","#mapNE","#mapNW"].forEach(id=>$(id).onchange=renderMap);
+$("#mapInfo").addEventListener("click",e=>{const b=e.target.closest(".mapgo");if(!b)return;F.states=new Set([b.dataset.st]);F.stateFilterOn=true;drill=null;syncFilterInputs();render();setPage("list")});
 
 /* ---- bar charts */
 function stackedBars(el,keys,labelOf,rows,{W=920,H=300}={}){
@@ -1265,10 +1442,7 @@ const ZC2={"North East":"#0033A0","North Central":"#1A8C7E","North West":"#E0A10
 function typeLegend(el,rs){const present=new Set(rs.map(r=>r.component_key));
   el.innerHTML=COMPONENTS.filter(c=>present.has(c.key)).map(c=>`<span><i style="background:${PALETTE[c.key]}"></i>${esc(c.label)}</span>`).join("")}
 function renderBarsAll(rs){
-  typeLegend($("#legYear"),rs);typeLegend($("#legMonth"),rs.filter(r=>r.month));
-  const ys=sortedYears();
-  stackedBars($("#barYear"),ys,k=>String(k),rs.map(r=>({...r,_k:r.year})));
-  stackedBars($("#barMonth"),range(1,12).filter(m=>F.months.has(m)),k=>MONTHS[k-1],rs.map(r=>({...r,_k:r.month})),{H:260});
+  renderPerMonth(rs);
   const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));const smax=Math.max(1,...Object.values(sc));
   $("#barState").innerHTML=Object.keys(STATES).map((z,i)=>`<div><h4 style="color:${ZONE_COL[z]}">${z}</h4><div id="bs${i}"></div></div>`).join("");
   Object.entries(STATES).forEach(([z,ss],i)=>hBars($("#bs"+i),ss.map(st=>({key:st,label:st==="FCT"?"FCT (Abuja)":st,v:sc[st]||0,c:ZONE_COL[z],dim:F.stateFilterOn&&!F.states.has(st)})),

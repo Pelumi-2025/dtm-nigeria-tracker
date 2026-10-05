@@ -393,7 +393,7 @@
  "_state_patterns_readme": "Optional regex overrides per state. Default is the state name as a whole word, so 'Niger' never matches 'Nigeria'.",
  "state_patterns": {
   "Nasarawa": "\\bnas+arawa\\b",
-  "Niger": "\\bniger\\b(?!\\s+(republic|delta))(?!\\s*\\()",
+  "Niger": "(?<!republic of )(?<!republic of the )\\bniger\\b(?!\\s*(republic|delta|basin|river|-nigeria|\\())",
   "FCT": "\\bfct\\b|\\babuja\\b|federal capital territory",
   "Akwa Ibom": "\\bakwa[\\s-]*ibom\\b",
   "Cross River": "\\bcross[\\s-]*river\\b",
@@ -420,5 +420,28 @@
    9
   ]
  },
- "_mt_readme": "Mobility Tracking: exactly one round report per round (NE and NC/NW). Other files a round publishes (dashboards, lists of wards and sites assessed, factsheets, site profiles, addenda) are 'Mobility Tracking – Dashboards'."
+ "_mt_readme": "Mobility Tracking: exactly one round report per round (NE and NC/NW). Other files a round publishes (dashboards, lists of wards and sites assessed, factsheets, site profiles, addenda) are 'Mobility Tracking – Dashboards'.",
+ "_states_readme": "A report counts for a state only when the state is named in its title (the report was published for that state); states merely mentioned in the text do not count. 'Republic of Niger', 'Niger Republic', 'Niger Delta' and 'Niger River/Basin' are never Niger State.",
+ "states_from_summary": false,
+ "component_states": {
+  "_readme": "Report types whose states are limited to where DTM Nigeria runs them.",
+  "ett": [
+   "Adamawa",
+   "Borno",
+   "Yobe",
+   "Benue"
+  ]
+ },
+ "subject_state_from_summary": [
+  "ett"
+ ],
+ "component_default_region": {
+  "_readme": "Region for reports of this type whose state cannot be read, by date: ETT ran only in the North East until Benue's first ETT report (12 July 2024).",
+  "ett": [
+   {
+    "before": "2024-07-01",
+    "region": "North East"
+   }
+  ]
+ }
 }
