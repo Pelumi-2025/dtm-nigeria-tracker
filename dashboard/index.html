@@ -474,7 +474,7 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
 @media (max-width:900px){aside.rail{position:static!important;flex-direction:column!important;min-height:0}.iconrail{width:auto;flex-direction:row;flex-wrap:wrap;justify-content:center;border-right:0}.ngroup,.nsep{display:none}.filterpanel{width:auto}}
 /* year / month tiles */
 .tiles{display:grid;gap:3px}
-.ytiles{grid-template-columns:repeat(7,minmax(46px,1fr))}
+.ytiles{grid-template-columns:repeat(9,minmax(44px,1fr))}
 .mtiles{grid-template-columns:repeat(6,minmax(40px,1fr))}
 .tiles button{background:#0E4D6E;color:#fff;border:1px solid #0A3A57;border-radius:3px;padding:5px 6px;font-weight:700;font-size:.8rem;cursor:pointer}
 .tiles button.on{background:#F0B845;color:#0A3A57;border-color:#C98A0B;box-shadow:inset 0 0 0 1px #fff}
@@ -525,6 +525,11 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
 .mrep a{font-size:.8rem;font-weight:600}
 .mapgo{margin-top:6px}
 .trendrow{grid-template-columns:1fr!important}
+.pp{display:grid;grid-template-columns:38px 1fr 1fr;gap:4px;align-items:center;margin-top:2px}
+.pp span{font-size:.78rem;font-weight:700;color:var(--muted)}
+.pp select{background:#0E4D6E;color:#fff;border:0;border-radius:5px;padding:6px 4px;font-weight:700;font-size:.82rem;min-width:0}
+#ddStates .ddrow.zero{display:none}
+.ddnote{font-size:.74rem;color:var(--muted);padding:4px 8px 6px;border-bottom:1px solid var(--soft)}
 </style>
 </head>
 <body>
@@ -552,7 +557,7 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
       <div class="ngroup">Details</div><button type="button" class="nitem" data-nav="types" title="Step 4: Report types"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.6"/></svg><i class="stepn">4</i></span><span class="nl">Report types</span></button><button type="button" class="nitem" data-nav="calendar" title="Step 5: Calendar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><i class="stepn">5</i></span><span class="nl">Calendar</span></button><button type="button" class="nitem" data-nav="charts" title="Step 6: Charts"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><rect x="5" y="11" width="3.2" height="9"/><rect x="10.4" y="5" width="3.2" height="15"/><rect x="15.8" y="13" width="3.2" height="7"/></svg><i class="stepn">6</i></span><span class="nl">Charts</span></button><button type="button" class="nitem" data-nav="list" title="Step 7: Report list"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg><i class="stepn">7</i></span><span class="nl">Report list</span></button>
       <hr class="nsep">
       <button type="button" class="nitem tool" id="filterToggle" aria-expanded="true" title="Show or hide the Region and State filters"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></span><span class="nl">Filters</span></button>
-      <a class="nitem tool" href="https://dtm-nigeria-data-hub.netlify.app/#home" target="_blank" rel="noopener" title="Open the DTM Nigeria Data Hub in a new tab"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v6H4V5h6"/></svg></span><span class="nl">Data Hub ↗</span></a>
+      <a class="nitem tool" href="https://pelumi-2025.github.io/dtm-nigeria-data-hub/#home" target="_blank" rel="noopener" title="Open the DTM Nigeria Data Hub in a new tab"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v6H4V5h6"/></svg></span><span class="nl">Data Hub ↗</span></a>
       <button type="button" class="nitem tool" id="infoBtn" title="How to use this platform"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.6"/></svg></span><span class="nl">Guide</span></button>
     </nav>
     <div class="filterpanel" id="filterPanel">
@@ -560,6 +565,10 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
       <p class="fp-hint">Narrow every page to a region or state.</p>
       <div class="sl"><label>Region</label><div class="dd" id="ddRegions"></div></div>
       <div class="sl"><label>State</label><div class="dd" id="ddStates"></div></div>
+      <div class="sl"><label>Period</label>
+        <div class="pp"><span>From</span><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select></div>
+        <div class="pp"><span>To</span><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select></div>
+      </div>
       <div class="fp-active" id="fpActive"></div>
       <button class="resetbig" id="resetBtn2" type="button">↺ Reset all filters</button>
       <div class="side-foot">IOM · Displacement Tracking Matrix · Nigeria</div>
@@ -570,7 +579,7 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
     <section class="slicerbar" aria-label="Filters">
       <div class="sl"><label>Year <small>(click one; click another for a range)</small></label><div class="tiles ytiles" id="yearTiles"></div></div>
       <div class="sl"><label>Month <small>(click to pick months)</small></label><div class="tiles mtiles" id="monthTiles"></div></div>
-      <div hidden><select id="fromM"></select><select id="fromY"></select><select id="toM"></select><select id="toY"></select><div class="dd" id="ddMonths"></div></div>
+      <div hidden><div class="dd" id="ddMonths"></div></div>
       <div class="sl wide"><label>Report types</label><div class="dd" id="ddTypes"></div></div>
       <div class="sl"><label for="basisSel">Count by</label><select id="basisSel"><option value="pub">Publication date</option><option value="period">Period in title</option></select></div>
       <div class="sl"><label for="kw">Title contains</label><input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama"></div>
@@ -668,8 +677,8 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
 
     <div class="trendrow" data-page="overview">
       <section class="panel chart">
-        <h2>Monthly publication trend</h2>
-        <p class="hint">Reports published each month across the selected period. Hover a point for its number.</p>
+        <h2>Reports published per month</h2>
+        <p class="hint">Number of reports published on dtm.iom.int each month in the selected period. Hover a bar for its number; pick a report type on the Charts page to see it on its own.</p>
         <div id="trend"></div>
       </section>
       <section class="panel chart">
@@ -1078,7 +1087,7 @@ function updateFilterSummary(){
 /* ---- year and month tiles (period) */
 function renderPeriodTiles(){
   const cnt={};REPORTS.forEach(r=>{if(r.year)cnt[r.year]=(cnt[r.year]||0)+1});
-  const maxY=Math.max(YEAR_MIN,...Object.keys(cnt).map(Number)),yrs=range(YEAR_MIN,Math.min(YEAR_MAX,maxY+1));
+  const maxY=Math.max(YEAR_MIN,...Object.keys(cnt).map(Number)),yrs=range(YEAR_MIN,YEAR_MAX);
   const fy=Math.floor(F.from/12),ty=Math.floor(F.to/12),allY=F.from<=ym(YEAR_MIN,1)&&F.to>=ym(Math.min(YEAR_MAX,maxY),12);
   $("#yearTiles").innerHTML=yrs.map(y=>`<button type="button" data-yt="${y}" class="${!allY&&y>=fy&&y<=ty?"on":""}" ${cnt[y]?"":"disabled"} title="${cnt[y]?fmt(cnt[y])+" reports":"no reports yet"}">${y}</button>`).join("");
   const mc={};REPORTS.forEach(r=>{if(r.month&&r.year>=fy&&r.year<=ty&&passes(r,{ignoreMonth:true}))mc[r.month]=(mc[r.month]||0)+1});
@@ -1107,6 +1116,9 @@ function render(){
   const mcc={};REPORTS.forEach(r=>{if(r.month&&passes(r,{ignoreMonth:true}))mcc[r.month]=(mcc[r.month]||0)+1});syncDD($("#ddMonths"),mcc);
   const rcc={};REPORTS.forEach(r=>{if(passes(r,{ignoreRegion:true}))regionKeysOf(r).forEach(k=>rcc[k]=(rcc[k]||0)+1)});syncDD($("#ddRegions"),rcc,rs.length);
   const scc={};REPORTS.forEach(r=>{if(passes(r,{ignoreState:true}))r.states.forEach(st=>scc[st]=(scc[st]||0)+1)});syncDD($("#ddStates"),scc);
+  {const el=$("#ddStates"),n=Object.values(scc).filter(Boolean).length;let note=el.querySelector(".ddnote");
+   if(!note){note=document.createElement("div");note.className="ddnote";el.querySelector(".ddpanel").insertBefore(note,el.querySelector(".ddlist"))}
+   note.textContent=n?`${n} state${n===1?"":"s"} with reports for this selection; states with none are not listed.`:"No state has reports for this selection."}
   renderHome();renderPeriodTiles();updateFilterSummary();
   // live counts beside checkboxes
   const cc={};REPORTS.forEach(r=>{if(passes(r,{ignoreComp:true}))cc[r.component_key]=(cc[r.component_key]||0)+1});
@@ -1157,27 +1169,7 @@ function renderKPIs(rs){
     K(6,"Latest report",latest?new Date(latest+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"–",latest?"most recent publication in the selection":"no reports");
 }
 /* ---- monthly trend line */
-function renderTrend(rs){
-  const box=$("#trend");const now=new Date(),nowv=now.getFullYear()*12+now.getMonth();
-  const vs=rs.map(r=>r.year*12+r.month-1);
-  if(!vs.length){box.innerHTML='<p class="hint">No reports in this selection.</p>';return}
-  const a=Math.max(F.from,Math.min(...vs)),b=Math.min(F.to,Math.max(nowv,Math.max(...vs)));
-  const c={};vs.forEach(v=>c[v]=(c[v]||0)+1);const pts=range(a,b).map(v=>({v,n:F.months.has(v%12+1)?(c[v]||0):null}));
-  const W=820,H=360,L=40,R=12,T=22,B=30,max=niceMax(Math.max(1,...pts.map(p=>p.n||0)));
-  const X=i=>L+(pts.length<2?(W-L-R)/2:(W-L-R)*i/(pts.length-1)),Y=n=>H-B-(H-T-B)*n/max;
-  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports per month over time"><defs><linearGradient id="tg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0E4D6E" stop-opacity=".28"/><stop offset="1" stop-color="#0E4D6E" stop-opacity="0"/></linearGradient></defs>`;
-  for(let i=0;i<=4;i++){const v=max*i/4;s+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${fmt(v)}</text>`}
-  const seg=[];let cur=[];pts.forEach((p,i)=>{if(p.n===null){if(cur.length)seg.push(cur);cur=[]}else cur.push([X(i),Y(p.n)])});if(cur.length)seg.push(cur);
-  seg.forEach(g=>{const d=g.map((q,i)=>(i?"L":"M")+q[0].toFixed(1)+","+q[1].toFixed(1)).join("");
-    s+=`<path d="${d}L${g[g.length-1][0].toFixed(1)},${H-B}L${g[0][0].toFixed(1)},${H-B}Z" fill="url(#tg)"/><path d="${d}" fill="none" stroke="#0E4D6E" stroke-width="2.2" stroke-linejoin="round"/>`});
-  const step=pts.length>60?12:pts.length>24?6:pts.length>12?3:1;
-  pts.forEach((p,i)=>{const mm=p.v%12,yy=Math.floor(p.v/12);
-    if(mm===0||i===0||(step<12&&mm%step===0))s+=`<text x="${X(i)}" y="${H-B+16}" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-weight="${mm===0?700:400}">${step>=12||mm===0?(mm===0?yy:MONTHS[mm]+" "+String(yy).slice(2)):MONTHS[mm]}</text>`;
-    if(p.n!==null)s+=`<circle cx="${X(i).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${pts.length>60?2.2:3.6}" fill="#fff" stroke="#0E4D6E" stroke-width="1.8" data-tip="${MONTHS[mm]} ${yy}: ${p.n} report${p.n===1?"":"s"}"/>`});
-  const top=pts.filter(p=>p.n!==null).sort((x,y)=>y.n-x.n)[0];
-  if(top&&top.n){const i=pts.indexOf(top);s+=`<text x="${X(i)}" y="${Y(top.n)-9}" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0E4D6E">${top.n} · ${MONTHS[top.v%12]} ${Math.floor(top.v/12)}</text>`}
-  box.innerHTML=s+"</svg>";bindTips(box);
-}
+function renderTrend(rs){monthBars($("#trend"),rs,"#0E4D6E","reports")}
 /* ---- bar chart: reports by report type */
 function renderDonut(rs){
   const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
@@ -1263,22 +1255,26 @@ function renderPerMonth(rs){
     items.map(c=>`<button type="button" data-pt="${c.key}" aria-pressed="${PM.type===c.key}"><i style="background:${PALETTE[c.key]||"#888"}"></i>${esc(c.label)} <b>${fmt(cnt[c.key])}</b></button>`).join("");
   const sel=PM.type?rs.filter(r=>r.component_key===PM.type):rs, col=PM.type?(PALETTE[PM.type]||"#0E4D6E"):"#0E4D6E", name=PM.type?COMPONENTS.find(c=>c.key===PM.type).label:"All report types";
   $("#pmTitle").textContent=`Reports published per month – ${name}`;
+  monthBars($("#barPerMonth"),sel,col,PM.type?name:"reports",$("#pmSum"));
+}
+/* plain monthly bar chart (one colour, never stacked), shared by Overview and Charts */
+function monthBars(el,sel,col,what,sumEl){
   const now=new Date(),nowv=now.getFullYear()*12+now.getMonth(),dataMax=Math.max(F.from,...REPORTS.filter(r=>r.year&&r.month).map(r=>r.year*12+r.month-1));
   const a=F.from,b=Math.min(F.to,Math.max(nowv,dataMax));
   const by={};sel.forEach(r=>{if(r.year&&r.month){const k=r.year*12+r.month-1;by[k]=(by[k]||0)+1}});
   const ks=range(a,b).filter(k=>F.months.has(k%12+1));
-  if(!ks.length){$("#barPerMonth").innerHTML=`<p class="empty">No months in the selected period.</p>`;$("#pmSum").innerHTML="";return}
+  if(!ks.length){el.innerHTML=`<p class="empty">No months in the selected period.</p>`;if(sumEl)sumEl.innerHTML="";return}
   const max=Math.max(1,...ks.map(k=>by[k]||0)),W=940,H=300,L=44,R=10,T=18,B=40,bw=(W-L-R)/ks.length,Y=v=>H-B-(H-T-B)*v/niceMax(max),nm=niceMax(max);
-  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(name)}: reports published per month">`;
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(what)} published per month">`;
   for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${Number.isInteger(v)?v:v.toFixed(1)}</text>`}
   ks.forEach((k,i)=>{const v=by[k]||0,x=L+i*bw,lab=`${MONTHS[k%12]} ${Math.floor(k/12)}`;
-    if(v)g+=`<rect x="${(x+bw*.12).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${Math.max(1,bw*.76).toFixed(1)}" height="${(H-B-Y(v)).toFixed(1)}" fill="${col}" rx="${bw>8?2:0}" data-tip="${esc(lab+": "+fmt(v)+" "+(PM.type?name:"reports"))}"/>`;
+    if(v)g+=`<rect x="${(x+bw*.12).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${Math.max(1,bw*.76).toFixed(1)}" height="${(H-B-Y(v)).toFixed(1)}" fill="${col}" rx="${bw>8?2:0}" data-tip="${esc(lab+": "+fmt(v)+" "+what)}"/>`;
     if(v&&ks.length<=36)g+=`<text x="${(x+bw/2).toFixed(1)}" y="${(Y(v)-4).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="800" fill="var(--ink)">${v}</text>`;
     if(k%12===0||i===0)g+=`<text x="${(x+(ks.length<=36?bw/2:2)).toFixed(1)}" y="${H-B+16}" text-anchor="${ks.length<=36?"middle":"start"}" font-size="11" fill="var(--muted)">${ks.length<=36?MONTHS[k%12]+" "+String(Math.floor(k/12)).slice(2):Math.floor(k/12)}</text>`;
     else if(ks.length<=36)g+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-B+16}" text-anchor="middle" font-size="10" fill="var(--muted)">${MONTHS[k%12]}</text>`});
-  $("#barPerMonth").innerHTML=g+"</svg>";bindTips($("#barPerMonth"));
+  el.innerHTML=g+"</svg>";bindTips(el);
   const tot=ks.reduce((t,k)=>t+(by[k]||0),0),best=ks.reduce((m,k)=>(by[k]||0)>(by[m]||0)?k:m,ks[0]),zero=ks.filter(k=>!by[k]).length,last=[...ks].reverse().find(k=>by[k]);
-  $("#pmSum").innerHTML=`<div><b>${fmt(tot)}</b>reports in ${fmt(ks.length)} months</div><div><b>${(tot/ks.length).toFixed(1)}</b>per month on average</div>`+
+  if(sumEl)sumEl.innerHTML=`<div><b>${fmt(tot)}</b>reports in ${fmt(ks.length)} months</div><div><b>${(tot/ks.length).toFixed(1)}</b>per month on average</div>`+
     `<div><b>${by[best]?fmt(by[best]):"–"}</b>busiest: ${by[best]?MONTHS[best%12]+" "+Math.floor(best/12):"none"}</div><div><b>${fmt(zero)}</b>months with none</div>`+
     `<div><b>${last!=null?MONTHS[last%12]+" "+Math.floor(last/12):"–"}</b>latest month with a report</div>`;
 }
@@ -1428,6 +1424,7 @@ function stackedBars(el,keys,labelOf,rows,{W=920,H=300}={}){
   el.innerHTML=s+"</svg>";bindTips(el);
 }
 function hBars(el,items,onPick,L=150,W=560,fixedMax){
+  if(!items.length){el.innerHTML=`<p class="empty">No reports in this selection.</p>`;return}
   const rowH=26,R=56,T=4;let y=T,s="";const max=fixedMax||Math.max(1,...items.filter(i=>!i.head).map(i=>i.v));
   items.forEach(it=>{if(it.head){s+=`<text x="0" y="${y+15}" font-size="11" font-weight="800" fill="${it.c}" letter-spacing=".04em">${esc(it.head.toUpperCase())}</text>`;y+=20;return}
     const w=(W-L-R)*it.v/max;
@@ -1445,7 +1442,7 @@ function renderBarsAll(rs){
   renderPerMonth(rs);
   const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));const smax=Math.max(1,...Object.values(sc));
   $("#barState").innerHTML=Object.keys(STATES).map((z,i)=>`<div><h4 style="color:${ZONE_COL[z]}">${z}</h4><div id="bs${i}"></div></div>`).join("");
-  Object.entries(STATES).forEach(([z,ss],i)=>hBars($("#bs"+i),ss.map(st=>({key:st,label:st==="FCT"?"FCT (Abuja)":st,v:sc[st]||0,c:ZONE_COL[z],dim:F.stateFilterOn&&!F.states.has(st)})),
+  Object.entries(STATES).forEach(([z,ss],i)=>hBars($("#bs"+i),ss.filter(st=>sc[st]).map(st=>({key:st,label:st==="FCT"?"FCT (Abuja)":st,v:sc[st]||0,c:ZONE_COL[z],dim:F.stateFilterOn&&!F.states.has(st)})),
     st=>{if(F.stateFilterOn&&F.states.size===1&&F.states.has(st)){F.states=new Set(ALL_STATES);F.stateFilterOn=false}else{F.states=new Set([st]);F.stateFilterOn=true}drill=null;syncFilterInputs();render()},110,380,smax));
   const has=(r,z)=>(r.regions||[]).includes(z);
   const ne=rs.filter(r=>has(r,"North East")).length,nc=rs.filter(r=>has(r,"North Central")).length,nw=rs.filter(r=>has(r,"North West")).length,
