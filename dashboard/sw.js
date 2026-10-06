@@ -4,7 +4,7 @@
 //  - only requests to this site are handled; fonts and other sites go straight to the network
 //  - redirected pages are copied into a fresh response before they are returned
 //  - when the network and the cache both fail, a proper error response is returned
-const CACHE = "dtm-ng-v4";
+const CACHE = "dtm-ng-v5";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "data/reports.js", "data/status.json"];
 
 self.addEventListener("install", e => e.waitUntil(
