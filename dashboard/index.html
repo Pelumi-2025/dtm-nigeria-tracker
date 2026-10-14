@@ -530,206 +530,268 @@ aside.rail{background:#fff!important;padding:0!important;flex-direction:row!impo
 .pp select{background:#0E4D6E;color:#fff;border:0;border-radius:5px;padding:6px 4px;font-weight:700;font-size:.82rem;min-width:0}
 #ddStates .ddrow.zero{display:none}
 .ddnote{font-size:.74rem;color:var(--muted);padding:4px 8px 6px;border-bottom:1px solid var(--soft)}
-/* ================= Data Hub look (matches pelumi-2025.github.io/dtm-nigeria-data-hub) ================= */
-:root{--iom:#0033A0;--idp:#0033A0;--ret:#C98A0B;--flood:#16807F;--flash:#B8322A;--ink:#16213A;--ink-2:#4A5570;--ink-3:#7B859C;--muted:#4A5570;
-  --line:#D9DEE8;--line-2:#EBEEF4;--paper:#F2F4F8;--pbbg:#F2F4F8;--panel:#FFFFFF;--surface:#FFFFFF;--wash:#E6ECF7;--soft:#EEF2F8;--pbline:#D9DEE8}
-:root[data-theme="dark"]{--iom:#7FA6FF;--idp:#7FA6FF;--ret:#F0B845;--flood:#4FC2C0;--flash:#F2776E;--ink:#E8ECF5;--ink-2:#B3BCD0;--ink-3:#8791A8;--muted:#B3BCD0;
-  --line:#2E3850;--line-2:#252E43;--paper:#111827;--pbbg:#111827;--panel:#182236;--surface:#182236;--wash:#1F2B45;--soft:#1F2B45;--pbline:#2E3850}
-body{background:var(--paper);font-family:"Public Sans","Segoe UI",Roboto,Arial,sans-serif}
-/* masthead with the displacement curve */
-.pbi-head.mast{display:block;background:#0033A0;padding:0;min-height:0;box-shadow:none}
-:root[data-theme="dark"] .pbi-head.mast{background:#0B1E55}
-.mast-in{padding:16px 26px 0}
-.mast-row{display:flex;gap:16px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-.mast-l{min-width:0;flex:1 1 520px}
-.mast .brandlogo{display:inline-flex;align-items:center;gap:12px;margin-bottom:10px}
-.mast .brandlogo svg{height:36px;width:auto}
-.mast h1{text-align:left;margin:0;font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:800;letter-spacing:-.01em;line-height:1.15;color:#fff}
-.mast .mast-l p{margin:6px 0 0;max-width:72ch;color:#C9D6F5;font-size:.95rem}
-.mast .headright{font-size:.82rem;color:#C9D6F5;text-align:right}
-.mast .hbtn{border-color:rgba(255,255,255,.45);font-weight:500;font-size:.82rem;padding:5px 10px}
-#curve{margin-top:12px;min-height:150px}
-#curve svg{display:block;width:100%;height:auto;max-height:230px}
-#curve svg text{fill:#C9D6F5}
-.curve-empty{color:#C9D6F5;font-size:.9rem;padding:30px 0;margin:0}
-.curve-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 0 12px}
-.curve-key{display:flex;gap:18px;font-size:.8rem;color:#C9D6F5;flex-wrap:wrap;align-items:center}
-.curve-key i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
-.curve-key .ck-note{opacity:.75}
-.mseg{display:inline-flex;border:1px solid rgba(255,255,255,.45);border-radius:6px;overflow:hidden}
-.mseg button{background:transparent;border:0;color:#DCE5FB;padding:3px 10px;font-size:.78rem;cursor:pointer}
-.mseg button+button{border-left:1px solid rgba(255,255,255,.45)}
-.mseg button[aria-pressed="true"]{background:rgba(255,255,255,.18);color:#fff;font-weight:700}
-/* top bar of pill buttons (full width, like the Data Hub) */
-.topbar.slicerbar{display:block;position:relative;top:auto;margin:0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:var(--panel);
-  padding:10px 26px;box-shadow:0 2px 6px rgba(0,0,0,.05);z-index:26}
-.tb-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px;align-items:start;padding:3px 0}
-.tb-l{font-size:.78rem;font-weight:700;color:var(--ink-2);padding-top:5px}
-.tb-b{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
-.tb-b button,.tb-btn{border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:14px;padding:3px 11px;font-size:.8rem;cursor:pointer;font-weight:600;line-height:1.5}
-.tb-b button:hover,.tb-btn:hover{border-color:var(--iom);color:var(--iom)}
-.tb-b button[aria-pressed="true"],.tb-b button.on{background:var(--iom);border-color:var(--iom);color:#fff}
-.tb-b button:disabled{opacity:.45;cursor:default;border-style:dashed}
-.tb-years button{padding:2px 7px;font-size:.75rem;min-width:44px;background:var(--panel)!important;color:var(--ink-2)!important;border:1px solid var(--line)!important;border-radius:14px!important;box-shadow:none!important}
-.tb-years button.on{background:var(--iom)!important;color:#fff!important;border-color:var(--iom)!important}
-.tb-years button:disabled{background:var(--panel)!important;color:var(--ink-3)!important}
-#monthTiles button{min-width:42px;padding:2px 8px;font-size:.75rem;background:var(--panel)!important;color:var(--ink-2)!important;border:1px solid var(--line)!important;border-radius:14px!important;box-shadow:none!important}
-#monthTiles button.on{background:var(--iom)!important;color:#fff!important;border-color:var(--iom)!important}
-#monthTiles button:disabled{color:var(--ink-3)!important}
-.tb-inl{font-size:.76rem;color:var(--ink-3);margin:0 2px 0 10px;font-weight:600}
-.topbar select,.topbar .search{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:6px;padding:4px 8px!important;font-size:.82rem!important;font-weight:500!important;min-height:28px}
-.topbar .search{width:200px}
-.topbar .tb-count{margin:0;padding:0;border:0;font-size:.86rem;color:var(--ink)}
-.topbar .tb-count b{color:var(--iom);font-size:1rem}
-.topbar .tb-dd{min-width:0;margin-left:4px}
-.topbar .tb-dd .ddbtn{background:var(--wash)!important;color:var(--iom)!important;border:1px solid var(--iom)!important;border-radius:14px!important;padding:3px 11px!important;font-size:.8rem!important;min-height:0;font-weight:600}
-.topbar .tb-dd .ddbtn .ddn{background:var(--iom)!important;color:#fff!important}
-@media (max-width:900px){.tb-row{grid-template-columns:1fr}.topbar.slicerbar{padding:10px 14px}}
-/* overview layout */
-main{padding:22px 26px 80px}
-.ovhead h2{font-size:1.3rem;margin:0 0 4px;font-weight:700;letter-spacing:-.005em}
-.ovlede{color:var(--ink-2);margin:0 0 14px;max-width:90ch;font-size:.95rem}
-.figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:16px;overflow:hidden}
-.figgrp{display:contents}
-.fig{padding:14px 18px;box-shadow:1px 0 0 var(--line-2),0 1px 0 var(--line-2)}
-.fig .v{font-size:1.65rem;font-weight:800;letter-spacing:-.015em;line-height:1.1;color:var(--ink)}
-.fig .l{font-size:.82rem;color:var(--ink-2);margin-top:2px}
-.fig .d{font-size:.78rem;margin-top:4px;color:var(--ink-3)}
-.fig.idp .v{color:var(--idp)} .fig.ret .v{color:var(--ret)}
-.chg{display:inline-flex;align-items:center;padding:0 7px;border-radius:10px;font-weight:700;font-size:.76rem;white-space:nowrap}
-.chg.up{background:color-mix(in srgb,var(--flash) 14%,transparent);color:var(--flash)}
-.chg.down{background:color-mix(in srgb,var(--flood) 16%,transparent);color:var(--flood)}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(12,minmax(0,1fr));margin-bottom:16px}
-.c12{grid-column:span 12}.c8{grid-column:span 8}.c6{grid-column:span 6}.c4{grid-column:span 4}
-@media (max-width:1100px){.c8,.c6,.c4{grid-column:span 12}}
-.grid > section.panel{margin:0}
-.panel-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-bottom:6px}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.seg button{background:var(--panel);border:0;padding:4px 10px;font-size:.8rem;cursor:pointer;color:var(--ink-2)}
+/* ================= Combined design: light "campaign analysis" layout (default) + dark "performance" theme ================= */
+:root{color-scheme:light;
+  --bg:#EEF0F4;--paper:#EEF0F4;--pbbg:#EEF0F4;--panel:#FFFFFF;--surface:#FFFFFF;--ink:#1F2A37;--ink-2:#4B5563;--ink-3:#8A94A6;--muted:#4B5563;
+  --line:#E2E6EC;--line-2:#EEF0F4;--grid:#ECEEF2;--soft:#F4F6F9;--wash:#EEF1F8;--pbline:#E2E6EC;--title:#4E6A89;--tab:#4E6A89;
+  --c1:#4A5FC1;--c2:#F07A4A;--c3:#C8243A;--c4:#2E9E8F;--c0:#A3ACB9;--spark:#9AA3B2;--avg:#E8913A;--g1:#4A5FC1;--g2:#8FA0EA;
+  --pos:#2E9E5B;--neg:#D64545;--map:#E3E8F2;--maphas:#C9D3EC;--pin:#4A5FC1;--shadow:0 1px 3px rgba(17,24,39,.07),0 1px 2px rgba(17,24,39,.04);
+  --rail:#17152F;--railink:#A9A3D6;--railact:#E07BE0;--sep:#E8913A}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0B0A1C;--paper:#0B0A1C;--pbbg:#0B0A1C;--panel:#141229;--surface:#141229;--ink:#ECEAF8;--ink-2:#BDB8DD;--ink-3:#8C87B0;--muted:#BDB8DD;
+  --line:#2B2850;--line-2:#221F40;--grid:#24213F;--soft:#1B1835;--wash:#211D40;--pbline:#2B2850;--title:#FFFFFF;--tab:#7B6CF0;
+  --c1:#8576F2;--c2:#E0559F;--c3:#B87F1E;--c4:#2FA697;--c0:#6B6690;--spark:#B79BF0;--avg:#E8A07A;--g1:#6F5FE8;--g2:#D46BD9;
+  --pos:#5AD19A;--neg:#FF7B8A;--map:#2A2552;--maphas:#3E3676;--pin:#D46BD9;--shadow:0 0 0 1px rgba(255,255,255,.02);
+  --rail:#100E24;--railink:#8F89C2;--railact:#E07BE0;--sep:#E8A07A}
+body{background:var(--bg);color:var(--ink);font-family:"Public Sans","Segoe UI",Roboto,Arial,sans-serif}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+/* app frame: dark icon rail + main column */
+.app{display:grid;grid-template-columns:84px minmax(0,1fr);min-height:100vh}
+.drail{position:sticky;top:0;height:100vh;background:var(--rail);display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 0 14px;z-index:40;overflow-y:auto;scrollbar-width:none}
+.dmark{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#6F5FE8,#D46BD9);color:#fff;font-weight:900;font-size:.85rem;letter-spacing:.04em;text-decoration:none;margin-bottom:10px}
+.ditem{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;width:84px;padding:8px 2px;background:none;border:0;color:var(--railink);font-size:.64rem;font-weight:700;cursor:pointer;text-decoration:none;text-align:center;line-height:1.15}
+.ditem svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ditem:hover{color:#fff}
+.ditem[aria-current="page"]{color:var(--railact)}
+.ditem[aria-current="page"]::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:4px;border-radius:0 4px 4px 0;background:var(--railact)}
+.dsp{flex:1}
+.appmain{min-width:0;display:flex;flex-direction:column}
+/* header (title, page tabs, filters, reset) */
+.bhead{background:var(--panel);box-shadow:var(--shadow);padding:12px 22px 10px;position:relative;z-index:30}
+:root[data-theme="dark"] .bhead{background:linear-gradient(90deg,#141229,#1D1638);border-bottom:1px solid var(--line)}
+.bh-row1{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap}
+.bh-title{display:flex;align-items:center;gap:12px;min-width:0}
+.bhead .brandlogo{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.bhead .brandlogo svg{height:32px;width:auto}
+.bhead .brandlogo span{display:none}
+.bhead .brandlogo svg .cls-1{fill:#0033A0}
+:root[data-theme="dark"] .bhead .brandlogo svg .cls-1{fill:#FFFFFF}
+.bhead h1{margin:0;font-size:clamp(1.2rem,1.9vw,1.6rem);font-weight:800;color:var(--title);letter-spacing:-.01em;white-space:nowrap}
+.infoi{width:22px;height:22px;border-radius:50%;border:2px solid var(--title);background:none;color:var(--title);font-weight:900;font-size:.72rem;line-height:1;cursor:pointer;flex:none}
+.btabs{display:flex;gap:8px;flex-wrap:wrap}
+.btab{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:8px 16px;font-weight:700;font-size:.86rem;color:var(--ink);cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.btab:hover{border-color:var(--tab)}
+.btab[aria-current="page"]{background:var(--tab);border-color:var(--tab);color:#fff;box-shadow:0 2px 6px rgba(78,106,137,.35)}
+:root[data-theme="dark"] .btab{background:#1B1835}
+:root[data-theme="dark"] .btab[aria-current="page"]{background:linear-gradient(90deg,#6F5FE8,#D46BD9);border-color:transparent}
+.bhead .headright{margin-left:auto;text-align:right;font-size:.76rem;color:var(--ink-3)}
+.bhead .headright b{color:var(--ink)}
+.bhead .hbtn{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:.8rem;font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.bhead .hbtn:hover{border-color:var(--tab);background:var(--panel)}
+.bh-row2.filterpanel{width:auto;display:flex;flex-direction:row;align-items:flex-end;flex-wrap:wrap;gap:8px 16px;padding:10px 0 0;margin-top:10px;border-top:1px solid var(--line-2);background:none!important}
+.bh-f{font-weight:800;color:var(--title);font-size:1rem;padding-bottom:6px}
+.bf{display:flex;flex-direction:column;gap:2px}
+.bf>label{font-size:.74rem;font-weight:700;color:var(--ink-2);text-align:center}
+.bf .pp{display:flex;align-items:center;gap:4px}
+.bf .pp select,.aslicer select{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:6px!important;padding:5px 6px!important;font-weight:500!important;font-size:.82rem!important;min-height:30px;min-width:0}
+.bf .pp .to{color:var(--ink-3)}
+.bf .dd{min-width:170px}
+.bf .ddbtn,.filterpanel .ddbtn{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:6px!important;padding:5px 9px!important;font-weight:600!important;font-size:.82rem!important;min-height:30px;width:100%}
+.bf .ddbtn .ddn{background:var(--tab)!important;color:#fff!important}
+.bh-row2 .fp-active{background:none;border:0;padding:0 0 6px;font-size:.76rem;color:var(--ink-3);max-width:260px}
+.bh-row2 .fp-active b{display:inline;color:var(--ink-2);margin-right:4px}
+.breset{margin-left:auto;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 16px;font-weight:800;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.breset:hover{border-color:var(--tab);color:var(--tab)}
+/* quick-choice row with radio buttons */
+.aslicer.slicerbar{position:static;display:flex;flex-direction:column;gap:4px;margin:12px 22px 0;padding:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+.ar{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap}
+.al{font-size:.76rem;font-weight:800;color:var(--ink-2);width:56px;flex:none}
+.al2{font-size:.76rem;font-weight:700;color:var(--ink-2);margin-left:8px}
+.radios{display:flex;flex-wrap:wrap;gap:2px 4px}
+.radios button,.aslicer #yearTiles button,.aslicer #monthTiles button{display:inline-flex;align-items:center;gap:6px;background:none!important;border:0!important;box-shadow:none!important;color:var(--ink)!important;font-weight:700!important;font-size:.8rem!important;padding:3px 7px!important;border-radius:6px!important;cursor:pointer;min-width:0!important}
+.radios button::before{content:"";width:12px;height:12px;border-radius:50%;border:1.5px solid var(--ink-3);box-sizing:border-box;flex:none}
+.radios button:hover{background:var(--wash)!important}
+.radios button[aria-pressed="true"]::before,.radios button.on::before{border:3.5px solid var(--g1);background:var(--panel)}
+:root[data-theme="dark"] .radios button[aria-pressed="true"]::before,:root[data-theme="dark"] .radios button.on::before{border-color:var(--g2)}
+.radios button:disabled{color:var(--ink-3)!important;opacity:.5;cursor:default}
+.ar-tools .search{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font-size:.82rem;width:190px}
+.tb-btn{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:4px 11px;font-size:.78rem;font-weight:700;color:var(--ink-2);cursor:pointer}
+.tb-btn:hover{border-color:var(--tab);color:var(--tab)}
+.aslicer .lede{margin:0 0 0 auto;padding:0;border:0;font-size:.8rem;color:var(--ink-3)}
+.aslicer .lede b{color:var(--ink);font-size:.95rem}
+/* main */
+main{padding:12px 22px 70px!important;min-width:0}
+.crumbs{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:10px!important;box-shadow:var(--shadow);margin-bottom:12px}
+.crumbs .here{background:var(--tab)!important}
+.pn.next{background:var(--tab)!important;border-color:var(--tab)!important}
+:root[data-theme="dark"] .pn.next{background:linear-gradient(90deg,#6F5FE8,#D46BD9)!important;border-color:transparent!important}
+section.panel,.panel{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:10px!important;padding:14px 16px!important;box-shadow:var(--shadow)!important;margin:0 0 14px}
+.panel h2{font-size:.98rem!important;font-weight:800!important;color:var(--ink)!important;margin:0 0 2px!important;text-align:left!important}
+.panel h3{font-size:.86rem;font-weight:800;margin:0 0 6px;color:var(--ink)}
+.sub,.panel .hint{color:var(--ink-3)!important;font-size:.8rem!important;margin:0 0 8px!important;text-align:left!important}
+.phead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+svg text.ax{font-size:11px;fill:var(--ink-3)}
+svg text.vl{font-size:11px;font-weight:800;fill:var(--ink)}
+svg text.avgl{font-size:10.5px;font-weight:700;fill:var(--avg)}
+svg text.endl{font-size:11px;font-weight:700;fill:var(--ink-2)}
+.chart svg,#trend svg,#curve svg,#dow svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.78rem;color:var(--ink-2);margin:2px 0 6px}
+.legend i{display:inline-block;width:16px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.legend i.dash{background-image:repeating-linear-gradient(90deg,currentColor 0 5px,transparent 5px 8px)!important;background-color:transparent!important}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.seg button{background:var(--panel);border:0;padding:4px 10px;font-size:.78rem;font-weight:700;cursor:pointer;color:var(--ink-2)}
 .seg button+button{border-left:1px solid var(--line)}
-.seg button[aria-pressed="true"]{background:var(--wash);color:var(--iom);font-weight:700}
-.sub{color:var(--ink-3);font-size:.84rem;margin:0 0 10px}
-.latest{list-style:none;margin:0;padding:0}
-.latest li{display:grid;grid-template-columns:92px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line-2);font-size:.86rem}
-.latest li:last-child{border-bottom:0}
-.latest .ld{color:var(--ink-3);font-size:.78rem;white-space:nowrap}
-.latest a{text-decoration:none;color:var(--ink);font-weight:600;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.latest a:hover{color:var(--iom);text-decoration:underline}
-.latest .pill{background:var(--wash);color:var(--ink-2);border-radius:9px;padding:1px 7px;font-size:.72rem}
-/* every page: Data Hub panels */
-section.panel,.panel{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:10px!important;padding:16px 18px!important;box-shadow:none!important}
-.panel h2{font-size:1rem!important;font-weight:700!important;text-align:left!important;color:var(--ink)!important;margin:0 0 2px!important}
-.panel .hint{text-align:left!important;color:var(--ink-3)!important;font-size:.84rem!important}
-.legend{justify-content:flex-start;font-size:.78rem;color:var(--ink-2);gap:4px 14px}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
-.crumbs,.pagenav{margin-bottom:14px}
-.chatbtn{background:#0033A0!important;border-color:#0033A0!important;border-radius:22px!important;padding:10px 16px!important;font-weight:700}
-.hb{display:flex;flex-direction:column;gap:2px}
-.hbr{display:grid;grid-template-columns:minmax(0,46%) minmax(0,1fr);gap:10px;align-items:center;background:none;border:0;padding:3px 4px;border-radius:6px;cursor:pointer;text-align:left;color:var(--ink);font-size:.8rem}
+.seg button[aria-pressed="true"]{background:var(--tab);color:#fff}
+.mdh{display:inline-flex;border:1px solid var(--line);border-radius:10px;padding:3px;gap:0}
+.mdh button{background:none;border:0;padding:4px 16px;font-weight:800;font-size:.78rem;color:var(--ink-2);cursor:pointer;border-radius:7px}
+.mdh button+button{border-left:1px solid var(--line);border-radius:0}
+.mdh button[aria-pressed="true"]{background:var(--tab);color:#fff;border-radius:7px}
+:root[data-theme="dark"] .mdh button[aria-pressed="true"],:root[data-theme="dark"] .seg button[aria-pressed="true"]{background:linear-gradient(90deg,#6F5FE8,#D46BD9)}
+/* overview grid */
+.ovgrid{display:grid;grid-template-columns:290px minmax(0,1fr);gap:14px;align-items:start}
+.kcol{display:flex;flex-direction:column;gap:12px;position:sticky;top:12px}
+.kc{background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:12px 16px 10px}
+.kc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.kc-l{font-size:.95rem;color:var(--ink-2);font-weight:600}
+.kc .spark{width:130px;height:34px;flex:none}
+.kc-v{font-size:1.9rem;font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.1;padding-bottom:8px;border-bottom:1.5px solid var(--ink-3);margin-bottom:8px}
+:root[data-theme="dark"] .kc-v{background:linear-gradient(90deg,#B9A8FF,#E07BE0);-webkit-background-clip:text;background-clip:text;color:transparent;border-bottom-color:var(--line)}
+.kc-f{font-size:.8rem;color:var(--ink-2)}
+.kc-f b{color:var(--ink)} .kc-f b.pos,.ik-c b.pos{color:var(--pos)} .kc-f b.neg,.ik-c b.neg{color:var(--neg)}
+.kc-f a{color:var(--ink);font-weight:600;text-decoration:none}.kc-f a:hover{text-decoration:underline}
+.ovmain{min-width:0}
+.ovlede{margin:0 0 10px;font-size:.86rem;color:var(--ink-2)}
+.row{display:grid;gap:14px;margin-bottom:14px}
+.row>.panel{margin:0!important}
+.r3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.r21{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.r11{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cp h2,.cp .sub{text-align:center!important}
+.donut svg{display:block;width:100%;height:auto}
+.dleg{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;font-size:.76rem;color:var(--ink-2);margin:2px 0 0}
+.dleg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:0}
+svg text.dl1{font-size:12px;font-weight:800;fill:var(--ink)} svg text.dl2{font-size:11.5px;font-weight:700;fill:var(--ink-2)}
+svg text.dc1{font-size:19px;font-weight:800;fill:var(--ink)} svg text.dc2{font-size:10.5px;fill:var(--ink-3)}
+/* displacement icon figures */
+.ikpi{display:grid;grid-template-columns:1fr 1fr;margin-top:4px}
+.ik{padding:12px 10px;text-align:center;position:relative}
+.ik:nth-child(odd){border-right:1.5px solid var(--sep)}
+.ik:nth-child(n+3){border-top:1px solid var(--line)}
+.ik-i svg{width:34px;height:34px;fill:none;stroke:var(--c2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ik-v{font-size:1.75rem;font-weight:800;line-height:1.1;background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ik-l{font-size:.84rem;font-weight:800;color:var(--ink)}
+.ik-s{font-size:.72rem;color:var(--ink-3)}
+.ik-c{font-size:.74rem;color:var(--ink-2);margin-top:2px}
+/* Top N */
+.tn-head{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:center;margin-bottom:8px}
+.tn-head input[type=number]{background:var(--panel);color:var(--ink);border:1px solid var(--ink-3);border-radius:4px;padding:5px 6px;font-weight:700}
+.tn-head input[type=range]{width:100%;accent-color:var(--g2)}
+.tn-head b{font-size:1.05rem;font-weight:900;color:var(--ink)}
+.tn2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hb{display:flex;flex-direction:column;gap:3px}
+.hbr{display:grid;grid-template-columns:minmax(0,44%) minmax(0,1fr);gap:8px;align-items:center;background:none;border:0;padding:2px;border-radius:5px;cursor:pointer;text-align:left;color:var(--ink);font-size:.78rem}
 .hbr:hover{background:var(--wash)}
 .hbr.dim{opacity:.4}
 .hbl{text-align:right;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hbt{display:flex;align-items:center;gap:6px;min-width:0}
-.hbt i{display:block;height:14px;border-radius:2px;min-width:3px}
-.hbt b{font-size:.76rem;color:var(--ink);font-weight:700}
-#ovStates .hbr{grid-template-columns:110px minmax(0,1fr)}
-.mast .mast-l p{max-width:92ch}
-#donut{max-height:440px;overflow-y:auto;padding-right:4px}
-#donut .hbr{grid-template-columns:minmax(0,60%) minmax(0,1fr)}
-#donut .hbl,#ovRegion .hbl{white-space:normal;line-height:1.2}
-#ovRegion .hbr{grid-template-columns:minmax(0,55%) minmax(0,1fr)}
-#curve{min-height:0}
-.curve-key{gap:6px 18px}.curve-key span{line-height:1.4;display:inline-flex;align-items:center}
-@media (max-width:700px){.mast-in{padding:12px 14px 0}.mast .headright{text-align:left}.mast .htools{justify-content:flex-start}#curve svg text{font-size:22px}}
-/* main area accents in IOM blue (the sidebar keeps its own style) */
-main{--teal:#0033A0;--sky-2:#418FDE}
-.herostats div::before{background:#0033A0}
-.cta{background:#0033A0!important}
-.crumbs .here{background:#0033A0}
-.pn.next{background:#0033A0;border-color:#0033A0}.pn.next small{color:#C9D6F5}
-.mapctl select{background:var(--panel);color:var(--ink);border:1px solid var(--line);font-weight:500}
-.typepick button[aria-pressed="true"]{background:#0033A0;border-color:#0033A0}
-.typepick button[aria-pressed="true"] b{color:#0033A0}
-.scalelegend .bar{background:linear-gradient(90deg,#E6ECF7,#0033A0)}
-.hero{border:1px solid var(--line)!important;border-radius:10px}
-.step,.brief,.note,.herostats div{border:1px solid var(--line)!important;border-radius:10px!important}
-.hh{color:var(--ink)!important;font-weight:700}
+.hbt{position:relative;display:flex;align-items:center;gap:6px;min-width:0;height:22px}
+.hbt i{display:block;height:18px;border-radius:0 3px 3px 0;min-width:3px;background:linear-gradient(90deg,var(--g1),var(--g2))}
+.hbt b{font-size:.74rem;color:var(--ink);font-weight:800}
+.hbt .avgk{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--avg);margin-left:-1px;pointer-events:none}
+.more{font-size:.74rem;color:var(--ink-3);margin:6px 0 0;text-align:right}
+.tnnote{margin-top:8px!important}
+/* pin map */
+#pinMap svg{display:block;width:100%;height:auto;max-height:430px}
+.pm-st{fill:var(--map);stroke:var(--panel);stroke-width:1.2}
+.pm-st.has{fill:var(--maphas)}
+.pm-st.on{fill:var(--g2);opacity:.55}
+.pin{cursor:pointer}
+.pin path{fill:var(--pin);stroke:var(--panel);stroke-width:1.5}
+.pin:hover path{filter:brightness(1.15)}
+.pin text{fill:#fff;font-weight:800;pointer-events:none}
+/* latest list */
+.latest{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.latest li{display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:8px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line-2);font-size:.84rem}
+.latest .ld{color:var(--ink-3);font-size:.76rem;white-space:nowrap}
+.latest a{text-decoration:none;color:var(--ink);font-weight:600;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.latest a:hover{color:var(--tab);text-decoration:underline}
+.latest .pill{background:var(--wash);color:var(--ink-2);border-radius:9px;padding:1px 7px;font-size:.7rem}
+/* other pages keep their content, with the same panels and buttons */
+.mapctl select{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--line)!important;font-weight:500!important}
+.typepick button[aria-pressed="true"]{background:var(--tab)!important;border-color:var(--tab)!important;color:#fff!important}
+.herostats div::before{background:var(--tab)!important}
+.cta{background:var(--tab)!important;color:#fff!important}
+.hero,.step,.brief,.note,.herostats div{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:10px!important;color:var(--ink)}
+.hero h2,.hh{color:var(--title)!important}
+:root[data-theme="dark"] .list td,:root[data-theme="dark"] .list th{border-color:var(--line)}
+.chatbtn{background:linear-gradient(90deg,var(--g1),var(--g2))!important;border:0!important;border-radius:22px!important;padding:10px 18px!important;font-weight:800;color:#fff!important}
+#foot{padding:10px 0 0;color:var(--ink-3);font-size:.78rem}
+#tip,.tip{background:var(--ink)!important;color:var(--panel)!important}
+@media (max-width:1250px){.ovgrid{grid-template-columns:1fr}.kcol{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.kc .spark{width:90px}}
+@media (max-width:1050px){.r3,.r21,.r11{grid-template-columns:1fr}.latest{grid-template-columns:1fr}}
+@media (max-width:760px){.app{grid-template-columns:1fr}.drail{position:sticky;top:0;height:auto;flex-direction:row;overflow-x:auto;padding:4px 6px;justify-content:flex-start}
+  .dmark{width:38px;height:38px;margin:0 6px 0 0;flex:none}.ditem{width:64px;flex:none;padding:6px 2px}.ditem[aria-current="page"]::before{left:8px;right:8px;top:auto;bottom:0;width:auto;height:3px}.dsp{display:none}
+  .bhead{padding:10px 12px}.bhead h1{white-space:normal}.bhead .headright{margin-left:0;text-align:left}.btab{padding:6px 10px;font-size:.78rem}
+  .aslicer.slicerbar{margin:10px 12px 0}main{padding:10px 12px 60px!important}.kcol{grid-template-columns:1fr 1fr}.tn2{grid-template-columns:1fr}.bf .dd{min-width:140px}.breset{margin-left:0}.al{width:auto}}
+.aslicer.slicerbar{align-items:stretch!important}
+.app{background:linear-gradient(to right,var(--rail) 84px,transparent 84px)}
+.kc-top{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:8px}
+.kc .spark{width:110px}
+svg text.dl1{font-size:13.5px} svg text.dl2{font-size:13px} svg text.dc1{font-size:22px} svg text.dc2{font-size:12px}
+.ar-status{font-size:.74rem;color:var(--ink-3);justify-content:flex-end;margin-top:-2px}
+.ar-status b{color:var(--ink-2)} .ar-status .upd span{display:inline;margin-left:6px}
+.bhead .btabs{margin-left:auto}
+.herostats b{color:var(--title)!important}.eyebrow{color:var(--ink-3)!important}
+@media (max-width:760px){.app{background:none}}
 </style>
 </head>
 <body>
-<header class="pbi-head mast">
- <div class="mast-in">
-  <div class="mast-row">
-   <div class="mast-l"><a class="brandlogo" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="IOM DTM Nigeria on dtm.iom.int"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IOM UN Migration – Displacement Tracking Matrix" viewBox="0 0 270.988 42.276">
-<defs><style>.cls-1{fill:#ffffff;}</style></defs><rect class="cls-1" x="122.75" y=".27" width="1.46" height="41.39"/><rect class="cls-1" x="41.92" y=".36" width="3.89" height="27.09"/><path class="cls-1" d="m80.26,13.87c0-7.27-5.6-13.87-14.62-13.87s-14.5,6.8-14.5,13.98c0,7.55,5.8,13.83,14.3,13.83s14.82-6.16,14.82-13.95h0Zm-14.58,10.33c-5.68,0-10.53-4.05-10.53-10.21,0-4.53,3.06-10.33,10.64-10.33,7.07,0,10.49,5.68,10.49,10.17,0,2.34-.99,5.28-2.7,7.15-1.86,2.03-5,3.21-7.9,3.21h0Z"/><polygon class="cls-1" points="98.5 16.85 106.84 6.36 106.84 27.45 110.73 27.45 110.73 .36 107.12 .36 98.14 11.48 89.13 .36 85.47 .36 85.47 27.45 89.36 27.45 89.36 6.36 97.79 16.85 98.5 16.85"/><path class="cls-1" d="m6.89,37.73c0,.88-.08,1.36-.25,1.68-.24.44-.89,1.19-2.38,1.19-1.07,0-1.67-.36-2.07-.76-.48-.47-.58-.92-.58-2.12v-5.13H.28v5.13c0,.61,0,1.65.51,2.45.73,1.14,2.17,1.57,3.46,1.57,1.05,0,2.08-.26,2.9-.98,1.04-.91,1.04-2.18,1.04-3.04v-5.13h-1.31s0,5.13,0,5.13Z"/><polygon class="cls-1" points="18.98 39.6 12.76 32.6 11.69 32.6 11.69 41.63 12.94 41.63 12.94 34.68 19.1 41.63 20.23 41.63 20.23 32.6 18.98 32.6 18.98 39.6"/><polygon class="cls-1" points="32.95 36.31 29.88 32.6 28.64 32.6 28.64 41.63 29.96 41.63 29.96 34.6 32.82 38.1 33.07 38.1 35.9 34.6 35.9 41.63 37.23 41.63 37.23 32.6 36 32.6 32.95 36.31"/><rect class="cls-1" x="40.9" y="32.6" width="1.32" height="9.03"/><path class="cls-1" d="m50.41,38.33h1.77v1.88c-.87.28-1.34.4-2.01.4-2.23,0-3.7-1.5-3.7-3.5,0-2.13,1.74-3.49,3.58-3.49.51,0,1.76.08,3.27.94v-1.32c-.99-.41-1.94-.77-3.24-.77-3.16,0-4.98,2.33-4.98,4.71,0,2.05,1.48,4.55,5.04,4.55,1.54,0,2.67-.44,3.38-.74v-3.82h-3.09v1.14h-.02Z"/><path class="cls-1" d="m60.83,37.34c1-.39,1.54-1.18,1.54-2.22,0-.91-.46-1.82-1.45-2.22-.58-.25-1.15-.29-1.58-.29h-2.31v9.03h1.31v-3.93h.35c.63,0,1.08,0,1.98,1.14.3.39,1.58,2.36,1.89,2.8h1.56c-.63-.87-.86-1.18-1.25-1.8-.7-1.11-1.21-1.94-2.05-2.49h0Zm-.69-.93c-.37.14-1.08.14-1.28.14h-.51v-2.85h.41c.8,0,1.23.05,1.56.21.44.19.7.69.7,1.2s-.25,1.06-.87,1.3h0Z"/><path class="cls-1" d="m69.53,32.55l-3.96,9.08h1.35l1.17-2.66h3.91l1.23,2.66h1.35l-4.12-9.08s-.93,0-.93,0Zm-.93,5.25l1.38-3.27,1.49,3.27h-2.86Z"/><polygon class="cls-1" points="75.19 33.74 78.36 33.74 78.36 41.63 79.68 41.63 79.68 33.74 82.89 33.74 82.89 32.6 75.19 32.6 75.19 33.74"/><rect class="cls-1" x="85.8" y="32.6" width="1.32" height="9.03"/><path class="cls-1" d="m94.8,32.48c-3.15,0-4.93,2.26-4.93,4.66s1.97,4.6,4.87,4.6,5.04-2.05,5.04-4.64c0-2.42-1.9-4.62-4.97-4.62Zm2.7,6.99c-.63.68-1.7,1.07-2.69,1.07-1.93,0-3.58-1.35-3.58-3.4,0-1.51,1.04-3.44,3.62-3.44,2.41,0,3.56,1.89,3.56,3.39,0,.78-.34,1.76-.92,2.38h0Z"/><polygon class="cls-1" points="109.59 39.6 103.37 32.6 102.31 32.6 102.31 41.63 103.55 41.63 103.55 34.68 109.72 41.63 110.84 41.63 110.84 32.6 109.59 32.6 109.59 39.6"/><path class="cls-1" d="m14.22,11.35c.3,0,.55-.24.55-.55s-.24-.55-.55-.55-.55.24-.55.55.24.55.55.55Z"/><path class="cls-1" d="m12.26,14.69c.1,0,.18-.06.21-.15l.98-2.32.07,2.25-.37,2.86c0,.11.05.22.16.26.03,0,.06.02.09.02.12,0,.22-.09.23-.2l.35-2.72h.48l.35,2.72c.02.12.12.2.23.2.03,0,.06,0,.09-.02.11-.04.17-.16.16-.26l-.37-2.86.07-2.25.98,2.32h0s0,.03.02.04h0s0,.03.02.03h0l.03.03h0s.02.02.04.02h0s.02,0,.03,0h.24l-.32,1.61c-.02.12,0,.23.08.32.05.06.11.1.17.12v.68c0,.11.09.19.19.19s.19-.09.19-.19v-.66h.3v.66c0,.11.09.19.19.19s.19-.09.19-.19v-.68c.07-.02.13-.07.17-.12.08-.09.11-.2.08-.32l-.32-1.6h.24s.02,0,.03,0h0s.03-.02.04-.02h0s.02-.02.03-.03h0s0-.02.02-.03h0s0-.03.02-.05h0l1.02-2.4.2.98c.03.16.03.33-.02.49l-.93,4.01h2.89l-.93-4.01c-.04-.16-.05-.32,0-.49l.2-.98.79,1.93c.04.09.13.15.22.15.03,0,.06,0,.09-.02.12-.05.17-.18.13-.31l-.88-2.17c-.04-.09-.13-.15-.22-.15h-1.65c-.1,0-.18.06-.21.15l-1.06,2.49h-1.04l-1.06-2.49c-.04-.09-.13-.15-.21-.15h-1.69c-.1,0-.18.06-.21.15l-1.12,2.62c-.05.11,0,.24.09.3.04.03.09.04.13.04h.08Z"/><path class="cls-1" d="m19.48,11.35c.3,0,.55-.24.55-.55s-.24-.55-.55-.55-.55.24-.55.55.24.55.55.55Z"/><path class="cls-1" d="m16.86,14.1c.22,0,.42-.18.42-.42s-.18-.42-.42-.42-.42.18-.42.42.18.42.42.42Z"/><path class="cls-1" d="m33.44,13.11c0-4.3-1.97-9.12-5.19-12.7h-2.86c.75.69,1.79,1.89,1.79,1.89,2.76,3.09,4.37,7.23,4.37,10.92v.14h-4.58C26.27,6.13,20.51.41,13.52.41,6.05.41,0,6.84,0,14.76c0,4.3,1.97,9.12,5.19,12.7h2.86c-.75-.69-1.8-1.89-1.8-1.89-2.76-3.09-4.37-7.23-4.37-10.92v-.14h4.58c.7,7.23,6.46,12.95,13.45,12.95,7.47,0,13.52-6.43,13.52-14.35h0Zm-13.23,12.46v-3.39c1.92.09,3.66.86,4.93,2.08-1.49.8-3.17,1.26-4.93,1.31Zm0-4.1v-2.11h6.34c-.91,1.21-2.13,2.18-3.41,2.75-.9-.38-1.89-.6-2.93-.64Zm5.58,2.41c-.52-.51-1.12-.96-1.77-1.33,1.31-.71,2.52-1.83,3.43-3.19h2.55c-1.01,1.86-2.47,3.43-4.21,4.52Zm5.72-9.67c-.12,1.53-.5,2.99-1.09,4.32h-2.47c.64-1.2,1.03-2.56,1.03-3.96v-.36h2.52Zm-6.44-.84h-2.35v-.06c0-1.4-.39-2.75-1.03-3.96h2.32c.55,1.24.92,2.59,1.06,4.02Zm-1.48-4.87h-2.41c-.9-1.35-2.12-2.47-3.43-3.19.63-.35,1.2-.78,1.71-1.27,1.71,1.09,3.13,2.62,4.12,4.46h0ZM14.08,2.3c1.71.09,3.32.56,4.76,1.35-1.24,1.16-2.91,1.9-4.76,2.02,0,0,0-3.37,0-3.37Zm0,4.08c.99-.06,1.94-.28,2.82-.64,1.28.56,2.5,1.53,3.41,2.75h-6.22v-2.12h0Zm-.84-4.08v3.39c-1.92-.09-3.66-.86-4.93-2.08,1.49-.8,3.17-1.26,4.93-1.31Zm0,4.1v2.11h-6.34c.92-1.21,2.13-2.18,3.41-2.75.9.38,1.89.6,2.93.64Zm-5.58-2.41c.52.51,1.12.96,1.77,1.33-1.31.71-2.52,1.83-3.43,3.19h-2.55c1.01-1.86,2.47-3.43,4.21-4.52ZM1.93,13.65c.12-1.53.5-2.99,1.09-4.32h2.47c-.64,1.2-1.03,2.56-1.03,3.96v.36H1.93Zm3.27,0v-.36c0-1.41.43-2.77,1.14-3.96h14.54c.7,1.18,1.14,2.54,1.14,3.96v.06h0v.84h6.26v.36c0,1.41-.43,2.77-1.14,3.96h-14.54c-.7-1.18-1.13-2.54-1.13-3.96v-.06h0v-.84h-6.27Zm3.17.84h2.34v.06c0,1.4.39,2.75,1.03,3.96h-2.31c-.55-1.24-.92-2.59-1.06-4.02Zm1.48,4.86h2.41c.9,1.35,2.12,2.47,3.43,3.19-.63.35-1.2.78-1.71,1.27-1.71-1.09-3.13-2.62-4.12-4.46h0Zm9.53,6.2c-1.71-.09-3.32-.56-4.76-1.35,1.24-1.16,2.91-1.9,4.76-2.02,0,0,0,3.37,0,3.37Zm0-4.08c-.99.06-1.94.28-2.82.64-1.28-.56-2.49-1.53-3.41-2.75h6.22v2.12h0Z"/><path class="cls-1" d="m140.25,13.39h-3.77v9.93h3.79c3.15,0,5.34-2.01,5.34-5.08,0-2.8-2.04-4.86-5.36-4.86h0Zm-.06,8.65h-2.28v-7.38h2.09c2.82,0,4.15,1.49,4.15,3.63,0,2.36-1.44,3.76-3.94,3.76h0Z"/><rect class="cls-1" x="147.45" y="13.39" width="1.43" height="9.93"/><path class="cls-1" d="m152.88,18.61c1.96,1.15,2.16,1.6,2.16,2.27,0,.77-.63,1.31-1.46,1.31-1.03,0-1.98-.53-2.68-1.46v1.81c.79.58,1.7.91,2.68.91,1.73,0,2.88-1.14,2.88-2.59,0-1.35-.45-2.05-2.54-3.26-1.51-.87-1.63-1.36-1.63-1.9,0-.69.55-1.16,1.46-1.16s1.66.38,2.33,1.04v-1.62c-.69-.45-1.48-.7-2.28-.7-1.7,0-2.92,1.06-2.92,2.48,0,1.22.55,2.01,2.02,2.87h0Z"/><path class="cls-1" d="m158.3,13.39v9.93h1.43v-4.31h1.37c2.15,0,3.47-.86,3.47-2.82,0-1.75-1.21-2.81-3.23-2.81h-3.03Zm4.79,2.79c0,.94-.39,1.58-2.05,1.58h-1.31v-3.12h1.31c1.58,0,2.05.6,2.05,1.53Z"/><polygon class="cls-1" points="171.86 22.02 167.39 22.02 167.39 13.39 165.94 13.39 165.94 23.33 171.86 23.33 171.86 22.02"/><path class="cls-1" d="m179.5,20.39l1.32,2.92h1.46l-4.44-9.99h-1l-4.27,9.99h1.46l1.25-2.92h4.22Zm-2.17-5.13l1.62,3.85h-3.14s1.51-3.85,1.51-3.85Z"/><path class="cls-1" d="m182.44,18.37c0,2.33,1.69,5.08,5.34,5.08,1.25,0,2.45-.24,3.61-.87v-1.56c-1.08.72-2.26,1.11-3.55,1.11-2.48,0-3.91-1.8-3.91-3.75s1.5-3.81,3.93-3.81c1.21,0,2.37.4,3.44.99v-1.5c-1.19-.54-2.38-.82-3.48-.82-2.95,0-5.38,2.19-5.38,5.11v.02Z"/><polygon class="cls-1" points="198.92 14.65 198.92 13.39 193.29 13.39 193.29 23.33 199.06 23.33 199.06 22.04 194.72 22.04 194.72 18.96 198.78 18.96 198.78 17.68 194.72 17.68 194.72 14.65 198.92 14.65"/><polygon class="cls-1" points="205.53 17.47 202.22 13.39 200.88 13.39 200.88 23.33 202.31 23.33 202.31 15.59 205.4 19.43 205.66 19.43 208.72 15.59 208.72 23.33 210.15 23.33 210.15 13.39 208.83 13.39 205.53 17.47"/><polygon class="cls-1" points="218.27 22.04 213.92 22.04 213.92 18.96 217.98 18.96 217.98 17.68 213.92 17.68 213.92 14.65 218.13 14.65 218.13 13.39 212.5 13.39 212.5 23.33 218.27 23.33 218.27 22.04"/><polygon class="cls-1" points="227.93 21.09 221.27 13.39 220.09 13.39 220.09 23.33 221.46 23.33 221.46 15.67 228.05 23.33 229.3 23.33 229.3 13.39 227.93 13.39 227.93 21.09"/><polygon class="cls-1" points="234.02 23.33 235.44 23.33 235.44 14.64 238.91 14.64 238.91 13.39 230.61 13.39 230.61 14.64 234.02 14.64 234.02 23.33"/><polygon class="cls-1" points="135.62 30.18 139.03 30.18 139.03 38.86 140.46 38.86 140.46 30.18 143.93 30.18 143.93 28.93 135.62 28.93 135.62 30.18"/><path class="cls-1" d="m149.33,34.14c1.09-.44,1.66-1.29,1.66-2.45,0-1.46-1.03-2.77-3.01-2.77h-2.74v9.93h1.43v-4.33h.64c.7,0,1.32.31,2.33,1.88l1.57,2.45h1.69l-1.75-2.65c-.96-1.46-1.23-1.69-1.83-2.07h0Zm-1.75-.86h-.92v-3.1h1.21c1.08,0,1.66.55,1.66,1.51,0,1.33-.91,1.58-1.95,1.58h0Z"/><path class="cls-1" d="m157.8,28.87l-4.27,9.99h1.46l1.25-2.92h4.22l1.33,2.92h1.46l-4.44-9.99h-1.01Zm-1.02,5.79l1.51-3.85,1.62,3.85h-3.14Z"/><path class="cls-1" d="m164.9,33.92c0-1.95,1.5-3.81,3.93-3.81,1.2,0,2.37.4,3.44.99v-1.5c-1.19-.54-2.37-.82-3.48-.82-2.95,0-5.38,2.19-5.38,5.11,0,2.33,1.69,5.08,5.34,5.08,1.25,0,2.45-.24,3.61-.87v-1.56c-1.08.72-2.25,1.11-3.55,1.11-2.48,0-3.91-1.8-3.91-3.75v.02Z"/><polygon class="cls-1" points="181.66 28.93 179.89 28.93 175.7 33.47 175.7 28.93 174.26 28.93 174.26 38.86 175.7 38.86 175.7 33.95 180.77 38.86 182.72 38.86 177.35 33.63 181.66 28.93"/><rect class="cls-1" x="183.91" y="28.93" width="1.43" height="9.93"/><polygon class="cls-1" points="195.48 36.63 188.83 28.93 187.65 28.93 187.65 38.86 189.02 38.86 189.02 31.21 195.62 38.86 196.85 38.86 196.85 28.93 195.48 28.93 195.48 36.63"/><path class="cls-1" d="m204.43,35.23h1.9v2.07c-1.09.35-1.49.44-2.24.44-2.28,0-3.91-1.64-3.91-3.85s1.72-3.83,3.86-3.83c1.13,0,2.39.37,3.53,1.03v-1.46c-1.47-.64-2.36-.84-3.5-.84-3.24,0-5.38,2.4-5.38,5.19,0,2.34,1.66,5.01,5.43,5.01,1.24,0,2.41-.24,3.64-.82v-4.2h-3.33v1.25h0Z"/><polygon class="cls-1" points="218.54 33.01 215.23 28.93 213.89 28.93 213.89 38.86 215.31 38.86 215.31 31.12 218.4 34.97 218.66 34.97 221.72 31.12 221.72 38.86 223.15 38.86 223.15 28.93 221.82 28.93 218.54 33.01"/><path class="cls-1" d="m228.61,28.87l-4.26,9.99h1.46l1.25-2.92h4.22l1.33,2.92h1.46l-4.45-9.99h-1.01Zm-1.02,5.79l1.51-3.85,1.61,3.85h-3.13Z"/><polygon class="cls-1" points="233.09 30.18 236.5 30.18 236.5 38.86 237.93 38.86 237.93 30.18 241.4 30.18 241.4 28.93 233.09 28.93 233.09 30.18"/><path class="cls-1" d="m246.8,34.14c1.09-.44,1.66-1.29,1.66-2.45,0-1.46-1.04-2.77-3.01-2.77h-2.74v9.93h1.43v-4.33h.64c.7,0,1.33.31,2.33,1.88l1.57,2.45h1.69l-1.75-2.65c-.96-1.46-1.24-1.69-1.83-2.07h0Zm-1.75-.86h-.92v-3.1h1.21c1.08,0,1.66.55,1.66,1.51,0,1.33-.92,1.58-1.95,1.58h0Z"/><rect class="cls-1" x="251.54" y="28.93" width="1.43" height="9.93"/><path class="cls-1" d="m260.16,33.72l3.96-4.79h-1.72l-3.1,3.79-3.12-3.79h-1.74l3.97,4.79-4.28,5.14h1.73c1.51-1.81,2.65-3.18,3.43-4.11l3.38,4.11h1.72l-4.24-5.14h0Z"/><path class="cls-1" d="m138.87,7.85c.66,0,1.28-.14,1.94-.44v-2.23h-1.78v.67h1.02v1.11c-.58.18-.8.23-1.19.23-1.22,0-2.09-.87-2.09-2.05s.91-2.04,2.06-2.04c.6,0,1.27.19,1.88.55v-.78c-.79-.34-1.26-.45-1.86-.45-1.73,0-2.86,1.28-2.86,2.77,0,1.25.88,2.67,2.89,2.67v-.02Z"/><polygon class="cls-1" points="145.28 7.09 142.9 7.09 142.9 2.49 142.13 2.49 142.13 7.78 145.28 7.78 145.28 7.09"/><path class="cls-1" d="m148.41,7.85c1.85,0,2.89-1.31,2.89-2.73,0-1.51-1.18-2.71-2.86-2.71-1.85,0-2.84,1.35-2.84,2.73,0,1.46,1.12,2.7,2.8,2.7h0Zm.06-4.71c1.36,0,2.05,1.09,2.05,1.99,0,1.35-.97,2.02-2.1,2.02s-2.03-.82-2.03-1.99.76-2.02,2.07-2.02h0Z"/><path class="cls-1" d="m156.06,6.33c0-.66-.49-1.21-1.26-1.36.52-.21.81-.59.81-1.12,0-.8-.56-1.38-1.64-1.38h-1.53v5.29h1.69c.94,0,1.93-.39,1.93-1.45h0Zm-2.87-3.18h.65c.69,0,.98.23.98.77,0,.44-.29.84-1.1.84h-.53v-1.61h0Zm0,3.96v-1.69h.77c.96,0,1.32.33,1.32.84,0,.58-.41.84-1.29.84h-.8,0Z"/><path class="cls-1" d="m157.84,6.22h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78l.67-1.56h0Zm1.1-2.73l.86,2.05h-1.67l.81-2.05Z"/><polygon class="cls-1" points="165.5 7.09 163.12 7.09 163.12 2.49 162.35 2.49 162.35 7.78 165.5 7.78 165.5 7.09"/><path class="cls-1" d="m170.33,2.49h-2.01v5.29h2.02c1.68,0,2.85-1.07,2.85-2.71,0-1.5-1.09-2.58-2.86-2.58h0Zm-.03,4.61h-1.22v-3.93h1.11c1.5,0,2.21.8,2.21,1.93,0,1.26-.77,2-2.11,2h0Z"/><path class="cls-1" d="m174.92,6.22h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78l.67-1.56h0Zm1.1-2.73l.86,2.05h-1.67l.81-2.05Z"/><polygon class="cls-1" points="180.14 7.78 180.9 7.78 180.9 3.16 182.75 3.16 182.75 2.49 178.32 2.49 178.32 3.16 180.14 3.16 180.14 7.78"/><path class="cls-1" d="m183.19,7.78l.67-1.56h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78,0Zm1.76-4.29l.86,2.05h-1.67l.81-2.05Z"/><rect class="cls-1" x="190.34" y="2.49" width=".76" height="5.29"/><polygon class="cls-1" points="193.2 3.7 196.72 7.78 197.38 7.78 197.38 2.49 196.65 2.49 196.65 6.59 193.09 2.49 192.46 2.49 192.46 7.78 193.2 7.78 193.2 3.7"/><path class="cls-1" d="m199.65,5.26c1.05.61,1.15.85,1.15,1.21,0,.41-.33.7-.78.7-.55,0-1.06-.29-1.43-.78v.96c.42.31.91.49,1.43.49.92,0,1.53-.6,1.53-1.38,0-.72-.24-1.1-1.36-1.74-.81-.47-.87-.72-.87-1.02,0-.37.29-.61.78-.61s.88.2,1.24.55v-.86c-.37-.24-.79-.37-1.21-.37-.91,0-1.56.56-1.56,1.32,0,.65.29,1.07,1.08,1.53h0Z"/><polygon class="cls-1" points="203.98 7.78 204.74 7.78 204.74 3.16 206.59 3.16 206.59 2.49 202.16 2.49 202.16 3.16 203.98 3.16 203.98 7.78"/><rect class="cls-1" x="207.43" y="2.49" width=".76" height="5.29"/><polygon class="cls-1" points="213.44 2.49 209.01 2.49 209.01 3.16 210.83 3.16 210.83 7.78 211.59 7.78 211.59 3.16 213.44 3.16 213.44 2.49"/><path class="cls-1" d="m216.53,7.85c1.53,0,2.26-.86,2.26-2.31v-3.06h-.76v3.06c0,1.16-.5,1.63-1.51,1.63s-1.52-.45-1.52-1.62v-3.07h-.76v3.07c0,1.56.82,2.3,2.28,2.3Z"/><polygon class="cls-1" points="221.41 7.78 222.17 7.78 222.17 3.16 224.02 3.16 224.02 2.49 219.6 2.49 219.6 3.16 221.41 3.16 221.41 7.78"/><polygon class="cls-1" points="227.94 7.1 225.62 7.1 225.62 5.45 227.78 5.45 227.78 4.78 225.62 4.78 225.62 3.16 227.86 3.16 227.86 2.49 224.86 2.49 224.86 7.78 227.94 7.78 227.94 7.1"/></svg><span>Nigeria</span></a>
-    <h1>DTM Nigeria Publications Tracker</h1>
-    <p>Every report IOM's Displacement Tracking Matrix publishes on Nigeria, counted by month, report type, region and state, with the displacement figures each Mobility Tracking round reports.</p>
-   </div>
-   <div class="headright">
-    <div class="upd" id="dataStatus">Loading data…</div>
-    <div class="htools">
-      <button class="hbtn" id="themeBtn" type="button">Theme</button>
-      <a class="hbtn" id="offlineBtn" href="DTM_Nigeria_Dashboard_OFFLINE.html" download>Save offline</a>
-    </div>
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+ <linearGradient id="gBarH" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:var(--g1)"/><stop offset="1" style="stop-color:var(--g2)"/></linearGradient>
+ <linearGradient id="gBarV" x1="0" x2="0" y1="1" y2="0"><stop offset="0" style="stop-color:var(--g1)"/><stop offset="1" style="stop-color:var(--g2)"/></linearGradient>
+ <linearGradient id="gArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" style="stop-color:var(--g2);stop-opacity:.28"/><stop offset="1" style="stop-color:var(--g2);stop-opacity:0"/></linearGradient>
+</defs></svg>
+<div class="app">
+<nav class="drail pnav" aria-label="Pages">
+  <a class="dmark" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="IOM DTM Nigeria on dtm.iom.int">DTM</a>
+  <button type="button" class="ditem" data-nav="home" title="Step 1: Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Home</span></button><button type="button" class="ditem" data-nav="overview" title="Step 2: Overview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-9M2 20h20"/></svg><span>Overview</span></button><button type="button" class="ditem" data-nav="map" title="Step 3: Map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg><span>Map</span></button><button type="button" class="ditem" data-nav="types" title="Step 4: Report types"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.6"/></svg><span>Report types</span></button><button type="button" class="ditem" data-nav="calendar" title="Step 5: Calendar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></button><button type="button" class="ditem" data-nav="charts" title="Step 6: Charts"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><rect x="5" y="11" width="3.2" height="9"/><rect x="10.4" y="5" width="3.2" height="15"/><rect x="15.8" y="13" width="3.2" height="7"/></svg><span>Charts</span></button><button type="button" class="ditem" data-nav="list" title="Step 7: Report list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg><span>Report list</span></button>
+  <span class="dsp"></span>
+  <button type="button" class="ditem" id="themeBtn" title="Switch between the light and dark look"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><span>Theme</span></button>
+  <a class="ditem" id="offlineBtn" href="DTM_Nigeria_Dashboard_OFFLINE.html" download title="Save a copy that works without internet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5"/><path d="M4 19h16"/></svg><span>Save offline</span></a>
+  <a class="ditem" href="https://pelumi-2025.github.io/dtm-nigeria-data-hub/#home" target="_blank" rel="noopener" title="Open the DTM Nigeria Data Hub in a new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v6H4V5h6"/></svg><span>Data Hub ↗</span></a>
+  <button type="button" class="ditem" id="infoBtn" title="How to use this platform"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.6"/></svg><span>Guide</span></button>
+</nav>
+<div class="appmain">
+<header class="bhead">
+  <div class="bh-row1">
+    <div class="bh-title"><a class="brandlogo" href="https://dtm.iom.int/nigeria" target="_blank" rel="noopener" title="IOM DTM Nigeria on dtm.iom.int"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IOM UN Migration – Displacement Tracking Matrix" viewBox="0 0 270.988 42.276">
+<defs><style>.cls-1{fill:#ffffff;}</style></defs><rect class="cls-1" x="122.75" y=".27" width="1.46" height="41.39"/><rect class="cls-1" x="41.92" y=".36" width="3.89" height="27.09"/><path class="cls-1" d="m80.26,13.87c0-7.27-5.6-13.87-14.62-13.87s-14.5,6.8-14.5,13.98c0,7.55,5.8,13.83,14.3,13.83s14.82-6.16,14.82-13.95h0Zm-14.58,10.33c-5.68,0-10.53-4.05-10.53-10.21,0-4.53,3.06-10.33,10.64-10.33,7.07,0,10.49,5.68,10.49,10.17,0,2.34-.99,5.28-2.7,7.15-1.86,2.03-5,3.21-7.9,3.21h0Z"/><polygon class="cls-1" points="98.5 16.85 106.84 6.36 106.84 27.45 110.73 27.45 110.73 .36 107.12 .36 98.14 11.48 89.13 .36 85.47 .36 85.47 27.45 89.36 27.45 89.36 6.36 97.79 16.85 98.5 16.85"/><path class="cls-1" d="m6.89,37.73c0,.88-.08,1.36-.25,1.68-.24.44-.89,1.19-2.38,1.19-1.07,0-1.67-.36-2.07-.76-.48-.47-.58-.92-.58-2.12v-5.13H.28v5.13c0,.61,0,1.65.51,2.45.73,1.14,2.17,1.57,3.46,1.57,1.05,0,2.08-.26,2.9-.98,1.04-.91,1.04-2.18,1.04-3.04v-5.13h-1.31s0,5.13,0,5.13Z"/><polygon class="cls-1" points="18.98 39.6 12.76 32.6 11.69 32.6 11.69 41.63 12.94 41.63 12.94 34.68 19.1 41.63 20.23 41.63 20.23 32.6 18.98 32.6 18.98 39.6"/><polygon class="cls-1" points="32.95 36.31 29.88 32.6 28.64 32.6 28.64 41.63 29.96 41.63 29.96 34.6 32.82 38.1 33.07 38.1 35.9 34.6 35.9 41.63 37.23 41.63 37.23 32.6 36 32.6 32.95 36.31"/><rect class="cls-1" x="40.9" y="32.6" width="1.32" height="9.03"/><path class="cls-1" d="m50.41,38.33h1.77v1.88c-.87.28-1.34.4-2.01.4-2.23,0-3.7-1.5-3.7-3.5,0-2.13,1.74-3.49,3.58-3.49.51,0,1.76.08,3.27.94v-1.32c-.99-.41-1.94-.77-3.24-.77-3.16,0-4.98,2.33-4.98,4.71,0,2.05,1.48,4.55,5.04,4.55,1.54,0,2.67-.44,3.38-.74v-3.82h-3.09v1.14h-.02Z"/><path class="cls-1" d="m60.83,37.34c1-.39,1.54-1.18,1.54-2.22,0-.91-.46-1.82-1.45-2.22-.58-.25-1.15-.29-1.58-.29h-2.31v9.03h1.31v-3.93h.35c.63,0,1.08,0,1.98,1.14.3.39,1.58,2.36,1.89,2.8h1.56c-.63-.87-.86-1.18-1.25-1.8-.7-1.11-1.21-1.94-2.05-2.49h0Zm-.69-.93c-.37.14-1.08.14-1.28.14h-.51v-2.85h.41c.8,0,1.23.05,1.56.21.44.19.7.69.7,1.2s-.25,1.06-.87,1.3h0Z"/><path class="cls-1" d="m69.53,32.55l-3.96,9.08h1.35l1.17-2.66h3.91l1.23,2.66h1.35l-4.12-9.08s-.93,0-.93,0Zm-.93,5.25l1.38-3.27,1.49,3.27h-2.86Z"/><polygon class="cls-1" points="75.19 33.74 78.36 33.74 78.36 41.63 79.68 41.63 79.68 33.74 82.89 33.74 82.89 32.6 75.19 32.6 75.19 33.74"/><rect class="cls-1" x="85.8" y="32.6" width="1.32" height="9.03"/><path class="cls-1" d="m94.8,32.48c-3.15,0-4.93,2.26-4.93,4.66s1.97,4.6,4.87,4.6,5.04-2.05,5.04-4.64c0-2.42-1.9-4.62-4.97-4.62Zm2.7,6.99c-.63.68-1.7,1.07-2.69,1.07-1.93,0-3.58-1.35-3.58-3.4,0-1.51,1.04-3.44,3.62-3.44,2.41,0,3.56,1.89,3.56,3.39,0,.78-.34,1.76-.92,2.38h0Z"/><polygon class="cls-1" points="109.59 39.6 103.37 32.6 102.31 32.6 102.31 41.63 103.55 41.63 103.55 34.68 109.72 41.63 110.84 41.63 110.84 32.6 109.59 32.6 109.59 39.6"/><path class="cls-1" d="m14.22,11.35c.3,0,.55-.24.55-.55s-.24-.55-.55-.55-.55.24-.55.55.24.55.55.55Z"/><path class="cls-1" d="m12.26,14.69c.1,0,.18-.06.21-.15l.98-2.32.07,2.25-.37,2.86c0,.11.05.22.16.26.03,0,.06.02.09.02.12,0,.22-.09.23-.2l.35-2.72h.48l.35,2.72c.02.12.12.2.23.2.03,0,.06,0,.09-.02.11-.04.17-.16.16-.26l-.37-2.86.07-2.25.98,2.32h0s0,.03.02.04h0s0,.03.02.03h0l.03.03h0s.02.02.04.02h0s.02,0,.03,0h.24l-.32,1.61c-.02.12,0,.23.08.32.05.06.11.1.17.12v.68c0,.11.09.19.19.19s.19-.09.19-.19v-.66h.3v.66c0,.11.09.19.19.19s.19-.09.19-.19v-.68c.07-.02.13-.07.17-.12.08-.09.11-.2.08-.32l-.32-1.6h.24s.02,0,.03,0h0s.03-.02.04-.02h0s.02-.02.03-.03h0s0-.02.02-.03h0s0-.03.02-.05h0l1.02-2.4.2.98c.03.16.03.33-.02.49l-.93,4.01h2.89l-.93-4.01c-.04-.16-.05-.32,0-.49l.2-.98.79,1.93c.04.09.13.15.22.15.03,0,.06,0,.09-.02.12-.05.17-.18.13-.31l-.88-2.17c-.04-.09-.13-.15-.22-.15h-1.65c-.1,0-.18.06-.21.15l-1.06,2.49h-1.04l-1.06-2.49c-.04-.09-.13-.15-.21-.15h-1.69c-.1,0-.18.06-.21.15l-1.12,2.62c-.05.11,0,.24.09.3.04.03.09.04.13.04h.08Z"/><path class="cls-1" d="m19.48,11.35c.3,0,.55-.24.55-.55s-.24-.55-.55-.55-.55.24-.55.55.24.55.55.55Z"/><path class="cls-1" d="m16.86,14.1c.22,0,.42-.18.42-.42s-.18-.42-.42-.42-.42.18-.42.42.18.42.42.42Z"/><path class="cls-1" d="m33.44,13.11c0-4.3-1.97-9.12-5.19-12.7h-2.86c.75.69,1.79,1.89,1.79,1.89,2.76,3.09,4.37,7.23,4.37,10.92v.14h-4.58C26.27,6.13,20.51.41,13.52.41,6.05.41,0,6.84,0,14.76c0,4.3,1.97,9.12,5.19,12.7h2.86c-.75-.69-1.8-1.89-1.8-1.89-2.76-3.09-4.37-7.23-4.37-10.92v-.14h4.58c.7,7.23,6.46,12.95,13.45,12.95,7.47,0,13.52-6.43,13.52-14.35h0Zm-13.23,12.46v-3.39c1.92.09,3.66.86,4.93,2.08-1.49.8-3.17,1.26-4.93,1.31Zm0-4.1v-2.11h6.34c-.91,1.21-2.13,2.18-3.41,2.75-.9-.38-1.89-.6-2.93-.64Zm5.58,2.41c-.52-.51-1.12-.96-1.77-1.33,1.31-.71,2.52-1.83,3.43-3.19h2.55c-1.01,1.86-2.47,3.43-4.21,4.52Zm5.72-9.67c-.12,1.53-.5,2.99-1.09,4.32h-2.47c.64-1.2,1.03-2.56,1.03-3.96v-.36h2.52Zm-6.44-.84h-2.35v-.06c0-1.4-.39-2.75-1.03-3.96h2.32c.55,1.24.92,2.59,1.06,4.02Zm-1.48-4.87h-2.41c-.9-1.35-2.12-2.47-3.43-3.19.63-.35,1.2-.78,1.71-1.27,1.71,1.09,3.13,2.62,4.12,4.46h0ZM14.08,2.3c1.71.09,3.32.56,4.76,1.35-1.24,1.16-2.91,1.9-4.76,2.02,0,0,0-3.37,0-3.37Zm0,4.08c.99-.06,1.94-.28,2.82-.64,1.28.56,2.5,1.53,3.41,2.75h-6.22v-2.12h0Zm-.84-4.08v3.39c-1.92-.09-3.66-.86-4.93-2.08,1.49-.8,3.17-1.26,4.93-1.31Zm0,4.1v2.11h-6.34c.92-1.21,2.13-2.18,3.41-2.75.9.38,1.89.6,2.93.64Zm-5.58-2.41c.52.51,1.12.96,1.77,1.33-1.31.71-2.52,1.83-3.43,3.19h-2.55c1.01-1.86,2.47-3.43,4.21-4.52ZM1.93,13.65c.12-1.53.5-2.99,1.09-4.32h2.47c-.64,1.2-1.03,2.56-1.03,3.96v.36H1.93Zm3.27,0v-.36c0-1.41.43-2.77,1.14-3.96h14.54c.7,1.18,1.14,2.54,1.14,3.96v.06h0v.84h6.26v.36c0,1.41-.43,2.77-1.14,3.96h-14.54c-.7-1.18-1.13-2.54-1.13-3.96v-.06h0v-.84h-6.27Zm3.17.84h2.34v.06c0,1.4.39,2.75,1.03,3.96h-2.31c-.55-1.24-.92-2.59-1.06-4.02Zm1.48,4.86h2.41c.9,1.35,2.12,2.47,3.43,3.19-.63.35-1.2.78-1.71,1.27-1.71-1.09-3.13-2.62-4.12-4.46h0Zm9.53,6.2c-1.71-.09-3.32-.56-4.76-1.35,1.24-1.16,2.91-1.9,4.76-2.02,0,0,0,3.37,0,3.37Zm0-4.08c-.99.06-1.94.28-2.82.64-1.28-.56-2.49-1.53-3.41-2.75h6.22v2.12h0Z"/><path class="cls-1" d="m140.25,13.39h-3.77v9.93h3.79c3.15,0,5.34-2.01,5.34-5.08,0-2.8-2.04-4.86-5.36-4.86h0Zm-.06,8.65h-2.28v-7.38h2.09c2.82,0,4.15,1.49,4.15,3.63,0,2.36-1.44,3.76-3.94,3.76h0Z"/><rect class="cls-1" x="147.45" y="13.39" width="1.43" height="9.93"/><path class="cls-1" d="m152.88,18.61c1.96,1.15,2.16,1.6,2.16,2.27,0,.77-.63,1.31-1.46,1.31-1.03,0-1.98-.53-2.68-1.46v1.81c.79.58,1.7.91,2.68.91,1.73,0,2.88-1.14,2.88-2.59,0-1.35-.45-2.05-2.54-3.26-1.51-.87-1.63-1.36-1.63-1.9,0-.69.55-1.16,1.46-1.16s1.66.38,2.33,1.04v-1.62c-.69-.45-1.48-.7-2.28-.7-1.7,0-2.92,1.06-2.92,2.48,0,1.22.55,2.01,2.02,2.87h0Z"/><path class="cls-1" d="m158.3,13.39v9.93h1.43v-4.31h1.37c2.15,0,3.47-.86,3.47-2.82,0-1.75-1.21-2.81-3.23-2.81h-3.03Zm4.79,2.79c0,.94-.39,1.58-2.05,1.58h-1.31v-3.12h1.31c1.58,0,2.05.6,2.05,1.53Z"/><polygon class="cls-1" points="171.86 22.02 167.39 22.02 167.39 13.39 165.94 13.39 165.94 23.33 171.86 23.33 171.86 22.02"/><path class="cls-1" d="m179.5,20.39l1.32,2.92h1.46l-4.44-9.99h-1l-4.27,9.99h1.46l1.25-2.92h4.22Zm-2.17-5.13l1.62,3.85h-3.14s1.51-3.85,1.51-3.85Z"/><path class="cls-1" d="m182.44,18.37c0,2.33,1.69,5.08,5.34,5.08,1.25,0,2.45-.24,3.61-.87v-1.56c-1.08.72-2.26,1.11-3.55,1.11-2.48,0-3.91-1.8-3.91-3.75s1.5-3.81,3.93-3.81c1.21,0,2.37.4,3.44.99v-1.5c-1.19-.54-2.38-.82-3.48-.82-2.95,0-5.38,2.19-5.38,5.11v.02Z"/><polygon class="cls-1" points="198.92 14.65 198.92 13.39 193.29 13.39 193.29 23.33 199.06 23.33 199.06 22.04 194.72 22.04 194.72 18.96 198.78 18.96 198.78 17.68 194.72 17.68 194.72 14.65 198.92 14.65"/><polygon class="cls-1" points="205.53 17.47 202.22 13.39 200.88 13.39 200.88 23.33 202.31 23.33 202.31 15.59 205.4 19.43 205.66 19.43 208.72 15.59 208.72 23.33 210.15 23.33 210.15 13.39 208.83 13.39 205.53 17.47"/><polygon class="cls-1" points="218.27 22.04 213.92 22.04 213.92 18.96 217.98 18.96 217.98 17.68 213.92 17.68 213.92 14.65 218.13 14.65 218.13 13.39 212.5 13.39 212.5 23.33 218.27 23.33 218.27 22.04"/><polygon class="cls-1" points="227.93 21.09 221.27 13.39 220.09 13.39 220.09 23.33 221.46 23.33 221.46 15.67 228.05 23.33 229.3 23.33 229.3 13.39 227.93 13.39 227.93 21.09"/><polygon class="cls-1" points="234.02 23.33 235.44 23.33 235.44 14.64 238.91 14.64 238.91 13.39 230.61 13.39 230.61 14.64 234.02 14.64 234.02 23.33"/><polygon class="cls-1" points="135.62 30.18 139.03 30.18 139.03 38.86 140.46 38.86 140.46 30.18 143.93 30.18 143.93 28.93 135.62 28.93 135.62 30.18"/><path class="cls-1" d="m149.33,34.14c1.09-.44,1.66-1.29,1.66-2.45,0-1.46-1.03-2.77-3.01-2.77h-2.74v9.93h1.43v-4.33h.64c.7,0,1.32.31,2.33,1.88l1.57,2.45h1.69l-1.75-2.65c-.96-1.46-1.23-1.69-1.83-2.07h0Zm-1.75-.86h-.92v-3.1h1.21c1.08,0,1.66.55,1.66,1.51,0,1.33-.91,1.58-1.95,1.58h0Z"/><path class="cls-1" d="m157.8,28.87l-4.27,9.99h1.46l1.25-2.92h4.22l1.33,2.92h1.46l-4.44-9.99h-1.01Zm-1.02,5.79l1.51-3.85,1.62,3.85h-3.14Z"/><path class="cls-1" d="m164.9,33.92c0-1.95,1.5-3.81,3.93-3.81,1.2,0,2.37.4,3.44.99v-1.5c-1.19-.54-2.37-.82-3.48-.82-2.95,0-5.38,2.19-5.38,5.11,0,2.33,1.69,5.08,5.34,5.08,1.25,0,2.45-.24,3.61-.87v-1.56c-1.08.72-2.25,1.11-3.55,1.11-2.48,0-3.91-1.8-3.91-3.75v.02Z"/><polygon class="cls-1" points="181.66 28.93 179.89 28.93 175.7 33.47 175.7 28.93 174.26 28.93 174.26 38.86 175.7 38.86 175.7 33.95 180.77 38.86 182.72 38.86 177.35 33.63 181.66 28.93"/><rect class="cls-1" x="183.91" y="28.93" width="1.43" height="9.93"/><polygon class="cls-1" points="195.48 36.63 188.83 28.93 187.65 28.93 187.65 38.86 189.02 38.86 189.02 31.21 195.62 38.86 196.85 38.86 196.85 28.93 195.48 28.93 195.48 36.63"/><path class="cls-1" d="m204.43,35.23h1.9v2.07c-1.09.35-1.49.44-2.24.44-2.28,0-3.91-1.64-3.91-3.85s1.72-3.83,3.86-3.83c1.13,0,2.39.37,3.53,1.03v-1.46c-1.47-.64-2.36-.84-3.5-.84-3.24,0-5.38,2.4-5.38,5.19,0,2.34,1.66,5.01,5.43,5.01,1.24,0,2.41-.24,3.64-.82v-4.2h-3.33v1.25h0Z"/><polygon class="cls-1" points="218.54 33.01 215.23 28.93 213.89 28.93 213.89 38.86 215.31 38.86 215.31 31.12 218.4 34.97 218.66 34.97 221.72 31.12 221.72 38.86 223.15 38.86 223.15 28.93 221.82 28.93 218.54 33.01"/><path class="cls-1" d="m228.61,28.87l-4.26,9.99h1.46l1.25-2.92h4.22l1.33,2.92h1.46l-4.45-9.99h-1.01Zm-1.02,5.79l1.51-3.85,1.61,3.85h-3.13Z"/><polygon class="cls-1" points="233.09 30.18 236.5 30.18 236.5 38.86 237.93 38.86 237.93 30.18 241.4 30.18 241.4 28.93 233.09 28.93 233.09 30.18"/><path class="cls-1" d="m246.8,34.14c1.09-.44,1.66-1.29,1.66-2.45,0-1.46-1.04-2.77-3.01-2.77h-2.74v9.93h1.43v-4.33h.64c.7,0,1.33.31,2.33,1.88l1.57,2.45h1.69l-1.75-2.65c-.96-1.46-1.24-1.69-1.83-2.07h0Zm-1.75-.86h-.92v-3.1h1.21c1.08,0,1.66.55,1.66,1.51,0,1.33-.92,1.58-1.95,1.58h0Z"/><rect class="cls-1" x="251.54" y="28.93" width="1.43" height="9.93"/><path class="cls-1" d="m260.16,33.72l3.96-4.79h-1.72l-3.1,3.79-3.12-3.79h-1.74l3.97,4.79-4.28,5.14h1.73c1.51-1.81,2.65-3.18,3.43-4.11l3.38,4.11h1.72l-4.24-5.14h0Z"/><path class="cls-1" d="m138.87,7.85c.66,0,1.28-.14,1.94-.44v-2.23h-1.78v.67h1.02v1.11c-.58.18-.8.23-1.19.23-1.22,0-2.09-.87-2.09-2.05s.91-2.04,2.06-2.04c.6,0,1.27.19,1.88.55v-.78c-.79-.34-1.26-.45-1.86-.45-1.73,0-2.86,1.28-2.86,2.77,0,1.25.88,2.67,2.89,2.67v-.02Z"/><polygon class="cls-1" points="145.28 7.09 142.9 7.09 142.9 2.49 142.13 2.49 142.13 7.78 145.28 7.78 145.28 7.09"/><path class="cls-1" d="m148.41,7.85c1.85,0,2.89-1.31,2.89-2.73,0-1.51-1.18-2.71-2.86-2.71-1.85,0-2.84,1.35-2.84,2.73,0,1.46,1.12,2.7,2.8,2.7h0Zm.06-4.71c1.36,0,2.05,1.09,2.05,1.99,0,1.35-.97,2.02-2.1,2.02s-2.03-.82-2.03-1.99.76-2.02,2.07-2.02h0Z"/><path class="cls-1" d="m156.06,6.33c0-.66-.49-1.21-1.26-1.36.52-.21.81-.59.81-1.12,0-.8-.56-1.38-1.64-1.38h-1.53v5.29h1.69c.94,0,1.93-.39,1.93-1.45h0Zm-2.87-3.18h.65c.69,0,.98.23.98.77,0,.44-.29.84-1.1.84h-.53v-1.61h0Zm0,3.96v-1.69h.77c.96,0,1.32.33,1.32.84,0,.58-.41.84-1.29.84h-.8,0Z"/><path class="cls-1" d="m157.84,6.22h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78l.67-1.56h0Zm1.1-2.73l.86,2.05h-1.67l.81-2.05Z"/><polygon class="cls-1" points="165.5 7.09 163.12 7.09 163.12 2.49 162.35 2.49 162.35 7.78 165.5 7.78 165.5 7.09"/><path class="cls-1" d="m170.33,2.49h-2.01v5.29h2.02c1.68,0,2.85-1.07,2.85-2.71,0-1.5-1.09-2.58-2.86-2.58h0Zm-.03,4.61h-1.22v-3.93h1.11c1.5,0,2.21.8,2.21,1.93,0,1.26-.77,2-2.11,2h0Z"/><path class="cls-1" d="m174.92,6.22h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78l.67-1.56h0Zm1.1-2.73l.86,2.05h-1.67l.81-2.05Z"/><polygon class="cls-1" points="180.14 7.78 180.9 7.78 180.9 3.16 182.75 3.16 182.75 2.49 178.32 2.49 178.32 3.16 180.14 3.16 180.14 7.78"/><path class="cls-1" d="m183.19,7.78l.67-1.56h2.25l.71,1.56h.78l-2.37-5.33h-.53l-2.27,5.33h.78,0Zm1.76-4.29l.86,2.05h-1.67l.81-2.05Z"/><rect class="cls-1" x="190.34" y="2.49" width=".76" height="5.29"/><polygon class="cls-1" points="193.2 3.7 196.72 7.78 197.38 7.78 197.38 2.49 196.65 2.49 196.65 6.59 193.09 2.49 192.46 2.49 192.46 7.78 193.2 7.78 193.2 3.7"/><path class="cls-1" d="m199.65,5.26c1.05.61,1.15.85,1.15,1.21,0,.41-.33.7-.78.7-.55,0-1.06-.29-1.43-.78v.96c.42.31.91.49,1.43.49.92,0,1.53-.6,1.53-1.38,0-.72-.24-1.1-1.36-1.74-.81-.47-.87-.72-.87-1.02,0-.37.29-.61.78-.61s.88.2,1.24.55v-.86c-.37-.24-.79-.37-1.21-.37-.91,0-1.56.56-1.56,1.32,0,.65.29,1.07,1.08,1.53h0Z"/><polygon class="cls-1" points="203.98 7.78 204.74 7.78 204.74 3.16 206.59 3.16 206.59 2.49 202.16 2.49 202.16 3.16 203.98 3.16 203.98 7.78"/><rect class="cls-1" x="207.43" y="2.49" width=".76" height="5.29"/><polygon class="cls-1" points="213.44 2.49 209.01 2.49 209.01 3.16 210.83 3.16 210.83 7.78 211.59 7.78 211.59 3.16 213.44 3.16 213.44 2.49"/><path class="cls-1" d="m216.53,7.85c1.53,0,2.26-.86,2.26-2.31v-3.06h-.76v3.06c0,1.16-.5,1.63-1.51,1.63s-1.52-.45-1.52-1.62v-3.07h-.76v3.07c0,1.56.82,2.3,2.28,2.3Z"/><polygon class="cls-1" points="221.41 7.78 222.17 7.78 222.17 3.16 224.02 3.16 224.02 2.49 219.6 2.49 219.6 3.16 221.41 3.16 221.41 7.78"/><polygon class="cls-1" points="227.94 7.1 225.62 7.1 225.62 5.45 227.78 5.45 227.78 4.78 225.62 4.78 225.62 3.16 227.86 3.16 227.86 2.49 224.86 2.49 224.86 7.78 227.94 7.78 227.94 7.1"/></svg><span>Nigeria</span></a><h1>DTM Nigeria Publications Tracker</h1><button type="button" class="infoi" id="infoBtn2" title="How to use this platform" aria-label="How to use this platform">i</button></div>
+    <nav class="btabs pnav" aria-label="Pages"><button type="button" class="btab" data-nav="overview">Overview</button><button type="button" class="btab" data-nav="map">Map</button><button type="button" class="btab" data-nav="types">Report types</button><button type="button" class="btab" data-nav="calendar">Calendar</button><button type="button" class="btab" data-nav="charts">Charts</button><button type="button" class="btab" data-nav="list">Report list</button></nav>
+    
   </div>
+  <div class="bh-row2 filterpanel" id="filterPanel" role="group" aria-label="Filters">
+    <span class="bh-f">Filters:</span>
+    <div class="bf"><label>Period</label><div class="pp"><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select><span class="to">–</span><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select></div></div>
+    <div class="bf"><label>Region</label><div class="dd" id="ddRegions"></div></div>
+    <div class="bf"><label>State</label><div class="dd" id="ddStates"></div></div>
+    <div class="bf"><label>Report type</label><div class="dd" id="ddTypes"></div></div>
+    <div class="fp-active" id="fpActive"></div>
+    <button class="breset" id="resetBtn2" type="button">↺ Reset</button>
   </div>
-  <div id="curve" aria-label="Displacement by round"></div>
-  <div class="curve-row"><div class="curve-key" id="rtLegend"></div>
-   <div class="mseg" id="rtUnit" role="group" aria-label="Unit"><button type="button" data-unit="ind" aria-pressed="true">Individuals</button><button type="button" data-unit="hh" aria-pressed="false">Households</button></div></div>
- </div>
 </header>
 <p class="banner" id="banner" hidden></p>
-<div class="log" id="harvestLog" style="margin:0 24px"></div>
-<section class="topbar slicerbar" aria-label="Filters">
-  <div class="tb-row"><div class="tb-l">Region</div><div class="tb-b" id="regPills"></div></div>
-  <div class="tb-row"><div class="tb-l">Report type</div><div class="tb-b"><span id="typePills" class="tb-b"></span><div class="dd tb-dd" id="ddTypes"></div></div></div>
-  <div class="tb-row"><div class="tb-l">Year</div><div class="tb-b tb-years" id="yearTiles"></div></div>
-  <div class="tb-row"><div class="tb-l">Month</div><div class="tb-b"><span class="tb-b" id="monthTiles"></span>
-    <label class="tb-inl" for="presetSel">Quick period</label><select id="presetSel"><option value="">Choose a period…</option><option value="all">All years (2014–2030)</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select></div></div>
-  <div hidden><div class="dd" id="ddMonths"></div></div>
-  <div class="tb-row"><div class="tb-l">Reports published</div><div class="tb-b"><p class="tb-count lede" id="lede"></p></div></div>
-  <div class="tb-row"><div class="tb-l">Options</div><div class="tb-b">
-    <label class="tb-inl" for="basisSel">Count by</label><select id="basisSel"><option value="pub">Publication date</option><option value="period">Period in title</option></select>
-    <label class="tb-inl" for="kw">Title contains</label><input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama">
+<div class="log" id="harvestLog" style="margin:0 22px"></div>
+<section class="aslicer slicerbar" aria-label="Quick choices">
+  <div class="ar"><span class="al">Region</span><div class="radios" id="regPills"></div></div>
+  <div class="ar"><span class="al">Year</span><div class="radios" id="yearTiles"></div></div>
+  <div class="ar"><span class="al">Month</span><div class="radios" id="monthTiles"></div>
+    <label class="al2" for="presetSel">Quick period</label><select id="presetSel"><option value="">Choose a period…</option><option value="all">All years (2014–2030)</option><option value="data">With data</option><option value="12">Last 12 months</option><option value="ytd">This year</option><option value="last">Last year</option></select></div>
+  <div class="ar ar-tools">
+    <label class="al2" for="basisSel">Count by</label><select id="basisSel"><option value="pub">Publication date</option><option value="period">Period in title</option></select>
+    <label class="al2" for="kw">Title contains</label><input class="search" id="kw" type="search" placeholder="e.g. Round 47, Bama">
     <button class="tb-btn" id="harvestBtn" type="button" hidden>Harvest now</button>
     <label class="tb-btn" for="fileIn">Load data file</label><input type="file" id="fileIn" accept=".json,.js,.csv" class="sr">
     <button class="tb-btn" id="exportBtn" type="button">Export CSV</button>
-    <button class="tb-btn" id="resetBtn" type="button">Reset</button></div></div>
+    <button class="tb-btn" id="resetBtn" type="button">Reset</button>
+    <p class="lede" id="lede"></p></div>
+  <div class="ar ar-status"><span class="upd" id="dataStatus">Loading data…</span>
+  </div>
+  <div hidden><div class="dd" id="ddMonths"></div><span id="typePills"></span></div>
   <div hidden>
         <button type="button" data-preset="all"></button><button type="button" data-preset="data"></button><button type="button" data-preset="12"></button><button type="button" data-preset="ytd"></button><button type="button" data-preset="last"></button>
         <input type="radio" name="basis" value="pub" checked><input type="radio" name="basis" value="period">
       </div>
 </section>
-
-<div class="layout">
-  <aside class="rail" aria-label="Pages and filters">
-    <nav class="iconrail railnav" aria-label="Pages">
-      <div class="ngroup">Start</div><button type="button" class="nitem" data-nav="home" title="Step 1: Home"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><i class="stepn">1</i></span><span class="nl">Home</span></button>
-      <div class="ngroup">Summary</div><button type="button" class="nitem" data-nav="overview" title="Step 2: Overview"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-9M2 20h20"/></svg><i class="stepn">2</i></span><span class="nl">Overview</span></button>
-      <div class="ngroup">Geography</div><button type="button" class="nitem" data-nav="map" title="Step 3: Map"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg><i class="stepn">3</i></span><span class="nl">Map</span></button>
-      <div class="ngroup">Details</div><button type="button" class="nitem" data-nav="types" title="Step 4: Report types"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.6"/></svg><i class="stepn">4</i></span><span class="nl">Report types</span></button><button type="button" class="nitem" data-nav="calendar" title="Step 5: Calendar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><i class="stepn">5</i></span><span class="nl">Calendar</span></button><button type="button" class="nitem" data-nav="charts" title="Step 6: Charts"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><rect x="5" y="11" width="3.2" height="9"/><rect x="10.4" y="5" width="3.2" height="15"/><rect x="15.8" y="13" width="3.2" height="7"/></svg><i class="stepn">6</i></span><span class="nl">Charts</span></button><button type="button" class="nitem" data-nav="list" title="Step 7: Report list"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg><i class="stepn">7</i></span><span class="nl">Report list</span></button>
-      <hr class="nsep">
-      <button type="button" class="nitem tool" id="filterToggle" aria-expanded="true" title="Show or hide the Region and State filters"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></span><span class="nl">Filters</span></button>
-      <a class="nitem tool" href="https://pelumi-2025.github.io/dtm-nigeria-data-hub/#home" target="_blank" rel="noopener" title="Open the DTM Nigeria Data Hub in a new tab"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v6H4V5h6"/></svg></span><span class="nl">Data Hub ↗</span></a>
-      <button type="button" class="nitem tool" id="infoBtn" title="How to use this platform"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.6"/></svg></span><span class="nl">Guide</span></button>
-    </nav>
-    <div class="filterpanel" id="filterPanel">
-      <div class="fp-title">Filters</div>
-      <p class="fp-hint">Narrow every page to a region or state.</p>
-      <div class="sl"><label>Region</label><div class="dd" id="ddRegions"></div></div>
-      <div class="sl"><label>State</label><div class="dd" id="ddStates"></div></div>
-      <div class="sl"><label>Period</label>
-        <div class="pp"><span>From</span><select id="fromM" aria-label="From month"></select><select id="fromY" aria-label="From year"></select></div>
-        <div class="pp"><span>To</span><select id="toM" aria-label="To month"></select><select id="toY" aria-label="To year"></select></div>
-      </div>
-      <div class="fp-active" id="fpActive"></div>
-      <button class="resetbig" id="resetBtn2" type="button">↺ Reset all filters</button>
-      <div class="side-foot">IOM · Displacement Tracking Matrix · Nigeria</div>
-    </div>
-  </aside>
-
-  <main>
-
+<main>
     <nav class="crumbs" id="crumbs" aria-label="You are here"></nav>
 
     <section id="home" class="home" aria-labelledby="homeTitle">
@@ -791,35 +853,38 @@ main{--teal:#0033A0;--sky-2:#418FDE}
       <div class="deckrow"><div class="decklabel">Regions<span class="quick"><button type="button" data-all="region">All</button></span></div><div class="pills" id="regionBar"></div></div>
       <div class="deckrow"><div class="decklabel">States<span class="quick"><button type="button" data-all="state">All</button><button type="button" data-none="state">None</button></span></div><div class="pills" id="stateBar"></div></div>
     </section>
-    <section class="ovhead" data-page="overview"><h2>Where publishing stands now</h2><p class="ovlede" id="ovLede"></p></section>
-    <section class="figs" id="sec-overview" aria-label="Key numbers" data-page="overview"></section>
-    <div class="grid" data-page="overview">
-      <section class="panel chart c8">
-        <div class="panel-head"><div><h2 id="trTitle">Reports published per month</h2><p class="sub" id="trSub">Selected period, report types and places. Hover a bar for its number.</p></div>
-          <div class="seg" id="trSeg" role="group" aria-label="Group by"><button type="button" data-g="m" aria-pressed="true">Month</button><button type="button" data-g="y" aria-pressed="false">Year</button></div></div>
-        <div id="trend"></div>
-      </section>
-      <section class="panel chart c4">
-        <h2>Publications by report type</h2><p class="sub">Selected period and places. Click a bar to show only that type.</p>
-        <div id="donut"></div>
-      </section>
-      <section class="panel chart c8" id="refPanel">
-        <div class="panel-head"><div><h2>Year-on-year change</h2><p class="sub" id="yoySub">Last Mobility Tracking round published in each year.</p></div>
-          <div class="seg" id="yoySeg" role="group" aria-label="Region"><button type="button" data-z="NE" aria-pressed="true">North East</button><button type="button" data-z="NCNW" aria-pressed="false">NC &amp; NW</button></div></div>
-        <div id="yoy"></div><div class="legend" id="yoyKey"></div>
-      </section>
-      <section class="panel chart c4">
-        <h2>Reports by region</h2><p class="sub">A report covering several regions counts in each. Click a bar to filter.</p>
-        <div id="ovRegion"></div>
-      </section>
-      <section class="panel chart c6">
-        <h2>States with the most reports</h2><p class="sub">Reports published for each state (named in the title). Click a bar to focus on that state.</p>
-        <div id="ovStates"></div>
-      </section>
-      <section class="panel c6">
-        <div class="panel-head"><div><h2>Latest publications</h2><p class="sub">Most recent reports in the selection.</p></div><button type="button" class="tb-btn" data-nav-go="list">All reports →</button></div>
-        <div id="ovLatest"></div>
-      </section>
+    <div class="ovgrid" data-page="overview">
+      <aside class="kcol" id="sec-overview" aria-label="Key numbers"></aside>
+      <div class="ovmain">
+        <p class="ovlede" id="ovLede"></p>
+        <div class="row r3">
+          <section class="panel cp"><h2>Reports by region</h2><p class="sub">Each report counted once, by the regions named for it.</p><div class="donut" id="dReg"></div></section>
+          <section class="panel cp"><h2>Reports by product</h2><p class="sub">Each report counted once, by its report type family.</p><div class="donut" id="dFam"></div></section>
+          <section class="panel cp"><h2>Mobility Tracking round reports</h2><p class="sub">One report per round, by region and product.</p><div class="donut" id="dMT"></div></section>
+        </div>
+        <div class="row r21">
+          <section class="panel"><div class="phead"><div><h2 id="trTitle">Month trend</h2><p class="sub" id="trSub"></p></div>
+            <div class="mdh" id="trSeg" role="group" aria-label="Group by"><button type="button" data-g="m" aria-pressed="true" title="Per month">M</button><button type="button" data-g="q" aria-pressed="false" title="Per quarter">Q</button><button type="button" data-g="y" aria-pressed="false" title="Per year">Y</button></div></div>
+            <div id="trend"></div></section>
+          <section class="panel" id="refPanel"><div class="phead"><div><h2>Displacement – latest rounds</h2><p class="sub">Headline figures of the latest round report in each region.</p></div></div>
+            <div class="ikpi" id="figRef"></div></section>
+        </div>
+        <div class="row r11">
+          <section class="panel topn"><div class="tn-head"><input type="number" id="tnNum" min="3" max="20" value="7" aria-label="How many to show"><input type="range" id="tnRange" min="3" max="20" value="7" aria-label="How many to show"><b>Top N</b></div>
+            <div class="tn2"><div><h3>Reports by report type</h3><div id="donut"></div></div><div><h3>Reports by state</h3><div id="tnStates"></div></div></div>
+            <p class="sub tnnote">The orange line marks the average. Click a bar to filter by it.</p></section>
+          <section class="panel"><div class="phead"><div><h2>Reports distribution</h2><p class="sub">Reports published for each state in the selection. Click a pin to focus on that state.</p></div><button type="button" class="tb-btn" data-nav-go="map">Open map →</button></div>
+            <div id="pinMap"></div></section>
+        </div>
+        <div class="row r21">
+          <section class="panel"><div class="phead"><div><h2>Displacement trend over time</h2><p class="sub">Headline figure of each Mobility Tracking round, at its assessment month.</p></div>
+            <div class="seg" id="rtUnit" role="group" aria-label="Unit"><button type="button" data-unit="ind" aria-pressed="true">Individuals</button><button type="button" data-unit="hh" aria-pressed="false">Households</button></div></div>
+            <div class="legend" id="rtLegend"></div><div id="curve"></div></section>
+          <section class="panel"><h2>Reports by day of week</h2><p class="sub">Day each report was published on dtm.iom.int.</p><div id="dow"></div></section>
+        </div>
+        <section class="panel"><div class="phead"><div><h2>Latest publications</h2><p class="sub">Most recent reports in the selection.</p></div><button type="button" class="tb-btn" data-nav-go="list">All reports →</button></div>
+          <div id="ovLatest"></div></section>
+      </div>
     </div>
 
     <section class="panel" id="sec-types" data-page="types">
@@ -876,9 +941,10 @@ main{--teal:#0033A0;--sky-2:#418FDE}
       <div class="pager"><button class="btn" id="prev">Previous</button><span id="pageInfo"></span><button class="btn" id="next">Next</button></div>
     </section>
     <nav class="pagenav" id="pagenav" aria-label="Previous and next page"></nav>
+  <footer id="foot"></footer>
   </main>
 </div>
-<footer id="foot"></footer>
+</div>
 
 <button class="btn primary chatbtn" id="chatOpen" aria-controls="chat">Ask the data</button>
 <aside class="chat" id="chat" aria-label="Assistant" aria-hidden="true">
@@ -1165,11 +1231,11 @@ function setPage(p){
   try{history.replaceState(null,"","#"+CURPAGE)}catch(e){}
 }
 function markNav(){const v=document.body.dataset.view;try{updateNavSigns()}catch(e){}
-  document.querySelectorAll(".railnav [data-nav]").forEach(x=>x.setAttribute("aria-current",(v==="home"?x.dataset.nav==="home":x.dataset.nav===CURPAGE)?"page":"false"))}
+  document.querySelectorAll(".pnav [data-nav]").forEach(x=>x.setAttribute("aria-current",(v==="home"?x.dataset.nav==="home":x.dataset.nav===CURPAGE)?"page":"false"))}
 document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setPage("overview"));
 window.addEventListener("hashchange",()=>{const h=(location.hash||"").slice(1).replace(/^sec-/,"");
   if(h==="home"){setView("home");return}if(PAGES.includes(h)&&(h!==CURPAGE||document.body.dataset.view!=="dash"))setPage(h)});
-document.querySelectorAll(".railnav [data-nav]").forEach(b=>b.onclick=()=>{
+document.querySelectorAll(".pnav [data-nav]").forEach(b=>b.onclick=()=>{
   if(b.dataset.nav==="home"){setView("home");try{history.replaceState(null,"","#home")}catch(e){};return}
   setPage(b.dataset.nav)});
 function renderHome(){
@@ -1209,10 +1275,9 @@ function updateNavSigns(){
 document.addEventListener("click",e=>{const b=e.target.closest("[data-go2]");if(b){goPage(b.dataset.go2);return}
   if(e.target.closest("[data-top]"))window.scrollTo({top:0,behavior:"smooth"});
   if(e.target.closest("[data-reset]"))$("#resetBtn").click()});
-$("#filterToggle").onclick=()=>{const fp=$("#filterPanel"),open=fp.hidden;fp.hidden=!open;$("#filterToggle").setAttribute("aria-expanded",String(open))};
-if(window.innerWidth<900){$("#filterPanel").hidden=true;$("#filterToggle").setAttribute("aria-expanded","false")}
 $("#infoBtn").onclick=()=>{goPage("home");setTimeout(()=>{const g=document.querySelector(".step")||$("#home");g.scrollIntoView({behavior:"smooth",block:"start"})},60)};
 $("#resetBtn2").onclick=()=>$("#resetBtn").click();
+$("#infoBtn2").onclick=()=>$("#infoBtn").click();
 function updateFilterSummary(){
   const regs=F.regions.size===REGIONS.length?"all regions":[...F.regions].map(k=>(REGIONS.find(r=>r.key===k)||{}).label||k).join(", ");
   const sts=!F.stateFilterOn?"all states":[...F.states].sort().join(", ");
@@ -1274,62 +1339,6 @@ function describeFilters(){
 function renderLede(rs){
   $("#lede").innerHTML=`<b>${fmt(filtered().length)}</b> reports · ${describeFilters()}${F.basis==="period"?", dated by the period named in each report title":", dated by publication date on dtm.iom.int"}.`;
 }
-/* ---- headline figures (Data Hub style) */
-function renderKPIs(rs){
-  const len=F.to-F.from+1, prevFrom=F.from-len, prevTo=F.from-1;
-  const prev=REPORTS.filter(r=>{if(!passes(r,{ignoreYear:true})||!r.year||!r.month)return false;const v=r.year*12+r.month-1;return v>=prevFrom&&v<=prevTo}).length;
-  const now=new Date(), nowv=now.getFullYear()*12+now.getMonth();
-  const effLen=Math.max(1,Math.min(F.to,nowv)-F.from+1);
-  const byM={};rs.forEach(r=>{const k=r.year*12+r.month-1;byM[k]=(byM[k]||0)+1});
-  const best=Object.entries(byM).sort((a,b)=>b[1]-a[1])[0];
-  const latest=rs.filter(r=>!/no date on the site/.test(r.date_basis)).reduce((a,r)=>r.date>a?r.date:a,"");
-  const types=new Set(rs.map(r=>r.component_key)).size;
-  const nm=rs.filter(r=>r.component_key==="needs").length, mt=rs.filter(r=>r.mt_main).length;
-  const comparable=prevFrom>=ym(YEAR_MIN,1)&&prev>0;
-  const delta=comparable?Math.round(100*(rs.length-prev)/prev):null;
-  const ch=delta===null?(prevFrom<ym(YEAR_MIN,1)?"across "+periodText():"none in the previous "+len+" months"):`<span class="chg ${delta>=0?"up":"down"}">${delta>=0?"+":"−"}${Math.abs(delta)}%</span> vs previous ${len} months`;
-  const d30=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
-  const new30=REPORTS.filter(r=>r.pub_date&&r.pub_date>=d30&&passes(r,{ignoreYear:true,ignoreMonth:true})).length;
-  const allStates=new Set(rs.flatMap(r=>r.states)).size;
-  const Fg=(cls,v,l,d)=>`<div class="fig ${cls}"><div class="v">${v}</div><div class="l">${l}</div><div class="d">${d}</div></div>`;
-  $("#sec-overview").innerHTML=`<div class="figgrp">`+
-    Fg("idp",fmt(rs.length),"Reports published",ch)+
-    Fg("",fmt(new30),"New in the last 30 days","published on dtm.iom.int")+
-    Fg("",(rs.length/effLen).toFixed(1),"Reports per month",`average over ${fmt(effLen)} month${effLen===1?"":"s"}`)+
-    Fg("",best?fmt(best[1]):"–","Busiest month",best?`${MONTHS[best[0]%12]} ${Math.floor(best[0]/12)}`:"no reports")+
-    Fg("ret",fmt(nm),"Needs Monitoring round reports",`of ${fmt(mt)} Mobility Tracking round reports`)+
-    Fg("",fmt(allStates),"States with reports",`of 36 states and the FCT · ${fmt(types)} report types`)+
-    Fg("",latest?new Date(latest+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"–","Latest report",latest?"most recent in the selection":"no reports")+
-    `</div><div class="figgrp" id="figRef"></div>`;
-  $("#ovLede").innerHTML=`<b>${fmt(rs.length)}</b> reports for ${esc(describeFilters())}. Displacement figures come from the latest Mobility Tracking round in each region.`;
-  try{renderRefFigs()}catch(e){}
-}
-/* ---- reports per month or per year (plain bars, never stacked) */
-const TR={g:"m"};
-function renderTrend(rs){
-  document.querySelectorAll("#trSeg [data-g]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.g===TR.g));
-  $("#trTitle").textContent=TR.g==="m"?"Reports published per month":"Reports published per year";
-  if(TR.g==="m"){monthBars($("#trend"),rs,"#0033A0","reports");return}
-  const by={};rs.forEach(r=>{if(r.year)by[r.year]=(by[r.year]||0)+1});
-  const now=new Date().getFullYear(),a=Math.floor(F.from/12),b=Math.min(Math.floor(F.to/12),Math.max(now,...Object.keys(by).map(Number)));
-  const ys=range(a,b);if(!ys.length){$("#trend").innerHTML='<p class="empty">No years in the selected period.</p>';return}
-  const nm=niceMax(Math.max(1,...ys.map(y=>by[y]||0))),W=940,H=300,L=44,R=10,T=18,B=34,bw=(W-L-R)/ys.length,Y=v=>H-B-(H-T-B)*v/nm;
-  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports published per year">`;
-  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${fmt(v)}</text>`}
-  ys.forEach((y,i)=>{const v=by[y]||0,x=L+i*bw,w=Math.min(46,bw*.62);
-    if(v)g+=`<rect x="${(x+(bw-w)/2).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${w.toFixed(1)}" height="${(H-B-Y(v)).toFixed(1)}" fill="#0033A0" rx="2" data-tip="${y}: ${fmt(v)} reports"/><text x="${(x+bw/2).toFixed(1)}" y="${(Y(v)-5).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">${fmt(v)}</text>`;
-    g+=`<text x="${(x+bw/2).toFixed(1)}" y="${H-B+16}" text-anchor="middle" font-size="11" fill="var(--muted)">${y}</text>`});
-  $("#trend").innerHTML=g+"</svg>";bindTips($("#trend"));
-}
-$("#trSeg").onclick=e=>{const b=e.target.closest("[data-g]");if(!b)return;TR.g=b.dataset.g;renderTrend(filtered())};
-const shortType=l=>l.replace("Mobility Tracking – ","MT – ").replace(/ \((migrants)\) – extra category/," (migrants)").replace(" Reports","").replace(" Report","").replace("Early Warning & Early Response","EWER").replace("Situational Analysis","situation analysis").replace(" (Ad-Hoc)","");
-/* ---- bar chart: reports by report type */
-function renderDonut(rs){
-  const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
-  const items=Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({key:k,label:shortType(labelFor(k)),v,c:"#0033A0"}));
-  if(!items.length){$("#donut").innerHTML='<p class="hint">No reports in this selection.</p>';return}
-  htmlBars($("#donut"),items,k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);PM.type=F.comps.size===1?k:null;drill=null;syncFilterInputs();render()});
-}
 /* crisp HTML bar list (scales with the panel; used on the Overview) */
 function htmlBars(el,items,onPick){
   if(!items.length){el.innerHTML=`<p class="empty">No reports in this selection.</p>`;return}
@@ -1339,34 +1348,176 @@ function htmlBars(el,items,onPick){
 }
 function niceStep(v){if(v<=0)return 1;const raw=v/4,p=Math.pow(10,Math.floor(Math.log10(raw))),n=raw/p;return (n<=1?1:n<=1.25?1.25:n<=1.5?1.5:n<=2?2:n<=2.5?2.5:n<=3?3:n<=4?4:n<=5?5:n<=7.5?7.5:10)*p}
 const niceTop=v=>niceStep(v)*4;
-/* ---- Overview: regions, states, latest publications; hub-style pills in the top bar */
+/* ---- Overview (combined design): KPI cards with sparklines, donuts, lollipop trend, Top N, pin map */
+const CAT=["var(--c1)","var(--c2)","var(--c3)","var(--c4)"],GREY="var(--c0)";
+const fmtD=d=>new Date(d+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
+function spark(vals,w=140,h=36){
+  if(!vals||vals.length<2)return "";
+  const mx=Math.max(...vals),mn=Math.min(...vals),X=i=>(1+i*(w-2)/(vals.length-1)).toFixed(1),Y=v=>(h-3-(h-6)*(v-mn)/Math.max(1,mx-mn)).toFixed(1);
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${vals.map((v,i)=>(i?"L":"M")+X(i)+","+Y(v)).join("")}" style="fill:none;stroke:var(--spark);stroke-width:1.3;vector-effect:non-scaling-stroke"/></svg>`;
+}
+const chgTxt=(c,ok=true)=>c==null?"":`<b class="${c>=0?"pos":"neg"}">${c>=0?"+":"−"}${Math.abs(c).toFixed(2)}%</b>`;
+function monthKeys(){const now=new Date(),nowv=now.getFullYear()*12+now.getMonth(),dataMax=Math.max(F.from,...REPORTS.filter(r=>r.year&&r.month).map(r=>r.year*12+r.month-1));
+  return range(F.from,Math.min(F.to,Math.max(nowv,dataMax))).filter(k=>F.months.has(k%12+1))}
+function renderKPIs(rs){
+  const len=F.to-F.from+1, prevFrom=F.from-len, prevTo=F.from-1;
+  const prev=REPORTS.filter(r=>{if(!passes(r,{ignoreYear:true})||!r.year||!r.month)return false;const v=r.year*12+r.month-1;return v>=prevFrom&&v<=prevTo}).length;
+  const ks=monthKeys(),byM={};rs.forEach(r=>{if(r.year&&r.month){const k=r.year*12+r.month-1;byM[k]=(byM[k]||0)+1}});
+  const series=ks.map(k=>byM[k]||0), effLen=Math.max(1,ks.length);
+  const best=Object.entries(byM).sort((a,b)=>b[1]-a[1])[0];
+  const latestR=rs.filter(r=>r.pub_date&&!/no date on the site/.test(r.date_basis||"")).sort((a,b)=>b.pub_date.localeCompare(a.pub_date))[0];
+  const types=new Set(rs.map(r=>r.component_key)).size, nm=rs.filter(r=>r.component_key==="needs").length, mt=rs.filter(r=>r.mt_main).length;
+  const comparable=prevFrom>=ym(YEAR_MIN,1)&&prev>0, delta=comparable?100*(rs.length-prev)/prev:null;
+  const day=864e5,now=Date.now(),iso=t=>new Date(t).toISOString().slice(0,10),base=r=>passes(r,{ignoreYear:true,ignoreMonth:true});
+  const inWin=(a,b)=>REPORTS.filter(r=>r.pub_date&&r.pub_date>=iso(now-a*day)&&r.pub_date<iso(now-b*day+day)&&base(r)).length;
+  const new30=inWin(30,0),prev30=inWin(60,30),c30=prev30?100*(new30-prev30)/prev30:null;
+  const weeks=range(0,11).reverse().map(w=>inWin(7*(w+1),7*w));
+  const yrs={};rs.filter(r=>r.mt_main&&r.year).forEach(r=>yrs[r.year]=(yrs[r.year]||0)+1);const ys=Object.keys(yrs).sort();
+  const stY={};rs.forEach(r=>{if(r.year)(stY[r.year]??=new Set()).forEach?r.states.forEach(s=>stY[r.year].add(s)):0});
+  const states=new Set(rs.flatMap(r=>r.states)).size;
+  const K=(lab,val,sp,foot)=>`<div class="kc"><div class="kc-top"><div class="kc-l">${lab}</div>${sp}</div><div class="kc-v">${val}</div><div class="kc-f">${foot}</div></div>`;
+  $("#sec-overview").innerHTML=
+    K("Reports published",fmt(rs.length),spark(series),comparable?`Compare to previous ${len} months: ${chgTxt(delta)}`:`across ${periodText()}`)+
+    K("New in the last 30 days",fmt(new30),spark(weeks),c30!=null?`Compare to previous 30 days: ${chgTxt(c30)}`:"published on dtm.iom.int")+
+    K("Reports per month",(rs.length/effLen).toFixed(1),spark(series.map((v,i,a)=>a.slice(Math.max(0,i-11),i+1).reduce((x,y)=>x+y,0)/Math.min(i+1,12))),best?`Busiest month: <b>${MONTHS[best[0]%12]} ${Math.floor(best[0]/12)}</b> (${fmt(best[1])})`:"no reports")+
+    K("Needs Monitoring round reports",fmt(nm),spark(ys.map(y=>yrs[y])),`of <b>${fmt(mt)}</b> Mobility Tracking round reports`)+
+    K("States with reports",fmt(states),spark(Object.keys(stY).sort().map(y=>stY[y].size)),`of 36 states and the FCT · <b>${fmt(types)}</b> report types`)+
+    K("Latest report",latestR?fmtD(latestR.pub_date):"–","",latestR?`<a href="${esc(latestR.url)}" target="_blank" rel="noopener">${esc(latestR.title.replace(/^Nigeria\s*[—–-]\s*/,"").slice(0,90))}</a>`:"no reports");
+  $("#ovLede").innerHTML=`<b>${fmt(rs.length)}</b> reports for ${esc(describeFilters())}.`;
+  try{renderRefFigs()}catch(e){}
+}
+/* donut with leader-line labels (part-to-whole; every report counted once) */
+function donut(el,items,{center,sub,onPick}={}){
+  items=items.filter(i=>i.v>0);const tot=items.reduce((a,i)=>a+i.v,0);
+  if(!tot){el.innerHTML='<p class="empty">No reports in this selection.</p>';return}
+  const W=480,H=250,cx=240,cy=130,R=80,ri=54;let a0=-Math.PI/2,g="",labs=[];
+  const P=(r,a)=>[cx+r*Math.cos(a),cy+r*Math.sin(a)];
+  items.forEach(it=>{const a1=a0+2*Math.PI*it.v/tot,big=a1-a0>Math.PI?1:0,[x0,y0]=P(R,a0),[x1,y1]=P(R,a1),[x2,y2]=P(ri,a1),[x3,y3]=P(ri,a0);
+    const d=items.length===1?`M${cx-R},${cy}A${R},${R} 0 1 1 ${cx+R},${cy}A${R},${R} 0 1 1 ${cx-R},${cy}M${cx-ri},${cy}A${ri},${ri} 0 1 0 ${cx+ri},${cy}A${ri},${ri} 0 1 0 ${cx-ri},${cy}Z`
+      :`M${x0.toFixed(1)},${y0.toFixed(1)}A${R},${R} 0 ${big} 1 ${x1.toFixed(1)},${y1.toFixed(1)}L${x2.toFixed(1)},${y2.toFixed(1)}A${ri},${ri} 0 ${big} 0 ${x3.toFixed(1)},${y3.toFixed(1)}Z`;
+    const pct=100*it.v/tot;
+    g+=`<path d="${d}" style="fill:${it.c};stroke:var(--panel);stroke-width:2;cursor:${onPick?"pointer":"default"}" data-pick="${esc(it.key)}" data-tip="${esc(it.label)}: ${fmt(it.v)} reports (${pct.toFixed(1)}%)"/>`;
+    if(pct>=3)labs.push({it,pct,a:(a0+a1)/2});a0=a1});
+  ["R","L"].forEach(side=>{const L=labs.filter(l=>(Math.cos(l.a)>=0)===(side==="R")).sort((p,q)=>Math.sin(p.a)-Math.sin(q.a));let last=-1e9;
+    L.forEach(l=>{let y=cy+(R+16)*Math.sin(l.a);y=Math.max(y,last+(l.it.l2?44:30),16);last=y;l.y=Math.min(y,H-(l.it.l2?28:14))});
+    L.forEach(l=>{const [xa,ya]=P(R+3,l.a),xr=cx+(side==="R"?1:-1)*(R+30),xt=cx+(side==="R"?1:-1)*(R+34);
+      g+=`<path d="M${xa.toFixed(1)},${ya.toFixed(1)}L${xr.toFixed(1)},${l.y.toFixed(1)}L${(xt+(side==="R"?6:-6)).toFixed(1)},${l.y.toFixed(1)}" style="fill:none;stroke:var(--ink-3);stroke-width:1"/>`+
+        `<text x="${(xt+(side==="R"?9:-9)).toFixed(1)}" y="${(l.y-3).toFixed(1)}" text-anchor="${side==="R"?"start":"end"}" class="dl1">${esc(l.it.l1||l.it.short||l.it.label)}</text>`+
+        `<text x="${(xt+(side==="R"?9:-9)).toFixed(1)}" y="${(l.y+11).toFixed(1)}" text-anchor="${side==="R"?"start":"end"}" class="dl2">${l.it.l2?esc(l.it.l2):l.pct.toFixed(1)+"%"}</text>`+(l.it.l2?`<text x="${(xt+(side==="R"?9:-9)).toFixed(1)}" y="${(l.y+25).toFixed(1)}" text-anchor="${side==="R"?"start":"end"}" class="dl2">${l.pct.toFixed(1)}%</text>`:"")+``})});
+  if(center!=null)g+=`<text x="${cx}" y="${cy+2}" text-anchor="middle" class="dc1">${center}</text><text x="${cx}" y="${cy+17}" text-anchor="middle" class="dc2">${esc(sub||"")}</text>`;
+  el.innerHTML=`<div class="dleg">${items.map(i=>`<span><i style="background:${i.c}"></i>${esc(i.short||i.label)}</span>`).join("")}</div><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(items.map(i=>i.label+" "+i.v).join(", "))}">${g}</svg>`;
+  bindTips(el);el.onclick=onPick?e=>{const p=e.target.closest("[data-pick]");if(p)onPick(p.dataset.pick)}:null;
+}
+function renderDonuts(rs){
+  const z=r=>{const k=regionKeysOf(r).filter(x=>x!=="NONE");return k.length>1?"MULTI":k[0]||"NONE"};
+  const cr={};rs.forEach(r=>{const k=z(r);cr[k]=(cr[k]||0)+1});
+  donut($("#dReg"),[{key:"NE",label:"North East",v:cr.NE||0,c:CAT[0]},{key:"NCNW",label:"North Central & North West",short:"NC & NW",v:cr.NCNW||0,c:CAT[1]},
+    {key:"SOUTH",label:"Southern states",short:"South",v:cr.SOUTH||0,c:CAT[2]},{key:"MULTI",label:"Several regions",short:"Several",v:cr.MULTI||0,c:CAT[3]},
+    {key:"NONE",label:"Region not stated",short:"Not stated",v:cr.NONE||0,c:GREY}],{center:fmt(rs.length),sub:"reports",onPick:k=>{if(k!=="MULTI")setRegion(k)}});
+  const FAM={atlas:"MT",needs:"MT",mt_dash:"MT",ett:"ETT",flash:"FLASH",joint_flood:"FLOOD",flood:"FLOOD"},cf={};rs.forEach(r=>{const k=FAM[r.component_key]||"OTHER";cf[k]=(cf[k]||0)+1});
+  donut($("#dFam"),[{key:"MT",label:"Mobility Tracking",l1:"Mobility Tr.",v:cf.MT||0,c:CAT[0]},{key:"ETT",label:"Emergency Tracking Tool",short:"ETT",v:cf.ETT||0,c:CAT[1]},
+    {key:"FLASH",label:"Incident / Flash",short:"Flash",v:cf.FLASH||0,c:CAT[2]},{key:"FLOOD",label:"Flood reports",short:"Floods",v:cf.FLOOD||0,c:CAT[3]},
+    {key:"OTHER",label:"Other report types",short:"Other",v:cf.OTHER||0,c:GREY}],{center:fmt(rs.length),sub:"reports",
+    onPick:k=>{const m={MT:["atlas","needs","mt_dash"],ETT:["ett"],FLASH:["flash"],FLOOD:["joint_flood","flood"]}[k];if(!m)return;
+      const same=F.comps.size===m.length&&m.every(x=>F.comps.has(x));F.comps=same?new Set(COMPONENTS.map(c=>c.key)):new Set(m);PM.type=F.comps.size===1?[...F.comps][0]:null;drill=null;syncFilterInputs();render()}});
+  const cm={};rs.filter(r=>r.mt_main).forEach(r=>{const k=(r.round_zone||"NE")+"_"+r.component_key;cm[k]=(cm[k]||0)+1});const mt=rs.filter(r=>r.mt_main).length;
+  donut($("#dMT"),[{key:"NE_needs",label:"North East – Needs Monitoring",short:"NE · Needs Mon.",l1:"North East",l2:"Needs Mon.",v:cm.NE_needs||0,c:CAT[0]},{key:"NE_atlas",label:"North East – IDP & Returnee Atlas",short:"NE · Atlas",l1:"North East",l2:"Atlas",v:cm.NE_atlas||0,c:CAT[1]},
+    {key:"NCNW_needs",label:"NC & NW – Needs Monitoring",short:"NC&NW · Needs Mon.",l1:"NC & NW",l2:"Needs Mon.",v:cm.NCNW_needs||0,c:CAT[2]},{key:"NCNW_atlas",label:"NC & NW – IDP & Returnee Atlas",short:"NC&NW · Atlas",l1:"NC & NW",l2:"Atlas",v:cm.NCNW_atlas||0,c:CAT[3]}],
+    {center:fmt(mt),sub:"round reports"});
+}
+/* ---- lollipop trend: per month, quarter or year, with the average line */
+const TR={g:"m"};
+function renderTrend(rs){
+  document.querySelectorAll("#trSeg [data-g]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.g===TR.g));
+  const ks=monthKeys(),by={};rs.forEach(r=>{if(r.year&&r.month){const k=r.year*12+r.month-1;by[k]=(by[k]||0)+1}});
+  let pts;
+  if(TR.g==="m")pts=ks.map(k=>({k,v:by[k]||0,lab:`${MONTHS[k%12]} ${Math.floor(k/12)}`,yr:Math.floor(k/12),first:k%12===0}));
+  else{const step=TR.g==="q"?3:12,g={};ks.forEach(k=>{const b=Math.floor(k/step)*step;(g[b]??={k:b,v:0});g[b].v+=by[k]||0});
+    pts=Object.values(g).sort((a,b)=>a.k-b.k).map(p=>({...p,lab:TR.g==="q"?`Q${Math.floor(p.k%12/3)+1} ${Math.floor(p.k/12)}`:String(Math.floor(p.k/12)),yr:Math.floor(p.k/12),first:TR.g==="y"||p.k%12===0}))}
+  const name={m:"month",q:"quarter",y:"year"}[TR.g];
+  $("#trTitle").textContent=`Reports published per ${name}`;
+  if(!pts.length){$("#trend").innerHTML='<p class="empty">No months in the selected period.</p>';$("#trSub").textContent="";return}
+  const tot=pts.reduce((a,p)=>a+p.v,0),avg=tot/pts.length,nm=niceTop(Math.max(1,...pts.map(p=>p.v)));
+  $("#trSub").innerHTML=`Average <b>${avg.toFixed(1)}</b> per ${name} (orange line). Dots above the average are highlighted.`;
+  const W=900,H=360,L=40,R=12,T=14,B=34,bw=(W-L-R)/pts.length,Y=v=>H-B-(H-T-B)*v/nm;
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports published per ${name}">`;
+  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" style="stroke:var(--grid)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" class="ax">${fmt(+v.toFixed(1))}</text>`}
+  const top=new Set([...pts].sort((a,b)=>b.v-a.v).slice(0,3).map(p=>p.k)),rr=Math.max(2,Math.min(6,bw*.35));
+  pts.forEach((p,i)=>{const x=L+i*bw+bw/2,hi=p.v>avg;
+    if(p.v){g+=`<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${Y(0)}" y2="${Y(p.v).toFixed(1)}" style="stroke:${hi?"var(--c2)":"var(--c1)"};stroke-width:${Math.max(1,Math.min(3,bw*.3)).toFixed(1)}"/>`+
+      `<circle cx="${x.toFixed(1)}" cy="${Y(p.v).toFixed(1)}" r="${rr.toFixed(1)}" style="fill:${hi?"var(--c2)":"var(--c1)"};stroke:var(--panel);stroke-width:1.5"/>`;
+      if(top.has(p.k)&&pts.length>1)g+=`<text x="${x.toFixed(1)}" y="${(Y(p.v)-rr-4).toFixed(1)}" text-anchor="middle" class="vl">${fmt(p.v)}</text>`}
+    g+=`<rect x="${(x-bw/2).toFixed(1)}" y="${T}" width="${bw.toFixed(1)}" height="${H-T-B}" style="fill:transparent" data-tip="${esc(p.lab)}: ${fmt(p.v)} report${p.v===1?"":"s"}"/>`;
+    const every=pts.length>60?24:pts.length>24?12:pts.length>12?3:1;
+    if(TR.g!=="m"?(pts.length<=16||i%Math.ceil(pts.length/12)===0):(pts.length<=24?true:p.first&&(p.yr%(pts.length>96?2:1)===0)))
+      g+=`<text x="${x.toFixed(1)}" y="${H-B+16}" text-anchor="middle" class="ax">${TR.g==="m"&&pts.length>24?p.yr:TR.g==="m"?MONTHS[p.k%12]:esc(p.lab)}</text>`});
+  g+=`<line x1="${L}" x2="${W-R}" y1="${Y(avg).toFixed(1)}" y2="${Y(avg).toFixed(1)}" style="stroke:var(--avg);stroke-width:1.5;stroke-dasharray:5 4"/><text x="${W-R}" y="${(Y(avg)-5).toFixed(1)}" text-anchor="end" class="avgl">average ${avg.toFixed(1)}</text>`;
+  $("#trend").innerHTML=g+"</svg>";bindTips($("#trend"));
+}
+$("#trSeg").onclick=e=>{const b=e.target.closest("[data-g]");if(!b)return;TR.g=b.dataset.g;renderTrend(filtered())};
+const shortType=l=>l.replace("Mobility Tracking – ","MT – ").replace(/ \((migrants)\) – extra category/," (migrants)").replace(" Reports","").replace(" Report","").replace("Early Warning & Early Response","EWER").replace("Situational Analysis","situation analysis").replace(" (Ad-Hoc)","");
+/* ---- Top N bars with the average line */
+const TN={n:7};
+function barsAvg(el,items,onPick,n){
+  if(!items.length){el.innerHTML=`<p class="empty">No reports in this selection.</p>`;return}
+  const avg=items.reduce((a,i)=>a+i.v,0)/items.length,sh=items.slice(0,n),max=Math.max(1,...sh.map(i=>i.v),avg);
+  el.innerHTML=`<div class="hb">${sh.map(it=>`<button type="button" class="hbr${it.dim?" dim":""}" data-pick="${esc(it.key)}" data-tip="${esc(it.label)}: ${fmt(it.v)} report${it.v===1?"":"s"} (average ${avg.toFixed(1)})"><span class="hbl">${esc(it.label)}</span><span class="hbt"><i style="width:${(100*it.v/max).toFixed(1)}%"></i><b>${fmt(it.v)}</b><em class="avgk" style="left:${(100*avg/max).toFixed(1)}%"></em></span></button>`).join("")}</div>`+
+    (items.length>n?`<p class="more">+ ${items.length-n} more · average ${avg.toFixed(1)}</p>`:`<p class="more">average ${avg.toFixed(1)}</p>`);
+  bindTips(el);el.onclick=e=>{const g=e.target.closest("[data-pick]");if(g)onPick(g.dataset.pick,e)};
+}
+function renderDonut(rs){ // Top N: report types
+  const c={};rs.forEach(r=>c[r.component_key]=(c[r.component_key]||0)+1);
+  barsAvg($("#donut"),Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({key:k,label:shortType(labelFor(k)),v,dim:F.comps.size<COMPONENTS.length&&!F.comps.has(k)})),
+    k=>{F.comps=(F.comps.size===1&&F.comps.has(k))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);PM.type=F.comps.size===1?k:null;drill=null;syncFilterInputs();render()},TN.n);
+}
+const toggleState=st=>{if(F.stateFilterOn&&F.states.size===1&&F.states.has(st)){F.states=new Set(ALL_STATES);F.stateFilterOn=false}else{F.states=new Set([st]);F.stateFilterOn=true}drill=null;syncFilterInputs();render()};
+function renderTopStates(rs){
+  const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));
+  if(!Object.keys(sc).length){$("#tnStates").innerHTML='<p class="empty">No report in this selection was published for a particular state.</p>';return}
+  barsAvg($("#tnStates"),Object.entries(sc).sort((a,b)=>b[1]-a[1]).map(([st,v])=>({key:st,label:st==="FCT"?"FCT (Abuja)":st,v,dim:F.stateFilterOn&&!F.states.has(st)})),toggleState,TN.n);
+}
+const setTN=v=>{TN.n=Math.max(3,Math.min(20,+v||7));$("#tnNum").value=TN.n;$("#tnRange").value=TN.n;const rs=filtered();renderDonut(rs);renderTopStates(rs)};
+$("#tnNum").oninput=e=>setTN(e.target.value);$("#tnRange").oninput=e=>setTN(e.target.value);
+/* ---- pin map: reports published per state */
+function renderPinMap(rs){
+  const el=$("#pinMap");if(!el)return;
+  if(!GEO||!GEO.states){el.innerHTML='<p class="empty">Loading the map…</p>';loadGeo().then(()=>{if(GEO&&GEO.states)renderPinMap(filtered())});return}
+  const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));const mx=Math.max(1,...Object.values(sc));
+  let g=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="img" aria-label="Map of Nigeria with the number of reports published per state">`;
+  Object.entries(GEO.states).forEach(([st,o])=>{const on=F.stateFilterOn&&F.states.has(st);g+=`<path d="${o.d}" class="pm-st${sc[st]?" has":""}${on?" on":""}" data-st="${esc(st)}" data-tip="${esc(st)}: ${fmt(sc[st]||0)} report${sc[st]===1?"":"s"}"/>`});
+  Object.entries(sc).sort((a,b)=>a[1]-b[1]).forEach(([st,v])=>{const o=GEO.states[st];if(!o||!o.c)return;const [x,y]=o.c,r=12+12*Math.sqrt(v/mx);
+    g+=`<g class="pin" data-st="${esc(st)}" data-tip="${esc(st)}: ${fmt(v)} report${v===1?"":"s"}"><path d="M${x},${y}C${x-r*.35},${y-r*.9} ${x-r},${y-r*1.15} ${x-r},${y-r*1.75}A${r},${r} 0 1 1 ${x+r},${y-r*1.75}C${x+r},${y-r*1.15} ${x+r*.35},${y-r*.9} ${x},${y}Z"/>`+
+      `<text x="${x}" y="${(y-r*1.75+4.5).toFixed(1)}" text-anchor="middle" style="font-size:${Math.max(11,Math.min(15,r*.7)).toFixed(0)}px">${v>=1000?(v/1000).toFixed(1)+"k":v}</text></g>`});
+  el.innerHTML=g+"</svg>";bindTips(el);
+  el.onclick=e=>{const p=e.target.closest("[data-st]");if(p&&sc[p.dataset.st])toggleState(p.dataset.st)};
+}
+/* ---- reports by day of week (line) */
+function renderDow(rs){
+  const el=$("#dow");if(!el)return;const D=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],c=Array(7).fill(0);
+  rs.forEach(r=>{const d=r.pub_date;if(d){const w=(new Date(d+"T00:00:00Z").getUTCDay()+6)%7;c[w]++}});
+  const tot=c.reduce((a,b)=>a+b,0);if(!tot){el.innerHTML='<p class="empty">No reports in this selection.</p>';return}
+  const nm=niceTop(Math.max(...c)),W=380,H=250,L=36,R=16,T=24,B=28,X=i=>L+i*(W-L-R)/6,Y=v=>H-B-(H-T-B)*v/nm;
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reports published by day of week">`;
+  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" style="stroke:var(--grid)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" class="ax">${fmt(v)}</text>`}
+  g+=`<path d="${c.map((v,i)=>(i?"L":"M")+X(i).toFixed(1)+","+Y(v).toFixed(1)).join("")}L${X(6)},${Y(0)}L${X(0)},${Y(0)}Z" style="fill:url(#gArea)"/>`;
+  g+=`<path d="${c.map((v,i)=>(i?"L":"M")+X(i).toFixed(1)+","+Y(v).toFixed(1)).join("")}" style="fill:none;stroke:var(--c1);stroke-width:2"/>`;
+  c.forEach((v,i)=>{g+=`<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="4.5" style="fill:var(--c1);stroke:var(--panel);stroke-width:2" data-tip="${D[i]}: ${fmt(v)} reports (${(100*v/tot).toFixed(1)}%)"/>`+
+    `<text x="${X(i).toFixed(1)}" y="${(Y(v)-10).toFixed(1)}" text-anchor="middle" class="vl">${fmt(v)}</text><text x="${X(i).toFixed(1)}" y="${H-B+18}" text-anchor="middle" class="ax">${D[i].slice(0,3)}</text>`});
+  el.innerHTML=g+"</svg>";bindTips(el);
+}
+/* ---- region radios in the quick-choice row; latest publications */
 function setRegion(k){F.regions=(k==="ALL"||(F.regions.size===1&&F.regions.has(k)))?new Set(REGIONS.map(r=>r.key)):new Set([k]);drill=null;syncFilterInputs();render()}
 function setType(k){F.comps=(!k||(F.comps.size===1&&F.comps.has(k)))?new Set(COMPONENTS.map(c=>c.key)):new Set([k]);PM.type=F.comps.size===1?[...F.comps][0]:null;drill=null;syncFilterInputs();render()}
 function renderOverviewExtras(rs){
   const allR=F.regions.size===REGIONS.length;
   const rc={};REPORTS.forEach(r=>{if(passes(r,{ignoreRegion:true}))regionKeysOf(r).forEach(k=>rc[k]=(rc[k]||0)+1)});
   $("#regPills").innerHTML=`<button type="button" data-rp="ALL" aria-pressed="${allR}">All regions</button>`+REGIONS.map(r=>`<button type="button" data-rp="${r.key}" aria-pressed="${!allR&&F.regions.has(r.key)}" ${rc[r.key]?"":"disabled"} title="${fmt(rc[r.key]||0)} reports">${esc(r.key==="NONE"?"Region not stated":r.label)}</button>`).join("");
-  const tc={};REPORTS.forEach(r=>{if(passes(r,{ignoreComp:true}))tc[r.component_key]=(tc[r.component_key]||0)+1});
-  const allT=F.comps.size===COMPONENTS.length, top=Object.entries(tc).sort((a,b)=>b[1]-a[1]).slice(0,6).map(x=>x[0]);
-  [...F.comps].forEach(k=>{if(!allT&&F.comps.size<=2&&!top.includes(k)&&tc[k])top.push(k)});
-  $("#typePills").innerHTML=`<button type="button" data-tp="" aria-pressed="${allT}">All report types</button>`+top.map(k=>`<button type="button" data-tp="${k}" aria-pressed="${!allT&&F.comps.has(k)}" title="${fmt(tc[k]||0)} reports">${esc(shortType(labelFor(k)))}</button>`).join("");
   if(CURPAGE!=="overview"&&document.body.dataset.view==="dash")return;
-  const has=(r,z)=>(r.regions||[]).includes(z);
-  htmlBars($("#ovRegion"),[
-    {key:"NE",label:"North East",v:rs.filter(r=>has(r,"North East")).length,c:"#0033A0",dim:!F.regions.has("NE")},
-    {key:"NCNW",label:"North Central & North West",v:rs.filter(r=>has(r,"North Central")||has(r,"North West")).length,c:"#16807F",dim:!F.regions.has("NCNW")},
-    {key:"SOUTH",label:"Southern states",v:rs.filter(r=>(r.regions||[]).some(z=>z.startsWith("South"))).length,c:"#6A4C9C",dim:!F.regions.has("SOUTH")},
-    {key:"NONE",label:"Region not stated",v:rs.filter(r=>!(r.regions||[]).length).length,c:"#9AA5B6",dim:!F.regions.has("NONE")}].filter(x=>x.v),setRegion);
-  const sc={};rs.forEach(r=>r.states.forEach(st=>sc[st]=(sc[st]||0)+1));
-  const top10=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,10);
-  if(!top10.length)$("#ovStates").innerHTML='<p class="empty">No report in this selection was published for a particular state.</p>';
-  else htmlBars($("#ovStates"),top10.map(([st,v])=>({key:st,label:st==="FCT"?"FCT (Abuja)":st,v,c:ZONE_COL[STATE_ZONE[st]]||"#0033A0",dim:F.stateFilterOn&&!F.states.has(st)})),
-    st=>{if(F.stateFilterOn&&F.states.size===1&&F.states.has(st)){F.states=new Set(ALL_STATES);F.stateFilterOn=false}else{F.states=new Set([st]);F.stateFilterOn=true}drill=null;syncFilterInputs();render()});
-  const late=[...rs].filter(r=>r.date).sort((a,b)=>(b.date||"").localeCompare(a.date||"")||b.id-a.id).slice(0,7);
-  $("#ovLatest").innerHTML=late.length?`<ul class="latest">${late.map(r=>`<li><span class="ld">${new Date(r.date+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}</span><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title.replace(/^Nigeria\s*[—–-]\s*/,""))}</a><span class="pill">${esc(shortType(r.component))}</span></li>`).join("")}</ul>`:'<p class="empty">No reports in this selection.</p>';
+  renderDonuts(rs);renderTopStates(rs);renderPinMap(rs);renderDow(rs);
+  const late=[...rs].filter(r=>r.pub_date).sort((a,b)=>b.pub_date.localeCompare(a.pub_date)||b.id-a.id).slice(0,6);
+  $("#ovLatest").innerHTML=late.length?`<ul class="latest">${late.map(r=>`<li><span class="ld">${fmtD(r.pub_date)}</span><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title.replace(/^Nigeria\s*[—–-]\s*/,""))}</a><span class="pill">${esc(shortType(r.component))}</span></li>`).join("")}</ul>`:'<p class="empty">No reports in this selection.</p>';
 }
 $("#regPills").onclick=e=>{const b=e.target.closest("[data-rp]");if(b&&!b.disabled)setRegion(b.dataset.rp)};
-$("#typePills").onclick=e=>{const b=e.target.closest("[data-tp]");if(b)setType(b.dataset.tp)};
 document.addEventListener("click",e=>{const b=e.target.closest("[data-nav-go]");if(b)setPage(b.dataset.navGo)});
 function heatColor(v,max){ if(!v) return "var(--heat0)"; const t=Math.sqrt(v/max);
   const a=[230,243,250], b=[14,77,110]; return `rgb(${a.map((x,i)=>Math.round(x+(b[i]-x)*t))})`}
@@ -1470,66 +1621,51 @@ function monthBars(el,sel,col,what,sumEl){
     `<div><b>${last!=null?MONTHS[last%12]+" "+Math.floor(last/12):"–"}</b>latest month with a report</div>`;
 }
 $("#typePick").onclick=e=>{const b=e.target.closest("[data-pt]");if(!b)return;PM.type=b.dataset.pt||null;renderPerMonth(filtered())};
-/* ---- displacement by round: masthead curve, year-on-year bars, headline figures */
-const RT={unit:"ind",z:null};
+/* ---- displacement by round: icon figures (latest rounds) and the trend over time */
+const RT={unit:"ind"};
 const tOf=d=>{const[y,m]=String(d).split("-").map(Number);return y*12+(m||1)-1};
 const monTxt=d=>new Date(String(d).slice(0,7)+"-01T00:00:00Z").toLocaleDateString("en-GB",{month:"short",year:"numeric",timeZone:"UTC"});
 const roundsOf=R=>R&&R.rounds?Object.values(R.rounds).sort((a,b)=>a.round-b.round):[];
 const wantNE=()=>F.regions.has("NE")||F.regions.size===REGIONS.length||(F.regions.size===1&&F.regions.has("NONE"));
 const wantNW=()=>F.regions.has("NCNW")||F.regions.size===REGIONS.length||(F.regions.size===1&&F.regions.has("NONE"));
-const big=v=>v>=1e6?(v/1e6).toFixed(v>=1e7?1:2).replace(/\.?0+$/,"")+"M":v>=1e3?Math.round(v/1e3)+"k":String(v);
+const big=v=>v>=1e6?(v/1e6).toFixed(2).replace(/\.?0+$/,"")+"M":v>=1e3?(v/1e3).toFixed(v>=1e5?0:1).replace(/\.0$/,"")+"k":String(v);
+const IC_IDP='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="8" r="2.4"/><path d="M15.5 13.6c3 .2 5.5 2.5 5.5 5.9"/></svg>';
+const IC_RET='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 15h6M12 12l3 3-3 3"/></svg>';
 function renderRefFigs(){
-  const el=$("#figRef");if(!el)return;const R1=roundsOf(REF),R2=roundsOf(REF2);if(!R1.length&&!R2.length){el.innerHTML="";return}
-  const cell=(R,zone,k,kh,lab,cls)=>{const l=[...R].reverse().find(r=>r[k]);if(!l)return"";const p=R.filter(r=>r.round<l.round&&r[k]).pop();
-    const c=p?(l[k]-p[k])/p[k]*100:null;
-    return `<div class="fig ${cls}"><div class="v">${fmt(l[k])}</div><div class="l">${lab}, ${zone} (R${l.round})</div><div class="d">${c!=null?`<span class="chg ${c>=0?"up":"down"}">${c>=0?"+":"−"}${Math.abs(c).toFixed(1)}%</span> vs R${p.round} · `:""}${l[kh]?fmt(l[kh])+" households":monTxt(l.date)}</div></div>`};
-  el.innerHTML=(wantNE()?cell(R1,"North East","idp_ind","idp_hh","IDPs","idp")+cell(R1,"North East","ret_ind","ret_hh","Returnees","ret"):"")+
-               (wantNW()?cell(R2,"NC & NW","idp_ind","idp_hh","IDPs","idp")+cell(R2,"NC & NW","ret_ind","ret_hh","Returnees","ret"):"");
+  const el=$("#figRef");if(!el)return;const R1=roundsOf(REF),R2=roundsOf(REF2);
+  if(!R1.length&&!R2.length){el.innerHTML='<p class="empty">Loading round figures…</p>';return}
+  const cell=(R,zone,k,kh,lab,ic)=>{const l=[...R].reverse().find(r=>r[k]);if(!l)return"";const p=R.filter(r=>r.round<l.round&&r[k]).pop(),c=p?(l[k]-p[k])/p[k]*100:null;
+    return `<div class="ik"><span class="ik-i">${ic}</span><div class="ik-v">${big(l[k])}</div><div class="ik-l">${lab}, ${zone}</div><div class="ik-s">${fmt(l[k])} · R${l.round} (${monTxt(l.date)})${l[kh]?` · ${fmt(l[kh])} households`:""}</div>${c!=null?`<div class="ik-c">${chgTxt(c)} vs R${p.round}</div>`:""}</div>`};
+  const out=(wantNE()?cell(R1,"North East","idp_ind","idp_hh","IDPs",IC_IDP)+cell(R1,"North East","ret_ind","ret_hh","Returnees",IC_RET):"")+
+            (wantNW()?cell(R2,"NC & NW","idp_ind","idp_hh","IDPs",IC_IDP)+cell(R2,"NC & NW","ret_ind","ret_hh","Returnees",IC_RET):"");
+  el.innerHTML=out||'<p class="empty">DTM does not run Mobility Tracking rounds in the southern states; reports there are flood assessments.</p>';
 }
 function renderRef(){
   const R1=roundsOf(REF),R2=roundsOf(REF2);
   document.querySelectorAll("#rtUnit [data-unit]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.unit===RT.unit));
-  renderRefFigs();renderYoY(R1,R2);
+  renderRefFigs();
   const cv=$("#curve");if(!cv)return;
   if(!R1.length&&!R2.length){cv.innerHTML="";$("#rtLegend").innerHTML="";return}
-  const hh=RT.unit==="hh", ki=hh?"idp_hh":"idp_ind", kr=hh?"ret_hh":"ret_ind", U=hh?"households":"individuals";
-  const S=[];
-  if(wantNE()){S.push({n:"North East IDPs",c:"#FFFFFF",z:"North East",k:ki,lab:"IDPs",pts:R1.filter(r=>r[ki])});S.push({n:"North East returnees",c:"#F0B845",z:"North East",k:kr,lab:"returnees",pts:R1.filter(r=>r[kr])})}
-  if(wantNW()){S.push({n:"North Central & North West IDPs",c:"#A9C2FF",dash:1,z:"NC & NW",k:ki,lab:"IDPs",pts:R2.filter(r=>r[ki])});S.push({n:"North Central & North West returnees",c:"#F7D58A",dash:1,z:"NC & NW",k:kr,lab:"returnees",pts:R2.filter(r=>r[kr])})}
+  const hh=RT.unit==="hh",ki=hh?"idp_hh":"idp_ind",kr=hh?"ret_hh":"ret_ind",U=hh?"households":"individuals",S=[];
+  if(wantNE()){S.push({n:"North East IDPs",c:"var(--c1)",z:"North East",k:ki,lab:"IDPs",pts:R1.filter(r=>r[ki])});S.push({n:"North East returnees",c:"var(--c1)",dash:1,z:"North East",k:kr,lab:"returnees",pts:R1.filter(r=>r[kr])})}
+  if(wantNW()){S.push({n:"NC & NW IDPs",c:"var(--c2)",z:"NC & NW",k:ki,lab:"IDPs",pts:R2.filter(r=>r[ki])});S.push({n:"NC & NW returnees",c:"var(--c2)",dash:1,z:"NC & NW",k:kr,lab:"returnees",pts:R2.filter(r=>r[kr])})}
   const SS=S.filter(x=>x.pts.length);
-  if(!SS.length){cv.innerHTML=`<p class="curve-empty">DTM does not run Mobility Tracking rounds in the southern states, so there is no displacement curve for this selection. Reports there are flood assessments.</p>`;$("#rtLegend").innerHTML="";return}
-  const xs=SS.flatMap(x=>x.pts.map(r=>tOf(r.date))),x0=Math.min(...xs),x1=Math.max(...xs);
-  const mx=Math.max(...SS.flatMap(x=>x.pts.map(r=>r[x.k]))),nm=niceTop(mx);
-  const W=1240,H=200,L=56,Rm=14,T=10,B=24,X=v=>L+(W-L-Rm)*(v-x0)/Math.max(1,x1-x0),Y=v=>H-B-(H-T-B)*v/nm;
+  if(!SS.length){cv.innerHTML='<p class="empty">DTM does not run Mobility Tracking rounds in the southern states, so there is no displacement trend for this selection.</p>';$("#rtLegend").innerHTML="";return}
+  const xs=SS.flatMap(x=>x.pts.map(r=>tOf(r.date))),x0=Math.min(...xs),x1=Math.max(...xs),nm=niceTop(Math.max(...SS.flatMap(x=>x.pts.map(r=>r[x.k]))));
+  const W=900,H=290,L=54,Rm=118,T=14,B=28,X=v=>L+(W-L-Rm)*(v-x0)/Math.max(1,x1-x0),Y=v=>H-B-(H-T-B)*v/nm;
   let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Displacement by Mobility Tracking round">`;
-  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(255,255,255,.16)"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" font-size="11">${big(v)}</text>`}
-  for(let y=Math.ceil(x0/12);y*12<=x1;y++)g+=`<text x="${X(y*12)}" y="${H-6}" text-anchor="middle" font-size="11">${y}</text>`;
-  const first=SS[0];g+=`<path d="${first.pts.map((r,i)=>(i?"L":"M")+X(tOf(r.date)).toFixed(1)+","+Y(r[first.k]).toFixed(1)).join("")}L${X(tOf(first.pts[first.pts.length-1].date)).toFixed(1)},${Y(0)}L${X(tOf(first.pts[0].date)).toFixed(1)},${Y(0)}Z" fill="rgba(255,255,255,.08)"/>`;
-  SS.forEach(sr=>{g+=`<path d="${sr.pts.map((r,i)=>(i?"L":"M")+X(tOf(r.date)).toFixed(1)+","+Y(r[sr.k]).toFixed(1)).join("")}" fill="none" stroke="${sr.c}" stroke-width="2.4"${sr.dash?' stroke-dasharray="5 4"':""}/>`;
+  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" style="stroke:var(--grid)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" class="ax">${big(v)}</text>`}
+  for(let y=Math.ceil(x0/12);y*12<=x1;y++)g+=`<text x="${X(y*12)}" y="${H-8}" text-anchor="middle" class="ax">${y}</text>`;
+  const ends=[];
+  SS.forEach(sr=>{g+=`<path d="${sr.pts.map((r,i)=>(i?"L":"M")+X(tOf(r.date)).toFixed(1)+","+Y(r[sr.k]).toFixed(1)).join("")}" style="fill:none;stroke:${sr.c};stroke-width:2${sr.dash?";stroke-dasharray:6 4":""}"/>`;
     sr.pts.forEach((r,i)=>{const p=i?sr.pts[i-1][sr.k]:null,c=p?(r[sr.k]-p)/p*100:null;
-      g+=`<circle cx="${X(tOf(r.date)).toFixed(1)}" cy="${Y(r[sr.k]).toFixed(1)}" r="6" fill="transparent" data-tip="${esc(sr.z+" Round "+r.round+" ("+monTxt(r.date)+"): "+fmt(r[sr.k])+" "+sr.lab+" "+U+(c!=null?" · "+(c>=0?"+":"")+c.toFixed(1)+"% vs previous round":""))}"/>`})});
+      g+=`<circle cx="${X(tOf(r.date)).toFixed(1)}" cy="${Y(r[sr.k]).toFixed(1)}" r="7" style="fill:transparent" data-tip="${esc(sr.z+" Round "+r.round+" ("+monTxt(r.date)+"): "+fmt(r[sr.k])+" "+sr.lab+" "+U+(c!=null?" · "+(c>=0?"+":"")+c.toFixed(1)+"% vs previous round":""))}"/>`});
+    const l=sr.pts[sr.pts.length-1];ends.push({y:Y(l[sr.k]),x:X(tOf(l.date)),t:`${sr.z==="North East"?"NE":"NC&NW"} ${sr.lab} ${big(l[sr.k])}`,c:sr.c})});
+  ends.sort((a,b)=>a.y-b.y);let last=-1e9;ends.forEach(e=>{e.ly=Math.max(e.y,last+15);last=e.ly;
+    g+=`<circle cx="${e.x.toFixed(1)}" cy="${e.y.toFixed(1)}" r="4" style="fill:${e.c};stroke:var(--panel);stroke-width:2"/><text x="${(e.x+8).toFixed(1)}" y="${(e.ly+4).toFixed(1)}" class="endl">${esc(e.t)}</text>`});
   cv.innerHTML=g+"</svg>";bindTips(cv);
-  $("#rtLegend").innerHTML=SS.map(x=>`<span><i style="background:${x.c}${x.dash?";opacity:.8":""}"></i>${esc(x.n)}</span>`).join("")+`<span class="ck-note">${U} · headline figure of each round report</span>`;
+  $("#rtLegend").innerHTML=SS.map(x=>`<span><i class="${x.dash?"dash":""}" style="background:${x.c}"></i>${esc(x.n)}</span>`).join("")+`<span class="muted">${U}</span>`;
 }
-function renderYoY(R1,R2){
-  const el=$("#yoy");if(!el)return;
-  if(!RT.z||(RT.z==="NE"&&!wantNE())||(RT.z==="NCNW"&&!wantNW()))RT.z=wantNE()?"NE":"NCNW";
-  document.querySelectorAll("#yoySeg [data-z]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.z===RT.z));
-  const R=RT.z==="NE"?R1:R2;if(!R.length){el.innerHTML='<p class="empty">No rounds loaded.</p>';$("#yoyKey").innerHTML="";return}
-  const by={};R.forEach(r=>{const y=+String(r.date).slice(0,4);if(!by[y]||r.round>by[y].round)by[y]=r});
-  const ys=Object.keys(by).map(Number).sort((a,b)=>a-b);
-  const K=[["idp_hh","IDP households","#8FB0FF"],["idp_ind","IDPs (individuals)","#0033A0"],["ret_hh","Returnee households","#F0D08A"],["ret_ind","Returnees (individuals)","#C98A0B"]].filter(k=>R.some(r=>r[k[0]]));
-  const nm=niceTop(Math.max(...ys.flatMap(y=>K.map(k=>by[y][k[0]]||0)))),W=900,H=290,L=54,Rr=10,T=12,B=30,gw=(W-L-Rr)/ys.length,bw=Math.min(16,gw*.8/K.length),Y=v=>H-B-(H-T-B)*v/nm;
-  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Year-on-year change">`;
-  for(let i=0;i<=4;i++){const v=nm*i/4;g+=`<line x1="${L}" x2="${W-Rr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${big(v)}</text>`}
-  ys.forEach((y,i)=>{const r=by[y],x0=L+i*gw+(gw-bw*K.length)/2;
-    K.forEach(([k,lab,c],j)=>{const v=r[k];if(!v)return;g+=`<rect x="${(x0+j*bw).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${(bw-1.5).toFixed(1)}" height="${(H-B-Y(v)).toFixed(1)}" fill="${c}" data-tip="${esc(y+" · Round "+r.round+" ("+monTxt(r.date)+"): "+fmt(v)+" "+lab)}"/>`});
-    if(ys.length<=14||i%2===0)g+=`<text x="${(L+i*gw+gw/2).toFixed(1)}" y="${H-B+17}" text-anchor="middle" font-size="11" fill="var(--muted)">${y}</text>`});
-  el.innerHTML=g+"</svg>";bindTips(el);
-  $("#yoyKey").innerHTML=K.map(([,l,c])=>`<span><i style="background:${c}"></i>${l}</span>`).join("");
-  $("#yoySub").textContent=`Last ${RT.z==="NE"?"North East":"North Central & North West"} round published in each year (Round ${R[0].round} to Round ${R[R.length-1].round}). Bars side by side, never stacked.`;
-}
-$("#yoySeg").onclick=e=>{const b=e.target.closest("[data-z]");if(!b)return;RT.z=b.dataset.z;renderYoY(roundsOf(REF),roundsOf(REF2))};
 $("#rtUnit").onclick=e=>{const b=e.target.closest("[data-unit]");if(!b)return;RT.unit=b.dataset.unit;renderRef()};
 
 /* ---- map: numbers by state */
